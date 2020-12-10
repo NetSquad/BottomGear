@@ -16,4 +16,4 @@ Unity 2020.1.17f1
 Photon PUN2
 
 ## References 
-https://doc.photonengine.com/en-us/pun/v2/demos-and-tutorials/simple-tutorial#add_mounts_to_player
+https://doc.photonengine.com/en-us/pun/v2/demos-and-tutorials/simple-tutorial
