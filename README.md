@@ -3,8 +3,6 @@ I will follow you around the store until you pay for your loans
 
 ## Authors:
 
-Aitor Simona & Joan Marín
-
 * GitHub account: [AitorSimona](https://github.com/AitorSimona)
 * GitHub account: [CarlesHoms](https://github.com/ch0m5)
 * GitHub account: [DidacRomero](https://github.com/DidacRomero)
