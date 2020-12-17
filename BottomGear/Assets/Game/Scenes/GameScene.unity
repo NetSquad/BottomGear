@@ -470,9 +470,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 964925486}
-  - component: {fileID: 964925487}
   - component: {fileID: 964925488}
   - component: {fileID: 964925489}
+  - component: {fileID: 964925487}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -503,13 +503,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 964925485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86aba39379844aa428b0d3c0a3d92534, type: 3}
+  m_Script: {fileID: 11500000, guid: 56c007634021dfc42a64013afd1aaa45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   InfoText: {fileID: 601629552}
-  AsteroidPrefabs:
-  - {fileID: 151774, guid: 18a79aea49b60d342b7a672b7a34edbe, type: 3}
-  - {fileID: 140850, guid: 15f43343ba0a60e47a63d28496373c3f, type: 3}
 --- !u!114 &964925488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,7 +516,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 964925485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b579f4077cd5953489882224d803b137, type: 3}
+  m_Script: {fileID: 11500000, guid: 4055c4e5e40a4544ea513965a76e49f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerOverviewEntryPrefab: {fileID: 168392, guid: f03d1c686a26a1d4da99a4186b0bb1ab, type: 3}
