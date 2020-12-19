@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: 3c1ef6c70e16e2947a2baf048d0ee880
+timeCreated: 18446744011573954816
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Body_C
+    100002: Circle_WESD_B_PIVOT01_02
+    100004: Circle_WESD_B_PIVOT03_04
+    100006: Circle_WESD_BRIDGE01
+    100008: Circle_WESD_BRIDGE02
+    100010: Circle_WESD_GUN
+    100012: Circle_WESD_WHELL01
+    100014: Circle_WESD_WHELL02
+    100016: Circle_WESD_WHELL03
+    100018: Circle_WESD_WHELL04
+    100020: Point_WESD_WHELL01
+    100022: Point_WESD_WHELL02
+    100024: Point_WESD_WHELL03
+    100026: Point_WESD_WHELL04
+    100028: //RootNode
+    100030: WESD_B_PIVOT01
+    100032: WESD_B_PIVOT02
+    100034: WESD_B_PIVOT03
+    100036: WESD_B_PIVOT04
+    100038: WESD_BODY
+    100040: WESD_BRIDGE01
+    100042: WESD_BRIDGE02
+    100044: WESD_WHELL01
+    100046: WESD_WHELL02
+    100048: WESD_WHELL03
+    100050: WESD_WHELL04
+    400000: Body_C
+    400002: Circle_WESD_B_PIVOT01_02
+    400004: Circle_WESD_B_PIVOT03_04
+    400006: Circle_WESD_BRIDGE01
+    400008: Circle_WESD_BRIDGE02
+    400010: Circle_WESD_GUN
+    400012: Circle_WESD_WHELL01
+    400014: Circle_WESD_WHELL02
+    400016: Circle_WESD_WHELL03
+    400018: Circle_WESD_WHELL04
+    400020: Point_WESD_WHELL01
+    400022: Point_WESD_WHELL02
+    400024: Point_WESD_WHELL03
+    400026: Point_WESD_WHELL04
+    400028: //RootNode
+    400030: WESD_B_PIVOT01
+    400032: WESD_B_PIVOT02
+    400034: WESD_B_PIVOT03
+    400036: WESD_B_PIVOT04
+    400038: WESD_BODY
+    400040: WESD_BRIDGE01
+    400042: WESD_BRIDGE02
+    400044: WESD_WHELL01
+    400046: WESD_WHELL02
+    400048: WESD_WHELL03
+    400050: WESD_WHELL04
+    2300000: WESD_B_PIVOT01
+    2300002: WESD_B_PIVOT02
+    2300004: WESD_B_PIVOT03
+    2300006: WESD_B_PIVOT04
+    2300008: WESD_BODY
+    2300010: WESD_BRIDGE01
+    2300012: WESD_BRIDGE02
+    2300014: WESD_WHELL01
+    2300016: WESD_WHELL02
+    2300018: WESD_WHELL03
+    2300020: WESD_WHELL04
+    3300000: WESD_B_PIVOT01
+    3300002: WESD_B_PIVOT02
+    3300004: WESD_B_PIVOT03
+    3300006: WESD_B_PIVOT04
+    3300008: WESD_BODY
+    3300010: WESD_BRIDGE01
+    3300012: WESD_BRIDGE02
+    3300014: WESD_WHELL01
+    3300016: WESD_WHELL02
+    3300018: WESD_WHELL03
+    3300020: WESD_WHELL04
+    4300000: WESD_BODY
+    4300002: WESD_B_PIVOT04
+    4300004: WESD_B_PIVOT03
+    4300006: WESD_WHELL01
+    4300008: WESD_WHELL02
+    4300010: WESD_BRIDGE02
+    4300012: WESD_B_PIVOT02
+    4300014: WESD_B_PIVOT01
+    4300016: WESD_WHELL03
+    4300018: WESD_WHELL04
+    4300020: WESD_BRIDGE01
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.02
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
