@@ -209,7 +209,7 @@ namespace BottomGear
             Quaternion rotation = Quaternion.Euler(0.0f, angularStart, 0.0f);
 
             PhotonNetwork.Instantiate("BattleRoller", position, rotation, 0);      // avoid this call on rejoin (ship was network instantiated before)
-
+            //BasicKyle Variant
             //if (PhotonNetwork.IsMasterClient)
             //{
             //    StartCoroutine(SpawnAsteroid());

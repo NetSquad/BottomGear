@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using Photon.Pun;
 
 [Serializable]
 public enum DriveType
@@ -32,9 +33,11 @@ public class WheelDrive : MonoBehaviour
 	[Tooltip("The vehicle's drive type: rear-wheels drive, front-wheels drive or all-wheels drive.")]
 	public DriveType driveType;
 
+	private PhotonView photonView;
+	//private bool controllable = true;
 
 
-    private Wheel[] m_Wheels;
+	private Wheel[] m_Wheels;
 
 	struct Wheel
     {
@@ -42,7 +45,12 @@ public class WheelDrive : MonoBehaviour
 		public GameObject mesh;
     }
 
-    // Find all the WheelColliders down in the hierarchy.
+	public void Awake()
+	{
+		photonView = GetComponent<PhotonView>();
+	}
+
+	// Find all the WheelColliders down in the hierarchy.
 	void Start()
 	{
 		m_Wheels = new Wheel[wheelCount];
@@ -85,6 +93,11 @@ public class WheelDrive : MonoBehaviour
 	// This helps us to figure our which wheels are front ones and which are rear.
 	void Update()
 	{
+		if (!photonView.IsMine /*|| !controllable*/)
+		{
+			return;
+		}
+
 		m_Wheels[0].collider.ConfigureVehicleSubsteps(criticalSpeed, stepsBelow, stepsAbove);
 
 		float angle = maxAngle * Input.GetAxis("Horizontal");
