@@ -1,6 +1,10 @@
 # BottomGear
 I will follow you around the store until you pay for your loans
 
+## How to use:
+
+WASD or Arrows to move
+
 ## Authors:
 
 * GitHub account: [AitorSimona](https://github.com/AitorSimona)
