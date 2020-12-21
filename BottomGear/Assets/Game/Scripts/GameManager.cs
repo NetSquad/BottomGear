@@ -47,11 +47,11 @@ namespace BottomGear
             // NOTE: Without this the player's spaceship won't spawn, check OnPlayerPropertiesUpdate below
             // it will look for PLAYER_LOADED_LEVEL flag
 
-            //Hashtable props = new Hashtable
-            //{
-            //    {AsteroidsGame.PLAYER_LOADED_LEVEL, true}
-            //};
-            //PhotonNetwork.LocalPlayer.SetCustomProperties(props);
+            Hashtable props = new Hashtable
+            {
+                {Photon.Pun.Demo.Asteroids.AsteroidsGame.PLAYER_LOADED_LEVEL, true}
+            };
+            PhotonNetwork.LocalPlayer.SetCustomProperties(props);
         }
 
         public override void OnDisable()
@@ -161,26 +161,26 @@ namespace BottomGear
 
 
             // if there was no countdown yet, the master client (this one) waits until everyone loaded the level and sets a timer start
-            //int startTimestamp;
-            //bool startTimeIsSet = CountdownTimer.TryGetStartTime(out startTimestamp);
+            int startTimestamp;
+            bool startTimeIsSet = CountdownTimer.TryGetStartTime(out startTimestamp);
 
 
-            //if (changedProps.ContainsKey(AsteroidsGame.PLAYER_LOADED_LEVEL))
-            //{
-            //    if (CheckAllPlayerLoadedLevel())
-            //    {
-            //        if (!startTimeIsSet)
-            //        {
-            //            CountdownTimer.SetStartTime();
-            //        }
-            //    }
-            //    else
-            //    {
-            //        // not all players loaded yet. wait:
-            //        Debug.Log("setting text waiting for players! ", this.InfoText);
-            //        InfoText.text = "Waiting for other players...";
-            //    }
-            //}
+            if (changedProps.ContainsKey(Photon.Pun.Demo.Asteroids.AsteroidsGame.PLAYER_LOADED_LEVEL))
+            {
+                if (CheckAllPlayerLoadedLevel())
+                {
+                    if (!startTimeIsSet)
+                    {
+                        CountdownTimer.SetStartTime();
+                    }
+                }
+                else
+                {
+                    // not all players loaded yet. wait:
+                    Debug.Log("setting text waiting for players! ", this.InfoText);
+                    InfoText.text = "Waiting for other players...";
+                }
+            }
 
         }
 
@@ -202,13 +202,13 @@ namespace BottomGear
             // --- NOTE: This is AsteroidsGame's game code, spawn ship and start asteroid spwaning coroutine ---
 
 
-            //float angularStart = (360.0f / PhotonNetwork.CurrentRoom.PlayerCount) * PhotonNetwork.LocalPlayer.GetPlayerNumber();
-            //float x = 20.0f * Mathf.Sin(angularStart * Mathf.Deg2Rad);
-            //float z = 20.0f * Mathf.Cos(angularStart * Mathf.Deg2Rad);
-            //Vector3 position = new Vector3(x, 0.0f, z);
-            //Quaternion rotation = Quaternion.Euler(0.0f, angularStart, 0.0f);
+            float angularStart = (360.0f / PhotonNetwork.CurrentRoom.PlayerCount) * PhotonNetwork.LocalPlayer.GetPlayerNumber();
+            float x = 20.0f * Mathf.Sin(angularStart * Mathf.Deg2Rad);
+            float z = 20.0f * Mathf.Cos(angularStart * Mathf.Deg2Rad);
+            Vector3 position = new Vector3(x, 0.0f, z);
+            Quaternion rotation = Quaternion.Euler(0.0f, angularStart, 0.0f);
 
-            //PhotonNetwork.Instantiate("Spaceship", position, rotation, 0);      // avoid this call on rejoin (ship was network instantiated before)
+            PhotonNetwork.Instantiate("BattleRoller", position, rotation, 0);      // avoid this call on rejoin (ship was network instantiated before)
 
             //if (PhotonNetwork.IsMasterClient)
             //{
@@ -223,15 +223,15 @@ namespace BottomGear
 
                 // --- NOTE: This is AsteroidsGame's game code ---
 
-                //object playerLoadedLevel;
+                object playerLoadedLevel;
 
-                //if (p.CustomProperties.TryGetValue(AsteroidsGame.PLAYER_LOADED_LEVEL, out playerLoadedLevel))
-                //{
-                //    if ((bool)playerLoadedLevel)
-                //    {
-                //        continue;
-                //    }
-                //}
+                if (p.CustomProperties.TryGetValue(Photon.Pun.Demo.Asteroids.AsteroidsGame.PLAYER_LOADED_LEVEL, out playerLoadedLevel))
+                {
+                    if ((bool)playerLoadedLevel)
+                    {
+                        continue;
+                    }
+                }
 
                 return false;
             }
