@@ -10,7 +10,7 @@ I will follow you around the store until you pay for your loans
 
 ## Tools
 Visual Studio 2019
-Unity 2020.1.17f1
+Unity 2020.2.0f1
 Photon PUN2
 
 ## References 
