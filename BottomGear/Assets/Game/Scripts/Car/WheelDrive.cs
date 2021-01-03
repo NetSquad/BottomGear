@@ -34,10 +34,13 @@ public class WheelDrive : MonoBehaviour
 	public DriveType driveType;
 
 	private PhotonView photonView;
-	//private bool controllable = true;
 
+	[Tooltip("Turn this on to control the vehicle even when not playing online (Tests...).")]
+	public bool controllable = false;
 
+	Rigidbody _rb;
 	private Wheel[] m_Wheels;
+	public Transform centerOfMass;
 
 	struct Wheel
     {
@@ -73,7 +76,13 @@ public class WheelDrive : MonoBehaviour
 				Debug.LogError("No wheel collider found in object's subtree");
 		}
 
-		
+
+		_rb = GetComponent<Rigidbody>();
+
+		if (_rb != null && centerOfMass != null)
+		{
+			_rb.centerOfMass = centerOfMass.localPosition;
+		}
 
 		//for (int i = 0; i < m_Wheels.Length; ++i) 
 		//{
@@ -93,7 +102,7 @@ public class WheelDrive : MonoBehaviour
 	// This helps us to figure our which wheels are front ones and which are rear.
 	void Update()
 	{
-		if (!photonView.IsMine /*|| !controllable*/)
+		if (!photonView.IsMine && !controllable)
 		{
 			return;
 		}
@@ -102,6 +111,8 @@ public class WheelDrive : MonoBehaviour
 
 		float angle = maxAngle * Input.GetAxis("Horizontal");
 		float torque = maxTorque * Input.GetAxis("Vertical");
+
+
 
 		float handBrake = Input.GetKey(KeyCode.X) ? brakeTorque : 0;
 

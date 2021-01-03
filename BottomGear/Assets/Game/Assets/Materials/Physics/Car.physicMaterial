@@ -3,11 +3,12 @@
 --- !u!134 &13400000
 PhysicMaterial:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Car
-  dynamicFriction: 0.2
-  staticFriction: 0.2
+  dynamicFriction: 0
+  staticFriction: 0
   bounciness: 0
   frictionCombine: 1
   bounceCombine: 1
