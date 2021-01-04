@@ -12,33 +12,31 @@ public enum DriveType
 
 public class WheelDrive : MonoBehaviour
 {
+	[Header("Wheels")]
 	[Tooltip("The vehicle's wheel count")]
 	public int wheelCount = 4;
+	[Tooltip("The vehicle's drive type: rear-wheels drive, front-wheels drive or all-wheels drive.")]
+	public DriveType driveType;
 	[Tooltip("Maximum steering angle of the wheels")]
 	public float maxAngle = 30f;
 	[Tooltip("Maximum torque applied to the driving wheels")]
 	public float maxTorque = 300f;
 	[Tooltip("Maximum brake torque applied to the driving wheels")]
 	public float brakeTorque = 30000f;
-	//[Tooltip("If you need the visual wheels to be attached automatically, drag the wheel shape here.")]
-	//public GameObject wheelShape;
 
+	[Header("Controller")]
 	[Tooltip("The vehicle's speed when the physics engine can use different amount of sub-steps (in m/s).")]
 	public float criticalSpeed = 5f;
+	[Tooltip("The vehicle's limit speed.")]
+	public float maxSpeed = 30;
 	[Tooltip("Simulation sub-steps when the speed is above critical.")]
 	public int stepsBelow = 5;
 	[Tooltip("Simulation sub-steps when the speed is below critical.")]
 	public int stepsAbove = 1;
 
-	[Tooltip("The vehicle's drive type: rear-wheels drive, front-wheels drive or all-wheels drive.")]
-	public DriveType driveType;
-
 	private PhotonView photonView;
 
-	[Tooltip("Turn this on to control the vehicle even when not playing online (Tests...).")]
-	public bool controllable = false;
-
-	Rigidbody _rb;
+	Rigidbody rigidbody;
 	private Wheel[] m_Wheels;
 	public Transform centerOfMass;
 
@@ -77,11 +75,11 @@ public class WheelDrive : MonoBehaviour
 		}
 
 
-		_rb = GetComponent<Rigidbody>();
+		rigidbody = GetComponent<Rigidbody>();
 
-		if (_rb != null && centerOfMass != null)
+		if (rigidbody != null && centerOfMass != null)
 		{
-			_rb.centerOfMass = centerOfMass.localPosition;
+			rigidbody.centerOfMass = centerOfMass.localPosition;
 		}
 
 		//for (int i = 0; i < m_Wheels.Length; ++i) 
@@ -102,7 +100,8 @@ public class WheelDrive : MonoBehaviour
 	// This helps us to figure our which wheels are front ones and which are rear.
 	void Update()
 	{
-		if (!photonView.IsMine && !controllable)
+		// --- Only update if this is the local player ---
+		if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
 		{
 			return;
 		}
@@ -112,7 +111,11 @@ public class WheelDrive : MonoBehaviour
 		float angle = maxAngle * Input.GetAxis("Horizontal");
 		float torque = maxTorque * Input.GetAxis("Vertical");
 
-
+		// --- Limit car speed ---
+		if(rigidbody.velocity.magnitude > maxSpeed)
+        {
+			torque = 0;
+        }
 
 		float handBrake = Input.GetKey(KeyCode.X) ? brakeTorque : 0;
 

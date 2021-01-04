@@ -9,6 +9,6 @@ PhysicMaterial:
   m_Name: Car
   dynamicFriction: 0
   staticFriction: 0
-  bounciness: 0
+  bounciness: 1
   frictionCombine: 1
-  bounceCombine: 1
+  bounceCombine: 0
