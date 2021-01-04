@@ -45,7 +45,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1389970387
 Transform:
   m_ObjectHideFlags: 0
@@ -1609,14 +1609,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3922733138180589459}
   serializedVersion: 2
-  m_Mass: 1200
-  m_Drag: 0.02
-  m_AngularDrag: 0.05
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &865184822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1649,9 +1649,11 @@ MonoBehaviour:
   brakeTorque: 30000
   criticalSpeed: 20
   maxSpeed: 30
+  acceleration: 5
   stepsBelow: 7
   stepsAbove: 2
   centerOfMass: {fileID: 343950545}
+  camera: {fileID: 2138620560}
 --- !u!114 &8607155943644011075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1734,7 +1736,7 @@ WheelCollider:
   m_Radius: 0.1
   m_SuspensionSpring:
     spring: 50000
-    damper: 6000
+    damper: 1000
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
@@ -1796,7 +1798,7 @@ WheelCollider:
   m_Radius: 0.1
   m_SuspensionSpring:
     spring: 50000
-    damper: 6000
+    damper: 1000
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
@@ -1858,7 +1860,7 @@ WheelCollider:
   m_Radius: 0.1
   m_SuspensionSpring:
     spring: 50000
-    damper: 6000
+    damper: 1000
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
@@ -1920,7 +1922,7 @@ WheelCollider:
   m_Radius: 0.1
   m_SuspensionSpring:
     spring: 50000
-    damper: 6000
+    damper: 1000
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0

@@ -44,6 +44,7 @@ namespace BottomGear
 		private Rigidbody rb;
 		private Wheel[] m_Wheels;
 		public Transform centerOfMass;
+		public Camera camera;
 
 		struct Wheel
 		{
@@ -61,6 +62,15 @@ namespace BottomGear
 		// Find all the WheelColliders down in the hierarchy.
 		void Start()
 		{
+			// --- Deactivate camera if this is not the local player ---
+			if (camera != null)
+			{
+				if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
+					camera.enabled = false;
+			}
+			else
+				Debug.LogError("There is no valid camera in WheelDrive");
+
 			m_Wheels = new Wheel[wheelCount];
 			WheelCollider[] cWheels = GetComponentsInChildren<WheelCollider>();
 
