@@ -157,19 +157,37 @@ public class WheelDrive : MonoBehaviour
 
 				// Assume that the only child of the wheelcollider is the wheel shape.
 				Transform shapeTransform = m_Wheels[i].mesh.transform;
+				Debug.Log(-wheel.rpm / 60 * 360 * Time.deltaTime);
 
-                if (m_Wheels[i].mesh.name == "Wheel1Mesh" 
+				float rotation = wheel.rpm / 60 * 360 * Time.deltaTime;
+
+
+
+				//Mathf.Clamp(rotation, 0.1f, rotation);
+
+				if (m_Wheels[i].mesh.name == "Wheel1Mesh" 
 					|| m_Wheels[i].mesh.name == "Wheel2Mesh")
                 {
-                    shapeTransform.rotation = q * Quaternion.Euler(0, 180, 0);
-                    //shapeTransform.position = p;
-                }
-                else
+					//shapeTransform.rotation = q*Quaternion.Euler(wheel.rpm / 60 * 360 * Time.deltaTime, 0, 0);
+
+
+					shapeTransform.Rotate(-rotation, 0, 0);
+					shapeTransform.rotation = Quaternion.Euler(shapeTransform.rotation.eulerAngles.x,
+						q.eulerAngles.y + 180, q.eulerAngles.z);
+
+					//shapeTransform.rotation = q * Quaternion.Euler(0, 180, 0);
+					//shapeTransform.position = p;
+				}
+				else
                 {
-                    //shapeTransform.position = p;
-                    shapeTransform.rotation = q;
-                }
-            }
+					shapeTransform.Rotate(rotation, 0, 0);
+					shapeTransform.rotation = Quaternion.Euler(shapeTransform.rotation.eulerAngles.x,
+						q.eulerAngles.y, q.eulerAngles.z);
+					//shapeTransform.rotation = q*Quaternion.Euler(wheel.rpm / 60 * 360 * Time.deltaTime, 0, 0);
+					//shapeTransform.position = p;
+					//shapeTransform.rotation = q;
+				}
+			}
 		}
 	}
 }
