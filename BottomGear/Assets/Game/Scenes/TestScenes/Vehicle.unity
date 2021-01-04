@@ -386,7 +386,7 @@ Transform:
   m_GameObject: {fileID: 838703698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.61152, y: 0, z: 20.054111}
-  m_LocalScale: {x: 21.212807, y: 21.212807, z: 21.212807}
+  m_LocalScale: {x: 59.46586, y: 59.46586, z: 59.46586}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -521,6 +521,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 865184823, guid: 75980be8169e8844595d320b13a7e456, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865184823, guid: 75980be8169e8844595d320b13a7e456, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865184823, guid: 75980be8169e8844595d320b13a7e456, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1389970386, guid: 75980be8169e8844595d320b13a7e456, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -528,6 +540,14 @@ PrefabInstance:
     - target: {fileID: 1817820544, guid: 75980be8169e8844595d320b13a7e456, type: 3}
       propertyPath: test
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817820544, guid: 75980be8169e8844595d320b13a7e456, type: 3}
+      propertyPath: maxTorque
+      value: 2500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1817820544, guid: 75980be8169e8844595d320b13a7e456, type: 3}
+      propertyPath: criticalSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1864884027688733411, guid: 75980be8169e8844595d320b13a7e456, type: 3}
       propertyPath: m_Name
