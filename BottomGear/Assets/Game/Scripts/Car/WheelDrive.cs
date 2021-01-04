@@ -33,6 +33,8 @@ namespace BottomGear
 		public float criticalSpeed = 5f;
 		[Tooltip("The vehicle's limit speed.")]
 		public float maxSpeed = 30;
+		[Tooltip("The vehicle's acceleration multiplier.")]
+		public float acceleration = 5.0f;
 		[Tooltip("Simulation sub-steps when the speed is above critical.")]
 		public int stepsBelow = 5;
 		[Tooltip("Simulation sub-steps when the speed is below critical.")]
@@ -108,6 +110,8 @@ namespace BottomGear
 			{
 				torque = 0;
 			}
+			else
+				rb.AddForce(transform.forward * acceleration * Input.GetAxis("Vertical"), ForceMode.Acceleration);
 
 			float handBrake = Input.GetKey(KeyCode.X) ? brakeTorque : 0;
 
@@ -131,6 +135,7 @@ namespace BottomGear
 						&& driveType != DriveType.FrontWheelDrive)
 				{
 					wheel.motorTorque = torque;
+					
 				}
 
 				if (m_Wheels[i].mesh.name == "Wheel1Mesh"
