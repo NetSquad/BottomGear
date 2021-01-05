@@ -50,7 +50,6 @@ namespace BottomGear
 		{
 			public WheelCollider collider;
 			public GameObject mesh;
-			public float rotation;
 		}
 
 		public void Awake()
@@ -174,23 +173,15 @@ namespace BottomGear
 					// --- Rotate wheel according to collider's rotation ---
 					Transform shapeTransform = m_Wheels[i].mesh.transform;
 
-					m_Wheels[i].rotation += wheel.rpm / 60f * 360f * Time.deltaTime;
-
 					if (m_Wheels[i].mesh.name == "Wheel1Mesh"
                         || m_Wheels[i].mesh.name == "Wheel2Mesh")
                     {
 						                        
-						shapeTransform.rotation = Quaternion.Euler(-q.eulerAngles.x,
-                            q.eulerAngles.y + 180, q.eulerAngles.z);
-
-						shapeTransform.Rotate(-m_Wheels[i].rotation, 0, 0);
+						shapeTransform.rotation = q*Quaternion.Euler(0,180, 0);
 					}
 					else
                     {
-                        shapeTransform.rotation = Quaternion.Euler(q.eulerAngles.x,
-                            q.eulerAngles.y, q.eulerAngles.z);
-
-						shapeTransform.Rotate(m_Wheels[i].rotation, 0, 0);
+						shapeTransform.rotation = q;
 					}
 				}
 			}
