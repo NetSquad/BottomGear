@@ -1,6 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}" SchemaVersion="97">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="SFX" ID="{131F320D-2856-4FE4-B5B3-7C9C8AF3715F}" ShortID="290678668">
+					<ChildrenList>
+						<BlendContainer Name="Car_Accel" ID="{943A4EE3-1683-4E63-8CCA-36C3772DC002}" ShortID="988799005">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-36</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Car_engine_1000rpm" ID="{7DC5DA6E-7160-4C45-8B62-CC9BDED97C75}" ShortID="394070905">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Car_engine_1000rpm" ID="{08F42D27-26F8-4AE9-9A23-49E59E854E67}">
+											<Language>SFX</Language>
+											<AudioFile>Car_engine_1000rpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="624805314"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Car_engine_1000rpm" ID="{08F42D27-26F8-4AE9-9A23-49E59E854E67}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Car_engine_2000rpm" ID="{2F399FEE-1C86-44B1-B78F-7B43A19B17E5}" ShortID="1028901079">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Car_engine_2000rpm" ID="{2E6C2979-2326-4146-A6F9-0F8205BCD739}">
+											<Language>SFX</Language>
+											<AudioFile>Car_engine_2000rpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="9713637"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Car_engine_2000rpm" ID="{2E6C2979-2326-4146-A6F9-0F8205BCD739}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Car_engine_3000rpm" ID="{D275E46D-E083-4D70-8589-CC985AA2329B}" ShortID="277334064">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Car_engine_3000rpm" ID="{E6E128B3-6F71-41FE-863B-B96C04C46A57}">
+											<Language>SFX</Language>
+											<AudioFile>Car_engine_3000rpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="229397416"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Car_engine_3000rpm" ID="{E6E128B3-6F71-41FE-863B-B96C04C46A57}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Car_engine_4000rpm" ID="{5976EA37-22A4-4715-912F-8422806FA820}" ShortID="751470691">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Car_engine_4000rpm" ID="{71BC6911-AC8F-4C8E-9DEE-507253AAD480}">
+											<Language>SFX</Language>
+											<AudioFile>Car_engine_4000rpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="112910961"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Car_engine_4000rpm" ID="{71BC6911-AC8F-4C8E-9DEE-507253AAD480}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Car_engine_5000rpm" ID="{B306EE3B-EA26-4329-8886-AD0ADA2485B2}" ShortID="19965379">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Car_engine_5000rpm" ID="{A35A00E4-741D-4A80-9730-F6956B83610F}">
+											<Language>SFX</Language>
+											<AudioFile>Car_engine_5000rpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="153073756"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Car_engine_5000rpm" ID="{A35A00E4-741D-4A80-9730-F6956B83610F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Car_engine_6000rpm" ID="{89D37BB9-8831-43D0-BD9C-C9C7849F9C0C}" ShortID="496475824">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Car_engine_6000rpm" ID="{2EAF2E1F-A92C-4B04-AB6C-C0AED4BE46E8}">
+											<Language>SFX</Language>
+											<AudioFile>Car_engine_6000rpm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="424482009"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Car_engine_6000rpm" ID="{2EAF2E1F-A92C-4B04-AB6C-C0AED4BE46E8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<BlendTrackList>
+								<BlendTrack Name="Acceleration" ID="{95748482-D42B-442D-8AD4-3CB1C2FD5DD0}" ShortID="406980006">
+									<PropertyList>
+										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<RTPCList>
+												<RTPC Name="" ID="{5CB924FF-DBD6-46A9-91B5-B1DD3FD1E2BE}" ShortID="737581149">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Speed" ID="{ED437761-166D-4FC6-8E60-FF018266212E}" WorkUnitID="{83E701E2-A621-4E1B-9506-6C5D9F7F48B7}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{603966F3-A797-481E-B487-544CC15F802C}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="65537"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>500</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<RTPCList>
+												<RTPC Name="" ID="{A17C2EC7-AF0B-4B25-BAD6-36FB0C10BFDE}" ShortID="880455685">
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="Speed" ID="{ED437761-166D-4FC6-8E60-FF018266212E}" WorkUnitID="{83E701E2-A621-4E1B-9506-6C5D9F7F48B7}"/>
+														</Reference>
+													</ReferenceList>
+													<Curve Name="" ID="{BBCE127C-5F7A-42C5-991B-C9D5FDDA4B4A}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-6</YPos>
+																<Flags>5</Flags>
+																<SegmentShape>Log3</SegmentShape>
+															</Point>
+															<Point>
+																<XPos>29.82206</XPos>
+																<YPos>-0.81236</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</RTPC>
+											</RTPCList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="LayerCrossFadeControlInput">
+											<ObjectRef Name="Speed" ID="{ED437761-166D-4FC6-8E60-FF018266212E}" WorkUnitID="{83E701E2-A621-4E1B-9506-6C5D9F7F48B7}"/>
+										</Reference>
+									</ReferenceList>
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="Car_engine_1000rpm" ID="{7DC5DA6E-7160-4C45-8B62-CC9BDED97C75}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>74.9110320284697</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="Car_engine_3000rpm" ID="{D275E46D-E083-4D70-8589-CC985AA2329B}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>15.0533807829182</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>100</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
