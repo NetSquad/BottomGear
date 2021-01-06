@@ -134,7 +134,7 @@ namespace BottomGear
 			{
 				torque = 0;
 			}
-			else
+			else if(IsGrounded())
 				rb.AddForce(transform.forward * acceleration * Input.GetAxis("Vertical"), ForceMode.Acceleration);
 
 			// --- Car jump ---
