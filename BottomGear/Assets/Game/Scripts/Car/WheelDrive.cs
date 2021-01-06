@@ -16,6 +16,8 @@ namespace BottomGear
 
 	public class WheelDrive : MonoBehaviour
 	{
+		// --------------------- Variables -------------------------
+
 		[Header("Wheels")]
 		[Tooltip("The vehicle's wheel count")]
 		public int wheelCount = 4;
@@ -31,7 +33,7 @@ namespace BottomGear
 		[Header("Controller")]
 		[Tooltip("The vehicle's speed when the physics engine can use different amount of sub-steps (in m/s).")]
 		public float criticalSpeed = 5f;
-		[Tooltip("The vehicle's limit speed.")]
+		[Tooltip("The vehicle's limit speed  (in m/s).")]
 		public float maxSpeed = 30;
 		[Tooltip("The vehicle's acceleration multiplier.")]
 		public float acceleration = 5.0f;
@@ -39,7 +41,12 @@ namespace BottomGear
 		public int stepsBelow = 5;
 		[Tooltip("Simulation sub-steps when the speed is below critical.")]
 		public int stepsAbove = 1;
+		[Tooltip("The vehicle's jump force multiplier.")]
+		public int jumpForce = 10000;
+		[Tooltip("The vehicle's jump timer interval.")]
+		public float jumpInterval = 2.0f;
 
+		// --- Main components ---
 		private PhotonView photonView;
 		private Rigidbody rb;
 		private Wheel[] m_Wheels;
@@ -51,6 +58,11 @@ namespace BottomGear
 			public WheelCollider collider;
 			public GameObject mesh;
 		}
+
+		// --- Private gameplay variables ---
+		private float jumpTimer = 0.0f;
+
+		// --------------------- Main Methods -------------------------
 
 		public void Awake()
 		{
@@ -99,6 +111,9 @@ namespace BottomGear
 			{
 				Debug.LogError("Rigidbody is null or center of mass object does not exist");
 			}
+
+			// --- Initialize jump timer to given interval ---
+			jumpTimer = jumpInterval;
 		}
 
 		void Update()
@@ -121,6 +136,16 @@ namespace BottomGear
 			}
 			else
 				rb.AddForce(transform.forward * acceleration * Input.GetAxis("Vertical"), ForceMode.Acceleration);
+
+			// --- Car jump ---
+			if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
+			{
+				rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+				jumpTimer = 0.0f;
+			}
+
+			// --- Car jump timer ---
+			jumpTimer += Time.deltaTime;
 
 			float handBrake = Input.GetKey(KeyCode.X) ? brakeTorque : 0;
 
@@ -186,5 +211,22 @@ namespace BottomGear
 				}
 			}
 		}
-    }
+
+		// ----------------------------------------------
+
+		// --------------------- Utilities -------------------------
+
+		private bool IsGrounded()
+		{
+			for (int i = 0; i < m_Wheels.Length; ++i)
+			{
+				if (!m_Wheels[i].collider.isGrounded)
+					return false;
+			}
+
+			return true;
+		}
+
+		// ----------------------------------------------
+	}
 }

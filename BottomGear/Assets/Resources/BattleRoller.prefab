@@ -1652,6 +1652,8 @@ MonoBehaviour:
   acceleration: 5
   stepsBelow: 7
   stepsAbove: 2
+  jumpForce: 15000
+  jumpInterval: 3
   centerOfMass: {fileID: 343950545}
   camera: {fileID: 2138620560}
 --- !u!114 &8607155943644011075
