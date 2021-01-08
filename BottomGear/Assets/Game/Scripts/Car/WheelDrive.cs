@@ -205,9 +205,15 @@ namespace BottomGear
 					Transform shapeTransform = m_Wheels[i].mesh.transform;
 
 					if (m_Wheels[i].mesh.name == "Wheel1Mesh"
+					 || m_Wheels[i].mesh.name == "Wheel3Mesh")
+						shapeTransform.position = p + transform.right * m_Wheels[i].collider.radius / 2.0f;
+					else
+						shapeTransform.position = p - transform.right * m_Wheels[i].collider.radius / 2.0f;
+
+
+					if (m_Wheels[i].mesh.name == "Wheel1Mesh"
                         || m_Wheels[i].mesh.name == "Wheel2Mesh")
-                    {
-						                        
+                    {						                        
 						shapeTransform.rotation = q*Quaternion.Euler(0,180, 0);
 					}
 					else
