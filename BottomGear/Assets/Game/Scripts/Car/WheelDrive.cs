@@ -144,7 +144,7 @@ namespace BottomGear
                 jumpTimer = 0.0f;
             }
 
-            //// --- Car flip ---
+            // --- Car flip ---
             if (!IsGrounded() && Math.Abs(transform.eulerAngles.z) > 150 && Math.Abs(transform.eulerAngles.z) < 190)
             {
 				rb.MoveRotation(rb.rotation * Quaternion.Euler(0, 0, 180));	
