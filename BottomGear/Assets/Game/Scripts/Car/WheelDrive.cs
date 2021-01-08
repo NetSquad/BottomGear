@@ -144,14 +144,14 @@ namespace BottomGear
                 jumpTimer = 0.0f;
             }
 
-            // --- Car flip ---
-   //         if (Input.GetButtonDown("Jump"))
-			//{
-			//	rb.MoveRotation(rb.rotation*Quaternion.Euler(0, 0, 180));
-			//}
+            //// --- Car flip ---
+            if (!IsGrounded() && Math.Abs(transform.eulerAngles.z) > 150 && Math.Abs(transform.eulerAngles.z) < 190)
+            {
+				rb.MoveRotation(rb.rotation * Quaternion.Euler(0, 0, 180));	
+            }
 
-			// --- Car jump timer ---
-			jumpTimer += Time.deltaTime;
+            // --- Car jump timer ---
+            jumpTimer += Time.deltaTime;
 
 			float handBrake = Input.GetKey(KeyCode.X) ? brakeTorque : 0;
 
