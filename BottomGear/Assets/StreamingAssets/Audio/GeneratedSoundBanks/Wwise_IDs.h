@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID STOP_ALL = 452547817U;
         static const AkUniqueID STOP_ENGINE = 37214798U;
+        static const AkUniqueID TONIGHT_BOTTOM_GEAR = 1968261684U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
