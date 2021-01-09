@@ -230,7 +230,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e4ed0aef22d7c7478ab257ea4c288390
     GuidInternal: 
-    m_lastTime: -8585914002089722489
+    m_lastTime: -8585913857659597636
     List:
     - name: Gameplay
       guid: 572100031c49bb4c93c8377933e21139
@@ -258,7 +258,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: adfba9e144f1c741a345f6c52c3cc02b
     GuidInternal: 
-    m_lastTime: -8585914002094836359
+    m_lastTime: -8585913857810276390
     List:
     - name: Gameplay
       guid: 335e16bf552f1b4aa146ecb0c6f3f409
@@ -269,6 +269,18 @@ MonoBehaviour:
       - ElementName: Gameplay
         ObjectType: 4
       Path: Default Work Unit\Gameplay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Music
+      guid: dcd94329964e7144a098546f04e3c6f8
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      Path: Default Work Unit\Music
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -284,8 +296,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Play_Button_Hover
       maxAttenuation: 0
-      maxDuration: 0.089302
-      minDuration: 0.089302
+      maxDuration: 89302
+      minDuration: 89302
     - name: Play_Button_Selected
       guid: b4d3297ef1031e4ea610e422f8f6eaa0
       id: 3882482286
@@ -298,8 +310,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Play_Button_Selected
       maxAttenuation: 0
-      maxDuration: 0.561088
-      minDuration: 0.561088
+      maxDuration: 561088
+      minDuration: 561088
     - name: Play_Engine
       guid: 978977901d05d04f86c4be69e24d10f9
       id: 639345804
@@ -311,6 +323,20 @@ MonoBehaviour:
       - ElementName: Play_Engine
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Engine
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Music
+      guid: 4ac2dad089041643b9bb39011665043e
+      id: 2932040671
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: Play_Music
+        ObjectType: 3
+      Path: Default Work Unit\Music\Play_Music
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -515,6 +541,10 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585915131629981190
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /Wwise_Bottom_Gear_Project
+  - /Wwise_Bottom_Gear_Project/Events
+  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit
+  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit/Music
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

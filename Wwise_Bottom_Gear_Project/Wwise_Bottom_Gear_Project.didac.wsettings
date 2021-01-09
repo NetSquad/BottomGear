@@ -8,6 +8,7 @@
 				<Property Name="Event Action List\{7E29D3B4-03F1-4E1E-A610-E422F8F6EAA0}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{90778997-051D-4FD0-86C4-BE69E24D10F9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{A9439591-B167-45BB-86F6-00CD00388E93}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{D0DAC24A-0489-4316-B9BB-39011665043E}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
@@ -41,6 +42,7 @@
 				<Property Name="MonitoringManager\GameObjectFilter\x64_GameObjectFilters" Type="string" Value=""/>
 				<Property Name="Music Transition List\{2EC9FE9F-1043-4121-8977-21F1E301C26C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{333309E0-B62E-4C0B-971D-037182125F24}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{BA484297-B9F6-4CD0-9D45-CE1A7B747176}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\FirstVisible_10_1" Type="string" Value="{4C96B38B-3DB4-40C7-91C9-665510E38993}"/>
 				<Property Name="ProjectExplorer\FirstVisible_11_1" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
 				<Property Name="ProjectExplorer\FirstVisible_1_1" Type="string" Value="{2388DAEA-9775-46C6-A2ED-C5222A397756}"/>

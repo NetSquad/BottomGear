@@ -66,6 +66,21 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Music" ID="{2943D9DC-4E96-4471-A098-546F04E3C6F8}" ShortID="198044488">
+					<ChildrenList>
+						<Event Name="Play_Music" ID="{D0DAC24A-0489-4316-B9BB-39011665043E}">
+							<ChildrenList>
+								<Action Name="" ID="{C0952DCF-270B-4C8B-B8BE-A51E06675B08}" ShortID="263151686">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bottom_Gear_Main_Menu" ID="{BA484297-B9F6-4CD0-9D45-CE1A7B747176}" WorkUnitID="{BFA6517F-F718-4729-8ED1-DDEBCCE3D310}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
