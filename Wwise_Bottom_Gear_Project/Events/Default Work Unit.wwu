@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" SchemaVersion="97">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Engine" ID="{90778997-051D-4FD0-86C4-BE69E24D10F9}">
+					<ChildrenList>
+						<Action Name="" ID="{EBA55333-6F09-4558-B581-B7EAE2DDE314}" ShortID="461608103">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Car_Accel" ID="{943A4EE3-1683-4E63-8CCA-36C3772DC002}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Engine" ID="{0DF13846-463E-4F67-B391-89AE8A8D0180}">
+					<ChildrenList>
+						<Action Name="" ID="{13B10EA8-989C-4A7B-B5CD-9870922BC055}" ShortID="139743649">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Car_Accel" ID="{943A4EE3-1683-4E63-8CCA-36C3772DC002}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

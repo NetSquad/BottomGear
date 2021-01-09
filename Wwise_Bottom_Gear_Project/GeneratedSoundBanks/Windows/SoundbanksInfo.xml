@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\</ProjectRoot>
+		<SourceFilesRoot>D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="89505537" Language="SFX" Hash="3540435985">
+			<ObjectPath>\SoundBanks\Default Work Unit\Gameplay</ObjectPath>
+			<ShortName>Gameplay</ShortName>
+			<Path>Gameplay.bnk</Path>
+			<IncludedEvents>
+				<Event Id="639345804" Name="Play_Engine" ObjectPath="\Events\Default Work Unit\Play_Engine" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="9713637" Language="SFX">
+							<ShortName>Car_engine_2000rpm.wav</ShortName>
+							<Path>SFX\Car_engine_2000rpm_D79FB2B7.wem</Path>
+						</File>
+						<File Id="112910961" Language="SFX">
+							<ShortName>Car_engine_4000rpm.wav</ShortName>
+							<Path>SFX\Car_engine_4000rpm_10C4C929.wem</Path>
+						</File>
+						<File Id="153073756" Language="SFX">
+							<ShortName>Car_engine_5000rpm.wav</ShortName>
+							<Path>SFX\Car_engine_5000rpm_10C4C929.wem</Path>
+						</File>
+						<File Id="229397416" Language="SFX">
+							<ShortName>Car_engine_3000rpm.wav</ShortName>
+							<Path>SFX\Car_engine_3000rpm_D79FB2B7.wem</Path>
+						</File>
+						<File Id="424482009" Language="SFX">
+							<ShortName>Car_engine_6000rpm.wav</ShortName>
+							<Path>SFX\Car_engine_6000rpm_10C4C929.wem</Path>
+						</File>
+						<File Id="624805314" Language="SFX">
+							<ShortName>Car_engine_1000rpm.wav</ShortName>
+							<Path>SFX\Car_engine_1000rpm_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="37214798" Name="Stop_Engine" ObjectPath="\Events\Default Work Unit\Stop_Engine" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="640949982" Name="Speed" ObjectPath="\Game Parameters\Default Work Unit\Speed"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="2129306072">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
