@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_BUTTON_HOVER = 4021863785U;
+        static const AkUniqueID PLAY_BUTTON_SELECTED = 3882482286U;
         static const AkUniqueID PLAY_ENGINE = 639345804U;
         static const AkUniqueID STOP_ENGINE = 37214798U;
     } // namespace EVENTS
@@ -38,6 +40,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID GAMEPLAY = 89505537U;
+        static const AkUniqueID UI_AND_MUSIC = 3639918041U;
     } // namespace BANKS
 
     namespace BUSSES

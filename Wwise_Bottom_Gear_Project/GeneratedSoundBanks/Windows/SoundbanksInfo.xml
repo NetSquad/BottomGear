@@ -16,7 +16,7 @@
 			<ShortName>Gameplay</ShortName>
 			<Path>Gameplay.bnk</Path>
 			<IncludedEvents>
-				<Event Id="639345804" Name="Play_Engine" ObjectPath="\Events\Default Work Unit\Play_Engine" DurationType="Infinite">
+				<Event Id="639345804" Name="Play_Engine" ObjectPath="\Events\Default Work Unit\Gameplay\Play_Engine" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="9713637" Language="SFX">
 							<ShortName>Car_engine_2000rpm.wav</ShortName>
@@ -44,7 +44,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="37214798" Name="Stop_Engine" ObjectPath="\Events\Default Work Unit\Stop_Engine" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="37214798" Name="Stop_Engine" ObjectPath="\Events\Default Work Unit\Gameplay\Stop_Engine" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="640949982" Name="Speed" ObjectPath="\Game Parameters\Default Work Unit\Speed"/>
@@ -54,6 +54,29 @@
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3639918041" Language="SFX" Hash="3752952725">
+			<ObjectPath>\SoundBanks\Default Work Unit\UI_and_Music</ObjectPath>
+			<ShortName>UI_and_Music</ShortName>
+			<Path>UI_and_Music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4021863785" Name="Play_Button_Hover" ObjectPath="\Events\Default Work Unit\UI\Play_Button_Hover" DurationType="OneShot" DurationMin="0.089302" DurationMax="0.089302">
+					<IncludedMemoryFiles>
+						<File Id="988789766" Language="SFX">
+							<ShortName>UI_Button_Hover.wav</ShortName>
+							<Path>SFX\UI_Button_Hover_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3882482286" Name="Play_Button_Selected" ObjectPath="\Events\Default Work Unit\UI\Play_Button_Selected" DurationType="OneShot" DurationMin="0.561088" DurationMax="0.561088">
+					<IncludedMemoryFiles>
+						<File Id="1044159430" Language="SFX">
+							<ShortName>UI_Button_Selected.wav</ShortName>
+							<Path>SFX\UI_Button_Selected_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

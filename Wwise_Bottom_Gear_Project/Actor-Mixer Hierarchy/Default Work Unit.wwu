@@ -4,6 +4,10 @@
 		<WorkUnit Name="Default Work Unit" ID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}" PersistMode="Standalone">
 			<ChildrenList>
 				<Folder Name="SFX" ID="{131F320D-2856-4FE4-B5B3-7C9C8AF3715F}" ShortID="290678668">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<BlendContainer Name="Car_Accel" ID="{943A4EE3-1683-4E63-8CCA-36C3772DC002}" ShortID="988799005">
 							<PropertyList>
@@ -259,6 +263,72 @@
 								</BlendTrack>
 							</BlendTrackList>
 						</BlendContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{D16BC694-CAA6-4EED-A478-0E9AF49583E5}" ShortID="388247416">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Sound Name="Button_Hover" ID="{42752402-83AB-4184-B366-8418BFE2D803}" ShortID="539491437">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-24</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_Button_Hover" ID="{4A7E7530-C1D8-450D-8C73-1CA8293D7854}">
+									<Language>SFX</Language>
+									<AudioFile>UI_Button_Hover.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="988789766"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_Button_Hover" ID="{4A7E7530-C1D8-450D-8C73-1CA8293D7854}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Button_Selected" ID="{92952E65-8191-4EFD-8DA3-A721ACF415C0}" ShortID="364915539">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-20</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="UI_Button_Selected" ID="{21C17FE6-28CE-4D4D-A694-E80CCA4B6D4C}">
+									<Language>SFX</Language>
+									<AudioFile>UI_Button_Selected.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1044159430"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="UI_Button_Selected" ID="{21C17FE6-28CE-4D4D-A694-E80CCA4B6D4C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

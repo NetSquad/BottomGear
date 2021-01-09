@@ -3,31 +3,69 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_Engine" ID="{90778997-051D-4FD0-86C4-BE69E24D10F9}">
+				<Folder Name="Gameplay" ID="{BF165E33-2F55-4A1B-A146-ECB0C6F3F409}" ShortID="338199130">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{EBA55333-6F09-4558-B581-B7EAE2DDE314}" ShortID="461608103">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Car_Accel" ID="{943A4EE3-1683-4E63-8CCA-36C3772DC002}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Stop_Engine" ID="{0DF13846-463E-4F67-B391-89AE8A8D0180}">
+							<ChildrenList>
+								<Action Name="" ID="{13B10EA8-989C-4A7B-B5CD-9870922BC055}" ShortID="139743649">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Car_Accel" ID="{943A4EE3-1683-4E63-8CCA-36C3772DC002}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Engine" ID="{90778997-051D-4FD0-86C4-BE69E24D10F9}">
+							<ChildrenList>
+								<Action Name="" ID="{EBA55333-6F09-4558-B581-B7EAE2DDE314}" ShortID="461608103">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Car_Accel" ID="{943A4EE3-1683-4E63-8CCA-36C3772DC002}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Engine" ID="{0DF13846-463E-4F67-B391-89AE8A8D0180}">
+				</Folder>
+				<Folder Name="UI" ID="{8A4961F6-7B57-49F4-8DA0-D54727EB47F3}" ShortID="611502248">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{13B10EA8-989C-4A7B-B5CD-9870922BC055}" ShortID="139743649">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Car_Accel" ID="{943A4EE3-1683-4E63-8CCA-36C3772DC002}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="Play_Button_Hover" ID="{A9439591-B167-45BB-86F6-00CD00388E93}">
+							<ChildrenList>
+								<Action Name="" ID="{665126BE-2BB6-4C92-992E-D5AC986923AD}" ShortID="273502798">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Button_Hover" ID="{42752402-83AB-4184-B366-8418BFE2D803}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Button_Selected" ID="{7E29D3B4-03F1-4E1E-A610-E422F8F6EAA0}">
+							<ChildrenList>
+								<Action Name="" ID="{16E48CB0-B199-4094-9170-90C049449331}" ShortID="342135699">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Button_Selected" ID="{92952E65-8191-4EFD-8DA3-A721ACF415C0}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

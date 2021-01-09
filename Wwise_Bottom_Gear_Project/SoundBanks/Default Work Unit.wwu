@@ -11,6 +11,14 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="UI_and_Music" ID="{64A76E75-6D97-4239-92FD-CB653E8AF79D}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Button_Hover" ID="{A9439591-B167-45BB-86F6-00CD00388E93}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Button_Selected" ID="{7E29D3B4-03F1-4E1E-A610-E422F8F6EAA0}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
