@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
-	37214798	Stop_Engine			\Default Work Unit\Stop_Engine	
-	639345804	Play_Engine			\Default Work Unit\Play_Engine	
+	37214798	Stop_Engine			\Default Work Unit\Gameplay\Stop_Engine	
+	452547817	Stop_All			\Default Work Unit\Stop_All	
+	639345804	Play_Engine			\Default Work Unit\Gameplay\Play_Engine	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	640949982	Speed			\Default Work Unit\Speed	

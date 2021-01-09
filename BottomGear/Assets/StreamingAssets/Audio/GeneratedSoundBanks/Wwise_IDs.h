@@ -16,6 +16,8 @@ namespace AK
         static const AkUniqueID PLAY_BUTTON_HOVER = 4021863785U;
         static const AkUniqueID PLAY_BUTTON_SELECTED = 3882482286U;
         static const AkUniqueID PLAY_ENGINE = 639345804U;
+        static const AkUniqueID PLAY_MUSIC = 2932040671U;
+        static const AkUniqueID STOP_ALL = 452547817U;
         static const AkUniqueID STOP_ENGINE = 37214798U;
     } // namespace EVENTS
 

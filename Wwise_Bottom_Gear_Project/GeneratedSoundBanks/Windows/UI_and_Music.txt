@@ -1,8 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
+	452547817	Stop_All			\Default Work Unit\Stop_All	
+	2932040671	Play_Music			\Default Work Unit\Music\Play_Music	
 	3882482286	Play_Button_Selected			\Default Work Unit\UI\Play_Button_Selected	
 	4021863785	Play_Button_Hover			\Default Work Unit\UI\Play_Button_Hover	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	465847454	Bottom_Gear_Loop	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Bottom_Gear_Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Bottom_Gear_Main_Menu\Bottom_Gear_Loop\Bottom_Gear_Loop		1673160
+	485712089	Bottom_Gear_Loop_End	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Bottom_Gear_Loop_End_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Bottom_Gear_Main_Menu\Bottom_Gear_Loop_End\Bottom_Gear_Loop_End		4182504
 	988789766	Button_Hover	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\UI_Button_Hover_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Button_Hover		17208
 	1044159430	Button_Selected	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\UI_Button_Selected_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Button_Selected		49552
+	1057292868	Bottom_Gear_Intro	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Bottom_Gear_Intro_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Bottom_Gear_Main_Menu\Bottom_Gear_Intro\Bottom_Gear_Intro		7937000
 
