@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3882482286	Play_Button_Selected			\Default Work Unit\UI\Play_Button_Selected	
+	4021863785	Play_Button_Hover			\Default Work Unit\UI\Play_Button_Hover	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	988789766	Button_Hover	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\UI_Button_Hover_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Button_Hover		17208
+	1044159430	Button_Selected	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\UI_Button_Selected_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Button_Selected		49552
+
