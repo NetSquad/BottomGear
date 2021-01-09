@@ -230,7 +230,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e4ed0aef22d7c7478ab257ea4c288390
     GuidInternal: 
-    m_lastTime: -8585914045642079449
+    m_lastTime: -8585914028537590155
     List:
     - name: Gameplay
       guid: 572100031c49bb4c93c8377933e21139
@@ -241,6 +241,15 @@ MonoBehaviour:
       - ElementName: Gameplay
         ObjectType: 7
       Path: Default Work Unit\Gameplay
+    - name: UI_and_Music
+      guid: 756ea764976d394292fdcb653e8af79d
+      id: 3639918041
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI_and_Music
+        ObjectType: 7
+      Path: Default Work Unit\UI_and_Music
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -249,17 +258,59 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: adfba9e144f1c741a345f6c52c3cc02b
     GuidInternal: 
-    m_lastTime: -8585914045780634235
+    m_lastTime: -8585914028755857171
     List:
+    - name: Gameplay
+      guid: 335e16bf552f1b4aa146ecb0c6f3f409
+      id: 89505537
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
+      Path: Default Work Unit\Gameplay
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Button_Hover
+      guid: 919543a967b1bb4586f600cd00388e93
+      id: 4021863785
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Play_Button_Hover
+        ObjectType: 3
+      Path: Default Work Unit\UI\Play_Button_Hover
+      maxAttenuation: 0
+      maxDuration: 89302
+      minDuration: 89302
+    - name: Play_Button_Selected
+      guid: b4d3297ef1031e4ea610e422f8f6eaa0
+      id: 3882482286
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Play_Button_Selected
+        ObjectType: 3
+      Path: Default Work Unit\UI\Play_Button_Selected
+      maxAttenuation: 0
+      maxDuration: 561088
+      minDuration: 561088
     - name: Play_Engine
       guid: 978977901d05d04f86c4be69e24d10f9
       id: 639345804
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
       - ElementName: Play_Engine
         ObjectType: 3
-      Path: Default Work Unit\Play_Engine
+      Path: Default Work Unit\Gameplay\Play_Engine
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -269,12 +320,26 @@ MonoBehaviour:
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
       - ElementName: Stop_Engine
         ObjectType: 3
-      Path: Default Work Unit\Stop_Engine
+      Path: Default Work Unit\Gameplay\Stop_Engine
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: UI
+      guid: f661498a577bf4498da0d54727eb47f3
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      Path: Default Work Unit\UI
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -450,6 +515,11 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585918068181498732
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /Wwise_Bottom_Gear_Project
+  - /Wwise_Bottom_Gear_Project/Events
+  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit
+  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit/Gameplay
+  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit/UI
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
