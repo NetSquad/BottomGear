@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f8282a6158a2954ba7f445a30d52f873
     GuidInternal: 
-    m_lastTime: -8585918068182206825
+    m_lastTime: -8585915131629971250
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
     PathAndIcons:
@@ -29,7 +29,7 @@ MonoBehaviour:
     ParentPath: Factory Reflect Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8585959530790289397
+    m_lastTime: -8585915131629971250
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -202,7 +202,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0dd8e189a3413c418ac6400d83c2b3fd
     GuidInternal: 
-    m_lastTime: -8585918068099569846
+    m_lastTime: -8585915131636443927
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -230,7 +230,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e4ed0aef22d7c7478ab257ea4c288390
     GuidInternal: 
-    m_lastTime: -8585914028537590155
+    m_lastTime: -8585914002089722489
     List:
     - name: Gameplay
       guid: 572100031c49bb4c93c8377933e21139
@@ -258,7 +258,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: adfba9e144f1c741a345f6c52c3cc02b
     GuidInternal: 
-    m_lastTime: -8585914028755857171
+    m_lastTime: -8585914002094836359
     List:
     - name: Gameplay
       guid: 335e16bf552f1b4aa146ecb0c6f3f409
@@ -284,8 +284,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Play_Button_Hover
       maxAttenuation: 0
-      maxDuration: 89302
-      minDuration: 89302
+      maxDuration: 0.089302
+      minDuration: 0.089302
     - name: Play_Button_Selected
       guid: b4d3297ef1031e4ea610e422f8f6eaa0
       id: 3882482286
@@ -298,8 +298,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Play_Button_Selected
       maxAttenuation: 0
-      maxDuration: 561088
-      minDuration: 561088
+      maxDuration: 0.561088
+      minDuration: 0.561088
     - name: Play_Engine
       guid: 978977901d05d04f86c4be69e24d10f9
       id: 639345804
@@ -348,7 +348,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e201e78321a61b4e95066c5d9f7f48b7
     GuidInternal: 
-    m_lastTime: -8585917589421261054
+    m_lastTime: -8585915131636822894
     List:
     - name: Speed
       guid: 617743ed6d16c64f8e60ff018266212e
@@ -366,7 +366,7 @@ MonoBehaviour:
     ParentPath: Factory Motion
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8585959530795076620
+    m_lastTime: -8585915131636743049
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -393,7 +393,7 @@ MonoBehaviour:
     ParentPath: Factory SoundSeed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8585959530788534109
+    m_lastTime: -8585915131636473831
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -493,7 +493,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 43597006ca6f8346a8ca785d3ffbe3a8
     GuidInternal: 
-    m_lastTime: -8585918068180830518
+    m_lastTime: -8585915131631307618
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -503,7 +503,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d0727525ef6a0e4eae69db998250be64
     GuidInternal: 
-    m_lastTime: -8585918068181059891
+    m_lastTime: -8585915131631307618
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -513,13 +513,8 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0b16372f638b6441abff0a062a3ccafd
     GuidInternal: 
-    m_lastTime: -8585918068181498732
+    m_lastTime: -8585915131629981190
     List: []
-  ExpandedItems:
-  - /Wwise_Bottom_Gear_Project
-  - /Wwise_Bottom_Gear_Project/Events
-  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit
-  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit/Gameplay
-  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit/UI
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
