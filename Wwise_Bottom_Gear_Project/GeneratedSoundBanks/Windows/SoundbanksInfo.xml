@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="89505537" Language="SFX" Hash="3540435985">
+		<SoundBank Id="89505537" Language="SFX" Hash="1490761829">
 			<ObjectPath>\SoundBanks\Default Work Unit\Gameplay</ObjectPath>
 			<ShortName>Gameplay</ShortName>
 			<Path>Gameplay.bnk</Path>
@@ -44,6 +44,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\Default Work Unit\Stop_All" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="37214798" Name="Stop_Engine" ObjectPath="\Events\Default Work Unit\Gameplay\Stop_Engine" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<GameParameters>
@@ -55,7 +56,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3639918041" Language="SFX" Hash="2260085095">
+		<SoundBank Id="3639918041" Language="SFX" Hash="2291685282">
 			<ObjectPath>\SoundBanks\Default Work Unit\UI_and_Music</ObjectPath>
 			<ShortName>UI_and_Music</ShortName>
 			<Path>UI_and_Music.bnk</Path>
@@ -92,6 +93,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\Default Work Unit\Stop_All" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>

@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Gameplay" ID="{03002157-491C-4CBB-93C8-377933E21139}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Stop_All" ID="{51093E65-9447-4181-99A6-A1C3238088FF}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Engine" ID="{0DF13846-463E-4F67-B391-89AE8A8D0180}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Engine" ID="{90778997-051D-4FD0-86C4-BE69E24D10F9}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
@@ -13,6 +14,7 @@
 				</SoundBank>
 				<SoundBank Name="UI_and_Music" ID="{64A76E75-6D97-4239-92FD-CB653E8AF79D}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Stop_All" ID="{51093E65-9447-4181-99A6-A1C3238088FF}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Music" ID="{D0DAC24A-0489-4316-B9BB-39011665043E}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Button_Hover" ID="{A9439591-B167-45BB-86F6-00CD00388E93}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Button_Selected" ID="{7E29D3B4-03F1-4E1E-A610-E422F8F6EAA0}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>

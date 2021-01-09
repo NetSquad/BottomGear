@@ -230,7 +230,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e4ed0aef22d7c7478ab257ea4c288390
     GuidInternal: 
-    m_lastTime: -8585913857659597636
+    m_lastTime: -8585913849395138013
     List:
     - name: Gameplay
       guid: 572100031c49bb4c93c8377933e21139
@@ -258,7 +258,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: adfba9e144f1c741a345f6c52c3cc02b
     GuidInternal: 
-    m_lastTime: -8585913857810276390
+    m_lastTime: -8585913849570652876
     List:
     - name: Gameplay
       guid: 335e16bf552f1b4aa146ecb0c6f3f409
@@ -340,6 +340,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Stop_All
+      guid: 653e09514794814199a6a1c3238088ff
+      id: 452547817
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_All
+        ObjectType: 3
+      Path: Default Work Unit\Stop_All
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Engine
       guid: 4638f10d3e46674fb39189ae8a8d0180
       id: 37214798
@@ -545,6 +557,6 @@ MonoBehaviour:
   - /Wwise_Bottom_Gear_Project
   - /Wwise_Bottom_Gear_Project/Events
   - /Wwise_Bottom_Gear_Project/Events/Default Work Unit
-  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit/Music
+  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit/Gameplay
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
