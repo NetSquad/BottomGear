@@ -8,6 +8,7 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="Crash_Energy" ID="{E636151F-D19C-42DA-8099-76958AB54FC4}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

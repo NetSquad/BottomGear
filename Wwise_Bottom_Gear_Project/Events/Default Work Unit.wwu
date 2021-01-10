@@ -34,6 +34,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_shot" ID="{80A9D0B9-EEA5-4661-94C6-3BDEB672D6B4}">
+							<ChildrenList>
+								<Action Name="" ID="{ECC90462-796D-4430-A4FA-44208986E815}" ShortID="396233119">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Airsoft_shot" ID="{117BFF35-57B2-4429-AB32-6E2CC5034431}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Crash" ID="{616C061A-4056-489A-BA58-9632DAC8F39E}">
+							<ChildrenList>
+								<Action Name="" ID="{1B3A1FF4-99FD-4664-AE33-9881B602B447}" ShortID="607031151">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Crash" ID="{2EF717FE-9CAB-4518-A85C-D0CB330DF579}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{8A4961F6-7B57-49F4-8DA0-D54727EB47F3}" ShortID="611502248">

@@ -13,7 +13,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-36</Value>
+										<Value>-24</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -263,6 +263,273 @@
 								</BlendTrack>
 							</BlendTrackList>
 						</BlendContainer>
+						<RandomSequenceContainer Name="Airsoft_shot" ID="{117BFF35-57B2-4429-AB32-6E2CC5034431}" ShortID="167074052">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{73943A55-F1F5-4FB7-B285-4B9D7D8A0415}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="500"/>
+													<Property Name="Min" Type="Real64" Value="-500"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Airsoft_Shot_1" ID="{322ECE35-F675-4773-BED3-D55EAE990F08}" ShortID="193034783">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Airsoft_Shot_1" ID="{371CE030-3C85-4515-AA72-F0774A737941}">
+											<Language>SFX</Language>
+											<AudioFile>Airsoft_Shot_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="883585123"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Airsoft_Shot_1" ID="{371CE030-3C85-4515-AA72-F0774A737941}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Airsoft_Shot_2l" ID="{AFC8D9B3-F487-4E58-A10E-73DCB4B5B305}" ShortID="656129849">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Airsoft_Shot_2l" ID="{466DF6BB-2491-4971-84E7-3C139646229E}">
+											<Language>SFX</Language>
+											<AudioFile>Airsoft_Shot_2l.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="618986363"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Airsoft_Shot_2l" ID="{466DF6BB-2491-4971-84E7-3C139646229E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Airsoft_Shot_3" ID="{95ED3B06-997E-4009-9C74-74354B3F1CAA}" ShortID="77050563">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Airsoft_Shot_3" ID="{DF972FD9-A5BB-45FE-9EFE-118004199AD2}">
+											<Language>SFX</Language>
+											<AudioFile>Airsoft_Shot_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="460382379"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Airsoft_Shot_3" ID="{DF972FD9-A5BB-45FE-9EFE-118004199AD2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Crash" ID="{2EF717FE-9CAB-4518-A85C-D0CB330DF579}" ShortID="303962462">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1D3EE2AD-8E08-41CC-BD7D-DD71107254C3}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="581"/>
+													<Property Name="Min" Type="Real64" Value="-581"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{AB219E77-D39F-4F39-9070-1C1045F70471}" ShortID="164813613">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Crash_Energy" ID="{E636151F-D19C-42DA-8099-76958AB54FC4}" WorkUnitID="{83E701E2-A621-4E1B-9506-6C5D9F7F48B7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{5A50E3AD-D574-489D-BFEE-D23005FB4CCC}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-12.1491</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Exp2</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>49.80392</XPos>
+														<YPos>-0.11768</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>6</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="crash_1" ID="{0C3729AE-40DB-4161-AA1C-CD0F19A0A24D}" ShortID="3768739">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="crash_1" ID="{DD7938C1-4256-45E6-B61E-0F3963622E3A}">
+											<Language>SFX</Language>
+											<AudioFile>crash_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="302608464"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="crash_1" ID="{DD7938C1-4256-45E6-B61E-0F3963622E3A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="crash_2" ID="{DA3EF475-113B-42C4-9AFF-FF1AF74C7960}" ShortID="572943858">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="crash_2" ID="{424F4CCC-BFFA-490C-83DE-E37A8FB991B3}">
+											<Language>SFX</Language>
+											<AudioFile>crash_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1033237544"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="crash_2" ID="{424F4CCC-BFFA-490C-83DE-E37A8FB991B3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="crash_3" ID="{4C54578F-491C-48B2-A23B-729C99D29FA8}" ShortID="47788780">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="crash_3" ID="{18894281-F33D-43EB-B2AF-9BF6294C3667}">
+											<Language>SFX</Language>
+											<AudioFile>crash_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="413388097"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="crash_3" ID="{18894281-F33D-43EB-B2AF-9BF6294C3667}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="crash_4" ID="{EF71D351-488A-4B0B-80B1-7E31D4632CBF}" ShortID="804770696">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="crash_4" ID="{DC3B3998-AFF2-4694-B90D-20BA57C9B5AE}">
+											<Language>SFX</Language>
+											<AudioFile>crash_4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="377201563"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="crash_4" ID="{DC3B3998-AFF2-4694-B90D-20BA57C9B5AE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="crash_5" ID="{7317BDA1-0F62-45B4-91E6-8CFC6C1FF052}" ShortID="275041448">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="crash_5" ID="{CEE7A363-FD03-4324-83EA-EB7D2F805AAC}">
+											<Language>SFX</Language>
+											<AudioFile>crash_5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="403486225"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="crash_5" ID="{CEE7A363-FD03-4324-83EA-EB7D2F805AAC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{D16BC694-CAA6-4EED-A478-0E9AF49583E5}" ShortID="388247416">

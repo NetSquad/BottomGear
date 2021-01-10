@@ -1,16 +1,27 @@
 Event	ID	Name			Wwise Object Path	Notes
 	37214798	Stop_Engine			\Default Work Unit\Gameplay\Stop_Engine	
+	268953978	Play_shot			\Default Work Unit\Gameplay\Play_shot	
+	303595419	Play_Crash			\Default Work Unit\Gameplay\Play_Crash	
 	452547817	Stop_All			\Default Work Unit\Stop_All	
 	639345804	Play_Engine			\Default Work Unit\Gameplay\Play_Engine	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	640949982	Speed			\Default Work Unit\Speed	
+	3679139441	Crash_Energy			\Default Work Unit\Crash_Energy	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	9713637	Car_engine_2000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_2000rpm_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_2000rpm		878656
 	112910961	Car_engine_4000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_4000rpm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_4000rpm		536640
 	153073756	Car_engine_5000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_5000rpm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_5000rpm		976960
 	229397416	Car_engine_3000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_3000rpm_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_3000rpm		743488
+	302608464	crash_1	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\crash_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Crash\crash_1		511932
+	377201563	crash_4	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\crash_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Crash\crash_4		525288
+	403486225	crash_5	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\crash_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Crash\crash_5		454068
+	413388097	crash_3	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\crash_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Crash\crash_3		467424
 	424482009	Car_engine_6000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_6000rpm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_6000rpm		479296
+	460382379	Airsoft_Shot_3	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Airsoft_Shot_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Airsoft_shot\Airsoft_Shot_3		73888
+	618986363	Airsoft_Shot_2l	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Airsoft_Shot_2l_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Airsoft_shot\Airsoft_Shot_2l		73888
 	624805314	Car_engine_1000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_1000rpm_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_1000rpm		559168
+	883585123	Airsoft_Shot_1	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Airsoft_Shot_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Airsoft_shot\Airsoft_Shot_1		211008
+	1033237544	crash_2	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\crash_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Crash\crash_2		422912
 

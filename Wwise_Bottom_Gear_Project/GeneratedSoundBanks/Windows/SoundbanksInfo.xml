@@ -11,11 +11,35 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="89505537" Language="SFX" Hash="1490761829">
+		<SoundBank Id="89505537" Language="SFX" Hash="1167466151">
 			<ObjectPath>\SoundBanks\Default Work Unit\Gameplay</ObjectPath>
 			<ShortName>Gameplay</ShortName>
 			<Path>Gameplay.bnk</Path>
 			<IncludedEvents>
+				<Event Id="303595419" Name="Play_Crash" ObjectPath="\Events\Default Work Unit\Gameplay\Play_Crash" DurationType="OneShot" DurationMin="1.574470" DurationMax="3.826414">
+					<IncludedMemoryFiles>
+						<File Id="302608464" Language="SFX">
+							<ShortName>crash_1.wav</ShortName>
+							<Path>SFX\crash_1_10C4C929.wem</Path>
+						</File>
+						<File Id="377201563" Language="SFX">
+							<ShortName>crash_4.wav</ShortName>
+							<Path>SFX\crash_4_10C4C929.wem</Path>
+						</File>
+						<File Id="403486225" Language="SFX">
+							<ShortName>crash_5.wav</ShortName>
+							<Path>SFX\crash_5_10C4C929.wem</Path>
+						</File>
+						<File Id="413388097" Language="SFX">
+							<ShortName>crash_3.wav</ShortName>
+							<Path>SFX\crash_3_10C4C929.wem</Path>
+						</File>
+						<File Id="1033237544" Language="SFX">
+							<ShortName>crash_2.wav</ShortName>
+							<Path>SFX\crash_2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="639345804" Name="Play_Engine" ObjectPath="\Events\Default Work Unit\Gameplay\Play_Engine" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="9713637" Language="SFX">
@@ -44,19 +68,36 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="268953978" Name="Play_shot" ObjectPath="\Events\Default Work Unit\Gameplay\Play_shot" DurationType="OneShot" DurationMin="0.313523" DurationMax="1.596238">
+					<IncludedMemoryFiles>
+						<File Id="460382379" Language="SFX">
+							<ShortName>Airsoft_Shot_3.wav</ShortName>
+							<Path>SFX\Airsoft_Shot_3_10C4C929.wem</Path>
+						</File>
+						<File Id="618986363" Language="SFX">
+							<ShortName>Airsoft_Shot_2l.wav</ShortName>
+							<Path>SFX\Airsoft_Shot_2l_10C4C929.wem</Path>
+						</File>
+						<File Id="883585123" Language="SFX">
+							<ShortName>Airsoft_Shot_1.wav</ShortName>
+							<Path>SFX\Airsoft_Shot_1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\Default Work Unit\Stop_All" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="37214798" Name="Stop_Engine" ObjectPath="\Events\Default Work Unit\Gameplay\Stop_Engine" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="640949982" Name="Speed" ObjectPath="\Game Parameters\Default Work Unit\Speed"/>
+				<GameParameter Id="3679139441" Name="Crash_Energy" ObjectPath="\Game Parameters\Default Work Unit\Crash_Energy"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2129306072">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3960292364">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3639918041" Language="SFX" Hash="125572779">
+		<SoundBank Id="3639918041" Language="SFX" Hash="992001991">
 			<ObjectPath>\SoundBanks\Default Work Unit\UI_and_Music</ObjectPath>
 			<ShortName>UI_and_Music</ShortName>
 			<Path>UI_and_Music.bnk</Path>

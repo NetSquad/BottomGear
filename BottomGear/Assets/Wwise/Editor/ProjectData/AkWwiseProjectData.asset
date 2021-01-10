@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afe5a0d7772fa6847bd1e6d66bad6744, type: 3}
   m_Name: AkWwiseProjectData
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   AcousticTextureWwu:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     PathAndIcons:
@@ -19,8 +19,8 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: f8282a6158a2954ba7f445a30d52f873
-    GuidInternal:
-    m_lastTime: -8585917467442879214
+    GuidInternal: 
+    m_lastTime: -8585913707887557799
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
     PathAndIcons:
@@ -28,8 +28,8 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Factory Reflect Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
-    GuidInternal:
-    m_lastTime: -8585917467442869215
+    GuidInternal: 
+    m_lastTime: -8585913707887547897
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -201,8 +201,8 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: 0dd8e189a3413c418ac6400d83c2b3fd
-    GuidInternal:
-    m_lastTime: -8585917467444059480
+    GuidInternal: 
+    m_lastTime: -8585913707895079481
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -229,8 +229,8 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: e4ed0aef22d7c7478ab257ea4c288390
-    GuidInternal:
-    m_lastTime: -8585913831917336629
+    GuidInternal: 
+    m_lastTime: -8585912927183496182
     List:
     - name: Gameplay
       guid: 572100031c49bb4c93c8377933e21139
@@ -257,8 +257,8 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: adfba9e144f1c741a345f6c52c3cc02b
-    GuidInternal:
-    m_lastTime: -8585913831921027456
+    GuidInternal: 
+    m_lastTime: -8585912927184006294
     List:
     - name: Gameplay
       guid: 335e16bf552f1b4aa146ecb0c6f3f409
@@ -296,8 +296,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Play_Button_Hover
       maxAttenuation: 0
-      maxDuration: 89302
-      minDuration: 89302
+      maxDuration: 0.089302
+      minDuration: 0.089302
     - name: Play_Button_Selected
       guid: b4d3297ef1031e4ea610e422f8f6eaa0
       id: 3882482286
@@ -310,8 +310,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Play_Button_Selected
       maxAttenuation: 0
-      maxDuration: 561088
-      minDuration: 561088
+      maxDuration: 0.561088
+      minDuration: 0.561088
     - name: Play_Engine
       guid: 978977901d05d04f86c4be69e24d10f9
       id: 639345804
@@ -340,6 +340,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_shot
+      guid: b9d0a980a5ee614694c63bdeb672d6b4
+      id: 268953978
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
+      - ElementName: Play_shot
+        ObjectType: 3
+      Path: Default Work Unit\Gameplay\Play_shot
+      maxAttenuation: 0
+      maxDuration: 1.596238
+      minDuration: 0.313523
     - name: Stop_All
       guid: 653e09514794814199a6a1c3238088ff
       id: 452547817
@@ -378,8 +392,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Tonight_Bottom_Gear
       maxAttenuation: 0
-      maxDuration: 13177416
-      minDuration: 5023334
+      maxDuration: 13.177416
+      minDuration: 5.023334
     - name: UI
       guid: f661498a577bf4498da0d54727eb47f3
       id: 1551306167
@@ -399,8 +413,8 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: e201e78321a61b4e95066c5d9f7f48b7
-    GuidInternal:
-    m_lastTime: -8585917467444079486
+    GuidInternal: 
+    m_lastTime: -8585913707900220727
     List:
     - name: Speed
       guid: 617743ed6d16c64f8e60ff018266212e
@@ -417,8 +431,8 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Factory Motion
     guid: 225213d7dbd1d042adc0930743567776
-    GuidInternal:
-    m_lastTime: -8585917467444069483
+    GuidInternal: 
+    m_lastTime: -8585913707900209934
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -444,8 +458,8 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Factory SoundSeed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
-    GuidInternal:
-    m_lastTime: -8585917467444069483
+    GuidInternal: 
+    m_lastTime: -8585913707900209934
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -544,8 +558,8 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: 43597006ca6f8346a8ca785d3ffbe3a8
-    GuidInternal:
-    m_lastTime: -8585917467442889217
+    GuidInternal: 
+    m_lastTime: -8585913707887577899
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -554,8 +568,8 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: d0727525ef6a0e4eae69db998250be64
-    GuidInternal:
-    m_lastTime: -8585917467442889217
+    GuidInternal: 
+    m_lastTime: -8585913707887567901
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -564,9 +578,13 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: 0b16372f638b6441abff0a062a3ccafd
-    GuidInternal:
-    m_lastTime: -8585917467442879214
+    GuidInternal: 
+    m_lastTime: -8585913707887567901
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /Wwise_Bottom_Gear_Project
+  - /Wwise_Bottom_Gear_Project/Events
+  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit
+  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit/Gameplay
   autoPopulateEnabled: 1
-  CurrentPluginConfig:
+  CurrentPluginConfig: 

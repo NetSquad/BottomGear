@@ -575,7 +575,7 @@ MonoBehaviour:
     operation: 1
     stateMask: 1
     notMask: 0
-  currentState: -1
+  currentState: 63
 --- !u!114 &7580676053884193993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,6 +596,11 @@ MonoBehaviour:
   serializeThis: 1
   origin: {fileID: 0}
   triggerKey: 102
+  play_audio: 1
+  shot_sound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 005779531857bc24d9619bff74420e20, type: 2}
   projPrefab: {fileID: 0}
   velocity: {x: 0, y: 0, z: 100}
   terminateOn: 12
@@ -1486,6 +1491,7 @@ GameObject:
   - component: {fileID: 3623554865982245567}
   - component: {fileID: 7544815900873905826}
   - component: {fileID: 748131709096153426}
+  - component: {fileID: 4091455361289254653}
   m_Layer: 0
   m_Name: BattleRoller
   m_TagString: Untagged
@@ -1553,6 +1559,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656260933d8e3694dac9e0e44f426503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  engine_sound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 536288f7ca6f9734e9ca60a6247e4ab9, type: 2}
   wheelCount: 4
   driveType: 2
   maxAngle: 30
@@ -2167,6 +2177,8 @@ MonoBehaviour:
     enableIfOwned: 1
   - component: {fileID: 7147278320516859586}
     enableIfOwned: 1
+  - component: {fileID: 4091455361289254653}
+    enableIfOwned: 1
   componentLookup:
   - {fileID: 7147278321149784970}
   - {fileID: 7147278321607788493}
@@ -2183,6 +2195,7 @@ MonoBehaviour:
   - {fileID: 7147278320516859596}
   - {fileID: 7147278320516859597}
   - {fileID: 7147278320516859586}
+  - {fileID: 4091455361289254653}
 --- !u!114 &677415328906719134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2332,6 +2345,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onlyIfPrefab: 1
   hasPrefabParent: 0
+--- !u!114 &4091455361289254653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6143018481379592601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9ac442c128857940bcdc4c56f06242e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 66883a76fed8273408128c2a0e09736f, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &6672909385611060687
 GameObject:
   m_ObjectHideFlags: 0
