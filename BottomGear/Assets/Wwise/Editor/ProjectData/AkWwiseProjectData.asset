@@ -296,8 +296,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Play_Button_Hover
       maxAttenuation: 0
-      maxDuration: 0.089302
-      minDuration: 0.089302
+      maxDuration: 89302
+      minDuration: 89302
     - name: Play_Button_Selected
       guid: b4d3297ef1031e4ea610e422f8f6eaa0
       id: 3882482286
@@ -310,8 +310,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Play_Button_Selected
       maxAttenuation: 0
-      maxDuration: 0.561088
-      minDuration: 0.561088
+      maxDuration: 561088
+      minDuration: 561088
     - name: Play_Engine
       guid: 978977901d05d04f86c4be69e24d10f9
       id: 639345804
@@ -378,8 +378,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Tonight_Bottom_Gear
       maxAttenuation: 0
-      maxDuration: 13.177416
-      minDuration: 5.023334
+      maxDuration: 13177416
+      minDuration: 5023334
     - name: UI
       guid: f661498a577bf4498da0d54727eb47f3
       id: 1551306167
