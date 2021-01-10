@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afe5a0d7772fa6847bd1e6d66bad6744, type: 3}
   m_Name: AkWwiseProjectData
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   AcousticTextureWwu:
   - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     PathAndIcons:
@@ -19,7 +19,7 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: f8282a6158a2954ba7f445a30d52f873
-    GuidInternal:
+    GuidInternal: 
     m_lastTime: -8585917467442879214
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
@@ -28,7 +28,7 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Factory Reflect Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
-    GuidInternal:
+    GuidInternal: 
     m_lastTime: -8585917467442869215
     List:
     - name: Acoustic_Banner
@@ -201,7 +201,7 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: 0dd8e189a3413c418ac6400d83c2b3fd
-    GuidInternal:
+    GuidInternal: 
     m_lastTime: -8585917467444059480
     List:
     - name: Master Audio Bus
@@ -229,8 +229,8 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: e4ed0aef22d7c7478ab257ea4c288390
-    GuidInternal:
-    m_lastTime: -8585913831917336629
+    GuidInternal: 
+    m_lastTime: -8585913742691103805
     List:
     - name: Gameplay
       guid: 572100031c49bb4c93c8377933e21139
@@ -257,8 +257,8 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: adfba9e144f1c741a345f6c52c3cc02b
-    GuidInternal:
-    m_lastTime: -8585913831921027456
+    GuidInternal: 
+    m_lastTime: -8585913742810866776
     List:
     - name: Gameplay
       guid: 335e16bf552f1b4aa146ecb0c6f3f409
@@ -399,7 +399,7 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: e201e78321a61b4e95066c5d9f7f48b7
-    GuidInternal:
+    GuidInternal: 
     m_lastTime: -8585917467444079486
     List:
     - name: Speed
@@ -417,7 +417,7 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Factory Motion
     guid: 225213d7dbd1d042adc0930743567776
-    GuidInternal:
+    GuidInternal: 
     m_lastTime: -8585917467444069483
     List:
     - name: Playback_Rate
@@ -444,7 +444,7 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Factory SoundSeed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
-    GuidInternal:
+    GuidInternal: 
     m_lastTime: -8585917467444069483
     List:
     - name: SS_Air_Fear
@@ -544,7 +544,7 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: 43597006ca6f8346a8ca785d3ffbe3a8
-    GuidInternal:
+    GuidInternal: 
     m_lastTime: -8585917467442889217
     List: []
   SwitchWwu:
@@ -554,7 +554,7 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: d0727525ef6a0e4eae69db998250be64
-    GuidInternal:
+    GuidInternal: 
     m_lastTime: -8585917467442889217
     List: []
   TriggerWwu:
@@ -564,9 +564,10 @@ MonoBehaviour:
       ObjectType: 12
     ParentPath: Default Work Unit
     guid: 0b16372f638b6441abff0a062a3ccafd
-    GuidInternal:
+    GuidInternal: 
     m_lastTime: -8585917467442879214
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /Wwise_Bottom_Gear_Project
   autoPopulateEnabled: 1
-  CurrentPluginConfig:
+  CurrentPluginConfig: 
