@@ -37,6 +37,7 @@ public class BoostingPad : MonoBehaviour
             beginBoost = false;
             boostDuration = 3.0f;
         }
+        //Speed=rigidbody.velocity.magnitude*3.6; 
     }
 
     // Collision callbacks
@@ -44,7 +45,7 @@ public class BoostingPad : MonoBehaviour
     {
         rb = other.GetComponent<Rigidbody>();
 
-        if(rb != null)
+        if(other.transform.root.gameObject.CompareTag("Player"))
         {
             Debug.Log("Detected RigidBody");
             beginBoost = true;
