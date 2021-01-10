@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	37214798	Stop_Engine			\Default Work Unit\Gameplay\Stop_Engine	
+	268953978	Play_shot			\Default Work Unit\Gameplay\Play_shot	
 	452547817	Stop_All			\Default Work Unit\Stop_All	
 	639345804	Play_Engine			\Default Work Unit\Gameplay\Play_Engine	
 
@@ -12,5 +13,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	153073756	Car_engine_5000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_5000rpm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_5000rpm		976960
 	229397416	Car_engine_3000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_3000rpm_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_3000rpm		743488
 	424482009	Car_engine_6000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_6000rpm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_6000rpm		479296
+	460382379	Airsoft_Shot_3	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Airsoft_Shot_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Airsoft_shot\Airsoft_Shot_3		73888
+	618986363	Airsoft_Shot_2l	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Airsoft_Shot_2l_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Airsoft_shot\Airsoft_Shot_2l		73888
 	624805314	Car_engine_1000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_1000rpm_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_1000rpm		559168
+	883585123	Airsoft_Shot_1	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Airsoft_Shot_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Airsoft_shot\Airsoft_Shot_1		211008
 

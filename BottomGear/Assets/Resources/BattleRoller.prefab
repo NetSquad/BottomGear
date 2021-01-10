@@ -575,7 +575,7 @@ MonoBehaviour:
     operation: 1
     stateMask: 1
     notMask: 0
-  currentState: -1
+  currentState: 63
 --- !u!114 &7580676053884193993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,6 +596,11 @@ MonoBehaviour:
   serializeThis: 1
   origin: {fileID: 0}
   triggerKey: 102
+  play_audio: 1
+  shot_sound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 005779531857bc24d9619bff74420e20, type: 2}
   projPrefab: {fileID: 0}
   velocity: {x: 0, y: 0, z: 100}
   terminateOn: 12

@@ -19,6 +19,8 @@ namespace Photon.Pun.Simple
         , IProjectileCannon
         //, IOnContactEvent
     {
+        public bool  play_audio = false;
+        public AK.Wwise.Event shot_sound;
         public override int ApplyOrder { get { return ApplyOrderConstants.WEAPONS; } }
 
         #region Inspector Items
@@ -149,6 +151,10 @@ namespace Photon.Pun.Simple
         /// </summary>
         protected override bool Trigger(Frame frame, int subFrameId, float timeshift = 0)
         {
+            if(play_audio == true)
+            {
+                shot_sound.Post(gameObject);
+            }
             Pool p = Pool.Spawn(projPrefab, origin);
 
             var proxy = p.GetComponent<IContactTrigger>();
