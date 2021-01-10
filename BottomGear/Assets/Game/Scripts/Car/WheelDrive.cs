@@ -17,7 +17,7 @@ namespace BottomGear
 	public class WheelDrive : MonoBehaviour
 	{
 		// --------------------- Variables -------------------------
-
+		public AK.Wwise.Event engine_sound;
 		[Header("Wheels")]
 		[Tooltip("The vehicle's wheel count")]
 		public int wheelCount = 4;
@@ -73,6 +73,8 @@ namespace BottomGear
 		// Find all the WheelColliders down in the hierarchy.
 		void Start()
 		{
+			//Play engine Sound
+			engine_sound.Post(gameObject);
 			// --- Deactivate camera if this is not the local player ---
 			if (camera != null)
 			{
@@ -186,6 +188,11 @@ namespace BottomGear
 				}
 
 			}
+
+
+			//Update the RTPC for the engine sound
+			float speed = rb.velocity.magnitude / maxSpeed;
+			AkSoundEngine.SetRTPCValue("Speed",speed*100);
 		}
 
         private void LateUpdate()
