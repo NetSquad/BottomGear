@@ -23,6 +23,7 @@ namespace BottomGear
     public class GameManager : MonoBehaviourPunCallbacks
     {
         public static GameManager Instance = null;
+        public Transform MainSpawn;
 
         public Text InfoText;
 
@@ -205,7 +206,7 @@ namespace BottomGear
             float angularStart = (360.0f / PhotonNetwork.CurrentRoom.PlayerCount) * PhotonNetwork.LocalPlayer.GetPlayerNumber();
             float x = 20.0f * Mathf.Sin(angularStart * Mathf.Deg2Rad);
             float z = 20.0f * Mathf.Cos(angularStart * Mathf.Deg2Rad);
-            Vector3 position = new Vector3(x, 0.0f, z);
+            Vector3 position = new Vector3(x, MainSpawn.position.y, z);
             Quaternion rotation = Quaternion.Euler(0.0f, angularStart, 0.0f);
 
             PhotonNetwork.Instantiate("BattleRoller", position, rotation, 0);      // avoid this call on rejoin (ship was network instantiated before)
