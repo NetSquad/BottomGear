@@ -230,7 +230,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e4ed0aef22d7c7478ab257ea4c288390
     GuidInternal:
-    m_lastTime: -8585913888356015413
+    m_lastTime: -8585913831917336629
     List:
     - name: Gameplay
       guid: 572100031c49bb4c93c8377933e21139
@@ -258,7 +258,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: adfba9e144f1c741a345f6c52c3cc02b
     GuidInternal:
-    m_lastTime: -8585913888356365496
+    m_lastTime: -8585913831921027456
     List:
     - name: Gameplay
       guid: 335e16bf552f1b4aa146ecb0c6f3f409
@@ -366,6 +366,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Tonight_Bottom_Gear
+      guid: 9a6d2c93ab0d60408372488915256569
+      id: 1968261684
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Tonight_Bottom_Gear
+        ObjectType: 3
+      Path: Default Work Unit\UI\Tonight_Bottom_Gear
+      maxAttenuation: 0
+      maxDuration: 13177416
+      minDuration: 5023334
     - name: UI
       guid: f661498a577bf4498da0d54727eb47f3
       id: 1551306167

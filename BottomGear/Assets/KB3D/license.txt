@@ -1,0 +1,115 @@
+End User License Agreement
+KITBASH3D MODEL KIT -- KITBASH3D LICENSE AGREEMENT
+ 
+This 3D Model Kit Studio License Agreement (the “Agreement”) is a legal agreement between the purchaser of a 3D Model Kit (“you”) and WeAreFuzzy, LLC, a California Limited Liability Company, DBA KitBash3D (“Company”) regarding the use of Company's 3D Model kit(s) made available by Company in connection with this Agreement, which may include user documentation provided in "online" or electronic form, object code, interface declarations, assemblies, and sample source code (the “3D Model Kit”). By clicking accept in the order process, you agree to the terms and conditions of this Agreement.
+ 
+GRANT OF LICENSE
+
+
+Conditioned upon your compliance with the terms and conditions of this Agreement, Company grants to you a limited, revocable, non-exclusive, non-transferable, non-sublicensable, worldwide, royalty-free right and license to:
+Install and use such numbers of copies of the 3D Model Kit on such number of devices/computers owned or controlled by you for such number of users as indicated in your order form for the purpose of developing or creating audio-visual content (“Content”);
+Reproduce and modify any source code included with the 3D Model Kit as a component of the Content; and
+Reproduce the relevant and necessary components of the 3D Model Kit (the “Distributable Code”) solely to incorporate the 3D Model Kit into the content.
+ 
+USE-SPECIFIC LICENSE TERMS
+ 
+Your installation and permitted use of the 3D Model Kit is expressly contingent on the type of license you have purchased. Before purchasing, please make sure that your prospective use of the 3D Model Kit will not exceed the scope of the license you will be purchasing. The scope of the license for each 3D Model Kit is as follows:
+
+
+Freelance
+Single Artist License
+License Terms: 
+By purchasing the Freelance license, the 3D Model Kit may not be hosted on any company server. Under the Freelance license, the 3D Model Kit is for individual use only. You agree that use of the 3D Model Kit under the Freelance license shall not exceed more than one (1) individual user, nor shall the 3D Model Kit be used by any individual on behalf of any studio, company, and/or separate entity. You may use the kit on commercial projects while working as a freelancer hired by a studio but you may not use a freelance license on studio projects as a staffed artists at that studio.  Use by a professional studio or by more than one (1) individual user under the Freelance license shall constitute a violation of this End User License Agreement. See Restrictions below.
+
+
+Small Studio
+Up to 7 Artists
+License Terms: 
+By purchasing under the Small Studio License, the 3D Model Kit may be hosted on your company server. Under the Small Studio license, the 3D Model Kit may be purchased only by studios with seven (7) or less 3D artists, in total, including both employees and independent contractors. Use by studios with more than seven (7) artists under the Freelance and/or Small Studio license shall constitute a violation of this End User License Agreement. See Restrictions below.
+
+
+Enterprise
+8 or more Artists
+License Terms: 
+If your use of the 3D Model Kit will include hosting on your company server and/or your studio includes eight (8) or more 3D artists, in total, including both employees and independent contractors, please contact Company at sales@kitbash3d.com for a quoted price. If you meet the criteria above, your use of the 3D Model Kit will exceed the scope of the Freelance and Small Studio licenses offered by Company. Use by studios with more than eight (8) artists under either the Freelance and/or Small Studio license shall constitute a violation of this End User License Agreement.
+See Restrictions below.
+
+RESTRICTIONS
+ 
+Except as expressly provided for herein, you may not, and may not enable others to:
+ 
+Create, design or develop anything other than the Content;
+Reverse engineer, reverse compile, or otherwise attempt to reconstruct, identify or discover any source code, underlying ideas, techniques, or algorithms in the 3D Model Kit or the Company’s current or future products and services (collectively, the “Company Products”), except as and only to the extent any foregoing restriction is prohibited by applicable law or permitted by applicable law notwithstanding the foregoing restriction, or to the extent as may be permitted by licensing terms governing use of any open source software components included within the 3D Model Kit;
+Distribute, sell, lease, rent, lend, offer on a service bureau basis or sublicense any part of the 3D Model Kit to any third party except as expressly provided herein and as necessary to distribute the Content;
+Remove, obscure, or alter any proprietary rights or confidentiality notices within the 3D Model Kit or any software, documentation or other materials in it or supplied with it;
+Create any software that prevents or degrades the interaction of applications developed by others with the 3D Model Kit or the Company Products; or
+Use the 3D Model Kit to create, develop or use any program or software which:
+Contains any viruses, Trojan horses, worms, time bombs, cancelbots or other computer programming routines that are intended to damage, detrimentally interfere with, surreptitiously intercept or expropriate any system, data or personal information;
+Limit the functionality of any software or hardware; or
+When used in the manner in which it is intended, violates any material law, statute, ordinance or regulation (including without limitation the laws and regulations governing export control, unfair competition, anti-discrimination or false advertising).
+ 
+You may use the 3D Model Kit solely in connection with the intended uses set forth herein.
+ 
+MAINTENANCE
+You will not receive any support or subscription services for the 3D Model Kit or any services from Company in connection with the 3D Model Kit, except as expressly provided in this Agreement or as provided for in a separately executed agreement between you and Company.
+ 
+TRADEMARKS; PUBLICITY.
+You may indicate that your Content is made with “KitBash3D models.” You will include a reference to the Company Products and Company in any press releases for the Content that relate to Company and its Company Products, and will identify Company as the provider of the Company Products. However, you may not otherwise use “KitBash3D”, or any other trademark of Company in connection with your Content or company, or in any URL, product, service, name field or logos created by you, unless provided for in a separately executed agreement between you and Company . You may not use Company’s trademarks, whether registered or unregistered, in any manner that implies that Company endorses or otherwise approves of the Content.
+ 
+Your use of the Company name under this Agreement does not create any right, title or interest in the Company name or any Company trademarks and all goodwill arising from your use inures solely to the benefit of Company.
+ 
+INTELLECTUAL PROPERTY & PROPRIETARY RIGHTS.
+Company and its licensors own, and shall retain ownership of, all right, title, and interest to the 3D Model Kit and the Company Products, including, without limitation, all copyrights and other intellectual property rights therein. Without limiting the foregoing, the 3D Model Kit is protected by United States copyright laws, international treaty provisions and other applicable laws. There are no implied licenses or other implied rights granted under this Agreement. All rights not expressly granted hereunder are reserved to Company. You may (but are not required to) provide feedback, comments and suggestions (collectively, “Feedback”) to Company. You acknowledge that the 3D Model Kit and the Company Products contain valuable proprietary information and trade secrets and that unauthorized or improper use of the 3D Model Kit and the Company Products will result in irreparable harm to Company and its licensors for which monetary damages would be inadequate and for which Company and its licensors will be entitled to immediate injunctive relief. You hereby grant to Company a non-exclusive, perpetual, irrevocable, paid- up, transferable, sub-licensable, worldwide license under all intellectual property rights covering such Feedback to use, disclose and exploit all such Feedback for any purpose.
+ 
+You and your licensors own, and shall retain ownership of, all right, title, and interest to the Content, including, without limitation, all copyrights and other intellectual property rights therein.
+ 
+Company retains the right to highlight notable users of the 3D Model Kits for Company’s professional portfolio and website, and in galleries, design periodicals, and other media or exhibits for the purpose of recognition of creative excellence or professional advancement.
+ 
+Nothing in this Agreement will preclude Company or its affiliates from lawfully developing, independently of your Confidential Information, for itself or for others, products or services that are competitive with the Content.
+ 
+YOUR OBLIGATIONS AND WARRANTIES.
+In addition to your other obligations under this Agreement, you warrant and agree that:
+ 
+If You are an individual, You are at least 18 years of age and have the right and authority to enter into this Agreement on your own behalf, or if you are entering into this Agreement on behalf of your company or organization, you have the right and authority to legally bind your company or organization.
+You will use the 3D Model Kit only in accordance with all accompanying documentation, in the manner expressly permitted by this Agreement under the applicable license, and your use of the 3D Model Kit, and the marketing, sales and distribution of your Content, will be in compliance with all applicable laws and regulations and all U.S. and local or foreign export and re-export restrictions applicable to the technology and documentation provided under this Agreement (including privacy and data security laws and regulations), and you will not develop any Content which would commit or facilitate the commission of a crime, or other tortious, unlawful, or illegal.
+ 
+CONFIDENTIALITY.
+You agree to maintain the confidentiality of any proprietary information received by you during, or prior to entering into, this Agreement, including, without limitation, the 3D Model Kit, that you should know is confidential or proprietary based on the circumstances surrounding the disclosure, including, without limitation, non-public technical and business information (“Confidential Information”) for a period of five (5) years after the termination of this Agreement. This section shall not apply to any publicly available or independently developed information. You agree not to use said Confidential Information for any purpose except as necessary to fulfill your obligations and exercise your rights under this Agreement. You shall protect the secrecy of and avoid disclosure and unauthorized use of the Company's Confidential Information to the same degree that you take to protect your own confidential information and in no event less than reasonable care.
+ 
+Notwithstanding any other provisions of this Agreement, Company will be free to use for any purpose (including but not limited to use in the development, manufacture, marketing and maintenance of the Company Products) the Residuals (as defined below) resulting from access to or work with your Confidential Information; provided that Company maintains the confidentiality of the Confidential Information as provided herein. The term “Residual” shall mean information in non-tangible form that is retained in the unaided memory by persons who have had rightful access to the Confidential Information, including without limitation, the ideas, concepts, know-how or techniques contained therein. Company will have no obligation to limit or restrict the work assignments of any of its employees, consultants, and contractors who are provided access to the Confidential Information.
+ 
+INDEMNIFICATION.
+You agree to defend, indemnify and hold harmless Company, and any of its directors, officers, employees, affiliates or agents, from and against any and all claims, losses, damages, liabilities and other expenses (including attorneys' fees), arising from your use, modification and distribution of the 3D Model Kit and/or Content or breach of this Agreement.
+ 
+TERM AND TERMINATION.
+This Agreement shall continue as long as you are in compliance with the terms specified herein or until otherwise terminated. Unless you prepaid for the 3D Model Kit or the license, You and or Company may terminate this Agreement for any reason at any time. You agree, upon termination, to destroy all copies of the 3D Model Kit within your possession or control. The Confidentiality, Indemnification, No Warranties, Limitation of Liability, and General sections set out in this Agreement shall survive any termination of this Agreement.
+ 
+NO WARRANTIES.
+THE 3D MODEL KIT IS PROVIDED “AS IS” AND COMPANY AND ITS AFFILIATES AND LICENSORS MAKE, AND YOU RECEIVE, NO OTHER WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR IN ANY COMMUNICATION WITH YOU. COMPANY SPECIFICALLY DISCLAIMS ANY OTHER WARRANTY INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, OR FITNESS FOR A PARTICULAR PURPOSE. COMPANY DOES NOT WARRANT THAT THE OPERATION OF THE 3D MODEL KIT WILL BE UNINTERRUPTED OR ERROR FREE OR THAT DEFECTS IN THE 3D MODEL KIT WILL BE CORRECTED. COMPANY MAKES NO WARRANTY WITH RESPECT TO THE CORRECTNESS, ACCURACY, OR RELIABILITY OF THE 3D MODEL KIT AND
+ 
+DOCUMENTATION.
+Some jurisdictions do not allow the exclusion of implied warranties, so the above exclusion may not apply to You.
+ 
+LIMITATION OF LIABILITY.
+THE TOTAL LIABILITY OF COMPANY AND ITS AFFILIATES AND LICENSORS UNDER THIS AGREEMENT FOR DAMAGES WILL NOT EXCEED $500 IN THE AGGREGATE. IN NO EVENT WILL COMPANY OR ITS AFFILIATES AND LICENSORS BE LIABLE IN ANY WAY FOR INCIDENTAL, CONSEQUENTIAL, INDIRECT, SPECIAL OR PUNITIVE DAMAGES OF ANY NATURE, INCLUDING WITHOUT LIMITATION, LOST BUSINESS PROFITS, OR LIABILITY OR INJURY TO THIRD PERSONS, WHETHER FORESEEABLE OR NOT, REGARDLESS OF WHETHER COMPANY OR ITS AFFILIATES AND LICENSORS HAVE BEEN ADVISED OF THE
+ 
+POSSIBILITY OF SUCH DAMAGES.
+Some jurisdictions do not permit limitations of liability for incidental or consequential damages, so the above exclusions may not apply to you.
+ 
+U.S. GOVERNMENT-RESTRICTED RIGHTS.
+The 3D Model Kit and accompanying documentation are deemed to be "commercial computer software" and "commercial computer 3D Model Kit documentation," respectively, pursuant to DFAR Section 227.7202 and FAR Section 12.212, as applicable. Any use, modification, reproduction release, performance, display or disclosure of the 3D Model Kit and accompanying documentation by the U.S. Government will be governed solely by the terms of this Agreement and shall be prohibited except to the extent expressly permitted by the terms of this Agreement.
+ 
+EXPORT RESTRICTIONS.
+You may not download, export, or re-export the 3D Model Kit: (1) into, or to a national or resident of, Cuba, Iraq, Libya, North Korea, Iran, Syria or any other country to which the United States has embargoed goods, or (2) to anyone on the United States Treasury Department's list of Specially Designated Nationals or the U.S. Commerce Department's Table of Deny Orders. By downloading or using the 3D Model Kit, you are representing and warranting that you are not located in, under the control of, or a national or resident of any such country or on any such list.
+ 
+GENERAL.
+This Agreement is governed by the laws of the United States and the State of California, without reference to conflict of laws principles. Any dispute between you and Company regarding this Agreement will be subject to the exclusive venue of the state and federal courts in Los Angeles County, California.
+
+
+This Agreement is the entire agreement between you and Company and supersedes any other communications or advertising with respect to the 3D Model Kit and documentation. If any provision of this Agreement is held invalid, the remainder of this Agreement shall continue in full force and effect. The failure of either party to enforce any provision of this Agreement may not be deemed a waiver of that or any other provision of this Agreement.
+ 
+SEVERABILITY.
+If any provision of this Agreement is held in whole or in part to be unenforceable for any reason, the remainder of that provision and of the entire Agreement will be severable and remain in effect. Any failure by Company to require performance of any provision in this Agreement shall not affect Company’s right to require performance at any time thereafter, nor shall a waiver of any breach or default of this Agreement constitute a waiver of any subsequent breach or default or a waiver of the provision itself.
+ 
+CORRESPONDENCE AND NOTICE.
+Should you have any questions concerning this Agreement, or if you desire to contact Company for any reason, please direct all correspondence to info@kitbash3d.com. The address for notice to Company under this Agreement is: 5297 Austin Rd., Santa Barbara, CA 93111.

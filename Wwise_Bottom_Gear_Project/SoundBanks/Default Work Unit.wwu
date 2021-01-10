@@ -14,6 +14,7 @@
 				</SoundBank>
 				<SoundBank Name="UI_and_Music" ID="{64A76E75-6D97-4239-92FD-CB653E8AF79D}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Tonight_Bottom_Gear" ID="{932C6D9A-0DAB-4060-8372-488915256569}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_All" ID="{51093E65-9447-4181-99A6-A1C3238088FF}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Music" ID="{D0DAC24A-0489-4316-B9BB-39011665043E}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Button_Hover" ID="{A9439591-B167-45BB-86F6-00CD00388E93}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>

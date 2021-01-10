@@ -273,6 +273,582 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Tonight_Bottom_Gear" ID="{3B45E108-05E9-4D10-90F7-CDBAC4DB9911}" ShortID="46764280">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="tonight_1" ID="{44D551CC-BBE3-4A4E-BCCF-EB03C432BDB1}" ShortID="809689440">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="8182.51700680272"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="tonight_1" ID="{F9BC2EA4-9309-4A6F-8488-C48EDF3C2EBE}" ShortID="173596715">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tonight_1" ID="{9F8AF7C7-D0EF-48E8-B4AB-FD870AEACBFA}">
+													<Language>SFX</Language>
+													<AudioFile>tonight_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="630591697"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{91C9815C-80B4-4593-9BCA-71054B1C754E}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{93034CE5-1176-4D8A-B2D2-09DAFEC6BA44}">
+													<ClipList>
+														<MusicClip Name="tonight_1" ID="{1B6CEA32-16BB-466D-A51E-4DE897F50394}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="8182.51700680272"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="tonight_1" ID="{9F8AF7C7-D0EF-48E8-B4AB-FD870AEACBFA}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{8BF38E7B-E20A-48FD-9CB5-004F9EAB51E0}"/>
+										<MusicCue Name="Exit Cue" ID="{F7A901F5-C552-44C1-8BFB-0EF19416E991}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="8182.51700680272"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="tonight_2" ID="{74107E21-376A-49DC-9A97-E42995F48771}" ShortID="724720691">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="9733.62811791383"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="tonight_2" ID="{9861FC7A-EF6A-4431-9469-72A560F0C3BF}" ShortID="775497263">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tonight_2" ID="{A240EDEA-C4F6-4CD5-BDC1-20C1182D929D}">
+													<Language>SFX</Language>
+													<AudioFile>tonight_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="23180561"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{FB84ADEC-1E1A-4B27-9977-D27714ADA1B0}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{41CE896A-98F9-4A98-BCE7-615DE8AD45CB}">
+													<ClipList>
+														<MusicClip Name="tonight_2" ID="{79C6ED47-3282-4F56-BF3F-C9EE3C98DD60}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="9733.62811791383"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="tonight_2" ID="{A240EDEA-C4F6-4CD5-BDC1-20C1182D929D}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{5D28E191-6768-4D1E-94E2-774766718F2D}"/>
+										<MusicCue Name="Exit Cue" ID="{1CF9CD06-B20A-4EBF-B0B7-783D72813706}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="9733.62811791383"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="tonight_3" ID="{DF047260-D5ED-49ED-B369-49918981E2D4}" ShortID="277737851">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="11469.7505668934"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="tonight_3" ID="{154ACEA4-E703-4F88-A9F1-1A34B968585A}" ShortID="157103788">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tonight_3" ID="{FF1D0BA3-18B2-4093-802A-FA934AEB9F45}">
+													<Language>SFX</Language>
+													<AudioFile>tonight_3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="169965694"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{82AD8726-5E08-4FD7-BF91-CE6123C95D0D}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{F20D6F5E-0F05-4533-BC4C-214C9E110777}">
+													<ClipList>
+														<MusicClip Name="tonight_3" ID="{936873F6-EE35-4BA6-93F2-C798DC8BA2AC}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="11469.7505668934"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="tonight_3" ID="{FF1D0BA3-18B2-4093-802A-FA934AEB9F45}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{2753215E-10DC-4D2A-AB78-18A9966A5E8D}"/>
+										<MusicCue Name="Exit Cue" ID="{5C2265C5-5E90-425D-8549-9C0E97843D71}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="11469.7505668934"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="tonight_4" ID="{97861E3B-2871-4186-9023-7D61690DE8EE}" ShortID="663377846">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="tonight_4" ID="{6950DCBB-E636-4326-9A8E-2FAED19983F5}" ShortID="920702274">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tonight_4" ID="{9E53C0AB-44BD-40B0-A7D6-ED93C0086EC9}">
+													<Language>SFX</Language>
+													<AudioFile>tonight_4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="69545968"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{710294AC-582B-48AD-BF71-97999131343C}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{F5D7EF07-3718-4E15-B6CE-B62C57716FA9}">
+													<ClipList>
+														<MusicClip Name="tonight_4" ID="{1BCEAD2D-0AEC-4EFB-9953-BF909A48B93E}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="3315.66893424036"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="tonight_4" ID="{9E53C0AB-44BD-40B0-A7D6-ED93C0086EC9}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{CCE88933-4F7C-4F17-BC04-EE8863148DA8}"/>
+										<MusicCue Name="Exit Cue" ID="{59FD6186-1C07-49BC-A90A-D5476FDFBA09}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="3315.66893424036"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="tonight_5" ID="{0F0A2AB1-49C0-48E3-92D5-8D4E1A23D8A2}" ShortID="584120066">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="9207.09750566893"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="tonight_5" ID="{F9ADCCF0-1D0D-4C78-96D3-7F027ACD6FFC}" ShortID="495984681">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tonight_5" ID="{932FB769-B3B0-4076-A4EE-3D508327D8C5}">
+													<Language>SFX</Language>
+													<AudioFile>tonight_5.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="975531746"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{1B4E5412-3F71-4EA8-90C2-8823717E9698}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{9F05CD60-C2D5-445A-A4CB-8BF538A05027}">
+													<ClipList>
+														<MusicClip Name="tonight_5" ID="{2C4A4B0E-8C54-445E-8743-7C8F95B899A8}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="9207.09750566893"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="tonight_5" ID="{932FB769-B3B0-4076-A4EE-3D508327D8C5}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{8A7509EC-A4C6-4F18-B7F3-C9D3FC84B289}"/>
+										<MusicCue Name="Exit Cue" ID="{F62A63C5-B0FF-442D-BA25-89DB0CB71C06}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="9207.09750566893"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="tonight_6" ID="{C4E206F5-A420-4BF8-80BA-D00A24230AA4}" ShortID="276372186">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="8154.0589569161"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="tonight_6" ID="{2809A707-B267-4616-A4CB-640BADC9F47F}" ShortID="178656876">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tonight_6" ID="{1691FF82-6573-4303-A7A7-4CF79A306542}">
+													<Language>SFX</Language>
+													<AudioFile>tonight_6.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="962905564"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{35941257-0640-480D-9E1B-F75F2966EBED}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{7A3E77A0-5B19-4D9E-B245-9025B2104BDA}">
+													<ClipList>
+														<MusicClip Name="tonight_6" ID="{E46FB137-B9DF-458A-9824-CF8F2A031AAE}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="8154.0589569161"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="tonight_6" ID="{1691FF82-6573-4303-A7A7-4CF79A306542}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{3321FB74-4ADB-45A1-A082-F52CBFD9DDE7}"/>
+										<MusicCue Name="Exit Cue" ID="{A340614F-8E5B-4C65-A5C9-69CCEF0A09F0}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="8154.0589569161"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="tonight_7" ID="{847941CD-814B-468C-A1FA-A12008767127}" ShortID="279416697">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="8495.60090702948"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="tonight_7" ID="{8D38D738-45AB-43E3-9BDA-51F5B089FC4E}" ShortID="1068416754">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="tonight_7" ID="{1CAE4BEE-7CE3-4279-B646-CD99093191F2}">
+													<Language>SFX</Language>
+													<AudioFile>tonight_7.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="199281180"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{4F0A44E5-48F7-42AA-9BF8-96D94FF443DB}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{8B086DF0-15D3-4FB0-B749-449F194E0820}">
+													<ClipList>
+														<MusicClip Name="tonight_7" ID="{4999691B-935D-4D6A-B6BF-0C8BA0078371}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="8495.60090702948"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="tonight_7" ID="{1CAE4BEE-7CE3-4279-B646-CD99093191F2}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{A58F74CC-77E1-4FEC-BA1B-E220254BB72A}"/>
+										<MusicCue Name="Exit Cue" ID="{119B931D-C69F-42EE-9EAE-A5745B1B2A51}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="8495.60090702948"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="Tonight_start" ID="{93C0B4EE-1C88-4252-8C1F-0DC960017D7A}" ShortID="505431652">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Tonight_start" ID="{FF908BA3-6A1D-4E27-A097-7A878DEA7822}" ShortID="1065989008">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tonight_start" ID="{A9D4A6E3-9EC4-45D9-AB43-953A8797FD83}">
+													<Language>SFX</Language>
+													<AudioFile>Tonight_start.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="705727265"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{00D7E05B-AD3D-4747-B5AB-C3FC6EB81C52}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{CB35F58A-B56A-436A-B8D8-6CAF4D6F0FAB}">
+													<ClipList>
+														<MusicClip Name="Tonight_start" ID="{878E1B09-3CEE-4661-848E-CF8B471342AF}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="1707.66439909297"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Tonight_start" ID="{A9D4A6E3-9EC4-45D9-AB43-953A8797FD83}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{764AE2DB-9E45-4DBB-9335-17096C7F7582}"/>
+										<MusicCue Name="Exit Cue" ID="{9F12B773-9B2B-465B-BF54-37D09B110148}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="1707.66439909297"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{1596E6A5-DE15-4DF0-8345-DFE9595E5774}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{59AB54B7-CA55-4E7F-A9FC-4FE2FB15A165}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{5C09FF10-84D0-4C07-9C29-7BB495622BB5}" ShortID="541408349">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{8035C39B-3FC6-49FA-BBCC-2C803FBC0C5E}" ShortID="451569974">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Tonight_start" ID="{93C0B4EE-1C88-4252-8C1F-0DC960017D7A}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{D57CBEB6-1543-4982-A2DD-F7637160F233}" ShortID="336321432">
+											<PropertyList>
+												<Property Name="PlayMode" Type="int16" Value="3"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{3525F582-9B7E-4E4F-8E8F-4232AE760AA2}" ShortID="661190826">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="tonight_1" ID="{44D551CC-BBE3-4A4E-BCCF-EB03C432BDB1}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{2A73EF2E-67FE-4560-9A60-A1C6ADC0C3E2}" ShortID="480348689">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="tonight_2" ID="{74107E21-376A-49DC-9A97-E42995F48771}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{BC05055B-1A29-4C2E-88ED-DD0ABC1505E2}" ShortID="639411669">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="tonight_3" ID="{DF047260-D5ED-49ED-B369-49918981E2D4}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{B369A795-E34B-4319-A07F-B2E2C165C443}" ShortID="960123470">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="tonight_4" ID="{97861E3B-2871-4186-9023-7D61690DE8EE}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{EBBE62DB-D78A-49F0-AF31-2E7BFA44F68F}" ShortID="968415091">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="tonight_5" ID="{0F0A2AB1-49C0-48E3-92D5-8D4E1A23D8A2}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{D65EC16D-3C06-413C-A20A-2B2F73077A9C}" ShortID="51813042">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="tonight_6" ID="{C4E206F5-A420-4BF8-80BA-D00A24230AA4}"/>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{F29D0F06-1DC8-4837-9843-E3BDEE1E1F87}" ShortID="36036528">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<SegmentRef Name="tonight_7" ID="{847941CD-814B-468C-A1FA-A12008767127}"/>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
