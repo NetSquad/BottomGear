@@ -263,6 +263,99 @@
 								</BlendTrack>
 							</BlendTrackList>
 						</BlendContainer>
+						<RandomSequenceContainer Name="Airsoft_shot" ID="{117BFF35-57B2-4429-AB32-6E2CC5034431}" ShortID="167074052">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{73943A55-F1F5-4FB7-B285-4B9D7D8A0415}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="500"/>
+													<Property Name="Min" Type="Real64" Value="-500"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Airsoft_Shot_1" ID="{322ECE35-F675-4773-BED3-D55EAE990F08}" ShortID="193034783">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Airsoft_Shot_1" ID="{371CE030-3C85-4515-AA72-F0774A737941}">
+											<Language>SFX</Language>
+											<AudioFile>Airsoft_Shot_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="883585123"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Airsoft_Shot_1" ID="{371CE030-3C85-4515-AA72-F0774A737941}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Airsoft_Shot_2l" ID="{AFC8D9B3-F487-4E58-A10E-73DCB4B5B305}" ShortID="656129849">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Airsoft_Shot_2l" ID="{466DF6BB-2491-4971-84E7-3C139646229E}">
+											<Language>SFX</Language>
+											<AudioFile>Airsoft_Shot_2l.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="618986363"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Airsoft_Shot_2l" ID="{466DF6BB-2491-4971-84E7-3C139646229E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Airsoft_Shot_3" ID="{95ED3B06-997E-4009-9C74-74354B3F1CAA}" ShortID="77050563">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Airsoft_Shot_3" ID="{DF972FD9-A5BB-45FE-9EFE-118004199AD2}">
+											<Language>SFX</Language>
+											<AudioFile>Airsoft_Shot_3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="460382379"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Airsoft_Shot_3" ID="{DF972FD9-A5BB-45FE-9EFE-118004199AD2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{D16BC694-CAA6-4EED-A478-0E9AF49583E5}" ShortID="388247416">

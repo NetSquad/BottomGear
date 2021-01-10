@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="89505537" Language="SFX" Hash="891486450">
+		<SoundBank Id="89505537" Language="SFX" Hash="4119436317">
 			<ObjectPath>\SoundBanks\Default Work Unit\Gameplay</ObjectPath>
 			<ShortName>Gameplay</ShortName>
 			<Path>Gameplay.bnk</Path>
@@ -41,6 +41,22 @@
 						<File Id="624805314" Language="SFX">
 							<ShortName>Car_engine_1000rpm.wav</ShortName>
 							<Path>SFX\Car_engine_1000rpm_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="268953978" Name="Play_shot" ObjectPath="\Events\Default Work Unit\Gameplay\Play_shot" DurationType="OneShot" DurationMin="0.313523" DurationMax="1.596238">
+					<IncludedMemoryFiles>
+						<File Id="460382379" Language="SFX">
+							<ShortName>Airsoft_Shot_3.wav</ShortName>
+							<Path>SFX\Airsoft_Shot_3_10C4C929.wem</Path>
+						</File>
+						<File Id="618986363" Language="SFX">
+							<ShortName>Airsoft_Shot_2l.wav</ShortName>
+							<Path>SFX\Airsoft_Shot_2l_10C4C929.wem</Path>
+						</File>
+						<File Id="883585123" Language="SFX">
+							<ShortName>Airsoft_Shot_1.wav</ShortName>
+							<Path>SFX\Airsoft_Shot_1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

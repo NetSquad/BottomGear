@@ -230,7 +230,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e4ed0aef22d7c7478ab257ea4c288390
     GuidInternal: 
-    m_lastTime: -8585913697703493957
+    m_lastTime: -8585912991434087483
     List:
     - name: Gameplay
       guid: 572100031c49bb4c93c8377933e21139
@@ -258,7 +258,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: adfba9e144f1c741a345f6c52c3cc02b
     GuidInternal: 
-    m_lastTime: -8585913697707174786
+    m_lastTime: -8585912993119254088
     List:
     - name: Gameplay
       guid: 335e16bf552f1b4aa146ecb0c6f3f409
@@ -340,6 +340,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_shot
+      guid: b9d0a980a5ee614694c63bdeb672d6b4
+      id: 268953978
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
+      - ElementName: Play_shot
+        ObjectType: 3
+      Path: Default Work Unit\Gameplay\Play_shot
+      maxAttenuation: 0
+      maxDuration: 1596238
+      minDuration: 313523
     - name: Stop_All
       guid: 653e09514794814199a6a1c3238088ff
       id: 452547817
@@ -567,6 +581,10 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585913707887567901
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /Wwise_Bottom_Gear_Project
+  - /Wwise_Bottom_Gear_Project/Events
+  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit
+  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit/Gameplay
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
