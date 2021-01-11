@@ -530,6 +530,58 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="Explosion" ID="{12CC3C00-B6C8-4C22-8675-40DAF89173B1}" ShortID="793256280">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="explosion" ID="{DFF26B63-DEEE-4A68-9712-31E0EA5001B2}">
+									<Language>SFX</Language>
+									<AudioFile>explosion.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="757646858"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="explosion" ID="{DFF26B63-DEEE-4A68-9712-31E0EA5001B2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Neon_Loop" ID="{10B794DF-C131-4872-9405-F93CC9C8AE9B}" ShortID="65682274">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Neon_Loop" ID="{870C073C-DDE2-49FA-92B8-2022FF1CB425}">
+									<Language>SFX</Language>
+									<AudioFile>Neon_Loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="904913494"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Neon_Loop" ID="{870C073C-DDE2-49FA-92B8-2022FF1CB425}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{D16BC694-CAA6-4EED-A478-0E9AF49583E5}" ShortID="388247416">

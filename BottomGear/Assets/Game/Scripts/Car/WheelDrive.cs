@@ -18,6 +18,9 @@ namespace BottomGear
 	{
 		// --------------------- Variables -------------------------
 		public AK.Wwise.Event engine_sound;
+		public AK.Wwise.Event crash_sound;
+		bool play_crash = false;
+
 		[Header("Wheels")]
 		[Tooltip("The vehicle's wheel count")]
 		public int wheelCount = 4;
@@ -263,10 +266,19 @@ namespace BottomGear
 		//If there's a collision
         private void OnCollisionEnter(Collision collision)
         {
-            if(collision.collider.tag == "Car")
+            if(collision.collider.tag == "Player")
             {
-				int test = 0;
-            }
+				float val = rb.velocity.magnitude + collision.collider.attachedRigidbody.velocity.magnitude;
+				val /= maxSpeed * 2;
+
+				if (val >= 1.0f)
+					val = 1.0f;
+				else if (val < 0.0f)
+					val = 0.0f;
+
+				AkSoundEngine.SetRTPCValue("Crash_Energy", val * 100);
+				crash_sound.Post(gameObject);
+			}
         }
 
         // ----------------------------------------------

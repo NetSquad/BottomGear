@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 320967679}
   - component: {fileID: 320967680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftTrailRef
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ PositionConstraint:
   m_Enabled: 1
   m_Weight: 1
   m_TranslationAtRest: {x: -2.0393238, y: -0.9944575, z: -1.54}
-  m_TranslationOffset: {x: -0.01252079, y: 0.043206215, z: 0.56285715}
+  m_TranslationOffset: {x: -0.012523651, y: 0.043206215, z: 0.56285715}
   m_AffectTranslationX: 0
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 0
@@ -59,7 +59,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 343950545}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: COM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 367256035}
   - component: {fileID: 367256036}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightTrailRef
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ PositionConstraint:
   m_Enabled: 1
   m_Weight: 1
   m_TranslationAtRest: {x: 2.0241795, y: -0.9944575, z: -1.5400014}
-  m_TranslationOffset: {x: 4.0509825, y: 0.043206215, z: 0.5628557}
+  m_TranslationOffset: {x: 4.0509796, y: 0.043206215, z: 0.5628557}
   m_AffectTranslationX: 0
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 0
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 399415737}
   - component: {fileID: 1568163302013526568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TrailYRef
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ PositionConstraint:
   m_Enabled: 1
   m_Weight: 1
   m_TranslationAtRest: {x: -4.242865, y: -2.4329724, z: 0.013586521}
-  m_TranslationOffset: {x: -4.242868, y: -1.0338051, z: 0.6057616}
+  m_TranslationOffset: {x: -4.242865, y: -1.0338051, z: 0.60576445}
   m_AffectTranslationX: 0
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 0
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 592466243}
   - component: {fileID: 592466244}
   - component: {fileID: 592466245}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Virtual Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,8 +205,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592466242}
-  m_LocalRotation: {x: 0.16202451, y: -0.000000074505806, z: 0.000000011175871, w: 0.9867868}
-  m_LocalPosition: {x: -6.9900017, y: 166.98001, z: -82.66}
+  m_LocalRotation: {x: 0.16202456, y: 0.0000000083298675, z: -0.0000000013677149, w: 0.9867867}
+  m_LocalPosition: {x: -6.99, y: 166.98001, z: -82.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 870320325}
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 870320326}
   - component: {fileID: 870320327}
   - component: {fileID: 870320328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1389970387}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CAM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 1702862663}
   - component: {fileID: 1702862662}
   - component: {fileID: 1702862661}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tank2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 1842894661}
   - component: {fileID: 1842894660}
   - component: {fileID: 1842894659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tank1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2094304707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Look At
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 1652378419}
   - component: {fileID: 676468205}
   - component: {fileID: 676468206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -624,8 +624,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138620558}
-  m_LocalRotation: {x: 0.16202451, y: -0.000000074505806, z: 0.000000011175871, w: 0.9867868}
-  m_LocalPosition: {x: -6.9900017, y: 166.98001, z: -82.66}
+  m_LocalRotation: {x: 0.16202456, y: 0.0000000083298675, z: -0.0000000013677149, w: 0.9867867}
+  m_LocalPosition: {x: -6.99, y: 166.98001, z: -82.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1389970387}
@@ -862,7 +862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1780380498893395138}
   - component: {fileID: 439235515}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -877,7 +877,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780380498893682722}
   m_LocalRotation: {x: 0.40557963, y: 0.57922775, z: -0.4055801, w: -0.5792281}
-  m_LocalPosition: {x: -0.010001659, y: 0.4000007, z: -0.040010333}
+  m_LocalPosition: {x: -0.009999156, y: 0.40000015, z: -0.040011406}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 1780380498893395194}
@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 1780380498893395190}
   - component: {fileID: 1780380498894656766}
   - component: {fileID: 1780380498895415998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WESD_B_PIVOT02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,7 +1001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1780380498893395174}
   - component: {fileID: 100597079}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ForwardBridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1058,7 +1058,7 @@ GameObject:
   - component: {fileID: 1780380498893395172}
   - component: {fileID: 1780380498894656704}
   - component: {fileID: 1780380498895415936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel4Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1139,7 +1139,7 @@ GameObject:
   - component: {fileID: 1780380498893395176}
   - component: {fileID: 1780380498894656710}
   - component: {fileID: 1780380498895415942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel3Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1221,7 +1221,7 @@ GameObject:
   - component: {fileID: 1780380498894656708}
   - component: {fileID: 1780380498895415940}
   - component: {fileID: 1894402503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1236,7 +1236,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780380498893682904}
   m_LocalRotation: {x: 0.000000030908623, y: 0.7071068, z: 0.7071068, w: -0.000000030908623}
-  m_LocalPosition: {x: -0.010001659, y: 0.003959179, z: 0.07998955}
+  m_LocalPosition: {x: -0.009999156, y: 0.0039586425, z: 0.07998848}
   m_LocalScale: {x: 4.221775, y: 4.221775, z: 4.221775}
   m_Children: []
   m_Father: {fileID: 3277922109011840617}
@@ -1325,7 +1325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1780380498893395194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BackBridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1359,7 +1359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1780380498893395196}
   - component: {fileID: 802032766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Forward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1374,7 +1374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780380498893682908}
   m_LocalRotation: {x: 0.40557963, y: 0.57922775, z: -0.4055801, w: -0.5792281}
-  m_LocalPosition: {x: -0.010001659, y: 0.4000007, z: 0.2649895}
+  m_LocalPosition: {x: -0.009999156, y: 0.40000015, z: 0.26498842}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 1780380498893395174}
@@ -1418,7 +1418,7 @@ GameObject:
   - component: {fileID: 1780380498893395096}
   - component: {fileID: 1780380498894656756}
   - component: {fileID: 1780380498895415988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bridge2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1499,7 +1499,7 @@ GameObject:
   - component: {fileID: 1780380498893395168}
   - component: {fileID: 1780380498894656758}
   - component: {fileID: 1780380498895415990}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WESD_B_PIVOT03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1580,7 +1580,7 @@ GameObject:
   - component: {fileID: 1780380498893395088}
   - component: {fileID: 1780380498894656762}
   - component: {fileID: 1780380498895415994}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel2Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1661,7 +1661,7 @@ GameObject:
   - component: {fileID: 1780380498893395092}
   - component: {fileID: 1780380498894656760}
   - component: {fileID: 1780380498895415992}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel1Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1740,7 +1740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1864884027688733420}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BattleRollerOLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1778,7 +1778,7 @@ GameObject:
   - component: {fileID: 1864884028113136407}
   - component: {fileID: 1864884028113136406}
   - component: {fileID: 768760810}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1793,7 +1793,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864884028113136404}
   m_LocalRotation: {x: -0.7071068, y: -0.000000030908623, z: 0.000000030908623, w: -0.7071068}
-  m_LocalPosition: {x: -0.010001659, y: 0.02234602, z: 0.07998955}
+  m_LocalPosition: {x: -0.009999156, y: 0.022345483, z: 0.07998848}
   m_LocalScale: {x: 4.221776, y: 4.221775, z: 4.221775}
   m_Children: []
   m_Father: {fileID: 3277922109011840617}
@@ -1884,7 +1884,7 @@ GameObject:
   - component: {fileID: 5539698602998028941}
   - component: {fileID: 2975823224498537245}
   - component: {fileID: 650841640410565144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WESD_B_PIVOT02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2003,7 +2003,7 @@ GameObject:
   - component: {fileID: 7091436805875677743}
   - component: {fileID: 3240728470419790997}
   - component: {fileID: 61116891714644875}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bridge 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2231,7 +2231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4829427563883369341}
   - component: {fileID: 8962455898984354761}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel1Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2295,7 +2295,7 @@ GameObject:
   - component: {fileID: 8283168214460455254}
   - component: {fileID: 4897621641817626964}
   - component: {fileID: 5989303988937771362}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WESD_B_PIVOT03 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2375,7 +2375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1157665809668380779}
   - component: {fileID: 5151564807111174973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel2Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2437,7 +2437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5843430934029131718}
   - component: {fileID: 8823429090271827014}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel3Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2499,7 +2499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3449325379626428020}
   - component: {fileID: 6971916259143222507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel4Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2610,6 +2610,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParticleTronTrail
       objectReference: {fileID: 0}
+    - target: {fileID: 5880017549711562271, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
 --- !u!4 &5880017550169564182 stripped
@@ -2627,6 +2631,10 @@ PrefabInstance:
     - target: {fileID: 1097810918716676488, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_Name
       value: RenderTrailLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097810918716676488, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1097810918716676488, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_IsActive
@@ -2720,6 +2728,10 @@ PrefabInstance:
       value: RenderTrailRight
       objectReference: {fileID: 0}
     - target: {fileID: 1097810918716676488, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097810918716676488, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -2810,6 +2822,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RenderTronTrail
       objectReference: {fileID: 0}
+    - target: {fileID: 1097810918716676488, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1737707477377397356, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_SortingOrder
       value: 0
@@ -2832,7 +2848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.080003
+      value: -7.08
       objectReference: {fileID: 0}
     - target: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2840,7 +2856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.7100009
+      value: 1.71
       objectReference: {fileID: 0}
     - target: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_LocalRotation.w
