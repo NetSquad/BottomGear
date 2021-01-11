@@ -258,7 +258,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: adfba9e144f1c741a345f6c52c3cc02b
     GuidInternal: 
-    m_lastTime: -8585912833764123396
+    m_lastTime: -8585912407685252973
     List:
     - name: Gameplay
       guid: 335e16bf552f1b4aa146ecb0c6f3f409
@@ -354,6 +354,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Neon_Loop
+      guid: d1cd6290f38ab047b22f313d882f2092
+      id: 2606864591
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
+      - ElementName: Play_Neon_Loop
+        ObjectType: 3
+      Path: Default Work Unit\Gameplay\Play_Neon_Loop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_shot
       guid: b9d0a980a5ee614694c63bdeb672d6b4
       id: 268953978
@@ -394,6 +408,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Neon_Loop
+      guid: 2182eafae26302488c39d759c63a5b27
+      id: 97968401
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
+      - ElementName: Stop_Neon_Loop
+        ObjectType: 3
+      Path: Default Work Unit\Gameplay\Stop_Neon_Loop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Tonight_Bottom_Gear
       guid: 9a6d2c93ab0d60408372488915256569
       id: 1968261684

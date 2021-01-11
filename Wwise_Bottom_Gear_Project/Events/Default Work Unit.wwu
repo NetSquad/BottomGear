@@ -56,6 +56,31 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Neon_Loop" ID="{9062CDD1-8AF3-47B0-B22F-313D882F2092}">
+							<ChildrenList>
+								<Action Name="" ID="{A8483EBB-5ABF-4B58-B594-C546CA5F156C}" ShortID="402586774">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Neon_Loop" ID="{10B794DF-C131-4872-9405-F93CC9C8AE9B}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Neon_Loop" ID="{FAEA8221-63E2-4802-8C39-D759C63A5B27}">
+							<ChildrenList>
+								<Action Name="" ID="{997676CD-3B88-498F-ADA5-F4E3C8C6B502}" ShortID="971263632">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Neon_Loop" ID="{10B794DF-C131-4872-9405-F93CC9C8AE9B}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{8A4961F6-7B57-49F4-8DA0-D54727EB47F3}" ShortID="611502248">
