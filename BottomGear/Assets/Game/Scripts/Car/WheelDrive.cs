@@ -46,6 +46,10 @@ namespace BottomGear
 		[Tooltip("The vehicle's jump timer interval.")]
 		public float jumpInterval = 2.0f;
 
+		[Tooltip("Constant force towards the ground to keep the vehicle riding on it.")]
+		public bool snapToGround = true;
+		[Tooltip("The amount of snapToGround force to be applied.")]
+		public float snapForce = 1500.0f;
 		// --- Main components ---
 		private PhotonView photonView;
 		private Rigidbody rb;
@@ -147,10 +151,14 @@ namespace BottomGear
                 jumpTimer = 0.0f;
             }
 
+			if(snapToGround)
+				rb.AddForce(-transform.up * snapForce, ForceMode.Force);
 
+			RaycastHit hit;
+			LayerMask mask = ~LayerMask.GetMask("Car");
 
-            // --- Car flip ---
-            if (/*Physics.Raycast(centerOfMass.position,transform.up, 3) && */!IsGrounded() && Math.Abs(transform.eulerAngles.z) > 150 && Math.Abs(transform.eulerAngles.z) < 190)
+			// --- Car flip ---
+			if (Physics.Raycast(centerOfMass.position, transform.up, out hit, 3, mask) && !IsGrounded() && Math.Abs(transform.eulerAngles.z) > 150 && Math.Abs(transform.eulerAngles.z) < 190)
             {
 				rb.MoveRotation(rb.rotation * Quaternion.Euler(0, 0, 180));
 
