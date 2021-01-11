@@ -185,11 +185,8 @@ namespace BottomGear
 			if(snapToGround)
 				rb.AddForce(-transform.up * snapForce, ForceMode.Force);
 
-			RaycastHit hit;
-			LayerMask mask = ~LayerMask.GetMask("Car");
-
 			// --- Car flip ---
-			if (Physics.Raycast(centerOfMass.position, transform.up, out hit, 3, mask) && !IsGrounded() && Math.Abs(transform.eulerAngles.z) > 150 && Math.Abs(transform.eulerAngles.z) < 190)
+			if (transform.up.y < -0.75)
             {
 				rb.MoveRotation(rb.rotation * Quaternion.Euler(0, 0, 180));
             }
