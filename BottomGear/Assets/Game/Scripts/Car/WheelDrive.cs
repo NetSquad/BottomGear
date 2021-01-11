@@ -56,6 +56,7 @@ namespace BottomGear
 
 		public Vector3 rotationSpeed = new Vector3(0, 40, 0);
 
+		bool lockDown = false;
 
 		// --- Main components ---
 		private PhotonView photonView;
@@ -151,12 +152,20 @@ namespace BottomGear
 			else if (IsGrounded())
 				rb.AddForce(direction, ForceMode.Acceleration);
 
+			// --- If no acceleration, release lock ---
+			if (Input.GetAxisRaw("Vertical") <= 0)
+				lockDown = false;
+
 			// --- Car on air rotation ---
 			if (!IsGrounded())
 			{
 				Vector2 inputDirection;
 				inputDirection.y = Input.GetAxis("Horizontal");
 				inputDirection.x = Input.GetAxis("Vertical");
+
+				// --- If lock was activated and we are moving forward block down rotation ---
+				if (lockDown && inputDirection.x > 0)
+					inputDirection.x = 0;
 
 				Quaternion deltaRot = Quaternion.Euler(inputDirection * rotationSpeed);
 				transform.rotation = Quaternion.Slerp(transform.rotation,transform.rotation * deltaRot, Time.deltaTime * 2.0f);
@@ -165,6 +174,10 @@ namespace BottomGear
 			// ---Car jump-- -
 			if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
             {
+				// --- If car jumps and has a forward acceleration, prevent it from rotating downwards ---
+				if (Input.GetAxis("Vertical") > 0)
+					lockDown = true;
+
                 rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
                 jumpTimer = 0.0f;
             }
@@ -179,9 +192,6 @@ namespace BottomGear
 			if (Physics.Raycast(centerOfMass.position, transform.up, out hit, 3, mask) && !IsGrounded() && Math.Abs(transform.eulerAngles.z) > 150 && Math.Abs(transform.eulerAngles.z) < 190)
             {
 				rb.MoveRotation(rb.rotation * Quaternion.Euler(0, 0, 180));
-
-                //if (Math.Abs(transform.eulerAngles.z) > 150 && Math.Abs(transform.eulerAngles.z) < 190)
-                //    rb.MovePosition(rb.position - transform.up);
             }
 
             // --- Car jump timer ---
