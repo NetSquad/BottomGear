@@ -24,6 +24,7 @@ namespace BottomGear
     {
         public static GameManager Instance = null;
         public Transform MainSpawn;
+        public ParticleSystem ps;
 
         public Text InfoText;
 
