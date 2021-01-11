@@ -139,17 +139,23 @@ namespace BottomGear
 			else if(IsGrounded())
 				rb.AddForce(transform.forward * acceleration * Input.GetAxis("Vertical"), ForceMode.Acceleration);
 
-            // ---Car jump---
+            // ---Car jump-- -
+
             if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
             {
                 rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
                 jumpTimer = 0.0f;
             }
 
+
+
             // --- Car flip ---
-            if (!IsGrounded() && Math.Abs(transform.eulerAngles.z) > 150 && Math.Abs(transform.eulerAngles.z) < 190)
+            if (/*Physics.Raycast(centerOfMass.position,transform.up, 3) && */!IsGrounded() && Math.Abs(transform.eulerAngles.z) > 150 && Math.Abs(transform.eulerAngles.z) < 190)
             {
-				rb.MoveRotation(rb.rotation * Quaternion.Euler(0, 0, 180));	
+				rb.MoveRotation(rb.rotation * Quaternion.Euler(0, 0, 180));
+
+                //if (Math.Abs(transform.eulerAngles.z) > 150 && Math.Abs(transform.eulerAngles.z) < 190)
+                //    rb.MovePosition(rb.position - transform.up);
             }
 
             // --- Car jump timer ---
