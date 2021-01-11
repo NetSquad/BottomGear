@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Stop_All" ID="{51093E65-9447-4181-99A6-A1C3238088FF}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_shot" ID="{80A9D0B9-EEA5-4661-94C6-3BDEB672D6B4}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Crash" ID="{616C061A-4056-489A-BA58-9632DAC8F39E}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Engine" ID="{0DF13846-463E-4F67-B391-89AE8A8D0180}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Engine" ID="{90778997-051D-4FD0-86C4-BE69E24D10F9}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID PLAY_BUTTON_HOVER = 4021863785U;
         static const AkUniqueID PLAY_BUTTON_SELECTED = 3882482286U;
+        static const AkUniqueID PLAY_CRASH = 303595419U;
         static const AkUniqueID PLAY_ENGINE = 639345804U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_SHOT = 268953978U;
@@ -25,6 +26,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID CRASH_ENERGY = 3679139441U;
         static const AkUniqueID PLAYBACK_RATE = 1524500807U;
         static const AkUniqueID RPM = 796049864U;
         static const AkUniqueID SPEED = 640949982U;

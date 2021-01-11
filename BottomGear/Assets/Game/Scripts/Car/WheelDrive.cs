@@ -246,6 +246,15 @@ namespace BottomGear
 			return true;
 		}
 
-		// ----------------------------------------------
-	}
+		//If there's a collision
+        private void OnCollisionEnter(Collision collision)
+        {
+            if(collision.collider.tag == "Car")
+            {
+				int test = 0;
+            }
+        }
+
+        // ----------------------------------------------
+    }
 }
