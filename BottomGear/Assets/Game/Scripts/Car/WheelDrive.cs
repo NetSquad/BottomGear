@@ -194,7 +194,7 @@ namespace BottomGear
             // --- Car jump timer ---
             jumpTimer += Time.deltaTime;
 
-			float handBrake = Input.GetKey(KeyCode.X) ? brakeTorque : 0;
+			float handBrake = Input.GetButton("R2") ? brakeTorque : 0;
 
 			for (int i = 0; i < m_Wheels.Length; ++i)
 			{
