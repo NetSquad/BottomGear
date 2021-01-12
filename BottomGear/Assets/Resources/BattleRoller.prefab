@@ -1710,6 +1710,7 @@ MonoBehaviour:
   jumpInterval: 3
   snapToGround: 1
   snapForce: 1500
+  rotationSpeed: {x: 0, y: 40, z: 0}
   centerOfMass: {fileID: 7147278319927577307}
   camera: {fileID: 7147278321399286938}
 --- !u!114 &1460003531299296329
