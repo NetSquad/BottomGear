@@ -40,10 +40,10 @@ namespace BottomGear
 		public float maxSpeed = 30;
 		[Tooltip("The vehicle's acceleration multiplier.")]
 		public float acceleration = 5.0f;
-		[Tooltip("Simulation sub-steps when the speed is above critical.")]
-		public int stepsBelow = 5;
 		[Tooltip("Simulation sub-steps when the speed is below critical.")]
-		public int stepsAbove = 1;
+		public int stepsBelow = 1;
+		[Tooltip("Simulation sub-steps when the speed is above critical.")]
+		public int stepsAbove = 5;
 		[Tooltip("The vehicle's jump force multiplier.")]
 		public int jumpForce = 10000;
 		[Tooltip("The vehicle's jump timer interval.")]
@@ -54,9 +54,8 @@ namespace BottomGear
 		[Tooltip("The amount of snapToGround force to be applied.")]
 		public float snapForce = 1500.0f;
 
+		[Tooltip("Speed at which the vehicle rotates in x and y axis.")]
 		public Vector3 rotationSpeed = new Vector3(0, 40, 0);
-
-		bool lockDown = false;
 
 		// --- Main components ---
 		private PhotonView photonView;
@@ -64,6 +63,13 @@ namespace BottomGear
 		private Wheel[] m_Wheels;
 		public Transform centerOfMass;
 		public Camera camera;
+		Transform mTransform;
+
+		// --- Internal variables ---
+		bool lockDown = false;
+		int currentSteps = 1;
+
+		System.Diagnostics.Stopwatch watch;
 
 		struct Wheel
 		{
@@ -74,12 +80,15 @@ namespace BottomGear
 		// --- Private gameplay variables ---
 		private float jumpTimer = 0.0f;
 
+
 		// --------------------- Main Methods -------------------------
 
 		public void Awake()
 		{
+			mTransform = GetComponent<Transform>();
 			photonView = GetComponent<PhotonView>();
 			rb = GetComponent<Rigidbody>();
+			watch = new System.Diagnostics.Stopwatch();
 		}
 
 		// Find all the WheelColliders down in the hierarchy.
@@ -87,6 +96,7 @@ namespace BottomGear
 		{
 			//Play engine Sound
 			engine_sound.Post(gameObject);
+
 			// --- Deactivate camera if this is not the local player ---
 			if (camera != null)
 			{
@@ -132,17 +142,26 @@ namespace BottomGear
 
 		void Update()
 		{
+			watch.Start();
+
 			// --- Only update if this is the local player ---
 			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
-			{
 				return;
-			}
 
-			m_Wheels[0].collider.ConfigureVehicleSubsteps(criticalSpeed, stepsBelow, stepsAbove);
+            // --- If speed is above critical increase simulation steps ---
+            //if (rb.velocity.magnitude > criticalSpeed)
+            //{
+                m_Wheels[0].collider.ConfigureVehicleSubsteps(criticalSpeed, stepsBelow, stepsAbove);
+            //}
 
-			float angle = maxAngle * Input.GetAxis("Horizontal");
-			float torque = maxTorque * Input.GetAxis("Vertical");
-			Vector3 direction = transform.forward * acceleration * Input.GetAxis("Vertical");
+            // --- Obtain input ---
+            Vector2 inputDirection;
+			inputDirection.x = Input.GetAxis("Horizontal");
+			inputDirection.y = Input.GetAxis("Vertical");
+
+			float angle = maxAngle * inputDirection.x;
+			float torque = maxTorque * inputDirection.y;
+			Vector3 direction = mTransform.forward * acceleration * inputDirection.y;
 
 			// --- Limit car speed ---
 			if (rb.velocity.magnitude > maxSpeed)
@@ -159,34 +178,35 @@ namespace BottomGear
 			// --- Car on air rotation ---
 			if (!IsGrounded())
 			{
-				Vector2 inputDirection;
-				inputDirection.y = Input.GetAxis("Horizontal");
-				inputDirection.x = Input.GetAxis("Vertical");
+				Vector2 inputDirectionRot;
+				inputDirectionRot.y = inputDirection.x;
+				inputDirectionRot.x = inputDirection.y;
 
 				// --- If lock was activated and we are moving forward block down rotation ---
-				if (lockDown && inputDirection.x > 0)
-					inputDirection.x = 0;
+				if (lockDown && inputDirectionRot.x > 0)
+					inputDirectionRot.x = 0;
 
-				Quaternion deltaRot = Quaternion.Euler(inputDirection * rotationSpeed);
-				transform.rotation = Quaternion.Slerp(transform.rotation,transform.rotation * deltaRot, Time.deltaTime * 2.0f);
+				Quaternion deltaRot = Quaternion.Euler(inputDirectionRot * rotationSpeed);
+				mTransform.rotation = Quaternion.Slerp(mTransform.rotation, mTransform.rotation * deltaRot, Time.deltaTime * 2.0f);
 			}
 
 			// ---Car jump-- -
 			if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
             {
 				// --- If car jumps and has a forward acceleration, prevent it from rotating downwards ---
-				if (Input.GetAxis("Vertical") > 0)
+				if (inputDirection.y > 0)
 					lockDown = true;
 
-                rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+                rb.AddForce(mTransform.up * jumpForce, ForceMode.Impulse);
                 jumpTimer = 0.0f;
             }
 
+			// --- Keep carattached to ground surface ---
 			if(snapToGround)
-				rb.AddForce(-transform.up * snapForce, ForceMode.Force);
+				rb.AddForce(-mTransform.up * snapForce, ForceMode.Force);
 
 			// --- Car flip ---
-			if (transform.up.y < -0.75)
+			if (mTransform.up.y < -0.75)
             {
 				rb.MoveRotation(rb.rotation * Quaternion.Euler(0, 0, 180));
             }
@@ -200,7 +220,7 @@ namespace BottomGear
 			{
 				ref WheelCollider wheel = ref m_Wheels[i].collider;
 
-				// A simple car where front wheels steer while rear ones drive.
+				// --- A simple car where front wheels steer while rear ones drive ---
 				if (m_Wheels[i].mesh.name == "Wheel1Mesh"
 						|| m_Wheels[i].mesh.name == "Wheel2Mesh")
 					wheel.steerAngle = angle;
@@ -228,6 +248,9 @@ namespace BottomGear
 
 			}
 
+			Debug.Log(watch.Elapsed.TotalMilliseconds);
+
+			watch.Reset();
 
 			//Update the RTPC for the engine sound
 			float speed = rb.velocity.magnitude / maxSpeed;
