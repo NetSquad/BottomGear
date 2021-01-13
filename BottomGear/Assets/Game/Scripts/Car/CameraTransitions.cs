@@ -15,6 +15,10 @@ public class CameraTransitions : MonoBehaviour
     void Start()
     {
         CurrentCamera = FollowCamera;
+        FollowCamera.SetActive(true);
+        FollowCameraFar.SetActive(false);
+        FollowCameraUp.SetActive(false);
+        FrontCamera.SetActive(false);
     }
 
     // Update is called once per frame
