@@ -6150,7 +6150,7 @@ MonoBehaviour:
   RandomOffset: 2
   ClampY: 1
   PrefabsToInstantiate:
-  - {fileID: 6143018481379592601, guid: 26a2b881edbe82043b0953277c6dc617, type: 3}
+  - {fileID: 304097424331246161, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
   AutoSpawnObjects: 1
 --- !u!114 &1841039223
 MonoBehaviour:

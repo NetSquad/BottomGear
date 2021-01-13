@@ -4,23 +4,33 @@ using UnityEngine;
 
 public class CameraTransitions : MonoBehaviour
 {
-    public Cinemachine.CinemachineVirtualCamera FollowCamera;
-    public Cinemachine.CinemachineVirtualCamera FollowCameraFar;
-    public Cinemachine.CinemachineVirtualCamera FollowCameraUp;
-    public Cinemachine.CinemachineVirtualCamera FrontCamera;
+    public GameObject FollowCamera;
+    public GameObject FollowCameraFar;
+    public GameObject FollowCameraUp;
+    public GameObject FrontCamera;
+
+    private GameObject CurrentCamera;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        CurrentCamera = FollowCamera;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButton("LookBack"))
+        if (Input.GetButton("Rear"))
         {
-
+            CurrentCamera.SetActive(false);
+            CurrentCamera = FrontCamera;
+            CurrentCamera.SetActive(true);
+        }
+        else if (CurrentCamera == FrontCamera)
+        {
+            CurrentCamera.SetActive(false);
+            CurrentCamera = FollowCamera;
+            CurrentCamera.SetActive(true);
         }
     }
 }
