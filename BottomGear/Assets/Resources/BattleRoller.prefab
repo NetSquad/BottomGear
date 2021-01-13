@@ -2009,10 +2009,11 @@ MonoBehaviour:
   driveType: 2
   maxAngle: 30
   maxTorque: 2500
-  brakeTorque: 30000
+  handBrakeTorque: 30000
   criticalSpeed: 25
   maxSpeed: 50
   acceleration: 5
+  brakeAcceleration: 15
   stepsBelow: 7
   stepsAbove: 2
   jumpForce: 25000
@@ -2020,6 +2021,7 @@ MonoBehaviour:
   snapToGround: 1
   snapForce: 2000
   rotationSpeed: {x: 0, y: 40, z: 0}
+  flyingLinearDrag: 0
   centerOfMass: {fileID: 7147278319927577307}
   camera: {fileID: 7147278321399286938}
 --- !u!114 &1460003531299296329
