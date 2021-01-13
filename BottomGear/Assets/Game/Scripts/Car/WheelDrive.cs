@@ -19,7 +19,6 @@ namespace BottomGear
 		// --------------------- Variables -------------------------
 		public AK.Wwise.Event engine_sound;
 		public AK.Wwise.Event crash_sound;
-		bool play_crash = false;
 
 		[Header("Wheels")]
 		[Tooltip("The vehicle's wheel count")]
@@ -178,6 +177,7 @@ namespace BottomGear
 			float torque = maxTorque * inputDirection.y;
 			Vector3 direction = mTransform.forward * acceleration * inputDirection.y;
 
+			// --- Manual brake ---
 			if (inputRawY <= 0)
 			{
 				lockDown = false;
@@ -223,6 +223,7 @@ namespace BottomGear
 			// --- Car on air rotation ---
 			if (!IsGrounded())
 			{
+				// --- Override rigidbody's drag ---
 				rb.drag = flyingLinearDrag;
 
 				float temp = inputDirection.y;
@@ -245,6 +246,7 @@ namespace BottomGear
 				rb.MoveRotation(rb.rotation * Quaternion.Euler(0, 0, 180));
             }
 
+			// --- Wheel physics ---
 			float handBrake = Input.GetButton("R2") ? handBrakeTorque : 0;
 
 			for (int i = 0; i < m_Wheels.Length; ++i)
