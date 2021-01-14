@@ -1547,7 +1547,7 @@ MonoBehaviour:
   jumpForce: 20000
   jumpInterval: 1
   snapToGround: 1
-  snapForce: 5000
+  snapForce: 3500
   rotationSpeed: {x: 60, y: 60, z: 0}
   flyingLinearDrag: 0
   centerOfMass: {fileID: 3623154689585449235}

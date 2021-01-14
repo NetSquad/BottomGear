@@ -224,7 +224,7 @@ namespace BottomGear
 			// --- Car jump timer ---
 			jumpTimer += Time.fixedDeltaTime;
 
-			// --- Keep carattached to ground surface ---
+			// --- Keep car attached to ground surface ---
 			if (snapToGround)
 				rb.AddForce(-mTransform.up * snapForce, ForceMode.Force);
 
