@@ -52,6 +52,7 @@ namespace Photon.Pun.Simple
         }
 
         public bool throwQueued;
+        public Vector3 deathVelocity = new Vector3();
 
         public void OnPreSimulate(int frameId, int subFrameId)
         {
@@ -67,8 +68,23 @@ namespace Photon.Pun.Simple
             for (int i = 0; i < mountedObjs.Count; ++i)
             {
                 var obj = mountedObjs[i];
-                var rb = transform.parent.GetComponent<Rigidbody>();    // @carles: Get car rigidbody
-                if (rb && obj.IsThrowable)
+
+                // @carles -----
+                Vector3 momentum = new Vector3();
+                if (deathVelocity.magnitude == 0)
+                {
+                    var rb = transform.parent.GetComponent<Rigidbody>();
+                    if (rb != null)
+                        momentum = rb.velocity;
+                }
+                else
+                {
+                    momentum = deathVelocity;
+                    deathVelocity = new Vector3(0, 0, 0);
+                }
+                    
+
+                if (obj.IsThrowable)
                 {
                     var syncState = obj as SyncState;
 
@@ -79,7 +95,7 @@ namespace Photon.Pun.Simple
 
                     var localizedOffset = origin.TransformPoint(offset);
                     var localizedRotation = origin.rotation;
-                    var localizedVelocity = (inheritRBVelocity && rb) ? rb.velocity + origin.TransformVector(velocity) : origin.TransformVector(velocity);
+                    var localizedVelocity = (inheritRBVelocity) ? momentum + origin.TransformVector(velocity) : origin.TransformVector(velocity);
 
                     syncState.Throw(localizedOffset, localizedRotation, localizedVelocity);
 
