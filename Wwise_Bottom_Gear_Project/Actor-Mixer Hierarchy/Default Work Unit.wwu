@@ -581,6 +581,16 @@
 						<Sound Name="Explosion" ID="{12CC3C00-B6C8-4C22-8675-40DAF89173B1}" ShortID="793256280">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>600</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -939,6 +949,151 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="Car_Jump" ID="{C5F6E7BB-618D-4CE1-BF6F-C57C72796248}" ShortID="812592553">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="jump_air_release" ID="{C0229182-DB61-4C7C-B8E1-606A2BC3F35B}">
+									<Language>SFX</Language>
+									<AudioFile>jump_air_release.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="214108455"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="jump_air_release" ID="{C0229182-DB61-4C7C-B8E1-606A2BC3F35B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="PickUp_Flag" ID="{6EFC656F-710E-4574-BB6E-FC68DB8E1231}" ShortID="59481552">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Pick_Up_Flag" ID="{1E430D68-78F8-482F-81B7-D8FCEF4FC495}">
+									<Language>SFX</Language>
+									<AudioFile>Pick_Up_Flag.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="815199413"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Pick_Up_Flag" ID="{1E430D68-78F8-482F-81B7-D8FCEF4FC495}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Fire_Boost_Loop" ID="{94A8E89F-88B7-4F7C-9E6B-4925FFA0C00C}" ShortID="604243076">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{30199E6E-1F6B-46DB-9988-B5B0DFF8FAD5}" ShortID="35663816">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="boost_Time" ID="{26A5C813-8789-4D84-9ED4-93C6DA5E911E}" WorkUnitID="{83E701E2-A621-4E1B-9506-6C5D9F7F48B7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{5C5C77E2-6232-4783-883C-32C9A66DEC35}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>0.09935</XPos>
+														<YPos>1936</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>59</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>18</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{802BAFD1-22F5-44D6-BFF7-C126BABA751F}" ShortID="237289737">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="boost_Time" ID="{26A5C813-8789-4D84-9ED4-93C6DA5E911E}" WorkUnitID="{83E701E2-A621-4E1B-9506-6C5D9F7F48B7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{E003C8DE-52AA-4121-946F-6BA6A62A94F7}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>-42</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Fir_Boost_Loop" ID="{3C735430-DB53-4540-A6F3-149247487959}">
+									<Language>SFX</Language>
+									<AudioFile>Fir_Boost_Loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="967403081"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Fir_Boost_Loop" ID="{3C735430-DB53-4540-A6F3-149247487959}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{D16BC694-CAA6-4EED-A478-0E9AF49583E5}" ShortID="388247416">
@@ -1003,6 +1158,43 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="UI_Button_Selected" ID="{21C17FE6-28CE-4D4D-A694-E80CCA4B6D4C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Voice_Lines" ID="{ACF2795A-529C-4157-9D34-DA67E4362907}" ShortID="136891907">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Sound Name="Ghandi_would_approve" ID="{47E8080C-4AE7-428D-95AC-CFE1C0480977}" ShortID="1016464442">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ghandi_would_approve" ID="{ABECA699-C965-4E62-A864-D4D3FE5AFFD2}">
+									<Language>SFX</Language>
+									<AudioFile>Ghandi_would_approve.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="338147328"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ghandi_would_approve" ID="{ABECA699-C965-4E62-A864-D4D3FE5AFFD2}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

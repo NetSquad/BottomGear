@@ -39,7 +39,7 @@
 								<Action Name="" ID="{ECC90462-796D-4430-A4FA-44208986E815}" ShortID="396233119">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Airsoft_shot" ID="{117BFF35-57B2-4429-AB32-6E2CC5034431}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+											<ObjectRef Name="laser_shot" ID="{CE2731C9-E750-4E61-B845-0BB28BDD12F1}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -76,6 +76,50 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Neon_Loop" ID="{10B794DF-C131-4872-9405-F93CC9C8AE9B}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Jump" ID="{B3A6DC8E-8F1D-4C61-BBF1-15A905793ABB}">
+							<ChildrenList>
+								<Action Name="" ID="{0AF8DCD9-189D-4403-91EC-8C6AEB7CD616}" ShortID="620898827">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Car_Jump" ID="{C5F6E7BB-618D-4CE1-BF6F-C57C72796248}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_explosion" ID="{10CF4486-C4B7-4171-A34E-6941B11B773F}">
+							<ChildrenList>
+								<Action Name="" ID="{E602A1EA-B9A6-495A-93AE-012F6F621543}" ShortID="718403433">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Explosion" ID="{12CC3C00-B6C8-4C22-8675-40DAF89173B1}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Tyre_hit" ID="{E2960315-FF87-4CD8-A50D-58FF61E02E5B}">
+							<ChildrenList>
+								<Action Name="" ID="{75BA0365-7783-46A7-B656-EBAD5EA99665}" ShortID="388042649">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Tyre_Hit" ID="{2126189D-75A6-4085-B8CA-DD2E1AF3BE30}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Enemy_Destroyed" ID="{99E12646-3D25-4C7A-BB84-CBE392E125C5}">
+							<ChildrenList>
+								<Action Name="" ID="{74A544CF-8E62-4943-992B-0B3333CE63B9}" ShortID="9225488">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ghandi_would_approve" ID="{47E8080C-4AE7-428D-95AC-CFE1C0480977}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

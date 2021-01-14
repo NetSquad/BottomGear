@@ -9,6 +9,13 @@
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="Crash_Energy" ID="{E636151F-D19C-42DA-8099-76958AB54FC4}"/>
+				<GameParameter Name="boost_Time" ID="{26A5C813-8789-4D84-9ED4-93C6DA5E911E}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

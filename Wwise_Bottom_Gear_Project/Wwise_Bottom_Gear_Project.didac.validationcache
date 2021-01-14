@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="97">
 	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Wwise_Bottom_Gear_Project.wproj" DateLow="1610202098" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Wwise_Bottom_Gear_Project.didac.wsettings" DateLow="1610561463" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Wwise_Bottom_Gear_Project.didac.wsettings" DateLow="1610655864" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Virtual Acoustics\Factory Reflect Acoustic Textures.wwu" DateLow="1605653806" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Virtual Acoustics\Default Work Unit.wwu" DateLow="1609800067" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Triggers\Default Work Unit.wwu" DateLow="1609800067" DateHigh="0"/>
@@ -21,7 +21,7 @@
 	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="1605653806" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Game Parameters\Factory Motion.wwu" DateLow="1605653805" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Game Parameters\Default Work Unit.wwu" DateLow="1610314239" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Events\Default Work Unit.wwu" DateLow="1610366116" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Events\Default Work Unit.wwu" DateLow="1610645551" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Effects\Factory Reflect.wwu" DateLow="1605653806" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Effects\Factory McDSP Effects.wwu" DateLow="1605653808" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Effects\Factory Mastering Suite.wwu" DateLow="1605653805" DateHigh="0"/>
@@ -44,5 +44,5 @@
 	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="1605653788" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="1605653806" DateHigh="0"/>
 	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Actor-Mixer Hierarchy\Factory Motion.wwu" DateLow="1609800075" DateHigh="0"/>
-	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1610561448" DateHigh="0"/>
+	<ValidationCacheItem File="D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1610645876" DateHigh="0"/>
 </ValidationCache>
