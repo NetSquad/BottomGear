@@ -144,6 +144,8 @@ namespace Photon.Pun.Simple
         }
 
 #endif
+        // @carles
+        BoxCollider carCollider;
 
         public override void OnAwake()
         {
@@ -158,6 +160,9 @@ namespace Photon.Pun.Simple
             transform.GetComponents(flagTeleportCallbacks);
 
             mountsLookup = netObj.GetComponent<MountsManager>();
+
+            // @carles
+            carCollider = GetComponent<BoxCollider>();
         }
 
         public override void OnStart()
@@ -302,6 +307,10 @@ namespace Photon.Pun.Simple
                 ChangeState(respawnStateInfo);
             else
                 stateChangeQueue.Enqueue(respawnStateInfo);
+
+            // @carles
+            if (carCollider != null)
+                carCollider.enabled = true;
         }
 
         public void Despawn(bool immediate)
@@ -311,6 +320,10 @@ namespace Photon.Pun.Simple
                 ChangeState(new StateChangeInfo(ObjState.Despawned, null, true));
             else
                 stateChangeQueue.Enqueue(new StateChangeInfo(ObjState.Despawned, null, true));
+
+            // @carles
+            if (carCollider != null)
+                carCollider.enabled = false;
         }
 
         /// <summary>
