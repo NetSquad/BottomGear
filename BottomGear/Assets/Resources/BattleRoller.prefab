@@ -315,8 +315,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950668914319559}
-  m_LocalRotation: {x: -0, y: 0.9973629, z: -0.07257594, w: -1e-45}
-  m_LocalPosition: {x: 0, y: 2.3, z: 10}
+  m_LocalRotation: {x: -3.1216946e-10, y: 0.9973629, z: -0.07257598, w: -0.000000004289935}
+  m_LocalPosition: {x: 0, y: 2.3000002, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 16950670105744445}
@@ -511,7 +511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950669194423404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.32, y: -2.3400002, z: -1.906}
+  m_LocalPosition: {x: -4.32, y: -2.34, z: -1.906}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8164345760099851967}
@@ -786,8 +786,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950669710695228}
-  m_LocalRotation: {x: -0, y: 0.9973629, z: -0.07257594, w: -1e-45}
-  m_LocalPosition: {x: 0, y: 2.3, z: 10}
+  m_LocalRotation: {x: -3.1216946e-10, y: 0.9973629, z: -0.07257598, w: -0.000000004289935}
+  m_LocalPosition: {x: 0, y: 2.3000002, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3623154688415829521}
@@ -1459,7 +1459,7 @@ GameObject:
   - component: {fileID: 7620082618270823733}
   - component: {fileID: 5083540206784892281}
   m_Layer: 8
-  m_Name: NewBattleRoller
+  m_Name: BattleRoller
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1537,18 +1537,17 @@ MonoBehaviour:
   wheelCount: 4
   driveType: 2
   maxAngle: 30
-  maxTorque: 2500
+  maxTorque: 5000
   handBrakeTorque: 30000
   criticalSpeed: 25
   maxSpeed: 50
-  acceleration: 5
-  brakeAcceleration: 15
+  acceleration: 2500
   stepsBelow: 7
   stepsAbove: 2
   jumpForce: 20000
   jumpInterval: 1
   snapToGround: 1
-  snapForce: 2000
+  snapForce: 5000
   rotationSpeed: {x: 60, y: 60, z: 0}
   flyingLinearDrag: 0
   centerOfMass: {fileID: 3623154689585449235}
@@ -3823,7 +3822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3097677610895766810}
   m_LocalRotation: {x: 0.000000030908623, y: 0.7071068, z: 0.7071068, w: -0.000000030908623}
-  m_LocalPosition: {x: -0.009999514, y: 0.00395862, z: 0.07998884}
+  m_LocalPosition: {x: -0.009998798, y: 0.0039593577, z: 0.07998741}
   m_LocalScale: {x: 4.221775, y: 4.221775, z: 4.221775}
   m_Children: []
   m_Father: {fileID: 268862617057086088}
@@ -3928,7 +3927,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3097677610895766814}
   m_LocalRotation: {x: 0.40557963, y: 0.57922775, z: -0.4055801, w: -0.5792281}
-  m_LocalPosition: {x: -0.009999514, y: 0.40000013, z: 0.26498878}
+  m_LocalPosition: {x: -0.009998798, y: 0.40000087, z: 0.26498735}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 3097677610895448356}
@@ -4310,7 +4309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3097677610895767008}
   m_LocalRotation: {x: 0.40557963, y: 0.57922775, z: -0.4055801, w: -0.5792281}
-  m_LocalPosition: {x: -0.009999514, y: 0.40000013, z: -0.04001105}
+  m_LocalPosition: {x: -0.009998798, y: 0.40000087, z: -0.04001248}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 3097677610895448376}
@@ -4370,7 +4369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3146153407408236246}
   m_LocalRotation: {x: -0.7071068, y: -0.000000030908623, z: 0.000000030908623, w: -0.7071068}
-  m_LocalPosition: {x: -0.009999514, y: 0.022345461, z: 0.07998884}
+  m_LocalPosition: {x: -0.009998798, y: 0.022346199, z: 0.07998741}
   m_LocalScale: {x: 4.221776, y: 4.221775, z: 4.221775}
   m_Children: []
   m_Father: {fileID: 268862617057086088}
@@ -6657,7 +6656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1070004
+      value: -2.1069984
       objectReference: {fileID: 0}
     - target: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_LocalPosition.y

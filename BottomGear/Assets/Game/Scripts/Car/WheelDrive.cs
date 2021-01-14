@@ -156,6 +156,19 @@ namespace BottomGear
 
 		void Update()
 		{
+			// --- Only update if this is the local player ---
+			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
+				return;
+
+			// Uncomment this and timer start to profile 
+			//Debug.Log(watch.Elapsed.TotalMilliseconds);
+			//watch.Reset();
+
+
+		}
+
+        private void FixedUpdate()
+        {
 			// Uncomment this and timer log at the end of this function to profile 
 			//watch.Start();
 
@@ -185,31 +198,31 @@ namespace BottomGear
 			float outputAcceleration = accelerator - decelerator;
 
 			float angle = maxAngle * inputDirection.x;
-			float torque = outputAcceleration * maxTorque;
-			Vector3 direction = mTransform.forward * acceleration * outputAcceleration;
+			float torque = outputAcceleration * maxTorque * Time.fixedDeltaTime;
+			Vector3 direction = mTransform.forward * acceleration * outputAcceleration * Time.fixedDeltaTime;
 
 			// --- Deactivate rotation lock if new player input is detected ---
 			if (inputRawY <= 0)
-                lockDown = false;
+				lockDown = false;
 
-            // --- Limit car speed ---
-            if (rb.velocity.magnitude >= Mathf.Abs(maxSpeed * outputAcceleration))
+			// --- Limit car speed ---
+			if (rb.velocity.magnitude >= Mathf.Abs(maxSpeed * outputAcceleration))
 				torque = 0;
-			else if (rb.velocity.magnitude < maxSpeed && IsGrounded() && direction != Vector3.zero)
-				rb.AddForce(direction, ForceMode.Acceleration);
+            else if (rb.velocity.magnitude < maxSpeed && IsGrounded() && direction != Vector3.zero)
+                rb.AddForce(direction, ForceMode.Acceleration);
 
-			// ---Car jump-- -
-			if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
-            {
+            // ---Car jump-- -
+            if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
+			{
 				// --- If car jumps and has a forward acceleration, prevent it from rotating downwards ---
 				if (accelerator > 0)
 					lockDown = true;
 
-                rb.AddForce(mTransform.up * jumpForce, ForceMode.Impulse);
-                jumpTimer = 0.0f;
-            }
+				rb.AddForce(mTransform.up * jumpForce, ForceMode.Impulse);
+				jumpTimer = 0.0f;
+			}
 			// --- Car jump timer ---
-			jumpTimer += Time.deltaTime;
+			jumpTimer += Time.fixedDeltaTime;
 
 			// --- Keep carattached to ground surface ---
 			if (snapToGround)
@@ -235,16 +248,16 @@ namespace BottomGear
 				orientation.z = 0;
 
 				Quaternion deltaRot = Quaternion.Euler(inputDirection * rotationSpeed);
-				mTransform.rotation = Quaternion.Slerp(mTransform.rotation, mTransform.rotation * deltaRot, Time.deltaTime * 2.0f);
+				mTransform.rotation = Quaternion.Slerp(mTransform.rotation, mTransform.rotation * deltaRot, Time.fixedDeltaTime * 2.0f);
 			}
 			else
 				rb.drag = linearDragBackup;
-			 
+
 			// --- Car flip ---
 			if (mTransform.up.y < -0.75)
-            {
+			{
 				rb.MoveRotation(rb.rotation * Quaternion.Euler(0, 0, 180));
-            }
+			}
 
 			// --- Wheel physics ---
 			float handBrake = decelerator > 0.5f && mTransform.InverseTransformDirection(rb.velocity).z > 0 ? handBrakeTorque : 0;
@@ -261,25 +274,21 @@ namespace BottomGear
 				if (m_Wheels[i].mesh.name == "Wheel3Mesh"
 						|| m_Wheels[i].mesh.name == "Wheel4Mesh")
 					wheel.brakeTorque = handBrake;
-				
+
 				if (m_Wheels[i].mesh.name == "Wheel1Mesh"
 						|| m_Wheels[i].mesh.name == "Wheel2Mesh"
 						&& driveType != DriveType.FrontWheelDrive)
 					wheel.motorTorque = torque;
-					
+
 				if (m_Wheels[i].mesh.name == "Wheel1Mesh"
 						|| m_Wheels[i].mesh.name == "Wheel2Mesh"
 						&& driveType != DriveType.RearWheelDrive)
 					wheel.motorTorque = torque;
 			}
-			 
-			// Uncomment this and timer start to profile 
-			//Debug.Log(watch.Elapsed.TotalMilliseconds);
-			//watch.Reset();
 
 			//Update the RTPC for the engine sound
 			float speed = rb.velocity.magnitude / maxSpeed;
-			AkSoundEngine.SetRTPCValue("Speed",speed*100);
+			AkSoundEngine.SetRTPCValue("Speed", speed * 100);
 		}
 
         private void LateUpdate()
