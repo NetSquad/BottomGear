@@ -88,7 +88,7 @@
 				<Property Name="RTPC\GameParameterSimValue\{E3B7811A-7B2F-490F-B44F-5FE51B468041}" Type="Real64" Value="75"/>
 				<Property Name="RTPC\GameParameterSimValue\{E636151F-D19C-42DA-8099-76958AB54FC4}" Type="Real64" Value="45.359477124183"/>
 				<Property Name="RTPC\GameParameterSimValue\{E93F8CDB-06D1-4737-ACAF-7CD44BBED783}" Type="Real64" Value="75"/>
-				<Property Name="RTPC\GameParameterSimValue\{ED437761-166D-4FC6-8E60-FF018266212E}" Type="Real64" Value="0"/>
+				<Property Name="RTPC\GameParameterSimValue\{ED437761-166D-4FC6-8E60-FF018266212E}" Type="Real64" Value="100"/>
 				<Property Name="RTPC\GameParameterSimValue\{EDA87B19-73AA-40A0-9F19-2073606DB710}" Type="Real64" Value="6"/>
 				<Property Name="RTPC\GameParameterSimValue\{F72E0659-4346-4E1C-A1B1-DAB46A05101E}" Type="Real64" Value="50"/>
 				<Property Name="SoundBank Manager\x64_Expand States" Type="string" Value="5O0K7yLXx0eKslfqTCiDkA=="/>
