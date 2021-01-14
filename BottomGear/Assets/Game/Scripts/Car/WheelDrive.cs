@@ -57,6 +57,8 @@ namespace BottomGear
 		public Vector3 rotationSpeed = new Vector3(0, 40, 0);
 		[Tooltip("The linear drag coefficient override when object is flying. 0 means no damping.")]
 		public float flyingLinearDrag = 0.0f;
+		[Tooltip("Constant force towards the world -up to simulate a higher gravity without touching the global parameter.")]
+		public float flyingFakeGravity = 9.81f;
 
 		// --- Main components ---
 		private PhotonView photonView;
@@ -163,8 +165,6 @@ namespace BottomGear
 			// Uncomment this and timer start to profile 
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
 			//watch.Reset();
-
-
 		}
 
         private void FixedUpdate()
@@ -231,6 +231,9 @@ namespace BottomGear
 			// --- Car on air rotation ---
 			if (!IsGrounded())
 			{
+				// --- Fake gravity towards world -up ---
+				rb.AddForce(-Vector3.up * flyingFakeGravity, ForceMode.Acceleration);
+
 				// --- Override rigidbody's drag ---
 				rb.drag = flyingLinearDrag;
 

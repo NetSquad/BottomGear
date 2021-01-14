@@ -1550,6 +1550,7 @@ MonoBehaviour:
   snapForce: 3500
   rotationSpeed: {x: 60, y: 60, z: 0}
   flyingLinearDrag: 0
+  flyingFakeGravity: 9.81
   centerOfMass: {fileID: 3623154689585449235}
   camera: {fileID: 16950669710695238}
 --- !u!114 &4972739074090260542
