@@ -511,7 +511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950669194423404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.32, y: -2.34, z: -1.906}
+  m_LocalPosition: {x: -4.32, y: -2.134, z: -1.9059999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8164345760099851967}
@@ -526,11 +526,11 @@ PositionConstraint:
   m_GameObject: {fileID: 16950669194423404}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: -4.32, y: -2.34, z: -1.906}
-  m_TranslationOffset: {x: -4.319999, y: -0.94083285, z: -1.3138201}
-  m_AffectTranslationX: 0
+  m_TranslationAtRest: {x: -4.32, y: -2.134, z: -1.906}
+  m_TranslationOffset: {x: -4.319999, y: -0.734833, z: -1.3138201}
+  m_AffectTranslationX: 1
   m_AffectTranslationY: 1
-  m_AffectTranslationZ: 0
+  m_AffectTranslationZ: 1
   m_IsContraintActive: 1
   m_IsLocked: 1
   m_Sources:
@@ -962,8 +962,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950669737670628}
-  m_LocalRotation: {x: -0.7933533, y: -0.00000031106177, z: 0.0000005392358, w: -0.60876155}
-  m_LocalPosition: {x: 2.034, y: -0.9446907, z: -2.1799927}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.034, y: -0.7386904, z: -2.1799927}
   m_LocalScale: {x: -2.50316, y: -2.50316, z: -2.50316}
   m_Children: []
   m_Father: {fileID: 16950669298217329}
@@ -1012,8 +1012,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950669859337333}
-  m_LocalRotation: {x: -0.7933533, y: -0.00000033527616, z: 0.0000005047769, w: -0.60876155}
-  m_LocalPosition: {x: -2.107, y: -0.9446907, z: -2.1799927}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.107, y: -0.7386904, z: -2.1799927}
   m_LocalScale: {x: -2.50316, y: -2.50316, z: -2.50316}
   m_Children: []
   m_Father: {fileID: 16950669298217329}
@@ -2225,6 +2225,8 @@ MonoBehaviour:
     enableIfOwned: 1
   - component: {fileID: 1401074383165198757}
     enableIfOwned: 1
+  - component: {fileID: 7050183339677283358}
+    enableIfOwned: 0
   componentLookup:
   - {fileID: 3623154688122286146}
   - {fileID: 3623154687913624581}
@@ -2269,6 +2271,7 @@ MonoBehaviour:
   - {fileID: 4972739074090260542}
   - {fileID: 6434831217072789595}
   - {fileID: 1401074383165198757}
+  - {fileID: 7050183339677283358}
 --- !u!114 &6349677017487240278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6681,7 +6684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9446907
+      value: -0.7386904
       objectReference: {fileID: 0}
     - target: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6776,7 +6779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9446907
+      value: -0.7386904
       objectReference: {fileID: 0}
     - target: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_LocalPosition.z
