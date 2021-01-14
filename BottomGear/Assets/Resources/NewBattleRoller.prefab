@@ -1545,7 +1545,7 @@ MonoBehaviour:
   brakeAcceleration: 15
   stepsBelow: 7
   stepsAbove: 2
-  jumpForce: 25000
+  jumpForce: 20000
   jumpInterval: 1
   snapToGround: 1
   snapForce: 2000
