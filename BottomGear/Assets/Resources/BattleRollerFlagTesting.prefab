@@ -315,7 +315,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950668914319559}
-  m_LocalRotation: {x: 3.1219252e-10, y: 0.9973629, z: -0.07257598, w: 0.000000004290252}
+  m_LocalRotation: {x: -3.121921e-10, y: 0.9973629, z: -0.07257598, w: -0.000000004290247}
   m_LocalPosition: {x: 0, y: 2.3000002, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -786,7 +786,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950669710695228}
-  m_LocalRotation: {x: 3.1219252e-10, y: 0.9973629, z: -0.07257598, w: 0.000000004290252}
+  m_LocalRotation: {x: -3.121921e-10, y: 0.9973629, z: -0.07257598, w: -0.000000004290247}
   m_LocalPosition: {x: 0, y: 2.3000002, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2082,7 +2082,7 @@ MonoBehaviour:
         hash: -882981140
         name: Health
       _fullValue: 100
-      _maxValue: 125
+      _maxValue: 5
       startValue: 5
       regenDelay: 1
       regenRate: 1
@@ -2094,7 +2094,7 @@ MonoBehaviour:
         hash: 22446227
         name: Armor
       _fullValue: 100
-      _maxValue: 125
+      _maxValue: 5
       startValue: 5
       regenDelay: 1
       regenRate: 1
@@ -2106,7 +2106,7 @@ MonoBehaviour:
         hash: -239767697
         name: Shield
       _fullValue: 200
-      _maxValue: 250
+      _maxValue: 5
       startValue: 5
       regenDelay: 1
       regenRate: 20
