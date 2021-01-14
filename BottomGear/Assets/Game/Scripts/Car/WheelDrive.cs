@@ -39,8 +39,6 @@ namespace BottomGear
 		public float maxSpeed = 30;
 		[Tooltip("The vehicle's acceleration multiplier.")]
 		public float acceleration = 5.0f;
-		[Tooltip("The vehicle's brake acceleration multiplier. Higher values will make the car stop faster.")]
-		public float brakeAcceleration = 15.0f;
 		[Tooltip("Simulation sub-steps when the speed is below critical. Not editable in Play mode.")]
 		public int stepsBelow = 1;
 		[Tooltip("Simulation sub-steps when the speed is above critical. Not editable in Play mode")]
@@ -187,32 +185,12 @@ namespace BottomGear
 			float outputAcceleration = accelerator - decelerator;
 
 			float angle = maxAngle * inputDirection.x;
-			float torque = outputAcceleration * maxTorque /** inputDirection.y*/;
-			Vector3 direction = mTransform.forward * acceleration * outputAcceleration /** inputDirection.y*/;
+			float torque = outputAcceleration * maxTorque;
+			Vector3 direction = mTransform.forward * acceleration * outputAcceleration;
 
-            if (inputRawY <= 0)
-            {
+			// --- Deactivate rotation lock if new player input is detected ---
+			if (inputRawY <= 0)
                 lockDown = false;
-            }
-            // --- Manual brake ---
-            //if (inputRawY <= 0)
-            //{
-            //	lockDown = false;
-
-            //	// --- Apply manual brake, we want to go backwards ---
-            //	if (inputRawY != 0 && mTransform.InverseTransformDirection(rb.velocity).z > 0)
-            //	{
-            //		rb.AddForce(mTransform.forward * brakeAcceleration * inputDirection.y, ForceMode.Acceleration);
-            //	}
-            //}
-            //         else
-            //         {
-            //             // --- Apply manual brake, we want to go forward ---
-            //             if (mTransform.InverseTransformDirection(rb.velocity).z < 0)
-            //             {
-            //                 rb.AddForce(mTransform.forward * brakeAcceleration * inputDirection.y, ForceMode.Acceleration);
-            //             }
-            //         }
 
             // --- Limit car speed ---
             if (rb.velocity.magnitude >= Mathf.Abs(maxSpeed * outputAcceleration))
@@ -319,7 +297,6 @@ namespace BottomGear
 					wheel.GetWorldPose(out p, out q);
 
 					// --- Rotate wheel according to collider's rotation ---
-					//Transform shapeTransform = m_Wheels[i].mesh.transform;
 
 					if (m_Wheels[i].mesh.name == "Wheel1Mesh"
 					 || m_Wheels[i].mesh.name == "Wheel3Mesh")
@@ -330,17 +307,11 @@ namespace BottomGear
 
 					if (m_Wheels[i].mesh.name == "Wheel1Mesh"
                         || m_Wheels[i].mesh.name == "Wheel2Mesh")
-                    {
 						m_Wheels[i].mTransform.rotation = q*Quaternion.Euler(0,180, 0);
-					}
 					else
-                    {
 						m_Wheels[i].mTransform.rotation = q;
-					}
 				}
 			}
-
-
 		}
 
 		// ----------------------------------------------
