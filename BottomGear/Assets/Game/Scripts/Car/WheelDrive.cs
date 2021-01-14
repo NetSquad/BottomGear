@@ -108,7 +108,7 @@ namespace BottomGear
 			if (camera != null)
 			{
 				if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
-					camera.enabled = false;
+					camera.gameObject.SetActive(false);
 			}
 			else
 				Debug.LogError("There is no valid camera in WheelDrive");

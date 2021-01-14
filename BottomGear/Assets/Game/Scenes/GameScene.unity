@@ -2256,7 +2256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainSpawn: {fileID: 175963997495413797}
-  ps: {fileID: 0}
+  sceneCamera: {fileID: 523789977}
   InfoText: {fileID: 601629552}
 --- !u!114 &964925488
 MonoBehaviour:
@@ -2534,7 +2534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2777367880495049807, guid: f6d4d779a70a09345b92e41a5e529d5f, type: 3}
       propertyPath: viewIdField
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2777367880495049819, guid: f6d4d779a70a09345b92e41a5e529d5f, type: 3}
       propertyPath: m_Name

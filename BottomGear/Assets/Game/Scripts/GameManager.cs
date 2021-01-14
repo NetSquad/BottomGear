@@ -24,7 +24,8 @@ namespace BottomGear
     {
         public static GameManager Instance = null;
         public Transform MainSpawn;
-        public ParticleSystem ps;
+
+        public GameObject sceneCamera;
 
         public Text InfoText;
 
@@ -196,6 +197,7 @@ namespace BottomGear
 
             // --- NOTE: Called when starting countdown finishes ---
 
+            sceneCamera.SetActive(false);
 
             // on rejoin, we have to figure out if the spaceship exists or not
             // if this is a rejoin (the ship is already network instantiated and will be setup via event) we don't need to call PN.Instantiate
@@ -203,7 +205,7 @@ namespace BottomGear
 
             // --- NOTE: This is AsteroidsGame's game code, spawn ship and start asteroid spwaning coroutine ---
 
-            
+
             float angularStart = (360.0f / PhotonNetwork.CurrentRoom.PlayerCount) * PhotonNetwork.LocalPlayer.GetPlayerNumber();
             float x = 20.0f * Mathf.Sin(angularStart * Mathf.Deg2Rad);
             float z = 20.0f * Mathf.Cos(angularStart * Mathf.Deg2Rad);
