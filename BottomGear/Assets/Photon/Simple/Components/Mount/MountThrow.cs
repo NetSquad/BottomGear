@@ -67,7 +67,7 @@ namespace Photon.Pun.Simple
             for (int i = 0; i < mountedObjs.Count; ++i)
             {
                 var obj = mountedObjs[i];
-                var rb = obj.Rb;
+                var rb = transform.parent.GetComponent<Rigidbody>();    // @carles: Get car rigidbody
                 if (rb && obj.IsThrowable)
                 {
                     var syncState = obj as SyncState;

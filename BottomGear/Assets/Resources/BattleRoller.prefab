@@ -5432,7 +5432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabInstanceId: -57526
-  throwKey: 113
+  throwKey: 0
   mount: {fileID: 3167942841125055018}
   fromRoot: 1
   inheritRBVelocity: 1
