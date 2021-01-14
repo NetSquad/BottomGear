@@ -28,7 +28,7 @@ R1 for rear camera
 * GitHub account: [VictorChen](https://github.com/Scarzard)
 
 ## Tools
-Visual Studio 2019
-Unity 2020.2.0f1
-Photon PUN2
-Wwise 2019.2.7.7402
+- Visual Studio 2019
+- Unity 2020.2.0f1
+- Photon PUN2
+- Wwise 2019.2.7.7402
