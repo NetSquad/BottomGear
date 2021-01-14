@@ -315,7 +315,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950668914319559}
-  m_LocalRotation: {x: -3.121921e-10, y: 0.9973629, z: -0.07257598, w: -0.000000004290247}
+  m_LocalRotation: {x: 3.1219252e-10, y: 0.9973629, z: -0.07257598, w: 0.000000004290252}
   m_LocalPosition: {x: 0, y: 2.3000002, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -786,7 +786,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950669710695228}
-  m_LocalRotation: {x: -3.121921e-10, y: 0.9973629, z: -0.07257598, w: -0.000000004290247}
+  m_LocalRotation: {x: 3.1219252e-10, y: 0.9973629, z: -0.07257598, w: 0.000000004290252}
   m_LocalPosition: {x: 0, y: 2.3000002, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -5409,13 +5409,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabInstanceId: -57526
-  throwKey: 113
+  throwKey: 0
   mount: {fileID: 3167942841125055018}
-  fromRoot: 1
+  fromRoot: 0
   inheritRBVelocity: 1
-  offset: {x: 0, y: 20, z: 0}
+  offset: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   throwQueued: 0
+  deathVelocity: {x: 0, y: 0, z: 0}
 --- !u!1 &5530558460547618217
 GameObject:
   m_ObjectHideFlags: 0
