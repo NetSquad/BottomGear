@@ -91,7 +91,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Metallic: 0.02
+    - _Metallic: 0.14
     - _OcclusionStrength: 1
     - _Parallax: 0.08
     - _QueueOffset: 50

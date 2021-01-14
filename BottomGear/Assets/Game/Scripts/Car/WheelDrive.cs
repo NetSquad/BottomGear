@@ -173,41 +173,58 @@ namespace BottomGear
 			// --- If no acceleration, release lock ---
 			float inputRawY = Input.GetAxisRaw("Vertical");
 
+			// --- Support both mouse/keyboard and gamepad ---
+			float accelerator = (Input.GetAxis("R2") - (-1)) / (2);
+
+			if (Input.GetKey(KeyCode.W))
+				accelerator = 1.0f;
+
+			float decelerator = (Input.GetAxis("L2") - (-1)) / (2);
+
+			if (Input.GetKey(KeyCode.S))
+				decelerator = 1.0f;
+
+			float outputAcceleration = accelerator - decelerator;
+
 			float angle = maxAngle * inputDirection.x;
-			float torque = maxTorque * inputDirection.y;
-			Vector3 direction = mTransform.forward * acceleration * inputDirection.y;
+			float torque = outputAcceleration * maxTorque /** inputDirection.y*/;
+			Vector3 direction = mTransform.forward * acceleration * outputAcceleration /** inputDirection.y*/;
 
-			// --- Manual brake ---
-			if (inputRawY <= 0)
-			{
-				lockDown = false;
-
-				// --- Apply manual brake, we want to go backwards ---
-				if (inputRawY != 0 && mTransform.InverseTransformDirection(rb.velocity).z > 0)
-				{
-					rb.AddForce(mTransform.forward * brakeAcceleration * inputDirection.y, ForceMode.Acceleration);
-				}
-			}
-            else
+            if (inputRawY <= 0)
             {
-                // --- Apply manual brake, we want to go forward ---
-                if (mTransform.InverseTransformDirection(rb.velocity).z < 0)
-                {
-                    rb.AddForce(mTransform.forward * brakeAcceleration * inputDirection.y, ForceMode.Acceleration);
-                }
+                lockDown = false;
             }
+            // --- Manual brake ---
+            //if (inputRawY <= 0)
+            //{
+            //	lockDown = false;
+
+            //	// --- Apply manual brake, we want to go backwards ---
+            //	if (inputRawY != 0 && mTransform.InverseTransformDirection(rb.velocity).z > 0)
+            //	{
+            //		rb.AddForce(mTransform.forward * brakeAcceleration * inputDirection.y, ForceMode.Acceleration);
+            //	}
+            //}
+            //         else
+            //         {
+            //             // --- Apply manual brake, we want to go forward ---
+            //             if (mTransform.InverseTransformDirection(rb.velocity).z < 0)
+            //             {
+            //                 rb.AddForce(mTransform.forward * brakeAcceleration * inputDirection.y, ForceMode.Acceleration);
+            //             }
+            //         }
 
             // --- Limit car speed ---
-            if (rb.velocity.magnitude >= maxSpeed)
-                torque = 0;
-            else if (rb.velocity.magnitude < maxSpeed && IsGrounded() && direction != Vector3.zero)
+            if (rb.velocity.magnitude >= Mathf.Abs(maxSpeed * outputAcceleration))
+				torque = 0;
+			else if (rb.velocity.magnitude < maxSpeed && IsGrounded() && direction != Vector3.zero)
 				rb.AddForce(direction, ForceMode.Acceleration);
 
 			// ---Car jump-- -
 			if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
             {
 				// --- If car jumps and has a forward acceleration, prevent it from rotating downwards ---
-				if (inputDirection.y > 0)
+				if (accelerator > 0)
 					lockDown = true;
 
                 rb.AddForce(mTransform.up * jumpForce, ForceMode.Impulse);
@@ -234,6 +251,11 @@ namespace BottomGear
 				if (lockDown && inputDirection.x > 0)
 					inputDirection.x = 0;
 
+				Vector3 orientation;
+				orientation.x = mTransform.right.x;
+				orientation.y = mTransform.up.y;
+				orientation.z = 0;
+
 				Quaternion deltaRot = Quaternion.Euler(inputDirection * rotationSpeed);
 				mTransform.rotation = Quaternion.Slerp(mTransform.rotation, mTransform.rotation * deltaRot, Time.deltaTime * 2.0f);
 			}
@@ -247,7 +269,7 @@ namespace BottomGear
             }
 
 			// --- Wheel physics ---
-			float handBrake = Input.GetButton("R2") ? handBrakeTorque : 0;
+			float handBrake = decelerator > 0.5f && mTransform.InverseTransformDirection(rb.velocity).z > 0 ? handBrakeTorque : 0;
 
 			for (int i = 0; i < m_Wheels.Length; ++i)
 			{

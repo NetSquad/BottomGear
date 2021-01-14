@@ -24,11 +24,14 @@ public class CameraTransitions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Rear"))
+        if (Input.GetButton("Rear") || Input.GetMouseButton(2))
         {
-            CurrentCamera.SetActive(false);
-            CurrentCamera = FrontCamera;
-            CurrentCamera.SetActive(true);
+            if (!FrontCamera.activeSelf)
+            {
+                CurrentCamera.SetActive(false);
+                CurrentCamera = FrontCamera;
+                CurrentCamera.SetActive(true);
+            }
         }
         else if (CurrentCamera == FrontCamera)
         {
