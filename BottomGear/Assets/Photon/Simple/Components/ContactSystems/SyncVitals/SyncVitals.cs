@@ -56,6 +56,8 @@ namespace Photon.Pun.Simple
         public bool autoDespawn = true;
         [Tooltip("When OnStateChange changes from ObjState.Despawned to any other state, vital values will be reset to their starting defaults.")]
         public bool resetOnSpawn = true;
+        [Tooltip("Throw all mounted objects on death before Despawn.")] // @carles
+        public bool throwOnDeath = true;
 
         #endregion
 
@@ -362,6 +364,17 @@ namespace Photon.Pun.Simple
         {
             for (int i = 0, cnt = OnRootVitalBecameZero.Count; i < cnt; ++i)
                 OnRootVitalBecameZero[i].OnRootVitalBecameZero(vital, null);
+
+            // @carles -------------------------
+            if (throwOnDeath)
+                if (syncState)
+                    foreach (Mount indexedMount in GetComponent<MountsManager>().indexedMounts)
+                    {
+                        MountThrow throwScript = indexedMount.gameObject.GetComponent<MountThrow>();
+                        if (throwScript != null)
+                            throwScript.throwQueued = true;
+                    }
+            // @carles -------------------------
 
             if (autoDespawn)
                 if (syncState)

@@ -51,7 +51,7 @@ namespace Photon.Pun.Simple
                 throwQueued = true;
         }
 
-        bool throwQueued;
+        public bool throwQueued;
 
         public void OnPreSimulate(int frameId, int subFrameId)
         {
