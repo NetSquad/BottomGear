@@ -1,13 +1,8 @@
 fileFormatVersion: 2
-guid: 6a06b65a7dfe10545a2455ad783c0b91
-labels:
-- SciFi
-- Metal
-- Decal
-- Vent
+guid: 020a5a49f2f07ef4c8938c4211f6f721
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 0
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
