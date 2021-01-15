@@ -786,8 +786,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950669710695228}
-  m_LocalRotation: {x: -3.1219247e-10, y: 0.9973629, z: -0.07257598, w: -0.0000000042902513}
-  m_LocalPosition: {x: 0, y: 2.3000002, z: 10}
+  m_LocalRotation: {x: 0.04761325, y: -0.0000000021483582, z: 1.02406465e-10, w: 0.99886584}
+  m_LocalPosition: {x: 0, y: 2.3099976, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3623154688415829521}
@@ -1570,6 +1570,10 @@ MonoBehaviour:
   FollowCameraUp: {fileID: 16950668835608663}
   FrontCamera: {fileID: 16950668914319559}
   MainCamera: {fileID: 16950669710695228}
+  FollowCamInitialWeight: 10
+  FrontCamInitialWeight: 10
+  FollowFarCamInitialWeight: 10
+  FollowUpCamInitialWeight: 10
   minDistance: 10
 --- !u!114 &4988516433530148737
 MonoBehaviour:
@@ -5398,7 +5402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5484385525901582459}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2248847848412316587}
