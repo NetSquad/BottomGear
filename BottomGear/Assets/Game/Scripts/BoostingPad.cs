@@ -8,9 +8,10 @@ public class BoostingPad : MonoBehaviour
     [Tooltip("The boost's duration")]
     public float boostDuration = 3.0f;
     [Tooltip("The boost's force")]
-    public float boostAmount = 5.0f;
+    public float boostAmount = 100.0f;
 
     private bool beginBoost = false;
+    private bool fromFront = false;
 
     // RigidBody entering the Trigger
     private Rigidbody rb;
@@ -45,10 +46,20 @@ public class BoostingPad : MonoBehaviour
     {
         rb = other.GetComponent<Rigidbody>();
 
-        if(other.transform.root.gameObject.CompareTag("Player"))
+        // Makes sure that the go is a player and he is coming from the right direction
+        // If he comes from the wrong direction, boosting will not be applied to said go
+        if(other.transform.root.gameObject.CompareTag("Player") && fromFront)
         {
             Debug.Log("Detected RigidBody");
             beginBoost = true;
+            fromFront = false;
         }
     }
+
+    // Check where is the player coming from
+    public void IsFront()
+    {
+        fromFront = true;
+    }
+
 }

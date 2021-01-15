@@ -1911,7 +1911,7 @@ GameObject:
   - component: {fileID: 625432092}
   - component: {fileID: 625432091}
   - component: {fileID: 625432095}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BoostArea
   m_TagString: BoostingPad
   m_Icon: {fileID: 0}
@@ -1938,7 +1938,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625432090}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1988,8 +1988,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625432090}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 7.21, z: 51.6}
-  m_LocalScale: {x: 2.9556, y: 2.9556, z: 2.9556}
+  m_LocalPosition: {x: 0, y: 7.41, z: 51.6}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 1177034767}
   m_Father: {fileID: 0}
