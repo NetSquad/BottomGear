@@ -85,7 +85,6 @@ namespace BottomGear
 		// --- Private gameplay variables ---
 		private float jumpTimer = 0.0f;
 
-
 		// --------------------- Main Methods -------------------------
 
 		public void Awake()
@@ -292,6 +291,29 @@ namespace BottomGear
 			//Update the RTPC for the engine sound
 			float speed = rb.velocity.magnitude / maxSpeed;
 			AkSoundEngine.SetRTPCValue("Speed", speed * 100);
+
+			// Raycast to detect speedboost
+			// Collide only with Boost Pad layer
+			int layerMask = 1 << 9;
+
+			RaycastHit hit;
+			
+			if (Physics.Raycast(transform.position, transform.forward, out hit, 2f, layerMask))
+            {
+				Debug.Log("Hitting BP");
+				Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.green);
+
+				BoostingPad bp = hit.collider.gameObject.GetComponent<BoostingPad>();
+
+				Vector3 go = hit.collider.gameObject.transform.InverseTransformPoint(transform.position);
+
+				if (go.z > 0)
+					bp.IsFront();
+			}
+			else
+				Debug.DrawRay(transform.position, transform.forward, Color.red);
+				
+
 		}
 
         private void LateUpdate()
