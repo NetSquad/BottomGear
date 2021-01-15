@@ -25,6 +25,10 @@
 							<ObjectRef Name="Play_Music" ID="{D0DAC24A-0489-4316-B9BB-39011665043E}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}"/>
 							<Position X="2" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Play_shot" ID="{80A9D0B9-EEA5-4661-94C6-3BDEB672D6B4}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}"/>
+							<Position X="2" Y="1"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>

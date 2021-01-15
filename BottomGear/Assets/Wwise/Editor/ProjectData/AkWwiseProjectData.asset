@@ -258,7 +258,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: adfba9e144f1c741a345f6c52c3cc02b
     GuidInternal: 
-    m_lastTime: -8585912145750141882
+    m_lastTime: -8585909437017120199
     List:
     - name: Gameplay
       guid: 335e16bf552f1b4aa146ecb0c6f3f409
@@ -326,6 +326,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 3826414
       minDuration: 1574470
+    - name: Play_Enemy_Destroyed
+      guid: 4626e199253d7a4cbb84cbe392e125c5
+      id: 4064197866
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
+      - ElementName: Play_Enemy_Destroyed
+        ObjectType: 3
+      Path: Default Work Unit\Gameplay\Play_Enemy_Destroyed
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Engine
       guid: 978977901d05d04f86c4be69e24d10f9
       id: 639345804
@@ -337,6 +351,34 @@ MonoBehaviour:
       - ElementName: Play_Engine
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Engine
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_explosion
+      guid: 8644cf10b7c47141a34e6941b11b773f
+      id: 4030404899
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
+      - ElementName: Play_explosion
+        ObjectType: 3
+      Path: Default Work Unit\Gameplay\Play_explosion
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Jump
+      guid: 8edca6b31d8f614cbbf115a905793abb
+      id: 3689126666
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
+      - ElementName: Play_Jump
+        ObjectType: 3
+      Path: Default Work Unit\Gameplay\Play_Jump
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -382,6 +424,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1596238
       minDuration: 313523
+    - name: Play_Tyre_hit
+      guid: 150396e287ffd84ca50d58ff61e02e5b
+      id: 1225054062
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
+      - ElementName: Play_Tyre_hit
+        ObjectType: 3
+      Path: Default Work Unit\Gameplay\Play_Tyre_hit
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_All
       guid: 653e09514794814199a6a1c3238088ff
       id: 452547817
@@ -456,8 +512,17 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e201e78321a61b4e95066c5d9f7f48b7
     GuidInternal: 
-    m_lastTime: -8585912833764093388
+    m_lastTime: -8585909458521206428
     List:
+    - name: boost_Time
+      guid: 13c8a5268987844d9ed493c6da5e911e
+      id: 435266594
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: boost_Time
+        ObjectType: 13
+      Path: Default Work Unit\boost_Time
     - name: Crash_Energy
       guid: 1f1536e69cd1da42809976958ab54fc4
       id: 3679139441

@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{243CEA36-9680-43A5-BA57-0D0C6D0846B8}" SchemaVersion="97">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{243CEA36-9680-43A5-BA57-0D0C6D0846B8}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{243CEA36-9680-43A5-BA57-0D0C6D0846B8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Wwise_Tremolo" ID="{8D081FA7-8980-44A2-ACB7-625A6CB7D9FF}" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+					<PropertyList>
+						<Property Name="ModDepth" Type="Real32" Value="84.2"/>
+						<Property Name="ModFrequency" Type="Real32" Value="4.2"/>
+						<Property Name="ModPWM" Type="Real32" Value="57"/>
+						<Property Name="ModPhaseMode" Type="int32" Value="1"/>
+						<Property Name="ModPhaseOffset" Type="Real32" Value="-2"/>
+						<Property Name="ModSmoothing" Type="Real32" Value="100"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Wwise_Tremolo_01" ID="{62FFB382-44C4-490F-BF6D-9E8F6DF124CD}" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
+					<PropertyList>
+						<Property Name="ModFrequency" Type="Real32" Value="5"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

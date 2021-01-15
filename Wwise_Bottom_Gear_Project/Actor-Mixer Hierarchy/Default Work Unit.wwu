@@ -1094,6 +1094,194 @@
 								<ActiveSource Name="Fir_Boost_Loop" ID="{3C735430-DB53-4540-A6F3-149247487959}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="Excessive_Swearing" ID="{519F634F-1C03-47F8-8C77-4DD384890A5D}" ShortID="65715398">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="everything_will_be_OK" ID="{528174C7-F61C-44FB-9E68-62B6A62B8DE9}" ShortID="814231623">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="everything_will_be_OK" ID="{4D2ABA4A-3D05-40CB-B4C3-D8DB8EFD5492}">
+											<Language>SFX</Language>
+											<AudioFile>everything_will_be_OK.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1061063613"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="everything_will_be_OK" ID="{4D2ABA4A-3D05-40CB-B4C3-D8DB8EFD5492}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Hammond_2" ID="{354A46AC-5392-484D-95E5-4CBF8F548887}" ShortID="102908651">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Hammond_2" ID="{80A35C0F-E6A5-48D0-B924-AD60D1D75913}">
+											<Language>SFX</Language>
+											<AudioFile>Hammond_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="543490717"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Hammond_2" ID="{80A35C0F-E6A5-48D0-B924-AD60D1D75913}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Hammond_scream" ID="{A216166F-23E3-4C27-BCB7-A12D986F56DE}" ShortID="1072416246">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Hammond_scream" ID="{20BC1B17-ECE1-4741-A174-247986329678}">
+											<Language>SFX</Language>
+											<AudioFile>Hammond_scream.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="15596748"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Hammond_scream" ID="{20BC1B17-ECE1-4741-A174-247986329678}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Hammond_you_Idiot" ID="{B29E4A78-5B12-49D5-8F34-E2DA8A682D40}" ShortID="879398845">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Hammond_you_Idiot" ID="{94265A83-C937-4BA5-8720-5A1145B1201D}">
+											<Language>SFX</Language>
+											<AudioFile>Hammond_you_Idiot.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1036292011"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Hammond_you_Idiot" ID="{94265A83-C937-4BA5-8720-5A1145B1201D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Now_were_in_trouble" ID="{C3BF5986-369D-4415-893A-0E9840A53448}" ShortID="47177989">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Now_were_in_trouble" ID="{81BF0C32-AB1B-4D0C-8F4B-B64EDB65E797}">
+											<Language>SFX</Language>
+											<AudioFile>Now_were_in_trouble.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="585613593"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Now_were_in_trouble" ID="{81BF0C32-AB1B-4D0C-8F4B-B64EDB65E797}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Scream_Clarkson" ID="{5113DFFB-075B-4509-A0E9-C5AADAC91AD1}" ShortID="997657640">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Scream_Clarkson" ID="{82372AC6-2C03-4FBB-B705-7879D5424B96}">
+											<Language>SFX</Language>
+											<AudioFile>Scream_Clarkson.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="617066071"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Scream_Clarkson" ID="{82372AC6-2C03-4FBB-B705-7879D5424B96}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Thanks_for_asking_im_fine" ID="{9C80D34C-DC80-4E4B-A311-DA961F3392E2}" ShortID="845459547">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Thanks_for_asking_im_fine" ID="{8D794BB3-E2FB-4A8E-BC22-C742C294F871}">
+											<Language>SFX</Language>
+											<AudioFile>Thanks_for_asking_im_fine.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="66773686"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Thanks_for_asking_im_fine" ID="{8D794BB3-E2FB-4A8E-BC22-C742C294F871}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="You_Moron" ID="{1B03C240-A569-4B80-9C30-4155A12DB0A0}" ShortID="990169761">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{89E1D80D-41A3-413C-8AC6-400D83C2B3FD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="You_Moron" ID="{01ABD547-5A64-4DA2-808C-8C23B6730AB8}">
+											<Language>SFX</Language>
+											<AudioFile>You_Moron.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="642516350"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="You_Moron" ID="{01ABD547-5A64-4DA2-808C-8C23B6730AB8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{D16BC694-CAA6-4EED-A478-0E9AF49583E5}" ShortID="388247416">

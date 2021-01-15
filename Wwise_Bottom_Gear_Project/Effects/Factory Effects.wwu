@@ -1598,11 +1598,14 @@
 						<Effect Name="Vibrato" ID="{D9586A30-FF0D-4DCC-89C5-04CDC4716ED6}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
 							<PropertyList>
 								<Property Name="DelayTime" Type="Real32" Value="8.5"/>
-								<Property Name="DryLevel" Type="Real32" Value="0.3"/>
-								<Property Name="FeedBackLevel" Type="Real32" Value="0.9"/>
-								<Property Name="ModDepth" Type="Real32" Value="10"/>
-								<Property Name="ModFrequency" Type="Real32" Value="5.5"/>
+								<Property Name="DryLevel" Type="Real32" Value="0.75"/>
+								<Property Name="FeedBackLevel" Type="Real32" Value="-1"/>
+								<Property Name="ModDepth" Type="Real32" Value="31.1"/>
+								<Property Name="ModFrequency" Type="Real32" Value="5"/>
 								<Property Name="ModPWM" Type="Real32" Value="0"/>
+								<Property Name="ModPhaseMode" Type="int32" Value="1"/>
+								<Property Name="ModSmoothing" Type="Real32" Value="100"/>
+								<Property Name="WetDryMix" Type="Real32" Value="50"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Special_Effect_1" ID="{83317D8A-9D4C-438E-BE8C-BC7D27CAD1B0}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
