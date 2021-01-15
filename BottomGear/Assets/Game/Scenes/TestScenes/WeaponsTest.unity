@@ -857,7 +857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainSpawn: {fileID: 0}
-  ps: {fileID: 0}
+  sceneCamera: {fileID: 0}
   InfoText: {fileID: 601629552}
 --- !u!114 &964925488
 MonoBehaviour:
@@ -6066,7 +6066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2777367880495049804, guid: f6d4d779a70a09345b92e41a5e529d5f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2777367880495049804, guid: f6d4d779a70a09345b92e41a5e529d5f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6074,7 +6074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2777367880495049804, guid: f6d4d779a70a09345b92e41a5e529d5f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2777367880495049804, guid: f6d4d779a70a09345b92e41a5e529d5f, type: 3}
       propertyPath: m_LocalRotation.w
