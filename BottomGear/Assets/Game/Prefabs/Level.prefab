@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 81047931}
   m_Layer: 0
   m_Name: GroundDetail
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 110815003}
   m_Layer: 0
   m_Name: GroundLaterals
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1183,7 +1183,7 @@ GameObject:
   - component: {fileID: 580068967}
   m_Layer: 0
   m_Name: LateralTopUnion
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1265,7 +1265,7 @@ GameObject:
   - component: {fileID: 666592004}
   m_Layer: 0
   m_Name: GroundAsphalt
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2588,7 +2588,7 @@ GameObject:
   - component: {fileID: 1782476633}
   m_Layer: 0
   m_Name: GroundWater
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2765,7 +2765,7 @@ GameObject:
   - component: {fileID: 2146610897}
   m_Layer: 0
   m_Name: LateralBotUnion
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3108,7 +3108,7 @@ GameObject:
   - component: {fileID: 6886669000294631363}
   m_Layer: 0
   m_Name: Dome_Render
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3190,7 +3190,7 @@ GameObject:
   - component: {fileID: 8437489897865843499}
   m_Layer: 0
   m_Name: DomeCollider
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

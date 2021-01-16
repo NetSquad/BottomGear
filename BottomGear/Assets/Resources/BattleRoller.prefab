@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950668255811319}
-  m_LocalRotation: {x: 0.09506412, y: -0.000000004282114, z: 4.0892742e-10, w: 0.9954712}
+  m_LocalRotation: {x: 0.09506412, y: 0.0000000042821133, z: -4.0892734e-10, w: 0.9954712}
   m_LocalPosition: {x: 0, y: 2.3099976, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -786,7 +786,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950669710695228}
-  m_LocalRotation: {x: 0.09506412, y: -0.000000004282114, z: 4.0892742e-10, w: 0.9954712}
+  m_LocalRotation: {x: 0.09506412, y: 0.0000000042821133, z: -4.0892734e-10, w: 0.9954712}
   m_LocalPosition: {x: 0, y: 2.3099976, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2276,6 +2276,18 @@ MonoBehaviour:
     enableIfOwned: 1
   - component: {fileID: 5346722963987834718}
     enableIfOwned: 1
+  - component: {fileID: 5359872287999556070}
+    enableIfOwned: 1
+  - component: {fileID: 0}
+    enableIfOwned: 1
+  - component: {fileID: 0}
+    enableIfOwned: 1
+  - component: {fileID: 0}
+    enableIfOwned: 1
+  - component: {fileID: 0}
+    enableIfOwned: 1
+  - component: {fileID: 0}
+    enableIfOwned: 1
   componentLookup:
   - {fileID: 3623154688122286146}
   - {fileID: 3623154687913624581}
@@ -2323,6 +2335,12 @@ MonoBehaviour:
   - {fileID: 6646793679201109663}
   - {fileID: 236218551694235596}
   - {fileID: 5346722963987834718}
+  - {fileID: 5359872287999556070}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &6349677017487240278
 MonoBehaviour:
   m_ObjectHideFlags: 0

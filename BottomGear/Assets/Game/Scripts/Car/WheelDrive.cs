@@ -96,6 +96,7 @@ namespace BottomGear
 			public GameObject mesh;
 			public Transform mTransform;
 			public Transform refTransform;
+			public bool wasGrounded;
 		}
 
 		// --- Private gameplay variables ---
@@ -152,6 +153,8 @@ namespace BottomGear
 				}
 				else
 					Debug.LogError("No wheel collider found in object's subtree");
+
+				m_Wheels[i].wasGrounded = false;
 			}
 
 			// --- Set rigidbody's center of mass ---
@@ -317,6 +320,21 @@ namespace BottomGear
 			//Update the RTPC for the engine sound
 			float speed = rb.velocity.magnitude / maxSpeed;
 			AkSoundEngine.SetRTPCValue("Speed", speed * 100);
+
+			//Check wheel collisions with ground
+			for (int i = 0; i < m_Wheels.Length; ++i)
+			{
+				if (m_Wheels[i].collider.isGrounded && m_Wheels[i].wasGrounded == false) //we just grounded
+                {
+					m_Wheels[i].wasGrounded = true;
+					tyre_hit.Post(gameObject);
+				}
+				else if (m_Wheels[i].collider.isGrounded == false && m_Wheels[i].wasGrounded == true)
+				{
+					m_Wheels[i].wasGrounded = false;
+				}
+			}
+				
 
 			// Raycast to detect speedboost
 			// Collide only with Boost Pad layer
