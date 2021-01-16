@@ -230,7 +230,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e4ed0aef22d7c7478ab257ea4c288390
     GuidInternal: 
-    m_lastTime: -8585908041758746353
+    m_lastTime: -8585907955531048213
     List:
     - name: Gameplay
       guid: 572100031c49bb4c93c8377933e21139
@@ -258,7 +258,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: adfba9e144f1c741a345f6c52c3cc02b
     GuidInternal: 
-    m_lastTime: -8585908042440118894
+    m_lastTime: -8585907955532568577
     List:
     - name: Gameplay
       guid: 335e16bf552f1b4aa146ecb0c6f3f409
@@ -753,10 +753,6 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585913707887567901
     List: []
-  ExpandedItems:
-  - /Wwise_Bottom_Gear_Project
-  - /Wwise_Bottom_Gear_Project/Events
-  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit
-  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit/Gameplay
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
