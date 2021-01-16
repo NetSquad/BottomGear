@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950668255811319}
-  m_LocalRotation: {x: 0.09506412, y: 0.0000000042821133, z: -4.0892734e-10, w: 0.9954712}
+  m_LocalRotation: {x: 0.09506412, y: -0.000000004282114, z: 4.0892742e-10, w: 0.9954712}
   m_LocalPosition: {x: 0, y: 2.3099976, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -786,7 +786,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950669710695228}
-  m_LocalRotation: {x: 0.09506412, y: 0.0000000042821133, z: -4.0892734e-10, w: 0.9954712}
+  m_LocalRotation: {x: 0.09506412, y: -0.000000004282114, z: 4.0892742e-10, w: 0.9954712}
   m_LocalPosition: {x: 0, y: 2.3099976, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1387,6 +1387,12 @@ MonoBehaviour:
     name: Armor
   targetField: 0
   vitalIndex: 1
+  use_audio: 0
+  max_voicelines_xlife: 4
+  on_hit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   autoOffset: 1
   offset: {x: 0, y: 0.1, z: 0}
   widthMultiplier: 1
@@ -1534,6 +1540,46 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 145f8371a579e1546b1869c1d0f7963f, type: 2}
+  enemy_destroyed:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9148240e2e424f8438a9f8e512660426, type: 2}
+  play_boost_loop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c52777bbc3a3d964792e4f01424b724c, type: 2}
+  stop_boost_loop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b9e1d51c5c8febe4da66ed452c89966a, type: 2}
+  jump:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c139488f7b0d1d6418509401832dc1e0, type: 2}
+  play_neon_loop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3340b2c631390e04b9de01ed056a9e2b, type: 2}
+  stop_neon_loop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c8fc70d86c3e9784e85b1aae860f4631, type: 2}
+  pickup_flag:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f7f014ebf4c480f4ab1b5217ebc87b7a, type: 2}
+  tyre_hit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a8899f49b5ca93644bc3b9b738f986af, type: 2}
+  on_hit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3c0859753b0ef614f9ebd67ea20e607b, type: 2}
+  explosion:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 96ac14d060f505543b9f5304bde125e8, type: 2}
   wheelCount: 4
   driveType: 2
   maxAngle: 30
@@ -4813,7 +4859,6 @@ MonoBehaviour:
   FrontCamInitialWeight: 10
   FollowFarCamInitialWeight: 15
   FollowUpCamInitialWeight: 10
-  minDistance: 5
 --- !u!1 &3623154689585449234
 GameObject:
   m_ObjectHideFlags: 0
@@ -5446,6 +5491,12 @@ MonoBehaviour:
     name: Shield
   targetField: 0
   vitalIndex: 2
+  use_audio: 0
+  max_voicelines_xlife: 4
+  on_hit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   autoOffset: 1
   offset: {x: 0, y: 0.1, z: 0}
   widthMultiplier: 1
@@ -6698,6 +6749,12 @@ MonoBehaviour:
     name: Health
   targetField: 0
   vitalIndex: 0
+  use_audio: 1
+  max_voicelines_xlife: 4
+  on_hit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3c0859753b0ef614f9ebd67ea20e607b, type: 2}
   autoOffset: 1
   offset: {x: 0, y: 0.1, z: 0}
   widthMultiplier: 1

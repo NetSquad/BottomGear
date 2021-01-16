@@ -20,6 +20,12 @@ namespace Photon.Pun.Simple
 	{
 		protected static GameObject vitalBarDefaultPrefab;
 
+		[Header("Audio")]
+		public bool use_audio = false;
+		public uint max_voicelines_xlife = 4;
+		private uint voicelines_to_play = 4;
+		public AK.Wwise.Event on_hit;
+
 		public bool autoOffset = true;
 		[Tooltip("Found children elements are nudged (value * vitalIndex). This is to automatically stagger multiple VitalUIs")]
 		public Vector3 offset = new Vector3(0, .1f, 0);
@@ -85,6 +91,8 @@ namespace Photon.Pun.Simple
 			FindUIElements();
 
 			enabled = billboard;
+			//AUDIO stuff by Didac
+			voicelines_to_play = max_voicelines_xlife;
 		}
 
 		public override void Recalculate()
@@ -177,6 +185,17 @@ namespace Photon.Pun.Simple
 						(float)((val / fullval) * widthMultiplier),
 						UIImage.rectTransform.localScale.y,
 						UIImage.rectTransform.localScale.z);
+
+				//AUDIO stuff by Didac Needs Testing
+				if(use_audio == true)
+                {
+					int life_vo_val = (int)(fullval * (voicelines_to_play / max_voicelines_xlife));
+					if(val < life_vo_val)
+                    {
+						on_hit.Post(gameObject);
+						voicelines_to_play--;
+                    }
+                }
 			}
 		}
 

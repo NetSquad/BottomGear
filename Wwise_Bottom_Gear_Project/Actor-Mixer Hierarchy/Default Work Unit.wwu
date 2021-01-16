@@ -951,6 +951,19 @@
 						</RandomSequenceContainer>
 						<Sound Name="Car_Jump" ID="{C5F6E7BB-618D-4CE1-BF6F-C57C72796248}" ShortID="812592553">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{53C77CE1-3605-4CA9-A42F-B23C42BB77FE}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="632"/>
+													<Property Name="Min" Type="Real64" Value="-505"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-6</Value>

@@ -125,6 +125,53 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_On_Hit" ID="{CB0FDE8C-B5CF-4BDE-BA69-7FBA4D1CD1CF}">
+							<ChildrenList>
+								<Action Name="" ID="{9C7AF6DF-DB23-4D43-8112-3F6F698B833C}" ShortID="646162684">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Excessive_Swearing" ID="{519F634F-1C03-47F8-8C77-4DD384890A5D}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Fire_Boost_Loop" ID="{3F8C48A5-71B2-428D-98D9-3FBD61E4FBE6}">
+							<ChildrenList>
+								<Action Name="" ID="{59CCF6F4-E075-4893-851E-5038B92EA305}" ShortID="914159007">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fire_Boost_Loop" ID="{94A8E89F-88B7-4F7C-9E6B-4925FFA0C00C}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Fire_Boost_Loop" ID="{A95BD143-EA6A-4956-B7EE-A9B95584F833}">
+							<ChildrenList>
+								<Action Name="" ID="{768C8BE1-7BBF-4F26-BE11-281F3CD8EB2A}" ShortID="151518130">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fire_Boost_Loop" ID="{94A8E89F-88B7-4F7C-9E6B-4925FFA0C00C}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PickUp_Flag" ID="{1CEAB580-922E-4443-88EC-A6814B03AD34}">
+							<ChildrenList>
+								<Action Name="" ID="{591C1D37-816D-48DD-9066-3B915DA739FC}" ShortID="205824859">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PickUp_Flag" ID="{6EFC656F-710E-4574-BB6E-FC68DB8E1231}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{8A4961F6-7B57-49F4-8DA0-D54727EB47F3}" ShortID="611502248">

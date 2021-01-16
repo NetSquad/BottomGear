@@ -5,9 +5,19 @@
 			<ChildrenList>
 				<SoundBank Name="Gameplay" ID="{03002157-491C-4CBB-93C8-377933E21139}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_explosion" ID="{10CF4486-C4B7-4171-A34E-6941B11B773F}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_All" ID="{51093E65-9447-4181-99A6-A1C3238088FF}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Fire_Boost_Loop" ID="{3F8C48A5-71B2-428D-98D9-3FBD61E4FBE6}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_PickUp_Flag" ID="{1CEAB580-922E-4443-88EC-A6814B03AD34}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_shot" ID="{80A9D0B9-EEA5-4661-94C6-3BDEB672D6B4}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Neon_Loop" ID="{9062CDD1-8AF3-47B0-B22F-313D882F2092}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Neon_Loop" ID="{FAEA8221-63E2-4802-8C39-D759C63A5B27}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Crash" ID="{616C061A-4056-489A-BA58-9632DAC8F39E}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Fire_Boost_Loop" ID="{A95BD143-EA6A-4956-B7EE-A9B95584F833}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_On_Hit" ID="{CB0FDE8C-B5CF-4BDE-BA69-7FBA4D1CD1CF}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Jump" ID="{B3A6DC8E-8F1D-4C61-BBF1-15A905793ABB}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Enemy_Destroyed" ID="{99E12646-3D25-4C7A-BB84-CBE392E125C5}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Tyre_hit" ID="{E2960315-FF87-4CD8-A50D-58FF61E02E5B}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Engine" ID="{0DF13846-463E-4F67-B391-89AE8A8D0180}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Engine" ID="{90778997-051D-4FD0-86C4-BE69E24D10F9}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
