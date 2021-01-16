@@ -1,27 +1,55 @@
 Event	ID	Name			Wwise Object Path	Notes
 	37214798	Stop_Engine			\Default Work Unit\Gameplay\Stop_Engine	
+	97968401	Stop_Neon_Loop			\Default Work Unit\Gameplay\Stop_Neon_Loop	
 	268953978	Play_shot			\Default Work Unit\Gameplay\Play_shot	
 	303595419	Play_Crash			\Default Work Unit\Gameplay\Play_Crash	
+	313790787	Play_PickUp_Flag			\Default Work Unit\Gameplay\Play_PickUp_Flag	
 	452547817	Stop_All			\Default Work Unit\Stop_All	
+	571185383	Play_On_Hit			\Default Work Unit\Gameplay\Play_On_Hit	
 	639345804	Play_Engine			\Default Work Unit\Gameplay\Play_Engine	
+	1225054062	Play_Tyre_hit			\Default Work Unit\Gameplay\Play_Tyre_hit	
+	1399260095	Play_Fire_Boost_Loop			\Default Work Unit\Gameplay\Play_Fire_Boost_Loop	
+	2606864591	Play_Neon_Loop			\Default Work Unit\Gameplay\Play_Neon_Loop	
+	3272790337	Stop_Fire_Boost_Loop			\Default Work Unit\Gameplay\Stop_Fire_Boost_Loop	
+	3689126666	Play_Jump			\Default Work Unit\Gameplay\Play_Jump	
+	4030404899	Play_explosion			\Default Work Unit\Gameplay\Play_explosion	
+	4064197866	Play_Enemy_Destroyed			\Default Work Unit\Gameplay\Play_Enemy_Destroyed	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	435266594	boost_Time			\Default Work Unit\boost_Time	
 	640949982	Speed			\Default Work Unit\Speed	
 	3679139441	Crash_Energy			\Default Work Unit\Crash_Energy	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	9713637	Car_engine_2000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_2000rpm_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_2000rpm		878656
+	15596748	Hammond_scream	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Hammond_scream_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Excessive_Swearing\Hammond_scream		297136
+	66773686	Thanks_for_asking_im_fine	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Thanks_for_asking_im_fine_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Excessive_Swearing\Thanks_for_asking_im_fine		390176
 	112910961	Car_engine_4000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_4000rpm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_4000rpm		536640
 	153073756	Car_engine_5000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_5000rpm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_5000rpm		976960
+	194577628	Tire_Hit_3	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Tire_Hit_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Tyre_Hit\Tire_Hit_3		33450
+	214108455	Car_Jump	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\jump_air_release_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Jump		75036
 	229397416	Car_engine_3000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_3000rpm_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_3000rpm		743488
+	243110814	laser_shot	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\laser_shot_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\laser_shot		98324
 	302608464	crash_1	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\crash_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Crash\crash_1		511932
+	338147328	Ghandi_would_approve	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Ghandi_would_approve_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voice_Lines\Ghandi_would_approve		271388
+	339179679	Tire_Hit_2	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Tire_Hit_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Tyre_Hit\Tire_Hit_2		36406
 	377201563	crash_4	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\crash_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Crash\crash_4		525288
 	403486225	crash_5	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\crash_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Crash\crash_5		454068
 	413388097	crash_3	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\crash_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Crash\crash_3		467424
 	424482009	Car_engine_6000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_6000rpm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_6000rpm		479296
-	460382379	Airsoft_Shot_3	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Airsoft_Shot_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Airsoft_shot\Airsoft_Shot_3		73888
-	618986363	Airsoft_Shot_2l	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Airsoft_Shot_2l_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Airsoft_shot\Airsoft_Shot_2l		73888
+	543490717	Hammond_2	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Hammond_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Excessive_Swearing\Hammond_2		316724
+	573617690	Tire_Hit_1	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Tire_Hit_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Tyre_Hit\Tire_Hit_1		40248
+	585613593	Now_were_in_trouble	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Now_were_in_trouble_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Excessive_Swearing\Now_were_in_trouble		287340
+	617066071	Scream_Clarkson	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Scream_Clarkson_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Excessive_Swearing\Scream_Clarkson		286536
 	624805314	Car_engine_1000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_1000rpm_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_1000rpm		559168
-	883585123	Airsoft_Shot_1	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Airsoft_Shot_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Airsoft_shot\Airsoft_Shot_1		211008
+	642516350	You_Moron	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\You_Moron_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Excessive_Swearing\You_Moron		359164
+	757646858	Explosion	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\explosion_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Explosion		958528
+	815199413	PickUp_Flag	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Pick_Up_Flag_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\PickUp_Flag		213112
 	1033237544	crash_2	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\crash_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Crash\crash_2		422912
+	1036292011	Hammond_you_Idiot	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Hammond_you_Idiot_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Excessive_Swearing\Hammond_you_Idiot		233172
+	1061063613	everything_will_be_OK	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\everything_will_be_OK_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Excessive_Swearing\everything_will_be_OK		222052
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	904913494	Neon_Loop	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Neon_Loop_D79FB2B7.wem	904913494.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\Neon_Loop	
+	967403081	Fire_Boost_Loop	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Fir_Boost_Loop_D79FB2B7.wem	967403081.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\Fire_Boost_Loop	
 

@@ -16,16 +16,27 @@ namespace AK
         static const AkUniqueID PLAY_BUTTON_HOVER = 4021863785U;
         static const AkUniqueID PLAY_BUTTON_SELECTED = 3882482286U;
         static const AkUniqueID PLAY_CRASH = 303595419U;
+        static const AkUniqueID PLAY_ENEMY_DESTROYED = 4064197866U;
         static const AkUniqueID PLAY_ENGINE = 639345804U;
+        static const AkUniqueID PLAY_EXPLOSION = 4030404899U;
+        static const AkUniqueID PLAY_FIRE_BOOST_LOOP = 1399260095U;
+        static const AkUniqueID PLAY_JUMP = 3689126666U;
         static const AkUniqueID PLAY_MUSIC = 2932040671U;
+        static const AkUniqueID PLAY_NEON_LOOP = 2606864591U;
+        static const AkUniqueID PLAY_ON_HIT = 571185383U;
+        static const AkUniqueID PLAY_PICKUP_FLAG = 313790787U;
         static const AkUniqueID PLAY_SHOT = 268953978U;
+        static const AkUniqueID PLAY_TYRE_HIT = 1225054062U;
         static const AkUniqueID STOP_ALL = 452547817U;
         static const AkUniqueID STOP_ENGINE = 37214798U;
+        static const AkUniqueID STOP_FIRE_BOOST_LOOP = 3272790337U;
+        static const AkUniqueID STOP_NEON_LOOP = 97968401U;
         static const AkUniqueID TONIGHT_BOTTOM_GEAR = 1968261684U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BOOST_TIME = 435266594U;
         static const AkUniqueID CRASH_ENERGY = 3679139441U;
         static const AkUniqueID PLAYBACK_RATE = 1524500807U;
         static const AkUniqueID RPM = 796049864U;

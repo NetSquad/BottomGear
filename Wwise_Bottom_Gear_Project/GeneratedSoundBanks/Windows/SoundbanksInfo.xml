@@ -8,10 +8,19 @@
 		<ExternalSourcesOutputRoot>D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
-	<StreamedFiles/>
+	<StreamedFiles>
+		<File Id="904913494" Language="SFX">
+			<ShortName>Neon_Loop.wav</ShortName>
+			<Path>SFX\Neon_Loop_D79FB2B7.wem</Path>
+		</File>
+		<File Id="967403081" Language="SFX">
+			<ShortName>Fir_Boost_Loop.wav</ShortName>
+			<Path>SFX\Fir_Boost_Loop_D79FB2B7.wem</Path>
+		</File>
+	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="89505537" Language="SFX" Hash="1167466151">
+		<SoundBank Id="89505537" Language="SFX" Hash="4292454897">
 			<ObjectPath>\SoundBanks\Default Work Unit\Gameplay</ObjectPath>
 			<ShortName>Gameplay</ShortName>
 			<Path>Gameplay.bnk</Path>
@@ -40,7 +49,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="639345804" Name="Play_Engine" ObjectPath="\Events\Default Work Unit\Gameplay\Play_Engine" DurationType="Infinite">
+				<Event Id="4064197866" Name="Play_Enemy_Destroyed" ObjectPath="\Events\Default Work Unit\Gameplay\Play_Enemy_Destroyed" DurationType="OneShot" DurationMin="1.538118" DurationMax="1.538118">
+					<IncludedMemoryFiles>
+						<File Id="338147328" Language="SFX">
+							<ShortName>Ghandi_would_approve.wav</ShortName>
+							<Path>SFX\Ghandi_would_approve_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="639345804" Name="Play_Engine" ObjectPath="\Events\Default Work Unit\Gameplay\Play_Engine" MaxAttenuation="100.000000" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="9713637" Language="SFX">
 							<ShortName>Car_engine_2000rpm.wav</ShortName>
@@ -68,31 +85,118 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="268953978" Name="Play_shot" ObjectPath="\Events\Default Work Unit\Gameplay\Play_shot" DurationType="OneShot" DurationMin="0.313523" DurationMax="1.596238">
+				<Event Id="4030404899" Name="Play_explosion" ObjectPath="\Events\Default Work Unit\Gameplay\Play_explosion" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="3.842043" DurationMax="3.842043">
 					<IncludedMemoryFiles>
-						<File Id="460382379" Language="SFX">
-							<ShortName>Airsoft_Shot_3.wav</ShortName>
-							<Path>SFX\Airsoft_Shot_3_10C4C929.wem</Path>
+						<File Id="757646858" Language="SFX">
+							<ShortName>explosion.wav</ShortName>
+							<Path>SFX\explosion_10C4C929.wem</Path>
 						</File>
-						<File Id="618986363" Language="SFX">
-							<ShortName>Airsoft_Shot_2l.wav</ShortName>
-							<Path>SFX\Airsoft_Shot_2l_10C4C929.wem</Path>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1399260095" Name="Play_Fire_Boost_Loop" ObjectPath="\Events\Default Work Unit\Gameplay\Play_Fire_Boost_Loop" DurationType="Infinite">
+					<ReferencedStreamedFiles>
+						<File Id="967403081" Language="SFX">
+							<ShortName>Fir_Boost_Loop.wav</ShortName>
+							<Path>SFX\Fir_Boost_Loop_D79FB2B7.wem</Path>
 						</File>
-						<File Id="883585123" Language="SFX">
-							<ShortName>Airsoft_Shot_1.wav</ShortName>
-							<Path>SFX\Airsoft_Shot_1_10C4C929.wem</Path>
+					</ReferencedStreamedFiles>
+				</Event>
+				<Event Id="3689126666" Name="Play_Jump" ObjectPath="\Events\Default Work Unit\Gameplay\Play_Jump" DurationType="OneShot" DurationMin="0.295024" DurationMax="0.568963">
+					<IncludedMemoryFiles>
+						<File Id="214108455" Language="SFX">
+							<ShortName>jump_air_release.wav</ShortName>
+							<Path>SFX\jump_air_release_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2606864591" Name="Play_Neon_Loop" ObjectPath="\Events\Default Work Unit\Gameplay\Play_Neon_Loop" MaxAttenuation="100.000000" DurationType="Infinite">
+					<ReferencedStreamedFiles>
+						<File Id="904913494" Language="SFX">
+							<ShortName>Neon_Loop.wav</ShortName>
+							<Path>SFX\Neon_Loop_D79FB2B7.wem</Path>
+						</File>
+					</ReferencedStreamedFiles>
+				</Event>
+				<Event Id="571185383" Name="Play_On_Hit" ObjectPath="\Events\Default Work Unit\Gameplay\Play_On_Hit" DurationType="OneShot" DurationMin="1.258435" DurationMax="2.211519">
+					<IncludedMemoryFiles>
+						<File Id="15596748" Language="SFX">
+							<ShortName>Hammond_scream.wav</ShortName>
+							<Path>SFX\Hammond_scream_10C4C929.wem</Path>
+						</File>
+						<File Id="66773686" Language="SFX">
+							<ShortName>Thanks_for_asking_im_fine.wav</ShortName>
+							<Path>SFX\Thanks_for_asking_im_fine_10C4C929.wem</Path>
+						</File>
+						<File Id="543490717" Language="SFX">
+							<ShortName>Hammond_2.wav</ShortName>
+							<Path>SFX\Hammond_2_10C4C929.wem</Path>
+						</File>
+						<File Id="585613593" Language="SFX">
+							<ShortName>Now_were_in_trouble.wav</ShortName>
+							<Path>SFX\Now_were_in_trouble_10C4C929.wem</Path>
+						</File>
+						<File Id="617066071" Language="SFX">
+							<ShortName>Scream_Clarkson.wav</ShortName>
+							<Path>SFX\Scream_Clarkson_10C4C929.wem</Path>
+						</File>
+						<File Id="642516350" Language="SFX">
+							<ShortName>You_Moron.wav</ShortName>
+							<Path>SFX\You_Moron_10C4C929.wem</Path>
+						</File>
+						<File Id="1036292011" Language="SFX">
+							<ShortName>Hammond_you_Idiot.wav</ShortName>
+							<Path>SFX\Hammond_you_Idiot_10C4C929.wem</Path>
+						</File>
+						<File Id="1061063613" Language="SFX">
+							<ShortName>everything_will_be_OK.wav</ShortName>
+							<Path>SFX\everything_will_be_OK_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="313790787" Name="Play_PickUp_Flag" ObjectPath="\Events\Default Work Unit\Gameplay\Play_PickUp_Flag" DurationType="OneShot" DurationMin="1.109635" DurationMax="1.109635">
+					<IncludedMemoryFiles>
+						<File Id="815199413" Language="SFX">
+							<ShortName>Pick_Up_Flag.wav</ShortName>
+							<Path>SFX\Pick_Up_Flag_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="268953978" Name="Play_shot" ObjectPath="\Events\Default Work Unit\Gameplay\Play_shot" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="0.417301" DurationMax="0.743545">
+					<IncludedMemoryFiles>
+						<File Id="243110814" Language="SFX">
+							<ShortName>laser_shot.wav</ShortName>
+							<Path>SFX\laser_shot_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1225054062" Name="Play_Tyre_hit" ObjectPath="\Events\Default Work Unit\Gameplay\Play_Tyre_hit" DurationType="OneShot" DurationMin="0.260542" DurationMax="0.558742">
+					<IncludedMemoryFiles>
+						<File Id="194577628" Language="SFX">
+							<ShortName>Tire_Hit_3.wav</ShortName>
+							<Path>SFX\Tire_Hit_3_10C4C929.wem</Path>
+						</File>
+						<File Id="339179679" Language="SFX">
+							<ShortName>Tire_Hit_2.wav</ShortName>
+							<Path>SFX\Tire_Hit_2_10C4C929.wem</Path>
+						</File>
+						<File Id="573617690" Language="SFX">
+							<ShortName>Tire_Hit_1.wav</ShortName>
+							<Path>SFX\Tire_Hit_1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="452547817" Name="Stop_All" ObjectPath="\Events\Default Work Unit\Stop_All" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="37214798" Name="Stop_Engine" ObjectPath="\Events\Default Work Unit\Gameplay\Stop_Engine" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3272790337" Name="Stop_Fire_Boost_Loop" ObjectPath="\Events\Default Work Unit\Gameplay\Stop_Fire_Boost_Loop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="97968401" Name="Stop_Neon_Loop" ObjectPath="\Events\Default Work Unit\Gameplay\Stop_Neon_Loop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<GameParameters>
+				<GameParameter Id="435266594" Name="boost_Time" ObjectPath="\Game Parameters\Default Work Unit\boost_Time"/>
 				<GameParameter Id="640949982" Name="Speed" ObjectPath="\Game Parameters\Default Work Unit\Speed"/>
 				<GameParameter Id="3679139441" Name="Crash_Energy" ObjectPath="\Game Parameters\Default Work Unit\Crash_Energy"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3960292364">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2806203145">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>

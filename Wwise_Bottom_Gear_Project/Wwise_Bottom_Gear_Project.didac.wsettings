@@ -6,6 +6,8 @@
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\UPC University\4th year\Networks &amp; Online Games\BottomGear_SFX\Voice Lines\"/>
 				<Property Name="Event Action List\{0DF13846-463E-4F67-B391-89AE8A8D0180}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{10CF4486-C4B7-4171-A34E-6941B11B773F}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{1CEAB580-922E-4443-88EC-A6814B03AD34}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{3F8C48A5-71B2-428D-98D9-3FBD61E4FBE6}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{51093E65-9447-4181-99A6-A1C3238088FF}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{616C061A-4056-489A-BA58-9632DAC8F39E}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7E29D3B4-03F1-4E1E-A610-E422F8F6EAA0}\x64_Expand States" Type="string" Value=""/>
@@ -15,7 +17,9 @@
 				<Property Name="Event Action List\{932C6D9A-0DAB-4060-8372-488915256569}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{99E12646-3D25-4C7A-BB84-CBE392E125C5}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{A9439591-B167-45BB-86F6-00CD00388E93}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{A95BD143-EA6A-4956-B7EE-A9B95584F833}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B3A6DC8E-8F1D-4C61-BBF1-15A905793ABB}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{CB0FDE8C-B5CF-4BDE-BA69-7FBA4D1CD1CF}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{D0DAC24A-0489-4316-B9BB-39011665043E}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{E2960315-FF87-4CD8-A50D-58FF61E02E5B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{FAEA8221-63E2-4802-8C39-D759C63A5B27}\x64_Expand States" Type="string" Value=""/>
@@ -75,7 +79,7 @@
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="BODiHMJVqkK8+HXb3JF5Vg0yHxNWKORPtbN8nIrzcV8="/>
-				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="rfup4UTxx0GjRfbFLDzAK9zZQymWTnFEoJhUbwTjxvj2YUmKV3v0SY2g1Ucn60fzM14Wv1UvG0qhRuywxvP0CQ=="/>
+				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="rfup4UTxx0GjRfbFLDzAKw=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value="5O0K7yLXx0eKslfqTCiDkA=="/>
