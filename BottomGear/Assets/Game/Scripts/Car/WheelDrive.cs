@@ -102,6 +102,8 @@ namespace BottomGear
 		// --- Private gameplay variables ---
 		private float jumpTimer = 0.0f;
 
+		public bool enterBoost = false;
+
 		// --------------------- Main Methods -------------------------
 
 		public void Awake()
@@ -334,30 +336,25 @@ namespace BottomGear
 					m_Wheels[i].wasGrounded = false;
 				}
 			}
-				
-
-			// Raycast to detect speedboost
-			// Collide only with Boost Pad layer
+			// Raycast to detect BoostPad and collides only with Boost Pad layer
 			int layerMask = 1 << 9;
 
 			RaycastHit hit;
 			
-			if (Physics.Raycast(transform.position, transform.forward, out hit, 2f, layerMask))
+			if (Physics.Raycast(transform.position, transform.forward, out hit, 20f, layerMask))
             {
-				Debug.Log("Hitting BP");
-				Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.green);
-
 				BoostingPad bp = hit.collider.gameObject.GetComponent<BoostingPad>();
 
-				Vector3 go = hit.collider.gameObject.transform.InverseTransformPoint(transform.position);
-
-				if (go.z > 0)
-					bp.IsFront();
+				// If car is in front, the moment it touches the booster, it will accelerate
+				if (bp.IsFront(transform))
+                {
+					Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.green);
+					
+					enterBoost = true;
+				}
 			}
 			else
 				Debug.DrawRay(transform.position, transform.forward, Color.red);
-				
-
 		}
 
         private void LateUpdate()
