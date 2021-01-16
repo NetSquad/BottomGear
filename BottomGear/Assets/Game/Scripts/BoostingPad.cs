@@ -39,9 +39,6 @@ public class BoostingPad : MonoBehaviour
             boostDuration = 3.0f;
             beginBoost = false;
             fromFront = false;
-
-            WheelDrive drive = rb.GetComponent<WheelDrive>();
-            drive.enterBoost = false;
         }
         //Speed=rigidbody.velocity.magnitude*3.6; 
     }

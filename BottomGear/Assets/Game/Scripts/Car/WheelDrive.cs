@@ -102,8 +102,6 @@ namespace BottomGear
 		// --- Private gameplay variables ---
 		private float jumpTimer = 0.0f;
 
-		public bool enterBoost = false;
-
 		// --------------------- Main Methods -------------------------
 
 		public void Awake()
@@ -346,12 +344,9 @@ namespace BottomGear
 				BoostingPad bp = hit.collider.gameObject.GetComponent<BoostingPad>();
 
 				// If car is in front, the moment it touches the booster, it will accelerate
-				if (bp.IsFront(transform))
-                {
+				
+				if (bp.IsFront(transform)) // ----> This if statement and the else below will be deleted when no longer needed
 					Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.green);
-					
-					enterBoost = true;
-				}
 			}
 			else
 				Debug.DrawRay(transform.position, transform.forward, Color.red);
