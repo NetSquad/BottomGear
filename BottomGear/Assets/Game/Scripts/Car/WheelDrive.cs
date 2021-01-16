@@ -13,6 +13,7 @@ namespace BottomGear
 	}
 
 	[RequireComponent(typeof(Rigidbody))]
+	[RequireComponent(typeof(WheelRefs))]
 
 	public class WheelDrive : MonoBehaviour
 	{
@@ -31,6 +32,9 @@ namespace BottomGear
 		public float maxTorque = 300f;
 		[Tooltip("Maximum brake torque applied to the driving wheels")]
 		public float handBrakeTorque = 30000f;
+		[Tooltip("Amount of position to correct using WheelReferences. Higher value will keep wheels more attached to the reference while lower to the WheelCollider.")]
+		[Range(0.0f, 1.0f)]
+		public float wheelRefsWeight = 0.75f;
 
 		[Header("Controller")]
 		[Tooltip("The vehicle's speed when the physics engine can use different amount of sub-steps (in m/s). Not editable in Play mode")]
@@ -43,18 +47,18 @@ namespace BottomGear
 		public int stepsBelow = 1;
 		[Tooltip("Simulation sub-steps when the speed is above critical. Not editable in Play mode")]
 		public int stepsAbove = 5;
+		[Tooltip("Speed at which the vehicle rotates in x and y axis.")]
+		public Vector3 rotationSpeed = new Vector3(0, 40, 0);
+
+		[Header("Forces")]
 		[Tooltip("The vehicle's jump force multiplier.")]
 		public int jumpForce = 10000;
 		[Tooltip("The vehicle's jump timer interval.")]
 		public float jumpInterval = 2.0f;
-
 		[Tooltip("Constant force towards the ground to keep the vehicle riding on it.")]
 		public bool snapToGround = true;
 		[Tooltip("The amount of snapToGround force to be applied.")]
 		public float snapForce = 1500.0f;
-
-		[Tooltip("Speed at which the vehicle rotates in x and y axis.")]
-		public Vector3 rotationSpeed = new Vector3(0, 40, 0);
 		[Tooltip("The linear drag coefficient override when object is flying. 0 means no damping.")]
 		public float flyingLinearDrag = 0.0f;
 		[Tooltip("Constant force towards the world -up to simulate a higher gravity without touching the global parameter.")]
@@ -80,6 +84,7 @@ namespace BottomGear
 			public WheelCollider collider;
 			public GameObject mesh;
 			public Transform mTransform;
+			public Transform refTransform;
 		}
 
 		// --- Private gameplay variables ---
@@ -115,6 +120,8 @@ namespace BottomGear
 			m_Wheels = new Wheel[wheelCount];
 			WheelCollider[] cWheels = GetComponentsInChildren<WheelCollider>();
 
+			WheelRefs wheelRefs = GetComponent<WheelRefs>();
+
 			for (int i = 0; i < cWheels.Length; ++i)
 			{
 				m_Wheels[i].collider = cWheels[i];
@@ -123,13 +130,14 @@ namespace BottomGear
 				{
 					MeshRenderer mr = m_Wheels[i].collider.gameObject.GetComponentInChildren<MeshRenderer>();
 
-					if (mr)
+					if (mr && wheelRefs.wheelRefs[i])
 					{
+						m_Wheels[i].refTransform = wheelRefs.wheelRefs[i].transform;
 						m_Wheels[i].mesh = mr.gameObject;
 						m_Wheels[i].mTransform = m_Wheels[i].mesh.transform;
 					}
 					else
-						Debug.LogError("No wheel mesh found in wheel collider's subtree");
+						Debug.LogError("No wheel mesh found in wheel collider's subtree or no wheel reference");
 				}
 				else
 					Debug.LogError("No wheel collider found in object's subtree");
@@ -218,6 +226,12 @@ namespace BottomGear
 					lockDown = true;
 
 				rb.AddForce(mTransform.up * jumpForce, ForceMode.Impulse);
+
+				//for (int i = 0; i < m_Wheels.Length; ++i)
+				//{
+				//	m_Wheels[i].collider.
+				//}
+
 				jumpTimer = 0.0f;
 			}
 			// --- Car jump timer ---
@@ -333,10 +347,10 @@ namespace BottomGear
 					// --- Rotate wheel according to collider's rotation ---
 
 					if (m_Wheels[i].mesh.name == "Wheel1Mesh"
-					 || m_Wheels[i].mesh.name == "Wheel3Mesh")
-						m_Wheels[i].mTransform.position = p + transform.right * m_Wheels[i].collider.radius / 2.0f;
+					 || m_Wheels[i].mesh.name == "Wheel3Mesh")	
+						m_Wheels[i].mTransform.position = Vector3.Lerp(p, m_Wheels[i].refTransform.position, wheelRefsWeight);
 					else
-						m_Wheels[i].mTransform.position = p - transform.right * m_Wheels[i].collider.radius / 2.0f;
+						m_Wheels[i].mTransform.position = Vector3.Lerp(p, m_Wheels[i].refTransform.position, wheelRefsWeight);
 
 
 					if (m_Wheels[i].mesh.name == "Wheel1Mesh"
@@ -344,6 +358,7 @@ namespace BottomGear
 						m_Wheels[i].mTransform.rotation = q*Quaternion.Euler(0,180, 0);
 					else
 						m_Wheels[i].mTransform.rotation = q;
+
 				}
 			}
 		}
