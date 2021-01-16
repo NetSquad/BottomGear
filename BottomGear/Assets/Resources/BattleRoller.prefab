@@ -1572,10 +1572,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a8899f49b5ca93644bc3b9b738f986af, type: 2}
-  on_hit:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3c0859753b0ef614f9ebd67ea20e607b, type: 2}
   explosion:
     idInternal: 0
     valueGuidInternal: 
@@ -2354,6 +2350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabInstanceId: -629360
+  use_audio: 0
   mountType:
     id: 0
     expanded: 0
@@ -5552,6 +5549,7 @@ GameObject:
   - component: {fileID: 6648316456178805962}
   - component: {fileID: 3167942841125055018}
   - component: {fileID: 728368079113569521}
+  - component: {fileID: 5359872287999556070}
   m_Layer: 8
   m_Name: FlagHolder
   m_TagString: Untagged
@@ -5586,6 +5584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabInstanceId: -10244
+  use_audio: 1
   mountType:
     id: 1
     expanded: 0
@@ -5611,6 +5610,22 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   throwQueued: 0
   deathVelocity: {x: 0, y: 0, z: 0}
+--- !u!114 &5359872287999556070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5484385525901582459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e555cd2d9d0e0545863da70be81ecdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickup_flag:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f7f014ebf4c480f4ab1b5217ebc87b7a, type: 2}
 --- !u!1 &5530558460547618217
 GameObject:
   m_ObjectHideFlags: 0

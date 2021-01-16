@@ -16,6 +16,10 @@ namespace Photon.Pun.Simple
         , IOnPreQuit
         , IOnPreNetDestroy
     {
+        [Header("Audio")]
+        public bool use_audio = false;
+        public static Mount_audio_Callbacks callbacks;
+
         public const string ROOT_MOUNT_NAME = "Root";
 
         [Tooltip("A Mount component can be associated with more than one mount name. The first root will always include 'Root'.")]
@@ -41,6 +45,7 @@ namespace Photon.Pun.Simple
         {
             base.OnAwake();
             mountsLookup = netObj.GetComponent<MountsManager>();
+            callbacks = GetComponent<Mount_audio_Callbacks>();
         }
 
         public void OnPreQuit()
@@ -87,7 +92,14 @@ namespace Photon.Pun.Simple
                 var mountedObjs = newMount.mountedObjs;
 
                 if (!mountedObjs.Contains(mountable))
+                {
                     mountedObjs.Add(mountable);
+                    //ADUIO
+                    if (callbacks != null)
+                    {
+                        callbacks.playPickUp();
+                    }
+                }
             }
         }
     }
