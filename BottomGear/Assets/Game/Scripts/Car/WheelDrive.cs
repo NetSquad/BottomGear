@@ -18,8 +18,19 @@ namespace BottomGear
 	public class WheelDrive : MonoBehaviour
 	{
 		// --------------------- Variables -------------------------
+		[Header("Audio")]
 		public AK.Wwise.Event engine_sound;
 		public AK.Wwise.Event crash_sound;
+		public AK.Wwise.Event enemy_destroyed;
+		public AK.Wwise.Event play_boost_loop;
+		public AK.Wwise.Event stop_boost_loop;
+		public AK.Wwise.Event jump;
+		public AK.Wwise.Event play_neon_loop;
+		public AK.Wwise.Event stop_neon_loop;
+		public AK.Wwise.Event pickup_flag;
+		public AK.Wwise.Event tyre_hit;
+		public AK.Wwise.Event explosion;
+
 
 		[Header("Wheels")]
 		[Tooltip("The vehicle's wheel count")]
@@ -233,6 +244,7 @@ namespace BottomGear
 				//}
 
 				jumpTimer = 0.0f;
+				jump.Post(gameObject);
 			}
 			// --- Car jump timer ---
 			jumpTimer += Time.fixedDeltaTime;

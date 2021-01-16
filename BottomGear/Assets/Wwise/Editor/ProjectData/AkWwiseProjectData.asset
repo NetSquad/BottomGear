@@ -230,7 +230,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e4ed0aef22d7c7478ab257ea4c288390
     GuidInternal: 
-    m_lastTime: -8585912375362859474
+    m_lastTime: -8585908041758746353
     List:
     - name: Gameplay
       guid: 572100031c49bb4c93c8377933e21139
@@ -258,7 +258,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: adfba9e144f1c741a345f6c52c3cc02b
     GuidInternal: 
-    m_lastTime: -8585909416602197126
+    m_lastTime: -8585908042440118894
     List:
     - name: Gameplay
       guid: 335e16bf552f1b4aa146ecb0c6f3f409
@@ -338,8 +338,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Enemy_Destroyed
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1538118
+      minDuration: 1538118
     - name: Play_Engine
       guid: 978977901d05d04f86c4be69e24d10f9
       id: 639345804
@@ -351,7 +351,7 @@ MonoBehaviour:
       - ElementName: Play_Engine
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Engine
-      maxAttenuation: 0
+      maxAttenuation: 100000000
       maxDuration: -1
       minDuration: -1
     - name: Play_explosion
@@ -365,6 +365,20 @@ MonoBehaviour:
       - ElementName: Play_explosion
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_explosion
+      maxAttenuation: 100000000
+      maxDuration: 3842043
+      minDuration: 3842043
+    - name: Play_Fire_Boost_Loop
+      guid: a5488c3fb2718d4298d93fbd61e4fbe6
+      id: 1399260095
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
+      - ElementName: Play_Fire_Boost_Loop
+        ObjectType: 3
+      Path: Default Work Unit\Gameplay\Play_Fire_Boost_Loop
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -380,8 +394,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Jump
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 568963
+      minDuration: 295024
     - name: Play_Music
       guid: 4ac2dad089041643b9bb39011665043e
       id: 2932040671
@@ -407,9 +421,37 @@ MonoBehaviour:
       - ElementName: Play_Neon_Loop
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Neon_Loop
-      maxAttenuation: 0
+      maxAttenuation: 100000000
       maxDuration: -1
       minDuration: -1
+    - name: Play_On_Hit
+      guid: 8cde0fcbcfb5de4bba697fba4d1cd1cf
+      id: 571185383
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
+      - ElementName: Play_On_Hit
+        ObjectType: 3
+      Path: Default Work Unit\Gameplay\Play_On_Hit
+      maxAttenuation: 0
+      maxDuration: 2211519
+      minDuration: 1258435
+    - name: Play_PickUp_Flag
+      guid: 80b5ea1c2e92434488eca6814b03ad34
+      id: 313790787
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
+      - ElementName: Play_PickUp_Flag
+        ObjectType: 3
+      Path: Default Work Unit\Gameplay\Play_PickUp_Flag
+      maxAttenuation: 0
+      maxDuration: 1109635
+      minDuration: 1109635
     - name: Play_shot
       guid: b9d0a980a5ee614694c63bdeb672d6b4
       id: 268953978
@@ -421,9 +463,9 @@ MonoBehaviour:
       - ElementName: Play_shot
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_shot
-      maxAttenuation: 0
-      maxDuration: 1596238
-      minDuration: 313523
+      maxAttenuation: 100000000
+      maxDuration: 743545
+      minDuration: 417301
     - name: Play_Tyre_hit
       guid: 150396e287ffd84ca50d58ff61e02e5b
       id: 1225054062
@@ -436,8 +478,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Tyre_hit
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 558742
+      minDuration: 260542
     - name: Stop_All
       guid: 653e09514794814199a6a1c3238088ff
       id: 452547817
@@ -464,6 +506,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Fire_Boost_Loop
+      guid: 43d15ba96aea5649b7eea9b95584f833
+      id: 3272790337
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gameplay
+        ObjectType: 4
+      - ElementName: Stop_Fire_Boost_Loop
+        ObjectType: 3
+      Path: Default Work Unit\Gameplay\Stop_Fire_Boost_Loop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Neon_Loop
       guid: 2182eafae26302488c39d759c63a5b27
       id: 97968401
@@ -476,8 +532,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Stop_Neon_Loop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Tonight_Bottom_Gear
       guid: 9a6d2c93ab0d60408372488915256569
       id: 1968261684
