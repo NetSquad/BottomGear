@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Banners2
   m_Shader: {fileID: 4800000, guid: ee7e4c9a5f6364b688a332c67fc32cca, type: 3}
-  m_ShaderKeywords: _ALPHATEST_ON _CLEARCOAT _EMISSION _METALLICSPECGLOSSMAP _NORMALMAP
+  m_ShaderKeywords: _ALPHATEST_ON _CLEARCOAT _EMISSION
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -21,8 +21,8 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: f6ca4b8a968d3ac469661e5709b50c43, type: 3}
-        m_Scale: {x: -0.5, y: 0.5}
+        m_Texture: {fileID: 2800000, guid: 62fcf6b25d33644c0aa58eb5b874a7a7, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: a32a1688acecf85429dd1f5b6aff2c10, type: 3}
@@ -45,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 55751d712cbaf5e499bf56201152e1dc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 62fcf6b25d33644c0aa58eb5b874a7a7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -111,7 +111,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 5.0566034, g: 3.8878603, b: 5.0566034, a: 1}
+    - _EmissionColor: {r: 2.5283015, g: 1.9458655, b: 2.5283015, a: 1}
     - _SpecColor: {r: 0.19999993, g: 0.19999993, b: 0.19999993, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &6029917142331742832
