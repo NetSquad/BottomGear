@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BottomGear;
 
 public class BoostingPad : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class BoostingPad : MonoBehaviour
     // RigidBody entering the Trigger
     private Rigidbody rb;
 
+    public Vector3 carRelative;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,13 +32,13 @@ public class BoostingPad : MonoBehaviour
             rb.AddForce(rb.transform.forward * boostAmount, ForceMode.Acceleration);
 
             boostDuration -= Time.deltaTime;
-            Debug.Log("BOOOOOOOOOOOOOOOOOOSTO");
         }
 
         if (boostDuration <= 0)
         {
-            beginBoost = false;
             boostDuration = 3.0f;
+            beginBoost = false;
+            fromFront = false;
         }
         //Speed=rigidbody.velocity.magnitude*3.6; 
     }
@@ -49,17 +51,25 @@ public class BoostingPad : MonoBehaviour
         // Makes sure that the go is a player and he is coming from the right direction
         // If he comes from the wrong direction, boosting will not be applied to said go
         if(other.transform.root.gameObject.CompareTag("Player") && fromFront)
-        {
-            Debug.Log("Detected RigidBody");
             beginBoost = true;
-            fromFront = false;
-        }
     }
 
     // Check where is the player coming from
-    public void IsFront()
+    public bool IsFront(Transform playerTrans)
     {
-        fromFront = true;
+        // Transform car position into Booster's local space
+        carRelative = transform.InverseTransformPoint(playerTrans.position);
+       
+        if (carRelative.x > 0)
+        {
+            fromFront = true;
+            return true;
+        }
+        else
+        {
+            fromFront = false;
+        }
+        return false;
     }
 
 }
