@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1341414018091564090}
   - component: {fileID: 1341414018090467066}
   - component: {fileID: 4957362355502328694}
+  - component: {fileID: 9015880849819445815}
   m_Layer: 0
   m_Name: UnmountedCrown
   m_TagString: Untagged
@@ -98,6 +99,20 @@ CapsuleCollider:
   m_Height: 0.46
   m_Direction: 1
   m_Center: {x: 0, y: 0.18, z: -0.000000044703484}
+--- !u!136 &9015880849819445815
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341414018092392506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.75
+  m_Height: 0.32370922
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.16185458, z: -0.000000044703484}
 --- !u!1 &1506036369071055889
 GameObject:
   m_ObjectHideFlags: 0

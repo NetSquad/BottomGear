@@ -210,11 +210,15 @@ namespace BottomGear
 
 			if (Input.GetKey(KeyCode.W))
 				accelerator = 1.0f;
+			else if ((Input.GetAxis("R2") == 0))
+				accelerator = 0.0f;
 
 			float decelerator = (Input.GetAxis("L2") - (-1)) / (2);
 
 			if (Input.GetKey(KeyCode.S))
 				decelerator = 1.0f;
+			else if ((Input.GetAxis("L2") == 0))
+				decelerator = 0.0f;
 
 			float outputAcceleration = accelerator - decelerator;
 
