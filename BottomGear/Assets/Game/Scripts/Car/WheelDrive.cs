@@ -82,6 +82,7 @@ namespace BottomGear
 		public Transform centerOfMass;
 		public Camera camera;
 		Transform mTransform;
+        Photon.Pun.Simple.SyncVitals vitals;
 
 		// --- Internal variables ---
 		bool lockDown = false;
@@ -106,6 +107,7 @@ namespace BottomGear
 
 		public void Awake()
 		{
+			vitals = GetComponent<Photon.Pun.Simple.SyncVitals>();
 			mTransform = transform;
 			photonView = GetComponent<PhotonView>();
 			rb = GetComponent<Rigidbody>();
@@ -188,7 +190,20 @@ namespace BottomGear
 			//watch.Reset();
 		}
 
-        private void FixedUpdate()
+        private void OnParticleCollision(GameObject other)
+        {
+			//Debug.Log(other.transform.parent.transform.parent.name);
+
+			// --- Kill car if it is another's trail ---
+			if (other.transform.parent.transform.parent.name != gameObject.name)
+			{
+				vitals.vitals.ApplyCharges(-vitals.vitals.VitalArray[0].Value, false, true);
+				Debug.Log("AAAAAAAAAA");
+			}
+
+		}
+
+		private void FixedUpdate()
         {
 			// Uncomment this and timer log at the end of this function to profile 
 			//watch.Start();

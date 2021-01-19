@@ -2126,36 +2126,12 @@ MonoBehaviour:
         hash: -882981140
         name: Health
       _fullValue: 100
-      _maxValue: 125
-      startValue: 125
+      _maxValue: 100
+      startValue: 100
       regenDelay: 1
       regenRate: 1
       decayDelay: 1
       decayRate: 1
-      absorption: 1
-    - vitalName:
-        type: 3
-        hash: 22446227
-        name: Armor
-      _fullValue: 100
-      _maxValue: 125
-      startValue: 50
-      regenDelay: 1
-      regenRate: 1
-      decayDelay: 1
-      decayRate: 0
-      absorption: 0.6669999957084656
-    - vitalName:
-        type: 4
-        hash: -239767697
-        name: Shield
-      _fullValue: 200
-      _maxValue: 250
-      startValue: 100
-      regenDelay: 1
-      regenRate: 20
-      decayDelay: 1
-      decayRate: 10
       absorption: 1
   contactGroups:
     mask: 0
@@ -2887,17 +2863,17 @@ RotationConstraint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080879018929913039}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Weight: 1
-  m_RotationAtRest: {x: 0, y: 0, z: 90}
-  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_RotationAtRest: {x: 0, y: 0, z: 90.00001}
+  m_RotationOffset: {x: 0, y: 0, z: 90.00001}
   m_AffectRotationX: 1
   m_AffectRotationY: 1
   m_AffectRotationZ: 1
-  m_IsContraintActive: 0
+  m_IsContraintActive: 1
   m_IsLocked: 1
   m_Sources:
-  - sourceTransform: {fileID: 7658921751467583622}
+  - sourceTransform: {fileID: 5883456233218082790}
     weight: 1
 --- !u!114 &1401074383165198757
 MonoBehaviour:
@@ -7070,6 +7046,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1737707477377397356, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
+      propertyPath: m_Time
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1737707477377397356, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
@@ -7191,6 +7171,18 @@ PrefabInstance:
     - target: {fileID: 5880017549711562268, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
+      propertyPath: lengthInSec
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 5880017549711562270, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
       propertyPath: m_Enabled

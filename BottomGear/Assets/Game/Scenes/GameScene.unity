@@ -12491,6 +12491,54 @@ PrefabInstance:
       propertyPath: m_Name
       value: BattleRoller
       objectReference: {fileID: 0}
+    - target: {fileID: 2150971825823302858, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
+      propertyPath: vitals.vitalDefs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150971825823302858, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
+      propertyPath: vitals.vitalDefs.Array.data[0]._maxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150971825823302858, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
+      propertyPath: vitals.vitalDefs.Array.data[1]._maxValue
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150971825823302858, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
+      propertyPath: vitals.vitalDefs.Array.data[1].decayRate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150971825823302858, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
+      propertyPath: vitals.vitalDefs.Array.data[1].regenRate
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150971825823302858, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
+      propertyPath: vitals.vitalDefs.Array.data[0].startValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150971825823302858, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
+      propertyPath: vitals.vitalDefs.Array.data[1]._fullValue
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150971825823302858, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
+      propertyPath: vitals.vitalDefs.Array.data[1].absorption
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150971825823302858, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
+      propertyPath: vitals.vitalDefs.Array.data[1].startValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150971825823302858, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
+      propertyPath: vitals.vitalDefs.Array.data[1].vitalName.hash
+      value: -239767697
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150971825823302858, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
+      propertyPath: vitals.vitalDefs.Array.data[1].vitalName.name
+      value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 2150971825823302858, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
+      propertyPath: vitals.vitalDefs.Array.data[1].vitalName.type
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2248847848412316587, guid: 2c430584551ffda428cf3b5e0242eed9, type: 3}
       propertyPath: m_RootOrder
       value: 1
