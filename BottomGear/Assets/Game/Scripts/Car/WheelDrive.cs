@@ -272,19 +272,24 @@ namespace BottomGear
 				if (lockDown && inputDirection.x > 0)
 					inputDirection.x = 0;
 
-				Vector3 orientationX = Vector3.up;
-				Vector3 orientationY = Vector3.right;
+				Vector3 orientationX = camera.transform.up;
+				Vector3 orientationY = camera.transform.right;
 
-				// --- Rotate X and Y separately ---
-				Vector3 orientation = orientationX;
-				orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
 
-				rb.AddTorque(orientation * inputDirection.y, ForceMode.Acceleration);
+				if (rb.angularVelocity.magnitude < Mathf.Abs(30))
+				{
+					// --- Rotate X and Y separately ---
+					Vector3 orientation = orientationX;
+					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
 
-                orientation = orientationY;
-                orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+					rb.AddTorque(orientation * inputDirection.y, ForceMode.Acceleration);
 
-                rb.AddTorque(orientation * inputDirection.x, ForceMode.Acceleration);
+					orientation = orientationY;
+					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+
+					rb.AddTorque(orientation * inputDirection.x, ForceMode.Acceleration);
+				}
+				
             }
 			else
 				rb.drag = linearDragBackup;
