@@ -111,7 +111,6 @@ GameObject:
   - component: {fileID: 8505692534355359643}
   - component: {fileID: 4875872599069232895}
   - component: {fileID: 4172962274426855965}
-  - component: {fileID: 6579318222000582768}
   m_Layer: 0
   m_Name: Building_025_LOD_4(Clone)
   m_TagString: Untagged
@@ -182,18 +181,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6579318222000582768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2896564995237929906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4852c224edbf44eaba646de79dafbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3894723246567510263
 GameObject:
   m_ObjectHideFlags: 0
