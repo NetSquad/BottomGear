@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using Photon.Pun;
+using Photon.Pun.UtilityScripts;
 
 namespace BottomGear
 {
@@ -82,7 +83,11 @@ namespace BottomGear
 		public Transform centerOfMass;
 		public Camera camera;
 		Transform mTransform;
+
+		// --- Network ---
         Photon.Pun.Simple.SyncVitals vitals;
+        Photon.Pun.Simple.BasicInventory basicInventory;
+		float initialScoreTime = 0.0f;
 
 		// --- Internal variables ---
 		bool lockDown = false;
@@ -107,6 +112,7 @@ namespace BottomGear
 
 		public void Awake()
 		{
+			basicInventory = GetComponent<Photon.Pun.Simple.BasicInventory>();
 			vitals = GetComponent<Photon.Pun.Simple.SyncVitals>();
 			mTransform = transform;
 			photonView = GetComponent<PhotonView>();
@@ -185,12 +191,22 @@ namespace BottomGear
 			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
 				return;
 
+			if (Time.time - initialScoreTime >= 1.0f &&
+				photonView.IsMine 
+				&& basicInventory.DefaultMount.mountedObjs.Count > 0)
+			{
+				initialScoreTime = Time.time;
+				PhotonNetwork.LocalPlayer.AddScore(1);
+			}
+
+			initialScoreTime += Time.deltaTime;
+
 			// Uncomment this and timer start to profile 
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
 			//watch.Reset();
 		}
 
-        private void OnParticleCollision(GameObject other)
+		private void OnParticleCollision(GameObject other)
         {
 			//Debug.Log(other.transform.parent.transform.parent.name);
 
@@ -198,7 +214,7 @@ namespace BottomGear
 			if (other.transform.parent.transform.parent.name != gameObject.name)
 			{
 				vitals.vitals.ApplyCharges(-vitals.vitals.VitalArray[0].Value, false, true);
-				Debug.Log("AAAAAAAAAA");
+				//Debug.Log("AAAAAAAAAA");
 			}
 
 		}

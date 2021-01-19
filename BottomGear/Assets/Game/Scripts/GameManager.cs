@@ -154,8 +154,6 @@ namespace BottomGear
             if (!startTimer || currentTime >= timeLimit)
                 return;
 
-            Debug.Log(currentTime);
-
             currentTime = PhotonNetwork.Time - initialTime;
 
             Timer.text = string.Format("{0}", System.Math.Round(currentTime, 2));
@@ -190,11 +188,11 @@ namespace BottomGear
         {
             // --- NOTE: This is AsteroidsGame's game code ---
 
-            //if (changedProps.ContainsKey(AsteroidsGame.PLAYER_LIVES))
-            //{
-            //    CheckEndOfGame();
-            //    return;
-            //}
+            if (changedProps.ContainsKey("score"))
+            {
+                
+                return;
+            }
 
             if (!PhotonNetwork.IsMasterClient)
             {
