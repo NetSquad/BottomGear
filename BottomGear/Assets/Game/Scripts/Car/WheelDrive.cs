@@ -274,7 +274,7 @@ namespace BottomGear
 
 				Vector3 orientationX = camera.transform.up;
 				Vector3 orientationY = camera.transform.right;
-
+				Vector3 orientationZ = camera.transform.forward;
 
 				if (rb.angularVelocity.magnitude < Mathf.Abs(30))
 				{
@@ -288,6 +288,11 @@ namespace BottomGear
 					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
 
 					rb.AddTorque(orientation * inputDirection.x, ForceMode.Acceleration);
+
+					orientation = orientationZ;
+					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+
+					rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("HorizontalRS"), -1, 1), ForceMode.Acceleration);
 				}
 				
             }
