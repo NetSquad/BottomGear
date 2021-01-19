@@ -59,7 +59,7 @@ namespace BottomGear
 		[Tooltip("Simulation sub-steps when the speed is above critical. Not editable in Play mode")]
 		public int stepsAbove = 5;
 		[Tooltip("Speed at which the vehicle rotates in x and y axis.")]
-		public Vector3 rotationSpeed = new Vector3(0, 40, 0);
+		public Vector3 rotationSpeed = new Vector3(30, 30, 30);
 
 		[Header("Forces")]
 		[Tooltip("The vehicle's jump force multiplier.")]
@@ -82,6 +82,7 @@ namespace BottomGear
 		public Transform centerOfMass;
 		public Camera camera;
 		Transform mTransform;
+        Photon.Pun.Simple.SyncVitals vitals;
 
 		// --- Internal variables ---
 		bool lockDown = false;
@@ -106,6 +107,7 @@ namespace BottomGear
 
 		public void Awake()
 		{
+			vitals = GetComponent<Photon.Pun.Simple.SyncVitals>();
 			mTransform = transform;
 			photonView = GetComponent<PhotonView>();
 			rb = GetComponent<Rigidbody>();
@@ -188,7 +190,20 @@ namespace BottomGear
 			//watch.Reset();
 		}
 
-        private void FixedUpdate()
+        private void OnParticleCollision(GameObject other)
+        {
+			//Debug.Log(other.transform.parent.transform.parent.name);
+
+			// --- Kill car if it is another's trail ---
+			if (other.transform.parent.transform.parent.name != gameObject.name)
+			{
+				vitals.vitals.ApplyCharges(-vitals.vitals.VitalArray[0].Value, false, true);
+				Debug.Log("AAAAAAAAAA");
+			}
+
+		}
+
+		private void FixedUpdate()
         {
 			// Uncomment this and timer log at the end of this function to profile 
 			//watch.Start();
@@ -245,11 +260,6 @@ namespace BottomGear
 
 				rb.AddForce(mTransform.up * jumpForce, ForceMode.Impulse);
 
-				//for (int i = 0; i < m_Wheels.Length; ++i)
-				//{
-				//	m_Wheels[i].collider.
-				//}
-
 				jumpTimer = 0.0f;
 				jump.Post(gameObject);
 			}
@@ -277,19 +287,35 @@ namespace BottomGear
 				if (lockDown && inputDirection.x > 0)
 					inputDirection.x = 0;
 
-				Vector3 orientation;
-				orientation.x = mTransform.right.x;
-				orientation.y = mTransform.up.y;
-				orientation.z = 0;
+				Vector3 orientationX = camera.transform.up;
+				Vector3 orientationY = camera.transform.right;
+				Vector3 orientationZ = camera.transform.forward;
 
-				Quaternion deltaRot = Quaternion.Euler(inputDirection * rotationSpeed);
-				mTransform.rotation = Quaternion.Slerp(mTransform.rotation, mTransform.rotation * deltaRot, Time.fixedDeltaTime * 2.0f);
-			}
+				if (rb.angularVelocity.magnitude < Mathf.Abs(30))
+				{
+					// --- Rotate X and Y separately ---
+					Vector3 orientation = orientationX;
+					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+
+					rb.AddTorque(orientation * inputDirection.y, ForceMode.Acceleration);
+
+					orientation = orientationY;
+					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+
+					rb.AddTorque(orientation * inputDirection.x, ForceMode.Acceleration);
+
+					orientation = orientationZ;
+					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+
+					rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("HorizontalRS"), -1, 1), ForceMode.Acceleration);
+				}
+				
+            }
 			else
 				rb.drag = linearDragBackup;
 
 			// --- Car flip ---
-			if (mTransform.up.y < -0.75)
+			if (mTransform.up.y < -0.6 && !IsGrounded())
 			{
 				rb.MoveRotation(rb.rotation * Quaternion.Euler(0, 0, 180));
 			}
