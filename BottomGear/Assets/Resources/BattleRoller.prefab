@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950668255811319}
-  m_LocalRotation: {x: 0.09506412, y: 0.0000000042821133, z: -4.0892734e-10, w: 0.9954712}
+  m_LocalRotation: {x: 0.09506412, y: -0.000000004282114, z: 4.0892742e-10, w: 0.9954712}
   m_LocalPosition: {x: 0, y: 2.3099976, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 5
+  m_BindingMode: 2
   m_FollowOffset: {x: 0, y: 2.3099976, z: -9.889999}
   m_XDamping: 1
   m_YDamping: 1
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16950669710695228}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   acceleration: 2500
   stepsBelow: 7
   stepsAbove: 2
-  rotationSpeed: {x: 60, y: 60, z: 0}
+  rotationSpeed: {x: 300, y: 300, z: 300}
   jumpForce: 20000
   jumpInterval: 1
   snapToGround: 1

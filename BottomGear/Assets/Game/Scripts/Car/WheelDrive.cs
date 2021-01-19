@@ -59,7 +59,7 @@ namespace BottomGear
 		[Tooltip("Simulation sub-steps when the speed is above critical. Not editable in Play mode")]
 		public int stepsAbove = 5;
 		[Tooltip("Speed at which the vehicle rotates in x and y axis.")]
-		public Vector3 rotationSpeed = new Vector3(0, 40, 0);
+		public Vector3 rotationSpeed = new Vector3(30, 30, 30);
 
 		[Header("Forces")]
 		[Tooltip("The vehicle's jump force multiplier.")]
@@ -260,6 +260,11 @@ namespace BottomGear
 			if (snapToGround)
 				rb.AddForce(-mTransform.up * snapForce, ForceMode.Force);
 
+
+			Debug.DrawRay(mTransform.position, transform.forward * 5, Color.red);
+			Debug.DrawRay(mTransform.position, transform.right * 5, Color.green);
+
+
 			// --- Car on air rotation ---
 			if (!IsGrounded())
 			{
@@ -277,14 +282,27 @@ namespace BottomGear
 				if (lockDown && inputDirection.x > 0)
 					inputDirection.x = 0;
 
-				Vector3 orientation;
-				orientation.x = mTransform.right.x;
-				orientation.y = mTransform.up.y;
-				orientation.z = 0;
+				Vector3 orientationX = transform.up;
+				Vector3 orientationY = transform.right;
+				//orientation.x = inputDirection.x * transform.forward;
+				//orientation.y = inputDirection.y * transform.up.y;
+				//orientation.z = 0;
+				Vector3 orientation = orientationX;
+				//orientation = mTransform.InverseTransformDirection(orientation);
 
-				Quaternion deltaRot = Quaternion.Euler(inputDirection * rotationSpeed);
-				mTransform.rotation = Quaternion.Slerp(mTransform.rotation, mTransform.rotation * deltaRot, Time.fixedDeltaTime * 2.0f);
-			}
+				//Debug.Log(orientation);
+				orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+				//Quaternion deltaRot = Quaternion.Euler(inputDirection * rotationSpeed);
+				rb.AddTorque(orientation * inputDirection.y, ForceMode.Acceleration);
+
+
+                orientation = orientationY;
+                orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+
+                rb.AddTorque(orientation * inputDirection.x, ForceMode.Acceleration);
+
+                //rb.MoveRotation(Quaternion.Slerp(mTransform.rotation, mTransform.rotation * deltaRot, 1.0f /*Time.fixedDeltaTime*2.0f*/));
+            }
 			else
 				rb.drag = linearDragBackup;
 
