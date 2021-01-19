@@ -245,11 +245,6 @@ namespace BottomGear
 
 				rb.AddForce(mTransform.up * jumpForce, ForceMode.Impulse);
 
-				//for (int i = 0; i < m_Wheels.Length; ++i)
-				//{
-				//	m_Wheels[i].collider.
-				//}
-
 				jumpTimer = 0.0f;
 				jump.Post(gameObject);
 			}
@@ -259,11 +254,6 @@ namespace BottomGear
 			// --- Keep car attached to ground surface ---
 			if (snapToGround)
 				rb.AddForce(-mTransform.up * snapForce, ForceMode.Force);
-
-
-			Debug.DrawRay(mTransform.position, transform.forward * 5, Color.red);
-			Debug.DrawRay(mTransform.position, transform.right * 5, Color.green);
-
 
 			// --- Car on air rotation ---
 			if (!IsGrounded())
@@ -284,30 +274,23 @@ namespace BottomGear
 
 				Vector3 orientationX = transform.up;
 				Vector3 orientationY = transform.right;
-				//orientation.x = inputDirection.x * transform.forward;
-				//orientation.y = inputDirection.y * transform.up.y;
-				//orientation.z = 0;
+
+				// --- Rotate X and Y separately ---
 				Vector3 orientation = orientationX;
-				//orientation = mTransform.InverseTransformDirection(orientation);
-
-				//Debug.Log(orientation);
 				orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
-				//Quaternion deltaRot = Quaternion.Euler(inputDirection * rotationSpeed);
-				rb.AddTorque(orientation * inputDirection.y, ForceMode.Acceleration);
 
+				rb.AddTorque(orientation * inputDirection.y, ForceMode.Acceleration);
 
                 orientation = orientationY;
                 orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
 
                 rb.AddTorque(orientation * inputDirection.x, ForceMode.Acceleration);
-
-                //rb.MoveRotation(Quaternion.Slerp(mTransform.rotation, mTransform.rotation * deltaRot, 1.0f /*Time.fixedDeltaTime*2.0f*/));
             }
 			else
 				rb.drag = linearDragBackup;
 
 			// --- Car flip ---
-			if (mTransform.up.y < -0.75)
+			if (mTransform.up.y < -0.6 && !IsGrounded())
 			{
 				rb.MoveRotation(rb.rotation * Quaternion.Euler(0, 0, 180));
 			}
