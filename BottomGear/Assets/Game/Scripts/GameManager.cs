@@ -28,6 +28,12 @@ namespace BottomGear
         public GameObject sceneCamera;
 
         public Text InfoText;
+        public Text Timer;
+
+        public double timeLimit = 10.0f;
+        double initialTime = 0.0f;
+        double currentTime = 0.0f;
+        bool startTimer = false;
 
         //public GameObject[] AsteroidPrefabs; // unneeded
 
@@ -143,6 +149,43 @@ namespace BottomGear
             CheckEndOfGame();
         }
 
+        private void Update()
+        {
+            if (!startTimer || currentTime >= timeLimit)
+                return;
+
+            Debug.Log(currentTime);
+
+            currentTime = PhotonNetwork.Time - initialTime;
+
+            Timer.text = string.Format("{0}", System.Math.Round(currentTime, 2));
+
+            if (currentTime >= timeLimit)
+            {
+                currentTime = timeLimit;
+
+                if (PhotonNetwork.IsMasterClient)
+                {
+                    StopAllCoroutines();
+                }
+
+                string winner = "";
+                int score = -1;
+
+                foreach (Player p in PhotonNetwork.PlayerList)
+                {
+                    if (p.GetScore() > score)
+                    {
+                        winner = p.NickName;
+                        score = p.GetScore();
+                    }
+                }
+
+                StartCoroutine(EndOfGame(winner, score));
+            }
+
+        }
+
         public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)
         {
             // --- NOTE: This is AsteroidsGame's game code ---
@@ -218,6 +261,20 @@ namespace BottomGear
             //{
             //    StartCoroutine(SpawnAsteroid());
             //}
+
+            // --- Start game timer ---
+            if(PhotonNetwork.IsMasterClient)
+            {
+                initialTime = PhotonNetwork.Time;
+                Hashtable ht = new Hashtable { { "StartTime", PhotonNetwork.Time } };
+                PhotonNetwork.CurrentRoom.SetCustomProperties(ht);
+                startTimer = true;
+            }
+            else
+            {
+                initialTime = double.Parse(PhotonNetwork.CurrentRoom.CustomProperties["StartTime"].ToString());
+                startTimer = true;
+            }
         }
 
         private bool CheckAllPlayerLoadedLevel()
@@ -263,7 +320,7 @@ namespace BottomGear
                 //}
             }
 
-            if (allDestroyed)
+            if (currentTime >= timeLimit || PhotonNetwork.PlayerList.Length <= 1/*allDestroyed*/)
             {
                 if (PhotonNetwork.IsMasterClient)
                 {
