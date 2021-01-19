@@ -272,8 +272,8 @@ namespace BottomGear
 				if (lockDown && inputDirection.x > 0)
 					inputDirection.x = 0;
 
-				Vector3 orientationX = transform.up;
-				Vector3 orientationY = transform.right;
+				Vector3 orientationX = Vector3.up;
+				Vector3 orientationY = Vector3.right;
 
 				// --- Rotate X and Y separately ---
 				Vector3 orientation = orientationX;

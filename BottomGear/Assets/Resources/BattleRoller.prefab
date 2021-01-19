@@ -1587,7 +1587,7 @@ MonoBehaviour:
   acceleration: 2500
   stepsBelow: 7
   stepsAbove: 2
-  rotationSpeed: {x: 300, y: 300, z: 300}
+  rotationSpeed: {x: 600, y: 600, z: 600}
   jumpForce: 20000
   jumpInterval: 1
   snapToGround: 1
