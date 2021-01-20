@@ -52,8 +52,12 @@ namespace BottomGear
 		public float criticalSpeed = 5f;
 		[Tooltip("The vehicle's limit speed  (in m/s).")]
 		public float maxSpeed = 30;
+		[Tooltip("The vehicle's limit speed while boosting (in m/s).")]
+		public float maxBoostingSpeed = 50;
 		[Tooltip("The vehicle's acceleration multiplier.")]
 		public float acceleration = 5.0f;
+		[Tooltip("The vehicle's boosting acceleration multiplier.")]
+		public float boostAcceleration = 10.0f;
 		[Tooltip("Simulation sub-steps when the speed is below critical. Not editable in Play mode.")]
 		public int stepsBelow = 1;
 		[Tooltip("Simulation sub-steps when the speed is above critical. Not editable in Play mode")]
@@ -74,6 +78,10 @@ namespace BottomGear
 		public float flyingLinearDrag = 0.0f;
 		[Tooltip("Constant force towards the world -up to simulate a higher gravity without touching the global parameter.")]
 		public float flyingFakeGravity = 9.81f;
+
+		[Header("TestVelocity")]
+		[Tooltip("Debug velocity")]
+		public float velocity = 0;
 
 		// --- Main components ---
 		private PhotonView photonView;
@@ -99,9 +107,11 @@ namespace BottomGear
 			public Transform refTransform;
 			public bool wasGrounded;
 		}
-
+		// --- Public gameplay variables
+		public bool isBoosting = false;
 		// --- Private gameplay variables ---
 		private float jumpTimer = 0.0f;
+		
 
 		// --------------------- Main Methods -------------------------
 
@@ -185,6 +195,8 @@ namespace BottomGear
 			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
 				return;
 
+			velocity = rb.velocity.magnitude;
+
 			// Uncomment this and timer start to profile 
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
 			//watch.Reset();
@@ -236,20 +248,33 @@ namespace BottomGear
 				decelerator = 0.0f;
 
 			float outputAcceleration = accelerator - decelerator;
-
 			float angle = maxAngle * inputDirection.x;
 			float torque = outputAcceleration * maxTorque * Time.fixedDeltaTime;
-			Vector3 direction = mTransform.forward * acceleration * outputAcceleration * Time.fixedDeltaTime;
 
 			// --- Deactivate rotation lock if new player input is detected ---
 			if (inputRawY <= 0)
 				lockDown = false;
 
 			// --- Limit car speed ---
-			if (rb.velocity.magnitude >= Mathf.Abs(maxSpeed * outputAcceleration))
-				torque = 0;
-            else if (rb.velocity.magnitude < maxSpeed && IsGrounded() && direction != Vector3.zero)
-                rb.AddForce(direction, ForceMode.Acceleration);
+			if (isBoosting)
+			{
+				Vector3 direction = mTransform.forward * boostAcceleration * outputAcceleration * Time.fixedDeltaTime;
+
+				if (rb.velocity.magnitude >= Mathf.Abs(maxBoostingSpeed * outputAcceleration))
+					torque = 0;
+				else if (rb.velocity.magnitude < maxBoostingSpeed && IsGrounded() && direction != Vector3.zero)
+					rb.AddForce(direction, ForceMode.Acceleration);
+			}
+            else
+            {
+				Vector3 direction = mTransform.forward * acceleration * outputAcceleration * Time.fixedDeltaTime;
+
+				if (rb.velocity.magnitude >= Mathf.Abs(maxSpeed * outputAcceleration))
+					torque = 0;
+				else if (rb.velocity.magnitude < maxSpeed && IsGrounded() && direction != Vector3.zero)
+					rb.AddForce(direction, ForceMode.Acceleration);
+			}
+			
 
             // ---Car jump-- -
             if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
@@ -374,7 +399,6 @@ namespace BottomGear
 				BoostingPad bp = hit.collider.gameObject.GetComponent<BoostingPad>();
 
 				// If car is in front, the moment it touches the booster, it will accelerate
-				
 				if (bp.IsFront(transform)) // ----> This if statement and the else below will be deleted when no longer needed
 					Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.green);
 			}

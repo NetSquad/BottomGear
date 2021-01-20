@@ -3666,7 +3666,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boostDuration: 3
-  boostAmount: 2.5
   carRelative: {x: 0, y: 0, z: 0}
 --- !u!4 &628271822
 Transform:
@@ -4316,7 +4315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &894793099
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4794,6 +4793,8 @@ MonoBehaviour:
   MainSpawn: {fileID: 0}
   sceneCamera: {fileID: 0}
   InfoText: {fileID: 601629552}
+  Timer: {fileID: 0}
+  timeLimit: 10
 --- !u!114 &964925488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7361,6 +7362,10 @@ PrefabInstance:
     - target: {fileID: 2777367880495049819, guid: f6d4d779a70a09345b92e41a5e529d5f, type: 3}
       propertyPath: m_Name
       value: Flag (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777367880495049819, guid: f6d4d779a70a09345b92e41a5e529d5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6d4d779a70a09345b92e41a5e529d5f, type: 3}
