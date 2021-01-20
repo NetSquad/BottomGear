@@ -4432,7 +4432,7 @@ MonoBehaviour:
   sceneCamera: {fileID: 523789977}
   InfoText: {fileID: 601629552}
   Timer: {fileID: 1913974791}
-  timeLimit: 10
+  timeLimit: 60
 --- !u!114 &964925488
 MonoBehaviour:
   m_ObjectHideFlags: 0
