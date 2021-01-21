@@ -1584,7 +1584,11 @@ MonoBehaviour:
   wheelRefsWeight: 0.75
   criticalSpeed: 25
   maxSpeed: 50
+  maxBoostingSpeed: 50
+  maxTurboSpeed: 40
   acceleration: 2500
+  boostAcceleration: 10
+  turboAcceleration: 7.5
   stepsBelow: 7
   stepsAbove: 2
   rotationSpeed: {x: 600, y: 600, z: 600}
@@ -1594,8 +1598,11 @@ MonoBehaviour:
   snapForce: 3500
   flyingLinearDrag: 0
   flyingFakeGravity: 9.81
+  velocity: 0
+  energy: 0
   centerOfMass: {fileID: 3623154689585449235}
   camera: {fileID: 16950669710695238}
+  isBoosting: 0
 --- !u!114 &6646793679201109663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2132,6 +2139,18 @@ MonoBehaviour:
       regenRate: 1
       decayDelay: 1
       decayRate: 1
+      absorption: 1
+    - vitalName:
+        type: 5
+        hash: 97264706
+        name: Energy
+      _fullValue: 100
+      _maxValue: 100
+      startValue: 100
+      regenDelay: 0
+      regenRate: 0
+      decayDelay: 1
+      decayRate: 0
       absorption: 1
   contactGroups:
     mask: 0

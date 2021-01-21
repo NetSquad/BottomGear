@@ -56,9 +56,13 @@ namespace BottomGear
 		[Tooltip("The vehicle's limit speed while boosting (in m/s).")]
 		public float maxBoostingSpeed = 50;
 		[Tooltip("The vehicle's acceleration multiplier.")]
+		public float maxTurboSpeed = 40;
+		[Tooltip("The vehicle's acceleration multiplier.")]
 		public float acceleration = 5.0f;
 		[Tooltip("The vehicle's boosting acceleration multiplier.")]
 		public float boostAcceleration = 10.0f;
+		[Tooltip("The vehicle's turbo acceleration multiplier.")]
+		public float turboAcceleration = 7.5f;
 		[Tooltip("Simulation sub-steps when the speed is below critical. Not editable in Play mode.")]
 		public int stepsBelow = 1;
 		[Tooltip("Simulation sub-steps when the speed is above critical. Not editable in Play mode")]
@@ -83,7 +87,7 @@ namespace BottomGear
 		[Header("TestVelocity")]
 		[Tooltip("Debug velocity")]
 		public float velocity = 0;
-
+		public double energy = 0.0f;
 		// --- Main components ---
 		private PhotonView photonView;
 		private Rigidbody rb;
@@ -262,6 +266,11 @@ namespace BottomGear
 				decelerator = 1.0f;
 			else if ((Input.GetAxis("L2") == 0))
 				decelerator = 0.0f;
+
+			if (Input.GetKey(KeyCode.LeftShift))
+				vitals.vitals.VitalArray[1].Value -= Time.fixedDeltaTime * turboAcceleration;
+
+			energy = vitals.vitals.VitalArray[1].Value;
 
 			float outputAcceleration = accelerator - decelerator;
 			float angle = maxAngle * inputDirection.x;
