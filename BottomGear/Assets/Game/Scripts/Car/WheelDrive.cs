@@ -52,17 +52,17 @@ namespace BottomGear
 		[Tooltip("The vehicle's speed when the physics engine can use different amount of sub-steps (in m/s). Not editable in Play mode")]
 		public float criticalSpeed = 5f;
 		[Tooltip("The vehicle's limit speed  (in m/s).")]
-		public float maxSpeed = 30;
+		public int maxSpeed = 30;
 		[Tooltip("The vehicle's limit speed while boosting (in m/s).")]
-		public float maxBoostingSpeed = 50;
+		public int maxBoostingSpeed = 60;
 		[Tooltip("The vehicle's acceleration multiplier.")]
-		public float maxTurboSpeed = 40;
+		public int maxTurboSpeed = 45;
 		[Tooltip("The vehicle's acceleration multiplier.")]
 		public float acceleration = 5.0f;
 		[Tooltip("The vehicle's boosting acceleration multiplier.")]
-		public float boostAcceleration = 10.0f;
+		public float boostAcceleration = 2.0f;
 		[Tooltip("The vehicle's turbo acceleration multiplier.")]
-		public float turboAcceleration = 7.5f;
+		public float turboAcceleration = 3.0f;
 		[Tooltip("Simulation sub-steps when the speed is below critical. Not editable in Play mode.")]
 		public int stepsBelow = 1;
 		[Tooltip("Simulation sub-steps when the speed is above critical. Not editable in Play mode")]
@@ -84,10 +84,11 @@ namespace BottomGear
 		[Tooltip("Constant force towards the world -up to simulate a higher gravity without touching the global parameter.")]
 		public float flyingFakeGravity = 9.81f;
 
-		[Header("TestVelocity")]
-		[Tooltip("Debug velocity")]
-		public float velocity = 0;
-		public double energy = 0.0f;
+		//[Header("TestVelocity")]
+		//[Tooltip("Debug velocity")]
+		//public float velocity = 0;
+		//public double energy = 0.0f;
+
 		// --- Main components ---
 		private PhotonView photonView;
 		private Rigidbody rb;
@@ -270,7 +271,7 @@ namespace BottomGear
 			if (Input.GetKey(KeyCode.LeftShift))
 				vitals.vitals.VitalArray[1].Value -= Time.fixedDeltaTime * turboAcceleration;
 
-			energy = vitals.vitals.VitalArray[1].Value;
+			//energy = vitals.vitals.VitalArray[1].Value;
 
 			float outputAcceleration = accelerator - decelerator;
 			float angle = maxAngle * inputDirection.x;
@@ -283,20 +284,20 @@ namespace BottomGear
 			// --- Limit car speed ---
 			if (isBoosting)
 			{
-				Vector3 direction = mTransform.forward * boostAcceleration * outputAcceleration * Time.fixedDeltaTime;
+				Vector3 direction = mTransform.forward * acceleration * boostAcceleration * outputAcceleration * Time.fixedDeltaTime;
 
-				if (rb.velocity.magnitude >= Mathf.Abs(maxBoostingSpeed * outputAcceleration))
+				if (rb.velocity.magnitude >= Mathf.Abs(60 * outputAcceleration))
 					torque = 0;
-				else if (rb.velocity.magnitude < maxBoostingSpeed && IsGrounded() && direction != Vector3.zero)
+				else if (rb.velocity.magnitude < 60 && IsGrounded() && direction != Vector3.zero)
 					rb.AddForce(direction, ForceMode.Acceleration);
 			}
             else
             {
 				Vector3 direction = mTransform.forward * acceleration * outputAcceleration * Time.fixedDeltaTime;
 
-				if (rb.velocity.magnitude >= Mathf.Abs(maxSpeed * outputAcceleration))
+				if (rb.velocity.magnitude >= Mathf.Abs(30 * outputAcceleration))
 					torque = 0;
-				else if (rb.velocity.magnitude < maxSpeed && IsGrounded() && direction != Vector3.zero)
+				else if (rb.velocity.magnitude < 30 && IsGrounded() && direction != Vector3.zero)
 					rb.AddForce(direction, ForceMode.Acceleration);
 			}
 			
