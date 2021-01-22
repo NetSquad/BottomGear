@@ -1592,6 +1592,7 @@ MonoBehaviour:
   stepsBelow: 7
   stepsAbove: 2
   rotationSpeed: {x: 600, y: 600, z: 600}
+  consumptionRate: 20
   jumpForce: 20000
   jumpInterval: 1
   snapToGround: 1
@@ -1599,7 +1600,6 @@ MonoBehaviour:
   flyingLinearDrag: 0
   flyingFakeGravity: 9.81
   velocity: 0
-  energy: 0
   centerOfMass: {fileID: 3623154689585449235}
   camera: {fileID: 16950669710695238}
   isBoosting: 0
