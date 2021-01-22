@@ -20,7 +20,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: f8282a6158a2954ba7f445a30d52f873
     GuidInternal: 
-    m_lastTime: -8585913707887557799
+    m_lastTime: -8585903512257048128
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
     PathAndIcons:
@@ -29,7 +29,7 @@ MonoBehaviour:
     ParentPath: Factory Reflect Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8585913707887547897
+    m_lastTime: -8585903512257038120
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -202,7 +202,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0dd8e189a3413c418ac6400d83c2b3fd
     GuidInternal: 
-    m_lastTime: -8585913707895079481
+    m_lastTime: -8585903512264875202
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -230,7 +230,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e4ed0aef22d7c7478ab257ea4c288390
     GuidInternal: 
-    m_lastTime: -8585907955531048213
+    m_lastTime: -8585903512257065880
     List:
     - name: Gameplay
       guid: 572100031c49bb4c93c8377933e21139
@@ -258,7 +258,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: adfba9e144f1c741a345f6c52c3cc02b
     GuidInternal: 
-    m_lastTime: -8585907955532568577
+    m_lastTime: -8585903512273168866
     List:
     - name: Gameplay
       guid: 335e16bf552f1b4aa146ecb0c6f3f409
@@ -296,8 +296,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Play_Button_Hover
       maxAttenuation: 0
-      maxDuration: 89302
-      minDuration: 89302
+      maxDuration: 0.089302
+      minDuration: 0.089302
     - name: Play_Button_Selected
       guid: b4d3297ef1031e4ea610e422f8f6eaa0
       id: 3882482286
@@ -310,8 +310,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Play_Button_Selected
       maxAttenuation: 0
-      maxDuration: 561088
-      minDuration: 561088
+      maxDuration: 0.561088
+      minDuration: 0.561088
     - name: Play_Crash
       guid: 1a066c6156409a48ba589632dac8f39e
       id: 303595419
@@ -324,8 +324,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Crash
       maxAttenuation: 0
-      maxDuration: 3826414
-      minDuration: 1574470
+      maxDuration: 3.826414
+      minDuration: 1.57447
     - name: Play_Enemy_Destroyed
       guid: 4626e199253d7a4cbb84cbe392e125c5
       id: 4064197866
@@ -338,8 +338,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Enemy_Destroyed
       maxAttenuation: 0
-      maxDuration: 1538118
-      minDuration: 1538118
+      maxDuration: 1.538118
+      minDuration: 1.538118
     - name: Play_Engine
       guid: 978977901d05d04f86c4be69e24d10f9
       id: 639345804
@@ -351,7 +351,7 @@ MonoBehaviour:
       - ElementName: Play_Engine
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Engine
-      maxAttenuation: 100000000
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: Play_explosion
@@ -365,9 +365,9 @@ MonoBehaviour:
       - ElementName: Play_explosion
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_explosion
-      maxAttenuation: 100000000
-      maxDuration: 3842043
-      minDuration: 3842043
+      maxAttenuation: 100
+      maxDuration: 3.842043
+      minDuration: 3.842043
     - name: Play_Fire_Boost_Loop
       guid: a5488c3fb2718d4298d93fbd61e4fbe6
       id: 1399260095
@@ -394,8 +394,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Jump
       maxAttenuation: 0
-      maxDuration: 568963
-      minDuration: 295024
+      maxDuration: 0.568963
+      minDuration: 0.295024
     - name: Play_Music
       guid: 4ac2dad089041643b9bb39011665043e
       id: 2932040671
@@ -421,7 +421,7 @@ MonoBehaviour:
       - ElementName: Play_Neon_Loop
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Neon_Loop
-      maxAttenuation: 100000000
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: Play_On_Hit
@@ -436,8 +436,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_On_Hit
       maxAttenuation: 0
-      maxDuration: 2211519
-      minDuration: 1258435
+      maxDuration: 2.211519
+      minDuration: 1.258435
     - name: Play_PickUp_Flag
       guid: 80b5ea1c2e92434488eca6814b03ad34
       id: 313790787
@@ -450,8 +450,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_PickUp_Flag
       maxAttenuation: 0
-      maxDuration: 1109635
-      minDuration: 1109635
+      maxDuration: 1.109635
+      minDuration: 1.109635
     - name: Play_shot
       guid: b9d0a980a5ee614694c63bdeb672d6b4
       id: 268953978
@@ -463,9 +463,9 @@ MonoBehaviour:
       - ElementName: Play_shot
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_shot
-      maxAttenuation: 100000000
-      maxDuration: 743545
-      minDuration: 417301
+      maxAttenuation: 100
+      maxDuration: 0.743545
+      minDuration: 0.417301
     - name: Play_Tyre_hit
       guid: 150396e287ffd84ca50d58ff61e02e5b
       id: 1225054062
@@ -478,8 +478,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Tyre_hit
       maxAttenuation: 0
-      maxDuration: 558742
-      minDuration: 260542
+      maxDuration: 0.558742
+      minDuration: 0.260542
     - name: Stop_All
       guid: 653e09514794814199a6a1c3238088ff
       id: 452547817
@@ -546,8 +546,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Tonight_Bottom_Gear
       maxAttenuation: 0
-      maxDuration: 13177416
-      minDuration: 5023334
+      maxDuration: 13.177416
+      minDuration: 5.023334
     - name: UI
       guid: f661498a577bf4498da0d54727eb47f3
       id: 1551306167
@@ -568,7 +568,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: e201e78321a61b4e95066c5d9f7f48b7
     GuidInternal: 
-    m_lastTime: -8585909416602147116
+    m_lastTime: -8585903512273158854
     List:
     - name: boost_Time
       guid: 13c8a5268987844d9ed493c6da5e911e
@@ -604,7 +604,7 @@ MonoBehaviour:
     ParentPath: Factory Motion
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8585913707900209934
+    m_lastTime: -8585903512273158854
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -631,7 +631,7 @@ MonoBehaviour:
     ParentPath: Factory SoundSeed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8585913707900209934
+    m_lastTime: -8585903512273148857
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -731,7 +731,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 43597006ca6f8346a8ca785d3ffbe3a8
     GuidInternal: 
-    m_lastTime: -8585913707887577899
+    m_lastTime: -8585903512257058030
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -741,7 +741,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: d0727525ef6a0e4eae69db998250be64
     GuidInternal: 
-    m_lastTime: -8585913707887567901
+    m_lastTime: -8585903512257058030
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -751,7 +751,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 0b16372f638b6441abff0a062a3ccafd
     GuidInternal: 
-    m_lastTime: -8585913707887567901
+    m_lastTime: -8585903512257048128
     List: []
   ExpandedItems: []
   autoPopulateEnabled: 1

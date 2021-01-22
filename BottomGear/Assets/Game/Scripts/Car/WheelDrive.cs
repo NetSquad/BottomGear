@@ -217,7 +217,7 @@ namespace BottomGear
 			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
 				return;
 			// Used to debug car speed
-			//velocity = rb.velocity.magnitude;
+			velocity = rb.velocity.magnitude;
 
 			if (Time.time - initialScoreTime >= 1.0f &&
 				photonView.IsMine
@@ -266,7 +266,7 @@ namespace BottomGear
 			else if ((Input.GetAxis("L2") == 0))
 				decelerator = 0.0f;
 
-			if (Input.GetKey(KeyCode.LeftShift) && vitals.vitals.VitalArray[1].Value > 0)
+			if (Input.GetKey(KeyCode.LeftShift) && vitals.vitals.VitalArray[1].Value > 0 && IsGrounded())
             {
 				vitals.vitals.VitalArray[1].Value -= Time.fixedDeltaTime * consumptionRate;
 				isTurbo = true;
@@ -288,30 +288,36 @@ namespace BottomGear
 			// --- Limit car speed ---
 			if (isBoosting)
 			{
-				Vector3 direction = mTransform.forward * acceleration * boostAcceleration * outputAcceleration * Time.fixedDeltaTime;
+				//Vector3 direction = mTransform.forward * acceleration * boostAcceleration * outputAcceleration * Time.fixedDeltaTime;
 
-				if (rb.velocity.magnitude >= Mathf.Abs(60 * outputAcceleration))
-					torque = 0;
-				else if (rb.velocity.magnitude < 60 && IsGrounded() && direction != Vector3.zero)
-					rb.AddForce(direction, ForceMode.Acceleration);
+				//if (rb.velocity.magnitude >= Mathf.Abs(60 * outputAcceleration))
+				//	torque = 0;
+				//else if (rb.velocity.magnitude < 60 && IsGrounded() && direction != Vector3.zero)
+				//	rb.AddForce(direction, ForceMode.Acceleration);
+
+				LimitSpeed(outputAcceleration, 60, torque, boostAcceleration);
 			}
 			else if (isTurbo)
 			{
-				Vector3 direction = mTransform.forward * acceleration * turboAcceleration * outputAcceleration * Time.fixedDeltaTime;
+				//Vector3 direction = mTransform.forward * acceleration * turboAcceleration * outputAcceleration * Time.fixedDeltaTime;
 
-				if (rb.velocity.magnitude >= Mathf.Abs(45 * outputAcceleration))
-					torque = 0;
-				else if (rb.velocity.magnitude < 45 && IsGrounded() && direction != Vector3.zero)
-					rb.AddForce(direction, ForceMode.Acceleration);
+				//if (rb.velocity.magnitude >= Mathf.Abs(45 * outputAcceleration))
+				//	torque = 0;
+				//else if (rb.velocity.magnitude < 45 && IsGrounded() && direction != Vector3.zero)
+				//	rb.AddForce(direction, ForceMode.Acceleration);
+
+				LimitSpeed(outputAcceleration, 45, torque, turboAcceleration);
 			}
 			else
             {
-				Vector3 direction = mTransform.forward * acceleration * outputAcceleration * Time.fixedDeltaTime;
+				//Vector3 direction = mTransform.forward * acceleration * outputAcceleration * Time.fixedDeltaTime;
 
-				if (rb.velocity.magnitude >= Mathf.Abs(30 * outputAcceleration))
-					torque = 0;
-				else if (rb.velocity.magnitude < 30 && IsGrounded() && direction != Vector3.zero)
-					rb.AddForce(direction, ForceMode.Acceleration);
+				//if (rb.velocity.magnitude >= Mathf.Abs(30 * outputAcceleration))
+				//	torque = 0;
+				//else if (rb.velocity.magnitude < 30 && IsGrounded() && direction != Vector3.zero)
+				//	rb.AddForce(direction, ForceMode.Acceleration);
+
+				LimitSpeed(outputAcceleration, 30, torque);
 			}
 
 
@@ -493,9 +499,15 @@ namespace BottomGear
 			return true;
 		}
 
-		// ----------------------------------------------
+		private void LimitSpeed(float output, int limit, float tq, float extraAcceleration = 1.0f)
+    {
+			Vector3 direction = mTransform.forward * acceleration * extraAcceleration * output * Time.fixedDeltaTime;
 
-		// --------------------- Events -------------------------
+			if (rb.velocity.magnitude >= Mathf.Abs(limit * output))
+				tq = 0;
+			else if (rb.velocity.magnitude < limit && IsGrounded() && direction != Vector3.zero)
+				rb.AddForce(direction, ForceMode.Acceleration);
+		}
 
 		//If there's a collision
 		private void OnCollisionEnter(Collision collision)
