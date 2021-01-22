@@ -128,12 +128,6 @@ namespace BottomGear
 		private float jumpTimer = 0.0f;
 		private bool isTurbo = false;
 
-
-        //public ContactType TriggerOn => new ContactType();
-
-        // public ContactType TriggerOn = new ContactType ContactType.Enter;
-
-
         // --------------------- Main Methods -------------------------
 
         public void Awake()
@@ -533,7 +527,6 @@ namespace BottomGear
 			if (other.tag == "Bullet")
 			{
 				ContactProjectile contact = other.gameObject.GetComponent<ContactProjectile>();
-
 				Debug.Log("Collided with bullet");
 
 				Debug.Log(vitals.vitals.VitalArray[0].Value);
@@ -546,22 +539,8 @@ namespace BottomGear
 			}
 		}
 
-        //public Consumption OnContactEvent(ContactEvent contactEvent)
-        //      {
-        //	//if(contactEvent.contactType == ContactType.Enter)
-
-        //	if (vitals.vitals.VitalArray[0].Value <= 0)
-        //		contactEvent.contactTrigger.NetObj.photonView.Owner.AddScore(10);
-
-        //	Debug.Log("HEEEEY");
-
-        //          return Consumption.All;
-        //      }
-
         private void OnParticleCollision(GameObject other)
 		{
-			//Debug.Log(other.transform.parent.transform.parent.name);
-
 			// --- Kill car if it is another's trail ---
 			if (other.GetComponent<ParentRef>().parentRef.name != gameObject.name)
 			{
@@ -576,12 +555,7 @@ namespace BottomGear
 					other.GetComponent<ParentRef>().parentRef.GetComponent<Photon.Pun.PhotonView>().Owner.AddScore(15);
 					Debug.Log(other.GetComponent<ParentRef>().parentRef.GetComponent<Photon.Pun.PhotonView>().Owner.GetScore());
 				}
-
-
-				//Debug.Log("AAAAAAAAAA");
 			}
-
-			//vitals.vitals.OnVitalValueChangeCallbacks.Add(this);
 		}
 
 		// ----------------------------------------------
