@@ -69,6 +69,8 @@ namespace BottomGear
 		public int stepsAbove = 5;
 		[Tooltip("Speed at which the vehicle rotates in x and y axis.")]
 		public Vector3 rotationSpeed = new Vector3(30, 30, 30);
+		[Tooltip("Rate at which fuel is consumed")]
+		public float consumptionRate = 20.0f;
 
 		[Header("Forces")]
 		[Tooltip("The vehicle's jump force multiplier.")]
@@ -121,6 +123,7 @@ namespace BottomGear
 		public bool isBoosting = false;
 		// --- Private gameplay variables ---
 		private float jumpTimer = 0.0f;
+		private bool isTurbo = false;
 		
 
 		// --------------------- Main Methods -------------------------
@@ -268,8 +271,14 @@ namespace BottomGear
 			else if ((Input.GetAxis("L2") == 0))
 				decelerator = 0.0f;
 
-			if (Input.GetKey(KeyCode.LeftShift))
-				vitals.vitals.VitalArray[1].Value -= Time.fixedDeltaTime * turboAcceleration;
+			if (Input.GetKey(KeyCode.LeftShift) && vitals.vitals.VitalArray[1].Value > 0)
+            {
+				vitals.vitals.VitalArray[1].Value -= Time.fixedDeltaTime * consumptionRate;
+				isTurbo = true;
+			}
+			else
+				isTurbo = false;
+
 
 			//energy = vitals.vitals.VitalArray[1].Value;
 
@@ -291,7 +300,16 @@ namespace BottomGear
 				else if (rb.velocity.magnitude < 60 && IsGrounded() && direction != Vector3.zero)
 					rb.AddForce(direction, ForceMode.Acceleration);
 			}
-            else
+			else if (isTurbo)
+			{
+				Vector3 direction = mTransform.forward * acceleration * turboAcceleration * outputAcceleration * Time.fixedDeltaTime;
+
+				if (rb.velocity.magnitude >= Mathf.Abs(45 * outputAcceleration))
+					torque = 0;
+				else if (rb.velocity.magnitude < 45 && IsGrounded() && direction != Vector3.zero)
+					rb.AddForce(direction, ForceMode.Acceleration);
+			}
+			else
             {
 				Vector3 direction = mTransform.forward * acceleration * outputAcceleration * Time.fixedDeltaTime;
 

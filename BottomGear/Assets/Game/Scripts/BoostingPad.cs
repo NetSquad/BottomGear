@@ -26,20 +26,23 @@ public class BoostingPad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (drive.isBoosting && boostDuration > 0)
+        if(drive != null)
         {
-            boostDuration -= Time.deltaTime;
-        }
+            if (drive.isBoosting && boostDuration > 0)
+            {
+                boostDuration -= Time.deltaTime;
+            }
 
-        if (boostDuration <= 0)
-        {
-            boostDuration = 3.0f;
-            fromFront = false;
+            if (boostDuration <= 0)
+            {
+                boostDuration = 3.0f;
+                fromFront = false;
 
-            // When finishing boosting, simply forget about the car assiciated
-            drive.isBoosting = false;
-            drive = null;
-            // Debug.Log("Stop boost");
+                // When finishing boosting, simply forget about the car assiciated
+                drive.isBoosting = false;
+                drive = null;
+                // Debug.Log("Stop boost");
+            }
         }
     }
 
