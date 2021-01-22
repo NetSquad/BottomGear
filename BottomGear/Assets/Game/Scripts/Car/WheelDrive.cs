@@ -54,23 +54,25 @@ namespace BottomGear
 		[Tooltip("The vehicle's speed when the physics engine can use different amount of sub-steps (in m/s). Not editable in Play mode")]
 		public float criticalSpeed = 5f;
 		[Tooltip("The vehicle's limit speed  (in m/s).")]
-		public float maxSpeed = 30;
+		public int maxSpeed = 30;
 		[Tooltip("The vehicle's limit speed while boosting (in m/s).")]
-		public float maxBoostingSpeed = 50;
+		public int maxBoostingSpeed = 60;
 		[Tooltip("The vehicle's acceleration multiplier.")]
-		public float maxTurboSpeed = 40;
+		public int maxTurboSpeed = 45;
 		[Tooltip("The vehicle's acceleration multiplier.")]
 		public float acceleration = 5.0f;
 		[Tooltip("The vehicle's boosting acceleration multiplier.")]
-		public float boostAcceleration = 10.0f;
+		public float boostAcceleration = 2.0f;
 		[Tooltip("The vehicle's turbo acceleration multiplier.")]
-		public float turboAcceleration = 7.5f;
+		public float turboAcceleration = 3.0f;
 		[Tooltip("Simulation sub-steps when the speed is below critical. Not editable in Play mode.")]
 		public int stepsBelow = 1;
 		[Tooltip("Simulation sub-steps when the speed is above critical. Not editable in Play mode")]
 		public int stepsAbove = 5;
 		[Tooltip("Speed at which the vehicle rotates in x and y axis.")]
 		public Vector3 rotationSpeed = new Vector3(30, 30, 30);
+		[Tooltip("Rate at which fuel is consumed")]
+		public float consumptionRate = 20.0f;
 
 		[Header("Forces")]
 		[Tooltip("The vehicle's jump force multiplier.")]
@@ -86,10 +88,10 @@ namespace BottomGear
 		[Tooltip("Constant force towards the world -up to simulate a higher gravity without touching the global parameter.")]
 		public float flyingFakeGravity = 9.81f;
 
-		[Header("TestVelocity")]
-		[Tooltip("Debug velocity")]
+		//[Header("TestVelocity")]
+		//[Tooltip("Debug velocity")]
 		public float velocity = 0;
-		public double energy = 0.0f;
+		//public double energy = 0.0f;
 
 		// --- Main components ---
 		private PhotonView photonView;
@@ -108,7 +110,7 @@ namespace BottomGear
 		bool lockDown = false;
 		float linearDragBackup = 0.0f;
 
-		// Uncomment this to profile 
+		// Uncomment this to profile
 		//System.Diagnostics.Stopwatch watch;
 
 		struct Wheel
@@ -124,6 +126,8 @@ namespace BottomGear
 		public bool isBoosting = false;
 		// --- Private gameplay variables ---
 		private float jumpTimer = 0.0f;
+		private bool isTurbo = false;
+
 
         //public ContactType TriggerOn => new ContactType();
 
@@ -140,7 +144,7 @@ namespace BottomGear
 			photonView = GetComponent<PhotonView>();
 			rb = GetComponent<Rigidbody>();
 
-			// Uncomment this to profile 
+			// Uncomment this to profile
 			//watch = new System.Diagnostics.Stopwatch();
 		}
 
@@ -216,7 +220,7 @@ namespace BottomGear
 			//velocity = rb.velocity.magnitude;
 
 			if (Time.time - initialScoreTime >= 1.0f &&
-				photonView.IsMine 
+				photonView.IsMine
 				&& basicInventory.DefaultMount.mountedObjs.Count > 0)
 			{
 				initialScoreTime = Time.time;
@@ -225,14 +229,14 @@ namespace BottomGear
 
 			initialScoreTime += Time.deltaTime;
 
-			// Uncomment this and timer start to profile 
+			// Uncomment this and timer start to profile
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
 			//watch.Reset();
 		}
 
 		private void FixedUpdate()
         {
-			// Uncomment this and timer log at the end of this function to profile 
+			// Uncomment this and timer log at the end of this function to profile
 			//watch.Start();
 
 			// --- Only update if this is the local player ---
@@ -262,10 +266,16 @@ namespace BottomGear
 			else if ((Input.GetAxis("L2") == 0))
 				decelerator = 0.0f;
 
-			if (Input.GetKey(KeyCode.LeftShift))
-				vitals.vitals.VitalArray[1].Value -= Time.fixedDeltaTime * turboAcceleration;
+			if (Input.GetKey(KeyCode.LeftShift) && vitals.vitals.VitalArray[1].Value > 0)
+            {
+				vitals.vitals.VitalArray[1].Value -= Time.fixedDeltaTime * consumptionRate;
+				isTurbo = true;
+			}
+			else
+				isTurbo = false;
 
-			energy = vitals.vitals.VitalArray[1].Value;
+
+			//energy = vitals.vitals.VitalArray[1].Value;
 
 			float outputAcceleration = accelerator - decelerator;
 			float angle = maxAngle * inputDirection.x;
@@ -278,23 +288,32 @@ namespace BottomGear
 			// --- Limit car speed ---
 			if (isBoosting)
 			{
-				Vector3 direction = mTransform.forward * boostAcceleration * outputAcceleration * Time.fixedDeltaTime;
+				Vector3 direction = mTransform.forward * acceleration * boostAcceleration * outputAcceleration * Time.fixedDeltaTime;
 
-				if (rb.velocity.magnitude >= Mathf.Abs(maxBoostingSpeed * outputAcceleration))
+				if (rb.velocity.magnitude >= Mathf.Abs(60 * outputAcceleration))
 					torque = 0;
-				else if (rb.velocity.magnitude < maxBoostingSpeed && IsGrounded() && direction != Vector3.zero)
+				else if (rb.velocity.magnitude < 60 && IsGrounded() && direction != Vector3.zero)
 					rb.AddForce(direction, ForceMode.Acceleration);
 			}
-            else
+			else if (isTurbo)
+			{
+				Vector3 direction = mTransform.forward * acceleration * turboAcceleration * outputAcceleration * Time.fixedDeltaTime;
+
+				if (rb.velocity.magnitude >= Mathf.Abs(45 * outputAcceleration))
+					torque = 0;
+				else if (rb.velocity.magnitude < 45 && IsGrounded() && direction != Vector3.zero)
+					rb.AddForce(direction, ForceMode.Acceleration);
+			}
+			else
             {
 				Vector3 direction = mTransform.forward * acceleration * outputAcceleration * Time.fixedDeltaTime;
 
-				if (rb.velocity.magnitude >= Mathf.Abs(maxSpeed * outputAcceleration))
+				if (rb.velocity.magnitude >= Mathf.Abs(30 * outputAcceleration))
 					torque = 0;
-				else if (rb.velocity.magnitude < maxSpeed && IsGrounded() && direction != Vector3.zero)
+				else if (rb.velocity.magnitude < 30 && IsGrounded() && direction != Vector3.zero)
 					rb.AddForce(direction, ForceMode.Acceleration);
 			}
-			
+
 
             // ---Car jump-- -
             if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
@@ -354,7 +373,7 @@ namespace BottomGear
 
 					rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("HorizontalRS"), -1, 1), ForceMode.Acceleration);
 				}
-				
+
             }
 			else
 				rb.drag = linearDragBackup;
@@ -413,7 +432,7 @@ namespace BottomGear
 			int layerMask = 1 << 9;
 
 			RaycastHit hit;
-			
+
 			if (Physics.Raycast(transform.position, transform.forward, out hit, 20f, layerMask))
             {
 				BoostingPad bp = hit.collider.gameObject.GetComponent<BoostingPad>();
@@ -435,7 +454,7 @@ namespace BottomGear
 			{
 				ref WheelCollider wheel = ref m_Wheels[i].collider;
 
-				// --- Update visual wheel's mesh --- 
+				// --- Update visual wheel's mesh ---
 				if (m_Wheels[i].mesh)
 				{
 					wheel.GetWorldPose(out p, out q);
@@ -443,7 +462,7 @@ namespace BottomGear
 					// --- Rotate wheel according to collider's rotation ---
 
 					if (m_Wheels[i].mesh.name == "Wheel1Mesh"
-					 || m_Wheels[i].mesh.name == "Wheel3Mesh")	
+					 || m_Wheels[i].mesh.name == "Wheel3Mesh")
 						m_Wheels[i].mTransform.position = Vector3.Lerp(p, m_Wheels[i].refTransform.position, wheelRefsWeight);
 					else
 						m_Wheels[i].mTransform.position = Vector3.Lerp(p, m_Wheels[i].refTransform.position, wheelRefsWeight);
