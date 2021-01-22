@@ -1271,7 +1271,7 @@ MonoBehaviour:
   projPrefab: {fileID: 1188203192661690242, guid: a59889749c50bfc40ad8cd3b28629f1a, type: 3}
   velocity: {x: 0, y: 0, z: 150}
   terminateOn: 12
-  damageOn: 12
+  damageOn: 14
   lagCompensate: 1
 --- !u!114 &7723741120666632365
 MonoBehaviour:
@@ -2273,6 +2273,8 @@ MonoBehaviour:
     enableIfOwned: 1
   - component: {fileID: 5359872287999556070}
     enableIfOwned: 1
+  - component: {fileID: 8271857195829821052}
+    enableIfOwned: 1
   componentLookup:
   - {fileID: 3623154688122286146}
   - {fileID: 3623154687913624581}
@@ -2321,6 +2323,7 @@ MonoBehaviour:
   - {fileID: 236218551694235596}
   - {fileID: 5346722963987834718}
   - {fileID: 5359872287999556070}
+  - {fileID: 8271857195829821052}
 --- !u!114 &6349677017487240278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5998,6 +6001,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8271857195829821052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5883456233218082789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7ae237e518d834285bc7f2698cb2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentRef: {fileID: 304097424331246161}
 --- !u!1 &6448315846129509056
 GameObject:
   m_ObjectHideFlags: 0
@@ -7066,7 +7082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1737707477377397356, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_Time
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1737707477377397356, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_SortingOrder
@@ -7193,7 +7209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
       propertyPath: lengthInSec
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
       propertyPath: CollisionModule.collisionMessages
@@ -7220,5 +7236,10 @@ PrefabInstance:
 --- !u!4 &5883456233218082790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5880017549711562268, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
+  m_PrefabInstance: {fileID: 16950670319636986}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5883456233218082789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5880017549711562271, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
   m_PrefabInstance: {fileID: 16950670319636986}
   m_PrefabAsset: {fileID: 0}

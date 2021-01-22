@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5710030107697642899}
   - component: {fileID: 7644129429263229052}
   - component: {fileID: 1119385595172342211}
+  - component: {fileID: 6497535661705766346}
   m_Layer: 0
   m_Name: CannonLaser
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,6 +80,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preventRepeats: 1
   _ignoredSystems: 
+--- !u!65 &6497535661705766346
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188203192661690242}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.25, z: 2}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!1 &7472322529062971684
 GameObject:
   m_ObjectHideFlags: 0

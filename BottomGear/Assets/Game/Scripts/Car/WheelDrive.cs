@@ -2,6 +2,8 @@
 using System;
 using Photon.Pun;
 using Photon.Pun.UtilityScripts;
+using System.Collections.Generic;
+using Photon.Pun.Simple;
 
 namespace BottomGear
 {
@@ -17,7 +19,7 @@ namespace BottomGear
 	[RequireComponent(typeof(WheelRefs))]
 
 	public class WheelDrive : MonoBehaviour
-	{
+    {
 		// --------------------- Variables -------------------------
 		[Header("Audio")]
 		public AK.Wwise.Event engine_sound;
@@ -88,6 +90,7 @@ namespace BottomGear
 		[Tooltip("Debug velocity")]
 		public float velocity = 0;
 		public double energy = 0.0f;
+
 		// --- Main components ---
 		private PhotonView photonView;
 		private Rigidbody rb;
@@ -116,15 +119,20 @@ namespace BottomGear
 			public Transform refTransform;
 			public bool wasGrounded;
 		}
+
 		// --- Public gameplay variables
 		public bool isBoosting = false;
 		// --- Private gameplay variables ---
 		private float jumpTimer = 0.0f;
-		
 
-		// --------------------- Main Methods -------------------------
+        //public ContactType TriggerOn => new ContactType();
 
-		public void Awake()
+        // public ContactType TriggerOn = new ContactType ContactType.Enter;
+
+
+        // --------------------- Main Methods -------------------------
+
+        public void Awake()
 		{
 			basicInventory = GetComponent<Photon.Pun.Simple.BasicInventory>();
 			vitals = GetComponent<Photon.Pun.Simple.SyncVitals>();
@@ -220,19 +228,6 @@ namespace BottomGear
 			// Uncomment this and timer start to profile 
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
 			//watch.Reset();
-		}
-
-		private void OnParticleCollision(GameObject other)
-        {
-			//Debug.Log(other.transform.parent.transform.parent.name);
-
-			// --- Kill car if it is another's trail ---
-			if (other.transform.parent.transform.parent.name != gameObject.name)
-			{
-				vitals.vitals.ApplyCharges(-vitals.vitals.VitalArray[0].Value, false, true);
-				//Debug.Log("AAAAAAAAAA");
-			}
-
 		}
 
 		private void FixedUpdate()
@@ -479,8 +474,12 @@ namespace BottomGear
 			return true;
 		}
 
+		// ----------------------------------------------
+
+		// --------------------- Events -------------------------
+
 		//If there's a collision
-        private void OnCollisionEnter(Collision collision)
+		private void OnCollisionEnter(Collision collision)
         {
             if(collision.collider.tag == "Player")
             {
@@ -495,8 +494,65 @@ namespace BottomGear
 				AkSoundEngine.SetRTPCValue("Crash_Energy", val * 100);
 				crash_sound.Post(gameObject);
 			}
-        }
 
-        // ----------------------------------------------
-    }
+		}
+
+        private void OnTriggerEnter(Collider other)
+        {
+			if (other.tag == "Bullet")
+			{
+				ContactProjectile contact = other.gameObject.GetComponent<ContactProjectile>();
+
+				Debug.Log("Collided with bullet");
+
+				Debug.Log(vitals.vitals.VitalArray[0].Value);
+
+				if (contact && vitals.vitals.VitalArray[0].Value - 20 <= 0) // bullet damage
+				{
+					contact.Owner.PhotonView.Owner.AddScore(10);
+					Debug.Log(contact.Owner.PhotonView.Owner.GetScore());
+				}
+			}
+		}
+
+        //public Consumption OnContactEvent(ContactEvent contactEvent)
+        //      {
+        //	//if(contactEvent.contactType == ContactType.Enter)
+
+        //	if (vitals.vitals.VitalArray[0].Value <= 0)
+        //		contactEvent.contactTrigger.NetObj.photonView.Owner.AddScore(10);
+
+        //	Debug.Log("HEEEEY");
+
+        //          return Consumption.All;
+        //      }
+
+        private void OnParticleCollision(GameObject other)
+		{
+			//Debug.Log(other.transform.parent.transform.parent.name);
+
+			// --- Kill car if it is another's trail ---
+			if (other.GetComponent<ParentRef>().parentRef.name != gameObject.name)
+			{
+				vitals.vitals.ApplyCharges(-vitals.vitals.VitalArray[0].Value, false, true);
+
+				Debug.Log("Collided with trail");
+
+				Debug.Log(vitals.vitals.VitalArray[0].Value);
+
+				if (vitals.vitals.VitalArray[0].Value <= 0)
+				{
+					other.GetComponent<ParentRef>().parentRef.GetComponent<Photon.Pun.PhotonView>().Owner.AddScore(15);
+					Debug.Log(other.GetComponent<ParentRef>().parentRef.GetComponent<Photon.Pun.PhotonView>().Owner.GetScore());
+				}
+
+
+				//Debug.Log("AAAAAAAAAA");
+			}
+
+			//vitals.vitals.OnVitalValueChangeCallbacks.Add(this);
+		}
+
+		// ----------------------------------------------
+	}
 }
