@@ -343,7 +343,7 @@ namespace BottomGear
                 //}
             }
 
-            if (currentTime >= timeLimit || PhotonNetwork.PlayerList.Length <= 1/*allDestroyed*/)
+            if (currentTime >= timeLimit || PhotonNetwork.PlayerList.Length <= 2/*allDestroyed*/)
             {
                 if (PhotonNetwork.IsMasterClient)
                 {
