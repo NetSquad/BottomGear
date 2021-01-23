@@ -7212,12 +7212,20 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
+      propertyPath: CollisionModule.radiusScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
       propertyPath: CollisionModule.collisionMessages
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits
       value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5880017549711562270, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
       propertyPath: m_Enabled
