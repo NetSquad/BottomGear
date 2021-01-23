@@ -148,8 +148,17 @@ namespace BottomGear
 
         public override void OnPlayerLeftRoom(Player otherPlayer)
         {
+            Debug.Log("TO DESTROY");
+
+            if (PhotonNetwork.LocalPlayer.IsMasterClient)
+            {
+                Debug.Log("Destroying");
+                PhotonNetwork.DestroyPlayerObjects(otherPlayer);
+            }
+
             CheckEndOfGame();
         }
+
 
         private void Update()
         {
