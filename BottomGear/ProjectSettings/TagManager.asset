@@ -8,6 +8,7 @@ TagManager:
   - BoostingPad
   - DomeCollider
   - Ground
+  - GameManager
   layers:
   - Default
   - TransparentFX

@@ -87,6 +87,19 @@ namespace BottomGear
 		public float flyingLinearDrag = 0.0f;
 		[Tooltip("Constant force towards the world -up to simulate a higher gravity without touching the global parameter.")]
 		public float flyingFakeGravity = 9.81f;
+		public Transform centerOfMass;
+
+		[Header("Explosion")]
+		[Tooltip("The explosion effect to control on car death.")]
+		public GameObject explosionEffect;
+		[Tooltip("The explosion effect active time.")]
+		public float explosionTime = 1.0f;
+		[Tooltip("The explosion target scale.")]
+		public float explosionScale = 4.0f;
+
+		float explosionCurrentTime = 0.0f;
+
+		[Header("Others")]
 
 		//[Header("TestVelocity")]
 		//[Tooltip("Debug velocity")]
@@ -97,8 +110,8 @@ namespace BottomGear
 		private PhotonView photonView;
 		private Rigidbody rb;
 		private Wheel[] m_Wheels;
-		public Transform centerOfMass;
 		public Camera camera;
+		public GameObject sceneCamera;
 		Transform mTransform;
 
 		// --- Network ---
@@ -137,10 +150,16 @@ namespace BottomGear
 			mTransform = transform;
 			photonView = GetComponent<PhotonView>();
 			rb = GetComponent<Rigidbody>();
+			sceneCamera = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().sceneCamera;
 
 			// Uncomment this to profile
 			//watch = new System.Diagnostics.Stopwatch();
 		}
+
+  //      private void OnEnable()
+  //      {
+		//	sceneCamera.SetActive(false);
+		//}
 
 		// Find all the WheelColliders down in the hierarchy.
 		void Start()
@@ -207,9 +226,18 @@ namespace BottomGear
 
 		void Update()
 		{
-			// --- Only update if this is the local player ---
-			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
-				return;
+            //if (Input.GetKey(KeyCode.Q))
+            //         {
+            //	if (!explosionEffect.activeSelf)
+            //		explosionEffect.SetActive(true);
+            //}
+
+            if (explosionEffect.activeSelf)
+                TriggerExplosion();
+
+            // --- Only update if this is the local player ---
+            if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
+			return;
 
 			// Used to debug car speed
 			velocity = rb.velocity.magnitude;
@@ -315,7 +343,6 @@ namespace BottomGear
 				LimitSpeed(outputAcceleration, 30, torque);
 			}
 
-
             // ---Car jump-- -
             if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
 			{
@@ -328,6 +355,7 @@ namespace BottomGear
 				jumpTimer = 0.0f;
 				jump.Post(gameObject);
 			}
+
 			// --- Car jump timer ---
 			jumpTimer += Time.fixedDeltaTime;
 
@@ -508,6 +536,34 @@ namespace BottomGear
 				rb.AddForce(direction, ForceMode.Acceleration);
 		}
 
+		private void TriggerExplosion()
+        {
+			float lerpRatio =  Mathf.Clamp(explosionCurrentTime / explosionTime, 0.0f, 1.0f);
+
+			explosionEffect.transform.localScale = Vector3.Lerp(Vector3.one, Vector3.one*explosionScale, lerpRatio);
+
+			explosionCurrentTime += Time.deltaTime;
+
+			if (lerpRatio == 1.0f)
+			{
+				explosionCurrentTime = 0.0f;
+				explosionEffect.SetActive(false);
+				explosionEffect.transform.localScale = Vector3.one;
+			}
+
+			
+        }
+
+		private void SwitchCamera()
+        {
+			Debug.Log("Switching camera to scene camera");
+			//camera.gameObject.SetActive(false);
+			sceneCamera.SetActive(true);
+
+			sceneCamera.transform.position = camera.transform.position;
+			sceneCamera.transform.rotation = camera.transform.rotation;
+		}
+
 		//If there's a collision
 		private void OnCollisionEnter(Collision collision)
         {
@@ -538,6 +594,11 @@ namespace BottomGear
 
 				if (contact && contact.Owner != null && vitals.vitals.VitalArray[0].Value - 20 <= 0) // bullet damage
 				{
+					SwitchCamera();
+
+					if (!explosionEffect.activeSelf)
+						explosionEffect.SetActive(true);
+
 					contact.Owner.PhotonView.Owner.AddScore(10);
 					Debug.Log(contact.Owner.PhotonView.Owner.GetScore());
 				}
@@ -547,7 +608,7 @@ namespace BottomGear
         private void OnParticleCollision(GameObject other)
 		{
 			// --- Kill car if it is another's trail ---
-			if (!photonView.IsMine && !other.GetComponent<ParentRef>().photonView.IsMine)
+			if (photonView.IsMine && !other.GetComponent<ParentRef>().photonView.AmOwner)
 			{
 				vitals.vitals.ApplyCharges(-vitals.vitals.VitalArray[0].Value, false, true);
 
@@ -557,11 +618,18 @@ namespace BottomGear
 
 				if (vitals.vitals.VitalArray[0].Value <= 0)
 				{
+					SwitchCamera();
+
+					if (!explosionEffect.activeSelf)
+						explosionEffect.SetActive(true);
+
 					other.GetComponent<ParentRef>().photonView.Owner.AddScore(15);
 					Debug.Log(other.GetComponent<ParentRef>().photonView.Owner.GetScore());
 				}
 			}
 		}
+
+		
 
 		// ----------------------------------------------
 	}
