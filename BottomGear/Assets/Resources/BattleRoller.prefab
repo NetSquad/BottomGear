@@ -6013,7 +6013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7ae237e518d834285bc7f2698cb2fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentRef: {fileID: 304097424331246161}
+  photonView: {fileID: 4988516433530148737}
 --- !u!1 &6448315846129509056
 GameObject:
   m_ObjectHideFlags: 0
@@ -7212,8 +7212,16 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
+      propertyPath: TriggerModule.inside
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
       propertyPath: CollisionModule.radiusScale
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
       propertyPath: CollisionModule.collisionMessages
