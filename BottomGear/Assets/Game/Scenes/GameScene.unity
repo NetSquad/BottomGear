@@ -2515,6 +2515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CannonLaser
       objectReference: {fileID: 0}
+    - target: {fileID: 1188203192661690242, guid: a59889749c50bfc40ad8cd3b28629f1a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6073030285685085313, guid: a59889749c50bfc40ad8cd3b28629f1a, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -12378,6 +12382,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5880017549711562271, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
 --- !u!1001 &1712752640
@@ -12855,7 +12863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1841039222
 MonoBehaviour:
   m_ObjectHideFlags: 0

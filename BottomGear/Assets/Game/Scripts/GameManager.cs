@@ -61,6 +61,8 @@ namespace BottomGear
                 {Photon.Pun.Demo.Asteroids.AsteroidsGame.PLAYER_LOADED_LEVEL, true}
             };
             PhotonNetwork.LocalPlayer.SetCustomProperties(props);
+
+
         }
 
         public override void OnDisable()
@@ -151,8 +153,11 @@ namespace BottomGear
 
         private void Update()
         {
+
             if (!startTimer || currentTime >= timeLimit)
+            {
                 return;
+            }
 
             currentTime = PhotonNetwork.Time - initialTime;
 
@@ -184,17 +189,35 @@ namespace BottomGear
 
         }
 
+        public override void OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)
+        {
+            Debug.Log("CountdownTimer.OnRoomPropertiesUpdate " + propertiesThatChanged.ToStringFull());
+
+            if (propertiesThatChanged.ContainsKey("GameStart"))
+            {
+                object propsTime;
+                
+                if (propertiesThatChanged.TryGetValue("GameStart", out propsTime))
+                {
+                    initialTime = (double)propsTime;
+                    startTimer = true;
+                }
+
+                Debug.Log("Retrieved time from room properties");
+            }
+        }
+
         public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)
         {
             // --- NOTE: This is AsteroidsGame's game code ---
 
-            if (changedProps.ContainsKey("score"))
+            if (changedProps.ContainsKey("score") || changedProps.ContainsKey("GameStart"))
             {
                 
                 return;
             }
 
-            if (!PhotonNetwork.IsMasterClient)
+            if (!PhotonNetwork.LocalPlayer.IsMasterClient)
             {
                 return;
             }
@@ -261,18 +284,20 @@ namespace BottomGear
             //}
 
             // --- Start game timer ---
-            if(PhotonNetwork.IsMasterClient)
+            if (PhotonNetwork.LocalPlayer.IsMasterClient)
             {
+                Hashtable ht = new Hashtable();
                 initialTime = PhotonNetwork.Time;
-                Hashtable ht = new Hashtable { { "StartTime", PhotonNetwork.Time } };
+                startTimer = true;
+                ht.Add("GameStart", initialTime);
                 PhotonNetwork.CurrentRoom.SetCustomProperties(ht);
-                startTimer = true;
             }
-            else
-            {
-                initialTime = double.Parse(PhotonNetwork.CurrentRoom.CustomProperties["StartTime"].ToString());
-                startTimer = true;
-            }
+            //else
+            //{
+            //    initialTime = double.Parse(PhotonNetwork.CurrentRoom.CustomProperties["StartTime"].ToString());
+            //    startTimer = true;
+            //}
+
         }
 
         private bool CheckAllPlayerLoadedLevel()
@@ -300,7 +325,7 @@ namespace BottomGear
 
         private void CheckEndOfGame()
         {
-            bool allDestroyed = true;
+            //bool allDestroyed = true;
 
             foreach (Player p in PhotonNetwork.PlayerList)
             {
