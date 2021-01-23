@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System;
 using Photon.Pun;
+using Photon.Pun.UtilityScripts;
+using System.Collections.Generic;
+using Photon.Pun.Simple;
 
 namespace BottomGear
 {
@@ -16,7 +19,7 @@ namespace BottomGear
 	[RequireComponent(typeof(WheelRefs))]
 
 	public class WheelDrive : MonoBehaviour
-	{
+    {
 		// --------------------- Variables -------------------------
 		[Header("Audio")]
 		public AK.Wwise.Event engine_sound;
@@ -51,15 +54,25 @@ namespace BottomGear
 		[Tooltip("The vehicle's speed when the physics engine can use different amount of sub-steps (in m/s). Not editable in Play mode")]
 		public float criticalSpeed = 5f;
 		[Tooltip("The vehicle's limit speed  (in m/s).")]
-		public float maxSpeed = 30;
+		public int maxSpeed = 30;
+		[Tooltip("The vehicle's limit speed while boosting (in m/s).")]
+		public int maxBoostingSpeed = 60;
+		[Tooltip("The vehicle's acceleration multiplier.")]
+		public int maxTurboSpeed = 45;
 		[Tooltip("The vehicle's acceleration multiplier.")]
 		public float acceleration = 5.0f;
+		[Tooltip("The vehicle's boosting acceleration multiplier.")]
+		public float boostAcceleration = 2.0f;
+		[Tooltip("The vehicle's turbo acceleration multiplier.")]
+		public float turboAcceleration = 3.0f;
 		[Tooltip("Simulation sub-steps when the speed is below critical. Not editable in Play mode.")]
 		public int stepsBelow = 1;
 		[Tooltip("Simulation sub-steps when the speed is above critical. Not editable in Play mode")]
 		public int stepsAbove = 5;
 		[Tooltip("Speed at which the vehicle rotates in x and y axis.")]
 		public Vector3 rotationSpeed = new Vector3(30, 30, 30);
+		[Tooltip("Rate at which fuel is consumed")]
+		public float consumptionRate = 20.0f;
 
 		[Header("Forces")]
 		[Tooltip("The vehicle's jump force multiplier.")]
@@ -75,6 +88,11 @@ namespace BottomGear
 		[Tooltip("Constant force towards the world -up to simulate a higher gravity without touching the global parameter.")]
 		public float flyingFakeGravity = 9.81f;
 
+		//[Header("TestVelocity")]
+		//[Tooltip("Debug velocity")]
+		public float velocity = 0;
+		//public double energy = 0.0f;
+
 		// --- Main components ---
 		private PhotonView photonView;
 		private Rigidbody rb;
@@ -82,13 +100,17 @@ namespace BottomGear
 		public Transform centerOfMass;
 		public Camera camera;
 		Transform mTransform;
+
+		// --- Network ---
         Photon.Pun.Simple.SyncVitals vitals;
+        Photon.Pun.Simple.BasicInventory basicInventory;
+		float initialScoreTime = 0.0f;
 
 		// --- Internal variables ---
 		bool lockDown = false;
 		float linearDragBackup = 0.0f;
 
-		// Uncomment this to profile 
+		// Uncomment this to profile
 		//System.Diagnostics.Stopwatch watch;
 
 		struct Wheel
@@ -100,19 +122,23 @@ namespace BottomGear
 			public bool wasGrounded;
 		}
 
+		// --- Public gameplay variables
+		public bool isBoosting = false;
 		// --- Private gameplay variables ---
 		private float jumpTimer = 0.0f;
+		private bool isTurbo = false;
 
-		// --------------------- Main Methods -------------------------
+        // --------------------- Main Methods -------------------------
 
-		public void Awake()
+        public void Awake()
 		{
+			basicInventory = GetComponent<Photon.Pun.Simple.BasicInventory>();
 			vitals = GetComponent<Photon.Pun.Simple.SyncVitals>();
 			mTransform = transform;
 			photonView = GetComponent<PhotonView>();
 			rb = GetComponent<Rigidbody>();
 
-			// Uncomment this to profile 
+			// Uncomment this to profile
 			//watch = new System.Diagnostics.Stopwatch();
 		}
 
@@ -185,27 +211,27 @@ namespace BottomGear
 			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
 				return;
 
-			// Uncomment this and timer start to profile 
+			// Used to debug car speed
+			velocity = rb.velocity.magnitude;
+
+			if (Time.time - initialScoreTime >= 1.0f &&
+				photonView.IsMine
+				&& basicInventory.DefaultMount.mountedObjs.Count > 0)
+			{
+				initialScoreTime = Time.time;
+				PhotonNetwork.LocalPlayer.AddScore(1);
+			}
+
+			initialScoreTime += Time.deltaTime;
+
+			// Uncomment this and timer start to profile
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
 			//watch.Reset();
 		}
 
-        private void OnParticleCollision(GameObject other)
-        {
-			//Debug.Log(other.transform.parent.transform.parent.name);
-
-			// --- Kill car if it is another's trail ---
-			if (other.transform.parent.transform.parent.name != gameObject.name)
-			{
-				vitals.vitals.ApplyCharges(-vitals.vitals.VitalArray[0].Value, false, true);
-				Debug.Log("AAAAAAAAAA");
-			}
-
-		}
-
 		private void FixedUpdate()
         {
-			// Uncomment this and timer log at the end of this function to profile 
+			// Uncomment this and timer log at the end of this function to profile
 			//watch.Start();
 
 			// --- Only update if this is the local player ---
@@ -235,21 +261,60 @@ namespace BottomGear
 			else if ((Input.GetAxis("L2") == 0))
 				decelerator = 0.0f;
 
-			float outputAcceleration = accelerator - decelerator;
+			if (Input.GetKey(KeyCode.LeftShift) && vitals.vitals.VitalArray[1].Value > 0 && IsGrounded())
+            {
+				vitals.vitals.VitalArray[1].Value -= Time.fixedDeltaTime * consumptionRate;
+				isTurbo = true;
+			}
+			else
+				isTurbo = false;
 
+
+			//energy = vitals.vitals.VitalArray[1].Value;
+
+			float outputAcceleration = accelerator - decelerator;
 			float angle = maxAngle * inputDirection.x;
 			float torque = outputAcceleration * maxTorque * Time.fixedDeltaTime;
-			Vector3 direction = mTransform.forward * acceleration * outputAcceleration * Time.fixedDeltaTime;
 
 			// --- Deactivate rotation lock if new player input is detected ---
 			if (inputRawY <= 0)
 				lockDown = false;
 
 			// --- Limit car speed ---
-			if (rb.velocity.magnitude >= Mathf.Abs(maxSpeed * outputAcceleration))
-				torque = 0;
-            else if (rb.velocity.magnitude < maxSpeed && IsGrounded() && direction != Vector3.zero)
-                rb.AddForce(direction, ForceMode.Acceleration);
+			if (isBoosting)
+			{
+				//Vector3 direction = mTransform.forward * acceleration * boostAcceleration * outputAcceleration * Time.fixedDeltaTime;
+
+				//if (rb.velocity.magnitude >= Mathf.Abs(60 * outputAcceleration))
+				//	torque = 0;
+				//else if (rb.velocity.magnitude < 60 && IsGrounded() && direction != Vector3.zero)
+				//	rb.AddForce(direction, ForceMode.Acceleration);
+
+				LimitSpeed(outputAcceleration, 60, torque, boostAcceleration);
+			}
+			else if (isTurbo)
+			{
+				//Vector3 direction = mTransform.forward * acceleration * turboAcceleration * outputAcceleration * Time.fixedDeltaTime;
+
+				//if (rb.velocity.magnitude >= Mathf.Abs(45 * outputAcceleration))
+				//	torque = 0;
+				//else if (rb.velocity.magnitude < 45 && IsGrounded() && direction != Vector3.zero)
+				//	rb.AddForce(direction, ForceMode.Acceleration);
+
+				LimitSpeed(outputAcceleration, 45, torque, turboAcceleration);
+			}
+			else
+            {
+				//Vector3 direction = mTransform.forward * acceleration * outputAcceleration * Time.fixedDeltaTime;
+
+				//if (rb.velocity.magnitude >= Mathf.Abs(30 * outputAcceleration))
+				//	torque = 0;
+				//else if (rb.velocity.magnitude < 30 && IsGrounded() && direction != Vector3.zero)
+				//	rb.AddForce(direction, ForceMode.Acceleration);
+
+				LimitSpeed(outputAcceleration, 30, torque);
+			}
+
 
             // ---Car jump-- -
             if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
@@ -309,7 +374,7 @@ namespace BottomGear
 
 					rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("HorizontalRS"), -1, 1), ForceMode.Acceleration);
 				}
-				
+
             }
 			else
 				rb.drag = linearDragBackup;
@@ -368,13 +433,12 @@ namespace BottomGear
 			int layerMask = 1 << 9;
 
 			RaycastHit hit;
-			
+
 			if (Physics.Raycast(transform.position, transform.forward, out hit, 20f, layerMask))
             {
 				BoostingPad bp = hit.collider.gameObject.GetComponent<BoostingPad>();
 
 				// If car is in front, the moment it touches the booster, it will accelerate
-				
 				if (bp.IsFront(transform)) // ----> This if statement and the else below will be deleted when no longer needed
 					Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.green);
 			}
@@ -384,6 +448,10 @@ namespace BottomGear
 
         private void LateUpdate()
         {
+			// --- Only update if this is the local player ---
+			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
+				return;
+
 			Quaternion q;
 			Vector3 p;
 
@@ -391,7 +459,7 @@ namespace BottomGear
 			{
 				ref WheelCollider wheel = ref m_Wheels[i].collider;
 
-				// --- Update visual wheel's mesh --- 
+				// --- Update visual wheel's mesh ---
 				if (m_Wheels[i].mesh)
 				{
 					wheel.GetWorldPose(out p, out q);
@@ -399,7 +467,7 @@ namespace BottomGear
 					// --- Rotate wheel according to collider's rotation ---
 
 					if (m_Wheels[i].mesh.name == "Wheel1Mesh"
-					 || m_Wheels[i].mesh.name == "Wheel3Mesh")	
+					 || m_Wheels[i].mesh.name == "Wheel3Mesh")
 						m_Wheels[i].mTransform.position = Vector3.Lerp(p, m_Wheels[i].refTransform.position, wheelRefsWeight);
 					else
 						m_Wheels[i].mTransform.position = Vector3.Lerp(p, m_Wheels[i].refTransform.position, wheelRefsWeight);
@@ -430,8 +498,18 @@ namespace BottomGear
 			return true;
 		}
 
+		private void LimitSpeed(float output, int limit, float tq, float extraAcceleration = 1.0f)
+    {
+			Vector3 direction = mTransform.forward * acceleration * extraAcceleration * output * Time.fixedDeltaTime;
+
+			if (rb.velocity.magnitude >= Mathf.Abs(limit * output))
+				tq = 0;
+			else if (rb.velocity.magnitude < limit && IsGrounded() && direction != Vector3.zero)
+				rb.AddForce(direction, ForceMode.Acceleration);
+		}
+
 		//If there's a collision
-        private void OnCollisionEnter(Collision collision)
+		private void OnCollisionEnter(Collision collision)
         {
             if(collision.collider.tag == "Player")
             {
@@ -446,8 +524,45 @@ namespace BottomGear
 				AkSoundEngine.SetRTPCValue("Crash_Energy", val * 100);
 				crash_sound.Post(gameObject);
 			}
-        }
 
-        // ----------------------------------------------
-    }
+		}
+
+        private void OnTriggerEnter(Collider other)
+        {
+			if (other.tag == "Bullet")
+			{
+				ContactProjectile contact = other.gameObject.GetComponent<ContactProjectile>();
+				Debug.Log("Collided with bullet");
+
+				Debug.Log(vitals.vitals.VitalArray[0].Value);
+
+				if (contact && contact.Owner != null && vitals.vitals.VitalArray[0].Value - 20 <= 0) // bullet damage
+				{
+					contact.Owner.PhotonView.Owner.AddScore(10);
+					Debug.Log(contact.Owner.PhotonView.Owner.GetScore());
+				}
+			}
+		}
+
+        private void OnParticleCollision(GameObject other)
+		{
+			// --- Kill car if it is another's trail ---
+			if (!photonView.IsMine && !other.GetComponent<ParentRef>().photonView.IsMine)
+			{
+				vitals.vitals.ApplyCharges(-vitals.vitals.VitalArray[0].Value, false, true);
+
+				Debug.Log("Collided with trail");
+
+				Debug.Log(vitals.vitals.VitalArray[0].Value);
+
+				if (vitals.vitals.VitalArray[0].Value <= 0)
+				{
+					other.GetComponent<ParentRef>().photonView.Owner.AddScore(15);
+					Debug.Log(other.GetComponent<ParentRef>().photonView.Owner.GetScore());
+				}
+			}
+		}
+
+		// ----------------------------------------------
+	}
 }

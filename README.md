@@ -22,6 +22,8 @@ R1 for rear camera
 
 ## Authors:
 
+This is a project developed by 4 university students in the span of 1 month. We are:
+
 * GitHub account: [AitorSimona](https://github.com/AitorSimona)
 * GitHub account: [CarlesHoms](https://github.com/ch0m5)
 * GitHub account: [DidacRomero](https://github.com/DidacRomero)
