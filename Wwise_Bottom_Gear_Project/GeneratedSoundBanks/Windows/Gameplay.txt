@@ -14,6 +14,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3689126666	Play_Jump			\Default Work Unit\Gameplay\Play_Jump	
 	4030404899	Play_explosion			\Default Work Unit\Gameplay\Play_explosion	
 	4064197866	Play_Enemy_Destroyed			\Default Work Unit\Gameplay\Play_Enemy_Destroyed	
+	4199405765	Play_Ambient_Sounds			\Default Work Unit\Gameplay\Play_Ambient_Sounds	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	435266594	boost_Time			\Default Work Unit\boost_Time	
@@ -37,6 +38,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	403486225	crash_5	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\crash_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Crash\crash_5		454068
 	413388097	crash_3	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\crash_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Crash\crash_3		467424
 	424482009	Car_engine_6000rpm	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Car_engine_6000rpm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Car_Accel\Car_engine_6000rpm		479296
+	533522272	Ambient	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Ambient_Sound_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambient		17704
 	543490717	Hammond_2	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Hammond_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Excessive_Swearing\Hammond_2		316724
 	573617690	Tire_Hit_1	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Tire_Hit_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Tyre_Hit\Tire_Hit_1		40248
 	585613593	Now_were_in_trouble	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Now_were_in_trouble_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Excessive_Swearing\Now_were_in_trouble		287340
@@ -50,6 +52,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1061063613	everything_will_be_OK	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\everything_will_be_OK_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Excessive_Swearing\everything_will_be_OK		222052
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	533522272	Ambient	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Ambient_Sound_D79FB2B7.wem	533522272.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambient	
 	904913494	Neon_Loop	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Neon_Loop_D79FB2B7.wem	904913494.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\Neon_Loop	
 	967403081	Fire_Boost_Loop	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Fir_Boost_Loop_D79FB2B7.wem	967403081.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\Fire_Boost_Loop	
 

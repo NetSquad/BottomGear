@@ -10,6 +10,7 @@
 						<ObjectRef Name="Play_Fire_Boost_Loop" ID="{3F8C48A5-71B2-428D-98D9-3FBD61E4FBE6}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PickUp_Flag" ID="{1CEAB580-922E-4443-88EC-A6814B03AD34}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_shot" ID="{80A9D0B9-EEA5-4661-94C6-3BDEB672D6B4}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Ambient_Sounds" ID="{8C98B876-9AA4-47A9-9952-3602CBDB2292}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Neon_Loop" ID="{9062CDD1-8AF3-47B0-B22F-313D882F2092}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Neon_Loop" ID="{FAEA8221-63E2-4802-8C39-D759C63A5B27}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Crash" ID="{616C061A-4056-489A-BA58-9632DAC8F39E}" WorkUnitID="{E1A9FBAD-F144-41C7-A345-F6C52C3CC02B}" Origin="Manual" Filter="7"/>
