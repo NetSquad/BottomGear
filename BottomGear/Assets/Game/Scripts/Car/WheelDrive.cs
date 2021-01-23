@@ -210,6 +210,7 @@ namespace BottomGear
 			// --- Only update if this is the local player ---
 			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
 				return;
+
 			// Used to debug car speed
 			velocity = rb.velocity.magnitude;
 
@@ -447,6 +448,10 @@ namespace BottomGear
 
         private void LateUpdate()
         {
+			// --- Only update if this is the local player ---
+			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
+				return;
+
 			Quaternion q;
 			Vector3 p;
 
@@ -531,7 +536,7 @@ namespace BottomGear
 
 				Debug.Log(vitals.vitals.VitalArray[0].Value);
 
-				if (contact && vitals.vitals.VitalArray[0].Value - 20 <= 0) // bullet damage
+				if (contact && contact.Owner != null && vitals.vitals.VitalArray[0].Value - 20 <= 0) // bullet damage
 				{
 					contact.Owner.PhotonView.Owner.AddScore(10);
 					Debug.Log(contact.Owner.PhotonView.Owner.GetScore());
