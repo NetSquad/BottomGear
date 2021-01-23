@@ -6,6 +6,7 @@
 				<GameParameter Name="Speed" ID="{ED437761-166D-4FC6-8E60-FF018266212E}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="Crash_Energy" ID="{E636151F-D19C-42DA-8099-76958AB54FC4}"/>

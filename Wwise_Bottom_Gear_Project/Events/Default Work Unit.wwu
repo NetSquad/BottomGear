@@ -172,6 +172,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Ambient_Sounds" ID="{8C98B876-9AA4-47A9-9952-3602CBDB2292}">
+							<ChildrenList>
+								<Action Name="" ID="{5B03B1A4-04DF-4B41-B739-7A832F024703}" ShortID="88816082">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ambient" ID="{182A2D14-F86B-4106-9B61-3B397F110591}" WorkUnitID="{1CE2E004-55C2-42AA-BCF8-75DBDC917956}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{8A4961F6-7B57-49F4-8DA0-D54727EB47F3}" ShortID="611502248">
