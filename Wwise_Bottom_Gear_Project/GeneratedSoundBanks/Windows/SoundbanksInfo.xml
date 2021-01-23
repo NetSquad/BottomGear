@@ -9,6 +9,10 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles>
+		<File Id="533522272" Language="SFX">
+			<ShortName>Ambient_Sound.wav</ShortName>
+			<Path>SFX\Ambient_Sound_D79FB2B7.wem</Path>
+		</File>
 		<File Id="904913494" Language="SFX">
 			<ShortName>Neon_Loop.wav</ShortName>
 			<Path>SFX\Neon_Loop_D79FB2B7.wem</Path>
@@ -20,11 +24,26 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="89505537" Language="SFX" Hash="4292454897">
+		<SoundBank Id="89505537" Language="SFX" Hash="535844133">
 			<ObjectPath>\SoundBanks\Default Work Unit\Gameplay</ObjectPath>
 			<ShortName>Gameplay</ShortName>
 			<Path>Gameplay.bnk</Path>
 			<IncludedEvents>
+				<Event Id="4199405765" Name="Play_Ambient_Sounds" ObjectPath="\Events\Default Work Unit\Gameplay\Play_Ambient_Sounds" DurationType="Infinite">
+					<ReferencedStreamedFiles>
+						<File Id="533522272" Language="SFX">
+							<ShortName>Ambient_Sound.wav</ShortName>
+							<Path>SFX\Ambient_Sound_D79FB2B7.wem</Path>
+						</File>
+					</ReferencedStreamedFiles>
+					<IncludedMemoryFiles>
+						<File Id="533522272" Language="SFX">
+							<ShortName>Ambient_Sound.wav</ShortName>
+							<Path>SFX\Ambient_Sound_D79FB2B7.wem</Path>
+							<PrefetchSize>17704</PrefetchSize>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="303595419" Name="Play_Crash" ObjectPath="\Events\Default Work Unit\Gameplay\Play_Crash" DurationType="OneShot" DurationMin="1.574470" DurationMax="3.826414">
 					<IncludedMemoryFiles>
 						<File Id="302608464" Language="SFX">
@@ -196,7 +215,7 @@
 				<GameParameter Id="3679139441" Name="Crash_Energy" ObjectPath="\Game Parameters\Default Work Unit\Crash_Energy"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2806203145">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1295670722">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
