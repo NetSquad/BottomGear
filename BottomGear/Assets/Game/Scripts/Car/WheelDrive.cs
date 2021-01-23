@@ -542,7 +542,7 @@ namespace BottomGear
         private void OnParticleCollision(GameObject other)
 		{
 			// --- Kill car if it is another's trail ---
-			if (!other.GetComponent<ParentRef>().photonView.IsMine)
+			if (!photonView.IsMine && !other.GetComponent<ParentRef>().photonView.IsMine)
 			{
 				vitals.vitals.ApplyCharges(-vitals.vitals.VitalArray[0].Value, false, true);
 
