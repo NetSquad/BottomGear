@@ -1839,7 +1839,7 @@ MonoBehaviour:
       expanded: 0
       isExpanded: 1
       hideFieldName: 1
-      _trsType: 1
+      _trsType: 2
       defaultTransform: {fileID: 0}
       uniformAxes: 0
       _xcrusher:
@@ -1869,7 +1869,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _ycrusher:
         expanded: 0
         axis: 1
@@ -1897,7 +1897,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _zcrusher:
         expanded: 0
         axis: 2
@@ -1925,7 +1925,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _ucrusher:
         expanded: 0
         axis: 4
@@ -1984,7 +1984,7 @@ MonoBehaviour:
         showBCL: 0
         expandBCL: 0
         showEnableToggle: 1
-        enabled: 1
+        enabled: 0
         _accurateCenter: 1
         outOfBoundsHandling: 1
         encoder: 127
@@ -3771,7 +3771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfa203032a269543b1fd3cee4aa1dd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabInstanceId: -231068
+  prefabInstanceId: -232164
   _applyOrder: 13
   keyframeRate: 1
   useDeltas: 1
@@ -3924,7 +3924,7 @@ MonoBehaviour:
       expanded: 0
       isExpanded: 1
       hideFieldName: 1
-      _trsType: 1
+      _trsType: 2
       defaultTransform: {fileID: 0}
       uniformAxes: 0
       _xcrusher:
@@ -3954,7 +3954,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _ycrusher:
         expanded: 0
         axis: 1
@@ -3982,7 +3982,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _zcrusher:
         expanded: 0
         axis: 2
@@ -4010,7 +4010,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _ucrusher:
         expanded: 0
         axis: 4
@@ -4287,7 +4287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfa203032a269543b1fd3cee4aa1dd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabInstanceId: -232160
+  prefabInstanceId: -232164
   _applyOrder: 13
   keyframeRate: 1
   useDeltas: 1
@@ -4440,7 +4440,7 @@ MonoBehaviour:
       expanded: 0
       isExpanded: 1
       hideFieldName: 1
-      _trsType: 1
+      _trsType: 2
       defaultTransform: {fileID: 0}
       uniformAxes: 0
       _xcrusher:
@@ -4470,7 +4470,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _ycrusher:
         expanded: 0
         axis: 1
@@ -4498,7 +4498,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _zcrusher:
         expanded: 0
         axis: 2
@@ -4526,7 +4526,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _ucrusher:
         expanded: 0
         axis: 4
@@ -5163,7 +5163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfa203032a269543b1fd3cee4aa1dd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabInstanceId: -232162
+  prefabInstanceId: -232164
   _applyOrder: 13
   keyframeRate: 1
   useDeltas: 1
@@ -5316,7 +5316,7 @@ MonoBehaviour:
       expanded: 0
       isExpanded: 1
       hideFieldName: 1
-      _trsType: 1
+      _trsType: 2
       defaultTransform: {fileID: 0}
       uniformAxes: 0
       _xcrusher:
@@ -5346,7 +5346,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _ycrusher:
         expanded: 0
         axis: 1
@@ -5374,7 +5374,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _zcrusher:
         expanded: 0
         axis: 2
@@ -5402,7 +5402,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _ucrusher:
         expanded: 0
         axis: 4
@@ -5832,7 +5832,7 @@ MonoBehaviour:
       expanded: 0
       isExpanded: 1
       hideFieldName: 1
-      _trsType: 1
+      _trsType: 2
       defaultTransform: {fileID: 0}
       uniformAxes: 0
       _xcrusher:
@@ -5862,7 +5862,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _ycrusher:
         expanded: 0
         axis: 1
@@ -5890,7 +5890,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _zcrusher:
         expanded: 0
         axis: 2
@@ -5918,7 +5918,7 @@ MonoBehaviour:
         _max: 180
         _resolution: 4095
         _precision: 0.08791209
-        _trsType: 1
+        _trsType: 2
       _ucrusher:
         expanded: 0
         axis: 4
