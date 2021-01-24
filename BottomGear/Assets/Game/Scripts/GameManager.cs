@@ -40,6 +40,9 @@ namespace BottomGear
         // --- Player colouring ---
 
         public List<Material> presets;
+        [ColorUsageAttribute(true, true)]
+        public List<Color> explosionColors;
+
         public GameManager manager;
         private List<int> presets_used;
 
@@ -97,28 +100,31 @@ namespace BottomGear
             return value;
         }
 
-        public void SetPresets(int preset, ref List<MeshRenderer> renderers, VisualEffect explosionEffect, ref List<TrailRenderer> trailRenderers)
+        public void SetPresets(int preset, ref List<MeshRenderer> renderers, ref VisualEffect explosionEffect, ref List<TrailRenderer> trailRenderers)
         {
             int i = 0;
-            renderers[i].material = presets[preset];
-            renderers[++i].material = presets[preset];
+            int presetPos = preset * 5;
+            renderers[i].material = presets[presetPos];
+            renderers[++i].material = presets[presetPos];
 
-            renderers[++i].material = presets[preset + 1];
-            renderers[++i].material = presets[preset + 1];
-            renderers[++i].material = presets[preset + 1];
-            renderers[++i].material = presets[preset + 1];
-            renderers[++i].material = presets[preset + 1];
-            renderers[++i].material = presets[preset + 1];
+            renderers[++i].material = presets[presetPos + 1];
+            renderers[++i].material = presets[presetPos + 1];
+            renderers[++i].material = presets[presetPos + 1];
+            renderers[++i].material = presets[presetPos + 1];
+            renderers[++i].material = presets[presetPos + 1];
+            renderers[++i].material = presets[presetPos + 1];
 
-            renderers[++i].material = presets[preset + 2];
-            renderers[++i].material = presets[preset + 2];
-            renderers[++i].material = presets[preset + 2];
-            renderers[++i].material = presets[preset + 2];
+            renderers[++i].material = presets[presetPos + 2];
+            renderers[++i].material = presets[presetPos + 2];
+            renderers[++i].material = presets[presetPos + 2];
+            renderers[++i].material = presets[presetPos + 2];
 
-            trailRenderers[0].material = presets[preset + 3];
-            trailRenderers[1].material = presets[preset + 3];
-            trailRenderers[2].material = presets[preset + 4];
+            trailRenderers[0].material = presets[presetPos + 3];
+            trailRenderers[1].material = presets[presetPos + 3];
+            trailRenderers[2].material = presets[presetPos + 4];
 
+            if(explosionEffect.HasVector4("Particle color"))
+                explosionEffect.SetVector4("Particle color", explosionColors[preset]);
         }
 
         #endregion

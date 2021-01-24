@@ -17,8 +17,8 @@ public class PlayerColouring : MonoBehaviour
     void Start()
     {
         manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        preset = manager.GetPreset()*5;
-        manager.SetPresets(preset, ref renderers, explosionEffect, ref trail_renderers);
+        preset = manager.GetPreset();
+        manager.SetPresets(preset, ref renderers, ref explosionEffect, ref trail_renderers);
     }
 
     // Update is called once per frame

@@ -226,11 +226,11 @@ namespace BottomGear
 
 		void Update()
 		{
-            //if (Input.GetKey(KeyCode.Q))
-            //         {
-            //	if (!explosionEffect.activeSelf)
-            //		explosionEffect.SetActive(true);
-            //}
+            if (Input.GetKey(KeyCode.Q))
+            {
+                if (!explosionEffect.activeSelf)
+                    explosionEffect.SetActive(true);
+            }
 
             if (explosionEffect.activeSelf)
                 TriggerExplosion();
