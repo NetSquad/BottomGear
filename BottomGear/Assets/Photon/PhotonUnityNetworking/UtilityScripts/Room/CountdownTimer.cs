@@ -150,7 +150,7 @@ namespace Photon.Pun.UtilityScripts
             startTimestamp = PhotonNetwork.ServerTimestamp;
 
             object startTimeFromProps;
-            if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(CountdownStartTime, out startTimeFromProps))
+            if (PhotonNetwork.CurrentRoom != null && PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(CountdownStartTime, out startTimeFromProps))
             {
                 startTimestamp = (int)startTimeFromProps;
                 return true;
