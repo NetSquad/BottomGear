@@ -29,6 +29,28 @@ public class PlayerColouring : MonoBehaviour
     {
         this.preset = preset;
         manager.SetPresets(preset, ref renderers, ref explosionEffect, ref trail_renderers);
+
+        foreach(MeshRenderer renderer in renderers)
+        {
+            if (preset == 0)
+                renderer.gameObject.layer = LayerMask.NameToLayer("CarYellow");
+            else if (preset == 1)
+                renderer.gameObject.layer = LayerMask.NameToLayer("CarOrange");
+            else if (preset == 2)
+                renderer.gameObject.layer = LayerMask.NameToLayer("CarYellow2");
+            else if (preset == 3)
+                renderer.gameObject.layer = LayerMask.NameToLayer("CarOrange2");
+            else if (preset == 4)
+                renderer.gameObject.layer = LayerMask.NameToLayer("CarGreen");
+            else if (preset == 5)
+                renderer.gameObject.layer = LayerMask.NameToLayer("CarBlue");
+        }
+
+     
+        trail_renderers[0].gameObject.layer = LayerMask.NameToLayer("Volumes");
+        trail_renderers[1].gameObject.layer = LayerMask.NameToLayer("Volumes");
+        trail_renderers[2].gameObject.layer = LayerMask.NameToLayer("Volumes");
+        explosionEffect.gameObject.layer = LayerMask.NameToLayer("Volumes");
     }
 
     // Update is called once per frame
