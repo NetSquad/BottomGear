@@ -34,6 +34,7 @@ namespace BottomGear
 		public AK.Wwise.Event tyre_hit;
 		public AK.Wwise.Event explosion;
 		public AK.Wwise.Event stop_all;
+		public AK.Wwise.Event on_hit;
 
 
 		[Header("Wheels")]
@@ -629,6 +630,7 @@ namespace BottomGear
 
 					contact.Owner.PhotonView.Owner.AddScore(10);
 					Debug.Log(contact.Owner.PhotonView.Owner.GetScore());
+					on_hit.Post(gameObject);
 				}
 			}
 		}
