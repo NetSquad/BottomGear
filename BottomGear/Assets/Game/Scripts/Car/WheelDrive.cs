@@ -260,6 +260,12 @@ namespace BottomGear
 
 		private void FixedUpdate()
         {
+			// always deactivate scene camera
+			if (camera.isActiveAndEnabled 
+				&& photonView.IsMine
+				&& vitals.vitals.VitalArray[0].Value > 0)
+				sceneCamera.SetActive(false);
+
 			// Uncomment this and timer log at the end of this function to profile
 			//watch.Start();
 
@@ -298,9 +304,6 @@ namespace BottomGear
 			else
 				isTurbo = false;
 
-
-			//energy = vitals.vitals.VitalArray[1].Value;
-
 			float outputAcceleration = accelerator - decelerator;
 			float angle = maxAngle * inputDirection.x;
 			float torque = outputAcceleration * maxTorque * Time.fixedDeltaTime;
@@ -319,7 +322,7 @@ namespace BottomGear
 				//else if (rb.velocity.magnitude < 60 && IsGrounded() && direction != Vector3.zero)
 				//	rb.AddForce(direction, ForceMode.Acceleration);
 
-				LimitSpeed(outputAcceleration, 60, torque, boostAcceleration);
+				LimitSpeed(outputAcceleration, maxBoostingSpeed, torque, boostAcceleration);
 			}
 			else if (isTurbo)
 			{
@@ -330,7 +333,7 @@ namespace BottomGear
 				//else if (rb.velocity.magnitude < 45 && IsGrounded() && direction != Vector3.zero)
 				//	rb.AddForce(direction, ForceMode.Acceleration);
 
-				LimitSpeed(outputAcceleration, 45, torque, turboAcceleration);
+				LimitSpeed(outputAcceleration, maxTurboSpeed, torque, turboAcceleration);
 			}
 			else
             {
@@ -341,7 +344,7 @@ namespace BottomGear
 				//else if (rb.velocity.magnitude < 30 && IsGrounded() && direction != Vector3.zero)
 				//	rb.AddForce(direction, ForceMode.Acceleration);
 
-				LimitSpeed(outputAcceleration, 30, torque);
+				LimitSpeed(outputAcceleration, maxSpeed, torque);
 			}
 
             // ---Car jump-- -
