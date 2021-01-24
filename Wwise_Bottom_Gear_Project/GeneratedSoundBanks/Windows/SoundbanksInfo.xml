@@ -24,7 +24,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="89505537" Language="SFX" Hash="2052248295">
+		<SoundBank Id="89505537" Language="SFX" Hash="717087436">
 			<ObjectPath>\SoundBanks\Default Work Unit\Gameplay</ObjectPath>
 			<ShortName>Gameplay</ShortName>
 			<Path>Gameplay.bnk</Path>
