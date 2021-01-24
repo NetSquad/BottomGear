@@ -551,7 +551,7 @@ namespace BottomGear
 				explosionEffect.transform.localScale = Vector3.one;
 			}
 
-			
+			explosion.Post(gameObject);
         }
 
 		private void SwitchCamera()
