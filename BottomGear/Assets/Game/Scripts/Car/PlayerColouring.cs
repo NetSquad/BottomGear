@@ -15,6 +15,7 @@ public class PlayerColouring : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         preset = manager.GetPreset()*5;
         manager.SetPresets(preset, ref renderers, explosionEffect);
     }

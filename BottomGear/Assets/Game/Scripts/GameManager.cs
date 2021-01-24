@@ -100,9 +100,22 @@ namespace BottomGear
 
         public void SetPresets(int preset, ref List<MeshRenderer> renderers, VisualEffect explosionEffect)
         {
-            presets[preset].ApplyTo(renderers[preset].material);
-            presets[preset + 1].ApplyTo(renderers[preset + 1].material);
-            presets[preset + 2].ApplyTo(renderers[preset + 2].material);
+            
+            presets[preset].ApplyTo(renderers[0].material);
+            presets[preset].ApplyTo(renderers[1].material);
+
+            presets[preset + 1].ApplyTo(renderers[2].material);
+            presets[preset + 1].ApplyTo(renderers[3].material);
+            presets[preset + 1].ApplyTo(renderers[4].material);
+            presets[preset + 1].ApplyTo(renderers[5].material);
+            presets[preset + 1].ApplyTo(renderers[6].material);
+            presets[preset + 1].ApplyTo(renderers[7].material);
+
+            presets[preset + 2].ApplyTo(renderers[8].material);
+            presets[preset + 2].ApplyTo(renderers[9].material);
+            presets[preset + 2].ApplyTo(renderers[10].material);
+            presets[preset + 2].ApplyTo(renderers[11].material);
+
         }
 
         #endregion
