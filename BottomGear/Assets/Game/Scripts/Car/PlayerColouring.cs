@@ -50,6 +50,14 @@ public class PlayerColouring : MonoBehaviour
         trail_renderers[0].gameObject.layer = LayerMask.NameToLayer("Volumes");
         trail_renderers[1].gameObject.layer = LayerMask.NameToLayer("Volumes");
         trail_renderers[2].gameObject.layer = LayerMask.NameToLayer("Volumes");
+
+        renderers[2].gameObject.layer = LayerMask.NameToLayer("Volumes");
+        renderers[3].gameObject.layer = LayerMask.NameToLayer("Volumes");
+        renderers[4].gameObject.layer = LayerMask.NameToLayer("Volumes");
+        renderers[5].gameObject.layer = LayerMask.NameToLayer("Volumes");
+        renderers[6].gameObject.layer = LayerMask.NameToLayer("Volumes");
+        renderers[7].gameObject.layer = LayerMask.NameToLayer("Volumes");
+
         explosionEffect.gameObject.layer = LayerMask.NameToLayer("Volumes");
     }
 
