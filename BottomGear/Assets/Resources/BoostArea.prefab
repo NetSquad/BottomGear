@@ -190,5 +190,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ba58106f00ed544bc047c55ecd1e78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostDuration: 3
+  boostDuration: 0.5
   carRelative: {x: 0, y: 0, z: 0}
