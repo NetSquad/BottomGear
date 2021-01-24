@@ -108,7 +108,7 @@ namespace BottomGear
 		//[Header("TestVelocity")]
 		//[Tooltip("Debug velocity")]
 		public float velocity = 0;
-		//public double energy = 0.0f;
+		public double energy = 0.0f;
 		public string[] controllername;
 
 		// --- Main components ---
@@ -283,6 +283,7 @@ namespace BottomGear
 
 			initialScoreTime += Time.deltaTime;
 
+			energy = vitals.vitals.VitalArray[1].Value;
 			// Uncomment this and timer start to profile
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
 			//watch.Reset();
@@ -354,7 +355,9 @@ namespace BottomGear
 			if (Input.GetKey(KeyCode.S))
 				decelerator = 1.0f;
 
-			if (Input.GetKey(KeyCode.LeftShift) && vitals.vitals.VitalArray[1].Value > 0 && IsGrounded())
+			bool controllerBoost = isXbox ? Input.GetButton("XboxB") : Input.GetButton("OButton");
+
+			if (Input.GetKey(KeyCode.LeftShift) || controllerBoost && vitals.vitals.VitalArray[1].Value > 0 && IsGrounded())
             {
 				vitals.vitals.VitalArray[1].Value -= Time.fixedDeltaTime * consumptionRate;
 				isTurbo = true;
@@ -509,11 +512,8 @@ namespace BottomGear
 				BoostingPad bp = hit.collider.gameObject.GetComponent<BoostingPad>();
 
 				// If car is in front, the moment it touches the booster, it will accelerate
-				if (bp.IsFront(transform)) // ----> This if statement and the else below will be deleted when no longer needed
-					Debug.DrawRay(transform.position, transform.forward * hit.distance, Color.green);
+				bp.IsFront(transform);
 			}
-			else
-				Debug.DrawRay(transform.position, transform.forward, Color.red);
 		}
 
         private void LateUpdate()
