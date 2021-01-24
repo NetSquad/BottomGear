@@ -545,6 +545,9 @@ namespace BottomGear
         {
 			float lerpRatio =  Mathf.Clamp(explosionCurrentTime / explosionTime, 0.0f, 1.0f);
 
+			if(explosionCurrentTime == 0.0f)
+				explosion.Post(gameObject);
+
 			explosionEffect.transform.localScale = Vector3.Lerp(Vector3.one, Vector3.one*explosionScale, lerpRatio);
 
 			explosionCurrentTime += Time.deltaTime;
@@ -556,7 +559,6 @@ namespace BottomGear
 				explosionEffect.transform.localScale = Vector3.one;
 			}
 
-			explosion.Post(gameObject);
         }
 
 		private void SwitchCamera()
