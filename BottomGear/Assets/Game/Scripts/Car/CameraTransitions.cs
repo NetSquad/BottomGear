@@ -42,23 +42,23 @@ public class CameraTransitions : MonoBehaviour
         mixingCamera.m_Weight3 = Mathf.Clamp(Mathf.Abs(Parent.transform.rotation.eulerAngles.GetXCorrectedEuler().x / 90 * FollowUpCamInitialWeight), 0, FollowUpCamInitialWeight);
 
         // --- Follow - Rear ---
-        if (Input.GetButton("Rear") || Input.GetMouseButton(2))
-        {
-            mixingCamera.m_Weight0 = 0;
-            mixingCamera.m_Weight2 = 0;
-            mixingCamera.m_Weight3 = 0;
+        //if (Input.GetButton("Rear") || Input.GetMouseButton(2))
+        //{
+        //    mixingCamera.m_Weight0 = 0;
+        //    mixingCamera.m_Weight2 = 0;
+        //    mixingCamera.m_Weight3 = 0;
 
-            if (CurrentCamera != FrontCamera)
-            {
-                mixingCamera.m_Weight1 = FrontCamInitialWeight;
-                CurrentCamera = FrontCamera;
-            }
-        }
-        else if (CurrentCamera == FrontCamera)
-        {
-            mixingCamera.m_Weight1 = 0;
-            mixingCamera.m_Weight0 = FollowCamInitialWeight;
-            CurrentCamera = FollowCamera;
-        }
+        //    if (CurrentCamera != FrontCamera)
+        //    {
+        //        mixingCamera.m_Weight1 = FrontCamInitialWeight;
+        //        CurrentCamera = FrontCamera;
+        //    }
+        //}
+        //else if (CurrentCamera == FrontCamera)
+        //{
+        //    mixingCamera.m_Weight1 = 0;
+        //    mixingCamera.m_Weight0 = FollowCamInitialWeight;
+        //    CurrentCamera = FollowCamera;
+        //}
     }
 }

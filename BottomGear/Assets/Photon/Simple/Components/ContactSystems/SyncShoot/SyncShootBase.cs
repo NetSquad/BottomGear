@@ -5,6 +5,7 @@
 
 using UnityEngine;
 using Photon.Compression;
+using UnityEngine.InputSystem;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -29,6 +30,10 @@ namespace Photon.Pun.Simple
         [Tooltip("Specify the transform hitscans/projectiles will originate from. If null this gameObject will be used as the origin.")]
         [SerializeField] protected Transform origin;
         [SerializeField] public KeyCode triggerKey = KeyCode.None;
+
+        // --- LIBRARY MODIFICATION ---
+        PlayerControls controls;
+        bool triggerPress;
 
         #endregion
 
@@ -69,6 +74,23 @@ namespace Photon.Pun.Simple
             }
         }
 
+        //private new void Awake()
+        //{
+        //    controls = new PlayerControls();
+        //    controls.Gameplay.Shoot.performed += ctx => triggerPress = true;
+        //    controls.Gameplay.Shoot.canceled += ctx => triggerPress = false;
+        //}
+
+        //private new void OnEnable()
+        //{
+        //    controls.Gameplay.Enable();
+        //}
+
+        //private void OnDisable()
+        //{
+        //    controls.Gameplay.Disable();
+        //}
+
         public override void OnAwakeInitialize(bool isNetObject)
         {
             base.OnAwakeInitialize(isNetObject);
@@ -83,7 +105,7 @@ namespace Photon.Pun.Simple
 
         public virtual void OnPreUpdate()
         {
-            if (IsMine && Input.GetKeyDown(triggerKey))
+            if (IsMine && Keyboard.current.fKey.wasPressedThisFrame/*&& Input.GetKeyDown(triggerKey)*/)
                 QueueTrigger();
         }
 

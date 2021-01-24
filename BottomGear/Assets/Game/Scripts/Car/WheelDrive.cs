@@ -4,6 +4,7 @@ using Photon.Pun;
 using Photon.Pun.UtilityScripts;
 using System.Collections.Generic;
 using Photon.Pun.Simple;
+using UnityEngine.InputSystem;
 
 namespace BottomGear
 {
@@ -123,6 +124,12 @@ namespace BottomGear
 		bool lockDown = false;
 		float linearDragBackup = 0.0f;
 
+		// --- Input ---
+		PlayerControls controls;
+		Vector2 inputDir;
+		float accelerator;
+		float decelerator;
+		//bool throwPress;
 		// Uncomment this to profile
 		//System.Diagnostics.Stopwatch watch;
 
@@ -151,18 +158,30 @@ namespace BottomGear
 			photonView = GetComponent<PhotonView>();
 			rb = GetComponent<Rigidbody>();
 			sceneCamera = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().sceneCamera;
+			controls = new PlayerControls();
 
 			// Uncomment this to profile
 			//watch = new System.Diagnostics.Stopwatch();
+
+			controls.Gameplay.Acceleration.performed += ctx => accelerator = ctx.ReadValue<float>();
+			controls.Gameplay.Deceleration.performed += ctx => decelerator = ctx.ReadValue<float>();
+			//controls.Gameplay.Shoot.started += ctx => throwPress = true;
+			//controls.Gameplay.Shoot.canceled += ctx => throwPress = false;
+
 		}
 
-  //      private void OnEnable()
-  //      {
-		//	sceneCamera.SetActive(false);
-		//}
+        private void OnEnable()
+        {
+			controls.Gameplay.Enable();
+        }
 
-		// Find all the WheelColliders down in the hierarchy.
-		void Start()
+        private void OnDisable()
+        {
+			controls.Gameplay.Disable();
+        }
+
+        // Find all the WheelColliders down in the hierarchy.
+        void Start()
 		{
 			//Play engine Sound
 			engine_sound.Post(gameObject);
@@ -226,6 +245,7 @@ namespace BottomGear
 
 		void Update()
 		{
+			//Debug.Log(throwPress);
             //if (Input.GetKey(KeyCode.Q))
             //         {
             //	if (!explosionEffect.activeSelf)
@@ -266,30 +286,35 @@ namespace BottomGear
 			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
 				return;
 
-			// --- Obtain input ---
-			Vector2 inputDirection;
-			inputDirection.x = Input.GetAxis("Horizontal");
-			inputDirection.y = Input.GetAxis("Vertical");
+            // --- Obtain input ---
+            Vector2 inputDirection;
 
-			// --- If no acceleration, release lock ---
-			float inputRawY = Input.GetAxisRaw("Vertical");
+
+            inputDirection.x = 0f/*Input.GetAxis("Horizontal")*/;
+            inputDirection.y = 0f/*Input.GetAxis("Vertical")*/;
+
+            // --- If no acceleration, release lock ---
+            float inputRawY = 0f/*Input.GetAxisRaw("Vertical")*/;
 
 			// --- Support both mouse/keyboard and gamepad ---
-			float accelerator = (Input.GetAxis("R2") - (-1)) / (2);
+			//float accelerator = (Input.GetAxis("R2") - (-1)) / (2);
 
-			if (Input.GetKey(KeyCode.W))
-				accelerator = 1.0f;
-			else if ((Input.GetAxis("R2") == 0))
-				accelerator = 0.0f;
+			//if (Input.GetKey(KeyCode.W))
+			//	accelerator = 1.0f;
+			//else if ((Input.GetAxis("R2") == 0))
+			//	accelerator = 0.0f;
 
-			float decelerator = (Input.GetAxis("L2") - (-1)) / (2);
+			//Debug.Log(accelerator);
 
-			if (Input.GetKey(KeyCode.S))
-				decelerator = 1.0f;
-			else if ((Input.GetAxis("L2") == 0))
-				decelerator = 0.0f;
 
-			if (Input.GetKey(KeyCode.LeftShift) && vitals.vitals.VitalArray[1].Value > 0 && IsGrounded())
+			//float decelerator = (Input.GetAxis("L2") - (-1)) / (2);
+
+			//if (Input.GetKey(KeyCode.S))
+			//	decelerator = 1.0f;
+			//else if ((Input.GetAxis("L2") == 0))
+			//	decelerator = 0.0f;
+
+			if (/*Input.GetKey(KeyCode.LeftShift) &&*/ vitals.vitals.VitalArray[1].Value > 0 && IsGrounded())
             {
 				vitals.vitals.VitalArray[1].Value -= Time.fixedDeltaTime * consumptionRate;
 				isTurbo = true;
@@ -344,17 +369,17 @@ namespace BottomGear
 			}
 
             // ---Car jump-- -
-            if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
-			{
-				// --- If car jumps and has a forward acceleration, prevent it from rotating downwards ---
-				if (accelerator > 0)
-					lockDown = true;
+   //         if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
+			//{
+			//	// --- If car jumps and has a forward acceleration, prevent it from rotating downwards ---
+			//	if (accelerator > 0)
+			//		lockDown = true;
 
-				rb.AddForce(mTransform.up * jumpForce, ForceMode.Impulse);
+			//	rb.AddForce(mTransform.up * jumpForce, ForceMode.Impulse);
 
-				jumpTimer = 0.0f;
-				jump.Post(gameObject);
-			}
+			//	jumpTimer = 0.0f;
+			//	jump.Post(gameObject);
+			//}
 
 			// --- Car jump timer ---
 			jumpTimer += Time.fixedDeltaTime;
@@ -400,7 +425,7 @@ namespace BottomGear
 					orientation = orientationZ;
 					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
 
-					rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("HorizontalRS"), -1, 1), ForceMode.Acceleration);
+					//rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("HorizontalRS"), -1, 1), ForceMode.Acceleration);
 				}
 
             }

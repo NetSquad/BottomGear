@@ -4,6 +4,7 @@
 // ---------------------------------------------------------------------------------------------
 
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -21,6 +22,10 @@ namespace Photon.Pun.Simple
         public KeyCode throwKey; // = KeyCode.Alpha5;
         public Mount mount;
 
+        // --- LIBRARY MODIFICATION ---
+        PlayerControls controls;
+        bool throwPress;
+
         public bool fromRoot = true;
         public bool inheritRBVelocity = true;
         public Vector3 offset = new Vector3(0, 3f, 0);
@@ -36,18 +41,32 @@ namespace Photon.Pun.Simple
 #endif
         public override void OnAwake()
         {
+            controls = new PlayerControls();
+
+            controls.Gameplay.Throw.performed += ctx => throwPress = true;
+            controls.Gameplay.Throw.canceled += ctx => throwPress = false;
+
             base.OnAwake();
             if (mount == null)
                 mount = GetComponent<Mount>();
         }
 
+        private void OnEnable()
+        {
+            controls.Gameplay.Enable();
+        }
+
+        private void OnDisable()
+        {
+            controls.Gameplay.Disable();
+        }
 
         public void OnPreUpdate()
         {
             if (!IsMine)
                 return;
 
-            if (Input.GetKeyDown(throwKey))
+            if (throwPress /*Input.GetKeyDown(throwKey)*/)
                 throwQueued = true;
         }
 
