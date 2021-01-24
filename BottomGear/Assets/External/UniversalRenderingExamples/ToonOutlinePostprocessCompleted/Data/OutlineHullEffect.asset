@@ -97,7 +97,7 @@ MonoBehaviour:
   - {fileID: 7748687247054426792}
   - {fileID: 6185732288397053383}
   - {fileID: 5196854160525315034}
-  m_RendererFeatureMap: 00e3df3c1b9074e51675e9eb03c5e905a8524734ffdd886bc70d922dbe22d855da4b9f2b53ef1e48
+  m_RendererFeatureMap: 00e3df3c1b9074e51675e9eb03c5e905a8524734ffdd886bc70d922dbe22d855da4b9f2b53ef1e484402d11a7da108a9
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
