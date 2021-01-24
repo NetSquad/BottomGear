@@ -17,6 +17,9 @@ using Photon.Realtime;
 using Photon.Pun.UtilityScripts;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 using Photon.Pun;
+using System.Collections.Generic;
+using UnityEditor.Presets;
+using UnityEngine.VFX;
 
 namespace BottomGear
 {
@@ -35,12 +38,25 @@ namespace BottomGear
         double currentTime = 0.0f;
         bool startTimer = false;
 
+        // --- Player colouring ---
+
+        public List<Preset> presets;
+        public GameManager manager;
+        private List<int> presets_used;
+
         //public GameObject[] AsteroidPrefabs; // unneeded
 
         #region UNITY
 
         public void Awake()
         {
+            presets_used = new List<int>(6);
+
+            for (int i = 0; i < 6; i++)
+            {
+                presets_used.Add(i);
+            }
+
             Instance = this;
         }
 
@@ -70,6 +86,36 @@ namespace BottomGear
             base.OnDisable();
 
             CountdownTimer.OnCountdownTimerHasExpired -= OnCountdownTimerIsExpired;
+        }
+
+        public int GetPreset()
+        {
+            int index = Random.Range(0, presets_used.Count);
+
+            int value = presets_used[index];
+            presets_used.RemoveAt(index);
+
+            return value;
+        }
+
+        public void SetPresets(int preset, ref List<MeshRenderer> renderers, VisualEffect explosionEffect)
+        {
+            
+            presets[preset].ApplyTo(renderers[0].material);
+            presets[preset].ApplyTo(renderers[1].material);
+
+            presets[preset + 1].ApplyTo(renderers[2].material);
+            presets[preset + 1].ApplyTo(renderers[3].material);
+            presets[preset + 1].ApplyTo(renderers[4].material);
+            presets[preset + 1].ApplyTo(renderers[5].material);
+            presets[preset + 1].ApplyTo(renderers[6].material);
+            presets[preset + 1].ApplyTo(renderers[7].material);
+
+            presets[preset + 2].ApplyTo(renderers[8].material);
+            presets[preset + 2].ApplyTo(renderers[9].material);
+            presets[preset + 2].ApplyTo(renderers[10].material);
+            presets[preset + 2].ApplyTo(renderers[11].material);
+
         }
 
         #endregion
