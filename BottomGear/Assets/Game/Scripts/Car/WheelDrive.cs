@@ -33,6 +33,7 @@ namespace BottomGear
 		public AK.Wwise.Event pickup_flag;
 		public AK.Wwise.Event tyre_hit;
 		public AK.Wwise.Event explosion;
+		public AK.Wwise.Event stop_all;
 
 
 		[Header("Wheels")]
@@ -53,6 +54,8 @@ namespace BottomGear
 		[Header("Controller")]
 		[Tooltip("The vehicle's speed when the physics engine can use different amount of sub-steps (in m/s). Not editable in Play mode")]
 		public float criticalSpeed = 5f;
+		[Tooltip("The vehicle's minimum speed to start playing the neon trail sound")]
+		public float minTrailSpeed = 10.0f;
 		[Tooltip("The vehicle's limit speed  (in m/s).")]
 		public int maxSpeed = 30;
 		[Tooltip("The vehicle's limit speed while boosting (in m/s).")]
@@ -123,6 +126,8 @@ namespace BottomGear
 		// --- Internal variables ---
 		bool lockDown = false;
 		float linearDragBackup = 0.0f;
+
+		private bool playingTrailLoop = false;
 
 		// Uncomment this to profile
 		//System.Diagnostics.Stopwatch watch;
@@ -257,6 +262,17 @@ namespace BottomGear
 			// Uncomment this and timer start to profile
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
 			//watch.Reset();
+
+			if(rb.velocity.magnitude >= minTrailSpeed && playingTrailLoop == false)
+            {
+				play_neon_loop.Post(gameObject);
+				playingTrailLoop = true;
+            }
+			else if (rb.velocity.magnitude < minTrailSpeed && playingTrailLoop == true)
+            {
+				stop_neon_loop.Post(gameObject);
+				playingTrailLoop = false;
+			}
 		}
 
 		private void FixedUpdate()
@@ -605,6 +621,8 @@ namespace BottomGear
 				if (contact && contact.Owner != null && vitals.vitals.VitalArray[0].Value - 20 <= 0) // bullet damage
 				{
 					SwitchCamera();
+					//Stop all audio events
+					stop_all.Post(gameObject);
 
 					if (!explosionEffect.activeSelf)
 						explosionEffect.SetActive(true);
@@ -629,7 +647,8 @@ namespace BottomGear
 				if (vitals.vitals.VitalArray[0].Value <= 0)
 				{
 					SwitchCamera();
-
+					//Stop all audio events
+					stop_all.Post(gameObject);
 					if (!explosionEffect.activeSelf)
 						explosionEffect.SetActive(true);
 

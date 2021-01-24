@@ -1659,6 +1659,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 96ac14d060f505543b9f5304bde125e8, type: 2}
+  stop_all:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a871fbb3a036f204582b3fd9b5263888, type: 2}
   wheelCount: 4
   driveType: 2
   maxAngle: 30
@@ -1666,6 +1670,7 @@ MonoBehaviour:
   handBrakeTorque: 30000
   wheelRefsWeight: 0.75
   criticalSpeed: 25
+  minTrailSpeed: 5
   maxSpeed: 50
   maxBoostingSpeed: 50
   maxTurboSpeed: 40

@@ -13,9 +13,9 @@
 			<ShortName>Ambient_Sound.wav</ShortName>
 			<Path>SFX\Ambient_Sound_D79FB2B7.wem</Path>
 		</File>
-		<File Id="904913494" Language="SFX">
-			<ShortName>Neon_Loop.wav</ShortName>
-			<Path>SFX\Neon_Loop_D79FB2B7.wem</Path>
+		<File Id="677063080" Language="SFX">
+			<ShortName>Maybe_Better_Neon_Boost.wav</ShortName>
+			<Path>SFX\Maybe_Better_Neon_Boost_D79FB2B7.wem</Path>
 		</File>
 		<File Id="967403081" Language="SFX">
 			<ShortName>Fir_Boost_Loop.wav</ShortName>
@@ -24,7 +24,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="89505537" Language="SFX" Hash="535844133">
+		<SoundBank Id="89505537" Language="SFX" Hash="1470336977">
 			<ObjectPath>\SoundBanks\Default Work Unit\Gameplay</ObjectPath>
 			<ShortName>Gameplay</ShortName>
 			<Path>Gameplay.bnk</Path>
@@ -130,9 +130,9 @@
 				</Event>
 				<Event Id="2606864591" Name="Play_Neon_Loop" ObjectPath="\Events\Default Work Unit\Gameplay\Play_Neon_Loop" MaxAttenuation="100.000000" DurationType="Infinite">
 					<ReferencedStreamedFiles>
-						<File Id="904913494" Language="SFX">
-							<ShortName>Neon_Loop.wav</ShortName>
-							<Path>SFX\Neon_Loop_D79FB2B7.wem</Path>
+						<File Id="677063080" Language="SFX">
+							<ShortName>Maybe_Better_Neon_Boost.wav</ShortName>
+							<Path>SFX\Maybe_Better_Neon_Boost_D79FB2B7.wem</Path>
 						</File>
 					</ReferencedStreamedFiles>
 				</Event>
