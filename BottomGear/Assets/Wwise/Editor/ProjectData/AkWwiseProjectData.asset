@@ -310,8 +310,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Play_Button_Hover
       maxAttenuation: 0
-      maxDuration: 0.089302
-      minDuration: 0.089302
+      maxDuration: 89302
+      minDuration: 89302
     - name: Play_Button_Selected
       guid: b4d3297ef1031e4ea610e422f8f6eaa0
       id: 3882482286
@@ -324,8 +324,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Play_Button_Selected
       maxAttenuation: 0
-      maxDuration: 0.561088
-      minDuration: 0.561088
+      maxDuration: 561088
+      minDuration: 561088
     - name: Play_Crash
       guid: 1a066c6156409a48ba589632dac8f39e
       id: 303595419
@@ -338,8 +338,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Crash
       maxAttenuation: 0
-      maxDuration: 3.826414
-      minDuration: 1.57447
+      maxDuration: 3826414
+      minDuration: 1574470
     - name: Play_Enemy_Destroyed
       guid: 4626e199253d7a4cbb84cbe392e125c5
       id: 4064197866
@@ -352,8 +352,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Enemy_Destroyed
       maxAttenuation: 0
-      maxDuration: 1.538118
-      minDuration: 1.538118
+      maxDuration: 1538118
+      minDuration: 1538118
     - name: Play_Engine
       guid: 978977901d05d04f86c4be69e24d10f9
       id: 639345804
@@ -365,7 +365,7 @@ MonoBehaviour:
       - ElementName: Play_Engine
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Engine
-      maxAttenuation: 100
+      maxAttenuation: 100000000
       maxDuration: -1
       minDuration: -1
     - name: Play_explosion
@@ -379,9 +379,9 @@ MonoBehaviour:
       - ElementName: Play_explosion
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_explosion
-      maxAttenuation: 100
-      maxDuration: 3.842043
-      minDuration: 3.842043
+      maxAttenuation: 100000000
+      maxDuration: 3842043
+      minDuration: 3842043
     - name: Play_Fire_Boost_Loop
       guid: a5488c3fb2718d4298d93fbd61e4fbe6
       id: 1399260095
@@ -408,8 +408,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Jump
       maxAttenuation: 0
-      maxDuration: 0.568963
-      minDuration: 0.295024
+      maxDuration: 568963
+      minDuration: 295024
     - name: Play_Music
       guid: 4ac2dad089041643b9bb39011665043e
       id: 2932040671
@@ -435,7 +435,7 @@ MonoBehaviour:
       - ElementName: Play_Neon_Loop
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Neon_Loop
-      maxAttenuation: 100
+      maxAttenuation: 100000000
       maxDuration: -1
       minDuration: -1
     - name: Play_On_Hit
@@ -450,8 +450,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_On_Hit
       maxAttenuation: 0
-      maxDuration: 2.211519
-      minDuration: 1.258435
+      maxDuration: 2211519
+      minDuration: 1258435
     - name: Play_PickUp_Flag
       guid: 80b5ea1c2e92434488eca6814b03ad34
       id: 313790787
@@ -464,8 +464,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_PickUp_Flag
       maxAttenuation: 0
-      maxDuration: 1.109635
-      minDuration: 1.109635
+      maxDuration: 1109635
+      minDuration: 1109635
     - name: Play_shot
       guid: b9d0a980a5ee614694c63bdeb672d6b4
       id: 268953978
@@ -477,9 +477,9 @@ MonoBehaviour:
       - ElementName: Play_shot
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_shot
-      maxAttenuation: 100
-      maxDuration: 0.743545
-      minDuration: 0.417301
+      maxAttenuation: 100000000
+      maxDuration: 743545
+      minDuration: 417301
     - name: Play_Tyre_hit
       guid: 150396e287ffd84ca50d58ff61e02e5b
       id: 1225054062
@@ -492,8 +492,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Gameplay\Play_Tyre_hit
       maxAttenuation: 0
-      maxDuration: 0.558742
-      minDuration: 0.260542
+      maxDuration: 558742
+      minDuration: 260542
     - name: Stop_All
       guid: 653e09514794814199a6a1c3238088ff
       id: 452547817
@@ -560,8 +560,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\UI\Tonight_Bottom_Gear
       maxAttenuation: 0
-      maxDuration: 13.177416
-      minDuration: 5.023334
+      maxDuration: 13177416
+      minDuration: 5023334
     - name: UI
       guid: f661498a577bf4498da0d54727eb47f3
       id: 1551306167
