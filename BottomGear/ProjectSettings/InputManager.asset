@@ -86,7 +86,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Jump
+    m_Name: PCJump
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -580,4 +580,100 @@ InputManager:
     invert: 0
     type: 1
     axis: 0
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: XboxRSHorizontal
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1.25
+    dead: 0.1
+    sensitivity: 2
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 3
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: XboxRSVertical
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1.25
+    dead: 0.1
+    sensitivity: 2
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 4
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: LT
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1.25
+    dead: 0.2
+    sensitivity: 2
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 8
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: RT
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1.25
+    dead: 0.2
+    sensitivity: 2
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 9
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: XboxA
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick button 0
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 2
+    joyNum: 0
+  - serializedVersion: 3
+    m_Name: XboxB
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick button 1
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1.25
+    dead: 0.001
+    sensitivity: 2
+    snap: 0
+    invert: 0
+    type: 2
+    axis: 2
     joyNum: 0

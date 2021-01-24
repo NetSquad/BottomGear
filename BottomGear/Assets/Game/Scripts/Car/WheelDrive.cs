@@ -105,6 +105,7 @@ namespace BottomGear
 		//[Tooltip("Debug velocity")]
 		public float velocity = 0;
 		//public double energy = 0.0f;
+		public string[] controllername;
 
 		// --- Main components ---
 		private PhotonView photonView;
@@ -138,12 +139,15 @@ namespace BottomGear
 		// --- Public gameplay variables
 		public bool isBoosting = false;
 		// --- Private gameplay variables ---
+		private float accelerator = 0.0f;
+		private float decelerator = 0.0f;
 		private float jumpTimer = 0.0f;
 		private bool isTurbo = false;
+		public bool isXbox = false;
 
-        // --------------------- Main Methods -------------------------
+		// --------------------- Main Methods -------------------------
 
-        public void Awake()
+		public void Awake()
 		{
 			basicInventory = GetComponent<Photon.Pun.Simple.BasicInventory>();
 			vitals = GetComponent<Photon.Pun.Simple.SyncVitals>();
@@ -152,6 +156,7 @@ namespace BottomGear
 			rb = GetComponent<Rigidbody>();
 			sceneCamera = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().sceneCamera;
 
+			
 			// Uncomment this to profile
 			//watch = new System.Diagnostics.Stopwatch();
 		}
@@ -222,6 +227,24 @@ namespace BottomGear
 
 			// --- Save rigidbody's drag ---
 			linearDragBackup = rb.drag;
+
+			controllername = Input.GetJoystickNames();
+
+			for (int x = 0; x < controllername.Length; x++)
+			{
+				if (controllername[x].Length == 19)
+				{
+					Debug.Log("DualShock Detected");
+					isXbox = false;
+				}
+				if (controllername[x].Length == 33)
+				{
+					Debug.Log("XInput Detected");
+					//set a controller bool to true
+					isXbox = true;
+
+				}
+			}
 		}
 
 		void Update()
@@ -266,7 +289,7 @@ namespace BottomGear
 			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
 				return;
 
-			// --- Obtain input ---
+			// --- Obtain input --- WORKS FOR BOTH CONTROLLERS
 			Vector2 inputDirection;
 			inputDirection.x = Input.GetAxis("Horizontal");
 			inputDirection.y = Input.GetAxis("Vertical");
@@ -274,20 +297,37 @@ namespace BottomGear
 			// --- If no acceleration, release lock ---
 			float inputRawY = Input.GetAxisRaw("Vertical");
 
-			// --- Support both mouse/keyboard and gamepad ---
-			float accelerator = (Input.GetAxis("R2") - (-1)) / (2);
+			// --- Support both controllers and keyboard/mouse ---
+			if (isXbox)
+			{
+				accelerator = (Input.GetAxis("RT") - (-1));
 
+				if ((Input.GetAxis("RT") == 0))
+					accelerator = 0.0f;
+
+				decelerator = (Input.GetAxis("LT") - (-1));
+
+				if ((Input.GetAxis("LT") == 0))
+					decelerator = 0.0f;
+			}
+			else
+            {
+				accelerator = (Input.GetAxis("R2") - (-1)) / (2);
+
+				if ((Input.GetAxis("R2") == 0))
+					accelerator = 0.0f;
+
+				decelerator = (Input.GetAxis("L2") - (-1)) / (2);
+
+				if ((Input.GetAxis("L2") == 0))
+					decelerator = 0.0f;
+			}
+
+			// --- Support KB
 			if (Input.GetKey(KeyCode.W))
 				accelerator = 1.0f;
-			else if ((Input.GetAxis("R2") == 0))
-				accelerator = 0.0f;
-
-			float decelerator = (Input.GetAxis("L2") - (-1)) / (2);
-
 			if (Input.GetKey(KeyCode.S))
 				decelerator = 1.0f;
-			else if ((Input.GetAxis("L2") == 0))
-				decelerator = 0.0f;
 
 			if (Input.GetKey(KeyCode.LeftShift) && vitals.vitals.VitalArray[1].Value > 0 && IsGrounded())
             {
@@ -296,7 +336,6 @@ namespace BottomGear
 			}
 			else
 				isTurbo = false;
-
 
 			//energy = vitals.vitals.VitalArray[1].Value;
 
@@ -310,41 +349,16 @@ namespace BottomGear
 
 			// --- Limit car speed ---
 			if (isBoosting)
-			{
-				//Vector3 direction = mTransform.forward * acceleration * boostAcceleration * outputAcceleration * Time.fixedDeltaTime;
-
-				//if (rb.velocity.magnitude >= Mathf.Abs(60 * outputAcceleration))
-				//	torque = 0;
-				//else if (rb.velocity.magnitude < 60 && IsGrounded() && direction != Vector3.zero)
-				//	rb.AddForce(direction, ForceMode.Acceleration);
-
 				LimitSpeed(outputAcceleration, 60, torque, boostAcceleration);
-			}
 			else if (isTurbo)
-			{
-				//Vector3 direction = mTransform.forward * acceleration * turboAcceleration * outputAcceleration * Time.fixedDeltaTime;
-
-				//if (rb.velocity.magnitude >= Mathf.Abs(45 * outputAcceleration))
-				//	torque = 0;
-				//else if (rb.velocity.magnitude < 45 && IsGrounded() && direction != Vector3.zero)
-				//	rb.AddForce(direction, ForceMode.Acceleration);
-
 				LimitSpeed(outputAcceleration, 45, torque, turboAcceleration);
-			}
 			else
-            {
-				//Vector3 direction = mTransform.forward * acceleration * outputAcceleration * Time.fixedDeltaTime;
-
-				//if (rb.velocity.magnitude >= Mathf.Abs(30 * outputAcceleration))
-				//	torque = 0;
-				//else if (rb.velocity.magnitude < 30 && IsGrounded() && direction != Vector3.zero)
-				//	rb.AddForce(direction, ForceMode.Acceleration);
-
 				LimitSpeed(outputAcceleration, 30, torque);
-			}
 
-            // ---Car jump-- -
-            if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
+			bool controllerJump = isXbox ? Input.GetButtonDown("XboxA") : Input.GetButtonDown("Jump");
+
+			// ---Car jump-- -
+			if (IsGrounded() && jumpTimer >= jumpInterval && controllerJump || Input.GetButtonDown("PCJump"))
 			{
 				// --- If car jumps and has a forward acceleration, prevent it from rotating downwards ---
 				if (accelerator > 0)
@@ -384,24 +398,29 @@ namespace BottomGear
 				Vector3 orientationY = camera.transform.right;
 				Vector3 orientationZ = camera.transform.forward;
 
-				if (rb.angularVelocity.magnitude < Mathf.Abs(30))
-				{
-					// --- Rotate X and Y separately ---
-					Vector3 orientation = orientationX;
-					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+                if (rb.angularVelocity.magnitude < Mathf.Abs(30))
+                {
+                    // --- Rotate X and Y separately ---
+                    Vector3 orientation = orientationX;
+                    orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
 
-					rb.AddTorque(orientation * inputDirection.y, ForceMode.Acceleration);
+                    rb.AddTorque(orientation * inputDirection.y, ForceMode.Acceleration);
 
-					orientation = orientationY;
-					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+                    orientation = orientationY;
+                    orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
 
-					rb.AddTorque(orientation * inputDirection.x, ForceMode.Acceleration);
+                    rb.AddTorque(orientation * inputDirection.x, ForceMode.Acceleration);
 
-					orientation = orientationZ;
-					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+                    orientation = orientationZ;
+                    orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
 
-					rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("HorizontalRS"), -1, 1), ForceMode.Acceleration);
-				}
+                    //if (isXbox)
+                    //{
+                    //    rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("XboxRSHorizontal"), -1, 1), ForceMode.Acceleration);
+                    //}
+                    //else
+                       rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("HorizontalRS"), -1, 1), ForceMode.Acceleration);
+                }
 
             }
 			else
