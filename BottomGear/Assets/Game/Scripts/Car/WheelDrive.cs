@@ -156,13 +156,14 @@ namespace BottomGear
 			//watch = new System.Diagnostics.Stopwatch();
 		}
 
-  //      private void OnEnable()
-  //      {
-		//	sceneCamera.SetActive(false);
-		//}
+        private void OnEnable()
+        {
+			if(camera.isActiveAndEnabled && photonView.IsMine)
+				sceneCamera.SetActive(false);
+        }
 
-		// Find all the WheelColliders down in the hierarchy.
-		void Start()
+        // Find all the WheelColliders down in the hierarchy.
+        void Start()
 		{
 			//Play engine Sound
 			engine_sound.Post(gameObject);
@@ -556,6 +557,9 @@ namespace BottomGear
 
 		private void SwitchCamera()
         {
+			if (!photonView.IsMine)
+				return;
+
 			Debug.Log("Switching camera to scene camera");
 			//camera.gameObject.SetActive(false);
 			sceneCamera.SetActive(true);
