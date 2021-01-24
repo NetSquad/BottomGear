@@ -1263,7 +1263,6 @@ MonoBehaviour:
   _alwaysReady: 1
   serializeThis: 1
   origin: {fileID: 3608952605963017561}
-  triggerKey: 0
   play_audio: 1
   shot_sound:
     idInternal: 0
@@ -7565,7 +7564,6 @@ MonoBehaviour:
   _alwaysReady: 1
   serializeThis: 1
   origin: {fileID: 4961857979568663177}
-  triggerKey: 0
   play_audio: 1
   shot_sound:
     idInternal: 0
@@ -8471,7 +8469,6 @@ MonoBehaviour:
   _alwaysReady: 1
   serializeThis: 1
   origin: {fileID: 0}
-  triggerKey: 53
   poke: 1
   grab: 1
   hitscanDefinition:
