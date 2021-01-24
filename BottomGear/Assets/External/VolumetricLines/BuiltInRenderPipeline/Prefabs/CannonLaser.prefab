@@ -207,6 +207,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser
       objectReference: {fileID: 0}
+    - target: {fileID: 8443899136890167873, guid: c3731d2a82371eb4fb7d6c01b3c68500, type: 3}
+      propertyPath: m_lineColor.b
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443899136890167873, guid: c3731d2a82371eb4fb7d6c01b3c68500, type: 3}
+      propertyPath: m_lineColor.g
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443899136890167873, guid: c3731d2a82371eb4fb7d6c01b3c68500, type: 3}
+      propertyPath: m_lineColor.r
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443899136890167873, guid: c3731d2a82371eb4fb7d6c01b3c68500, type: 3}
+      propertyPath: m_doNotOverwriteTemplateMaterialProperties
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9156244290197352965, guid: c3731d2a82371eb4fb7d6c01b3c68500, type: 3}
       propertyPath: m_RootOrder
       value: 1

@@ -111,10 +111,11 @@ namespace VolumetricLines
 			get { return m_doNotOverwriteTemplateMaterialProperties; }
 			set { m_doNotOverwriteTemplateMaterialProperties = value; }
 		}
-		
+
 		/// <summary>
 		/// Get or set the line color of this volumetric line's material
 		/// </summary>
+		/// 
 		public Color LineColor
 		{
 			get { return m_lineColor;  }

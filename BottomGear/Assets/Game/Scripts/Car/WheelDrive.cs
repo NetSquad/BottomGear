@@ -33,6 +33,8 @@ namespace BottomGear
 		public AK.Wwise.Event pickup_flag;
 		public AK.Wwise.Event tyre_hit;
 		public AK.Wwise.Event explosion;
+		public AK.Wwise.Event stop_all;
+		public AK.Wwise.Event on_hit;
 
 
 		[Header("Wheels")]
@@ -53,6 +55,8 @@ namespace BottomGear
 		[Header("Controller")]
 		[Tooltip("The vehicle's speed when the physics engine can use different amount of sub-steps (in m/s). Not editable in Play mode")]
 		public float criticalSpeed = 5f;
+		[Tooltip("The vehicle's minimum speed to start playing the neon trail sound")]
+		public float minTrailSpeed = 10.0f;
 		[Tooltip("The vehicle's limit speed  (in m/s).")]
 		public int maxSpeed = 30;
 		[Tooltip("The vehicle's limit speed while boosting (in m/s).")]
@@ -105,6 +109,7 @@ namespace BottomGear
 		//[Tooltip("Debug velocity")]
 		public float velocity = 0;
 		//public double energy = 0.0f;
+		public string[] controllername;
 
 		// --- Main components ---
 		private PhotonView photonView;
@@ -113,6 +118,7 @@ namespace BottomGear
 		public Camera camera;
 		public GameObject sceneCamera;
 		Transform mTransform;
+		public GameObject trailParticles;
 
 		// --- Network ---
         Photon.Pun.Simple.SyncVitals vitals;
@@ -122,6 +128,8 @@ namespace BottomGear
 		// --- Internal variables ---
 		bool lockDown = false;
 		float linearDragBackup = 0.0f;
+
+		private bool playingTrailLoop = false;
 
 		// Uncomment this to profile
 		//System.Diagnostics.Stopwatch watch;
@@ -138,12 +146,15 @@ namespace BottomGear
 		// --- Public gameplay variables
 		public bool isBoosting = false;
 		// --- Private gameplay variables ---
+		private float accelerator = 0.0f;
+		private float decelerator = 0.0f;
 		private float jumpTimer = 0.0f;
 		private bool isTurbo = false;
+		public bool isXbox = false;
 
-        // --------------------- Main Methods -------------------------
+		// --------------------- Main Methods -------------------------
 
-        public void Awake()
+		public void Awake()
 		{
 			basicInventory = GetComponent<Photon.Pun.Simple.BasicInventory>();
 			vitals = GetComponent<Photon.Pun.Simple.SyncVitals>();
@@ -152,17 +163,19 @@ namespace BottomGear
 			rb = GetComponent<Rigidbody>();
 			sceneCamera = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().sceneCamera;
 
+			
 			// Uncomment this to profile
 			//watch = new System.Diagnostics.Stopwatch();
 		}
 
-  //      private void OnEnable()
-  //      {
-		//	sceneCamera.SetActive(false);
-		//}
+        private void OnEnable()
+        {
+			if(camera.isActiveAndEnabled && photonView.IsMine)
+				sceneCamera.SetActive(false);
+        }
 
-		// Find all the WheelColliders down in the hierarchy.
-		void Start()
+        // Find all the WheelColliders down in the hierarchy.
+        void Start()
 		{
 			//Play engine Sound
 			engine_sound.Post(gameObject);
@@ -222,6 +235,24 @@ namespace BottomGear
 
 			// --- Save rigidbody's drag ---
 			linearDragBackup = rb.drag;
+
+			controllername = Input.GetJoystickNames();
+
+			for (int x = 0; x < controllername.Length; x++)
+			{
+				if (controllername[x].Length == 19)
+				{
+					Debug.Log("DualShock Detected");
+					isXbox = false;
+				}
+				if (controllername[x].Length == 33)
+				{
+					Debug.Log("XInput Detected");
+					//set a controller bool to true
+					isXbox = true;
+
+				}
+			}
 		}
 
 		void Update()
@@ -255,10 +286,27 @@ namespace BottomGear
 			// Uncomment this and timer start to profile
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
 			//watch.Reset();
+
+			if(rb.velocity.magnitude >= minTrailSpeed && playingTrailLoop == false)
+            {
+				play_neon_loop.Post(gameObject);
+				playingTrailLoop = true;
+            }
+			else if (rb.velocity.magnitude < minTrailSpeed && playingTrailLoop == true)
+            {
+				stop_neon_loop.Post(gameObject);
+				playingTrailLoop = false;
+			}
 		}
 
 		private void FixedUpdate()
         {
+			// always deactivate scene camera
+			if (camera.isActiveAndEnabled 
+				&& photonView.IsMine
+				&& vitals.vitals.VitalArray[0].Value > 0)
+				sceneCamera.SetActive(false);
+
 			// Uncomment this and timer log at the end of this function to profile
 			//watch.Start();
 
@@ -266,7 +314,7 @@ namespace BottomGear
 			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
 				return;
 
-			// --- Obtain input ---
+			// --- Obtain input --- WORKS FOR BOTH CONTROLLERS
 			Vector2 inputDirection;
 			inputDirection.x = Input.GetAxis("Horizontal");
 			inputDirection.y = Input.GetAxis("Vertical");
@@ -274,20 +322,37 @@ namespace BottomGear
 			// --- If no acceleration, release lock ---
 			float inputRawY = Input.GetAxisRaw("Vertical");
 
-			// --- Support both mouse/keyboard and gamepad ---
-			float accelerator = (Input.GetAxis("R2") - (-1)) / (2);
+			// --- Support both controllers and keyboard/mouse ---
+			if (isXbox)
+			{
+				accelerator = (Input.GetAxis("RT") - (-1));
 
+				if ((Input.GetAxis("RT") == 0))
+					accelerator = 0.0f;
+
+				decelerator = (Input.GetAxis("LT") - (-1));
+
+				if ((Input.GetAxis("LT") == 0))
+					decelerator = 0.0f;
+			}
+			else
+            {
+				accelerator = (Input.GetAxis("R2") - (-1)) / (2);
+
+				if ((Input.GetAxis("R2") == 0))
+					accelerator = 0.0f;
+
+				decelerator = (Input.GetAxis("L2") - (-1)) / (2);
+
+				if ((Input.GetAxis("L2") == 0))
+					decelerator = 0.0f;
+			}
+
+			// --- Support KB
 			if (Input.GetKey(KeyCode.W))
 				accelerator = 1.0f;
-			else if ((Input.GetAxis("R2") == 0))
-				accelerator = 0.0f;
-
-			float decelerator = (Input.GetAxis("L2") - (-1)) / (2);
-
 			if (Input.GetKey(KeyCode.S))
 				decelerator = 1.0f;
-			else if ((Input.GetAxis("L2") == 0))
-				decelerator = 0.0f;
 
 			if (Input.GetKey(KeyCode.LeftShift) && vitals.vitals.VitalArray[1].Value > 0 && IsGrounded())
             {
@@ -296,9 +361,6 @@ namespace BottomGear
 			}
 			else
 				isTurbo = false;
-
-
-			//energy = vitals.vitals.VitalArray[1].Value;
 
 			float outputAcceleration = accelerator - decelerator;
 			float angle = maxAngle * inputDirection.x;
@@ -310,41 +372,16 @@ namespace BottomGear
 
 			// --- Limit car speed ---
 			if (isBoosting)
-			{
-				//Vector3 direction = mTransform.forward * acceleration * boostAcceleration * outputAcceleration * Time.fixedDeltaTime;
-
-				//if (rb.velocity.magnitude >= Mathf.Abs(60 * outputAcceleration))
-				//	torque = 0;
-				//else if (rb.velocity.magnitude < 60 && IsGrounded() && direction != Vector3.zero)
-				//	rb.AddForce(direction, ForceMode.Acceleration);
-
 				LimitSpeed(outputAcceleration, 60, torque, boostAcceleration);
-			}
 			else if (isTurbo)
-			{
-				//Vector3 direction = mTransform.forward * acceleration * turboAcceleration * outputAcceleration * Time.fixedDeltaTime;
-
-				//if (rb.velocity.magnitude >= Mathf.Abs(45 * outputAcceleration))
-				//	torque = 0;
-				//else if (rb.velocity.magnitude < 45 && IsGrounded() && direction != Vector3.zero)
-				//	rb.AddForce(direction, ForceMode.Acceleration);
-
 				LimitSpeed(outputAcceleration, 45, torque, turboAcceleration);
-			}
 			else
-            {
-				//Vector3 direction = mTransform.forward * acceleration * outputAcceleration * Time.fixedDeltaTime;
-
-				//if (rb.velocity.magnitude >= Mathf.Abs(30 * outputAcceleration))
-				//	torque = 0;
-				//else if (rb.velocity.magnitude < 30 && IsGrounded() && direction != Vector3.zero)
-				//	rb.AddForce(direction, ForceMode.Acceleration);
-
 				LimitSpeed(outputAcceleration, 30, torque);
-			}
 
-            // ---Car jump-- -
-            if (IsGrounded() && jumpTimer >= jumpInterval && Input.GetButtonDown("Jump"))
+			bool controllerJump = isXbox ? Input.GetButtonDown("XboxA") : Input.GetButtonDown("Jump");
+
+			// ---Car jump-- -
+			if (IsGrounded() && jumpTimer >= jumpInterval && controllerJump || Input.GetButtonDown("PCJump"))
 			{
 				// --- If car jumps and has a forward acceleration, prevent it from rotating downwards ---
 				if (accelerator > 0)
@@ -384,24 +421,29 @@ namespace BottomGear
 				Vector3 orientationY = camera.transform.right;
 				Vector3 orientationZ = camera.transform.forward;
 
-				if (rb.angularVelocity.magnitude < Mathf.Abs(30))
-				{
-					// --- Rotate X and Y separately ---
-					Vector3 orientation = orientationX;
-					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+                if (rb.angularVelocity.magnitude < Mathf.Abs(30))
+                {
+                    // --- Rotate X and Y separately ---
+                    Vector3 orientation = orientationX;
+                    orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
 
-					rb.AddTorque(orientation * inputDirection.y, ForceMode.Acceleration);
+                    rb.AddTorque(orientation * inputDirection.y, ForceMode.Acceleration);
 
-					orientation = orientationY;
-					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+                    orientation = orientationY;
+                    orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
 
-					rb.AddTorque(orientation * inputDirection.x, ForceMode.Acceleration);
+                    rb.AddTorque(orientation * inputDirection.x, ForceMode.Acceleration);
 
-					orientation = orientationZ;
-					orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
+                    orientation = orientationZ;
+                    orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
 
-					rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("HorizontalRS"), -1, 1), ForceMode.Acceleration);
-				}
+                    //if (isXbox)
+                    //{
+                    //    rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("XboxRSHorizontal"), -1, 1), ForceMode.Acceleration);
+                    //}
+                    //else
+                       rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("HorizontalRS"), -1, 1), ForceMode.Acceleration);
+                }
 
             }
 			else
@@ -540,6 +582,9 @@ namespace BottomGear
         {
 			float lerpRatio =  Mathf.Clamp(explosionCurrentTime / explosionTime, 0.0f, 1.0f);
 
+			if(explosionCurrentTime == 0.0f)
+				explosion.Post(gameObject);
+
 			explosionEffect.transform.localScale = Vector3.Lerp(Vector3.one, Vector3.one*explosionScale, lerpRatio);
 
 			explosionCurrentTime += Time.deltaTime;
@@ -551,11 +596,13 @@ namespace BottomGear
 				explosionEffect.transform.localScale = Vector3.one;
 			}
 
-			explosion.Post(gameObject);
         }
 
 		private void SwitchCamera()
         {
+			if (!photonView.IsMine)
+				return;
+
 			Debug.Log("Switching camera to scene camera");
 			//camera.gameObject.SetActive(false);
 			sceneCamera.SetActive(true);
@@ -595,12 +642,15 @@ namespace BottomGear
 				if (contact && contact.Owner != null && vitals.vitals.VitalArray[0].Value - 20 <= 0) // bullet damage
 				{
 					SwitchCamera();
+					//Stop all audio events
+					stop_all.Post(gameObject);
 
 					if (!explosionEffect.activeSelf)
 						explosionEffect.SetActive(true);
 
 					contact.Owner.PhotonView.Owner.AddScore(10);
 					Debug.Log(contact.Owner.PhotonView.Owner.GetScore());
+					on_hit.Post(gameObject);
 				}
 			}
 		}
@@ -608,7 +658,7 @@ namespace BottomGear
         private void OnParticleCollision(GameObject other)
 		{
 			// --- Kill car if it is another's trail ---
-			if (photonView.IsMine && !other.GetComponent<ParentRef>().photonView.AmOwner)
+			if (trailParticles.GetInstanceID() != other.GetInstanceID() /*photonView.IsMine && !other.GetComponent<ParentRef>().photonView.AmOwner*/)
 			{
 				vitals.vitals.ApplyCharges(-vitals.vitals.VitalArray[0].Value, false, true);
 
@@ -619,7 +669,8 @@ namespace BottomGear
 				if (vitals.vitals.VitalArray[0].Value <= 0)
 				{
 					SwitchCamera();
-
+					//Stop all audio events
+					stop_all.Post(gameObject);
 					if (!explosionEffect.activeSelf)
 						explosionEffect.SetActive(true);
 
