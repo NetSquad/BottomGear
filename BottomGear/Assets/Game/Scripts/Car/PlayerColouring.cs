@@ -1,7 +1,7 @@
 using BottomGear;
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Presets;
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -17,7 +17,17 @@ public class PlayerColouring : MonoBehaviour
     void Start()
     {
         manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        preset = manager.GetPreset();
+        //preset = manager.GetPreset();
+        //manager.SetPresets(preset, ref renderers, ref explosionEffect, ref trail_renderers);
+
+        if (PhotonNetwork.IsMasterClient)
+            GetComponent<PhotonView>().RPC("SetColouring", RpcTarget.AllBuffered, manager.GetPreset());
+    }
+
+    [PunRPC]
+    void SetColouring(int preset)
+    {
+        this.preset = preset;
         manager.SetPresets(preset, ref renderers, ref explosionEffect, ref trail_renderers);
     }
 
