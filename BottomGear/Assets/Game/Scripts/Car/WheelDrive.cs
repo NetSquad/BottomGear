@@ -376,11 +376,11 @@ namespace BottomGear
 
 			// --- Limit car speed ---
 			if (isBoosting)
-				LimitSpeed(outputAcceleration, 60, torque, boostAcceleration);
+				LimitSpeed(outputAcceleration, maxBoostingSpeed, torque, boostAcceleration);
 			else if (isTurbo)
-				LimitSpeed(outputAcceleration, 45, torque, turboAcceleration);
+				LimitSpeed(outputAcceleration, maxTurboSpeed, torque, turboAcceleration);
 			else
-				LimitSpeed(outputAcceleration, 30, torque);
+				LimitSpeed(outputAcceleration, maxSpeed, torque);
 
 			bool controllerJump = isXbox ? Input.GetButtonDown("XboxA") : Input.GetButtonDown("Jump");
 
