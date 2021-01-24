@@ -113,6 +113,7 @@ namespace BottomGear
 		public Camera camera;
 		public GameObject sceneCamera;
 		Transform mTransform;
+		public GameObject trailParticles;
 
 		// --- Network ---
         Photon.Pun.Simple.SyncVitals vitals;
@@ -615,7 +616,7 @@ namespace BottomGear
         private void OnParticleCollision(GameObject other)
 		{
 			// --- Kill car if it is another's trail ---
-			if (photonView.IsMine && !other.GetComponent<ParentRef>().photonView.AmOwner)
+			if (trailParticles.GetInstanceID() != other.GetInstanceID() /*photonView.IsMine && !other.GetComponent<ParentRef>().photonView.AmOwner*/)
 			{
 				vitals.vitals.ApplyCharges(-vitals.vitals.VitalArray[0].Value, false, true);
 

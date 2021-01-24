@@ -1689,6 +1689,7 @@ MonoBehaviour:
   velocity: 0
   camera: {fileID: 16950669710695238}
   sceneCamera: {fileID: 0}
+  trailParticles: {fileID: 5883456233218082789}
   isBoosting: 0
 --- !u!114 &6646793679201109663
 MonoBehaviour:
