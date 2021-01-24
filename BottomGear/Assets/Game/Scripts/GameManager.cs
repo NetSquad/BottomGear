@@ -18,7 +18,6 @@ using Photon.Pun.UtilityScripts;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 using Photon.Pun;
 using System.Collections.Generic;
-using UnityEditor.Presets;
 using UnityEngine.VFX;
 
 namespace BottomGear
@@ -40,7 +39,7 @@ namespace BottomGear
 
         // --- Player colouring ---
 
-        public List<Preset> presets;
+        public List<Material> presets;
         public GameManager manager;
         private List<int> presets_used;
 
@@ -100,22 +99,21 @@ namespace BottomGear
 
         public void SetPresets(int preset, ref List<MeshRenderer> renderers, VisualEffect explosionEffect)
         {
-            
-            presets[preset].ApplyTo(renderers[0].material);
-            presets[preset].ApplyTo(renderers[1].material);
+            int i = 0;
+            renderers[i].material = presets[preset];
+            renderers[++i].material = presets[preset];
 
-            presets[preset + 1].ApplyTo(renderers[2].material);
-            presets[preset + 1].ApplyTo(renderers[3].material);
-            presets[preset + 1].ApplyTo(renderers[4].material);
-            presets[preset + 1].ApplyTo(renderers[5].material);
-            presets[preset + 1].ApplyTo(renderers[6].material);
-            presets[preset + 1].ApplyTo(renderers[7].material);
+            renderers[++i].material = presets[preset + 1];
+            renderers[++i].material = presets[preset + 1];
+            renderers[++i].material = presets[preset + 1];
+            renderers[++i].material = presets[preset + 1];
+            renderers[++i].material = presets[preset + 1];
+            renderers[++i].material = presets[preset + 1];
 
-            presets[preset + 2].ApplyTo(renderers[8].material);
-            presets[preset + 2].ApplyTo(renderers[9].material);
-            presets[preset + 2].ApplyTo(renderers[10].material);
-            presets[preset + 2].ApplyTo(renderers[11].material);
-
+            renderers[++i].material = presets[preset + 2];
+            renderers[++i].material = presets[preset + 2];
+            renderers[++i].material = presets[preset + 2];
+            renderers[++i].material = presets[preset + 2];
         }
 
         #endregion
