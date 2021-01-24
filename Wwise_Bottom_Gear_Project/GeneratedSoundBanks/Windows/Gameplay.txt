@@ -53,6 +53,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
 	533522272	Ambient	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Ambient_Sound_D79FB2B7.wem	533522272.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambient	
-	904913494	Neon_Loop	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Neon_Loop_D79FB2B7.wem	904913494.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\Neon_Loop	
+	677063080	Neon_Loop	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Maybe_Better_Neon_Boost_D79FB2B7.wem	677063080.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\Neon_Loop	
 	967403081	Fire_Boost_Loop	D:\Github\EpicMegaJam_GameJam\BottomGear\Wwise_Bottom_Gear_Project\.cache\Windows\SFX\Fir_Boost_Loop_D79FB2B7.wem	967403081.wem	\Actor-Mixer Hierarchy\Default Work Unit\SFX\Fire_Boost_Loop	
 

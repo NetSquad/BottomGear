@@ -89,7 +89,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Speed" ID="{ED437761-166D-4FC6-8E60-FF018266212E}"/>
-							<Value>1.16997429529826E-311</Value>
+							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>

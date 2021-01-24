@@ -669,6 +669,75 @@
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{11BAB83A-9664-4DF6-B3A2-AB22E8C63727}" ShortID="212193836">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Speed" ID="{ED437761-166D-4FC6-8E60-FF018266212E}" WorkUnitID="{83E701E2-A621-4E1B-9506-6C5D9F7F48B7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{11AFB6FB-1E79-437D-A409-334A665B64E5}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-651</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>592</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+									<RTPCList>
+										<RTPC Name="" ID="{9FAA47A4-3471-4535-A693-B376F3DE2677}" ShortID="599699430">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Speed" ID="{ED437761-166D-4FC6-8E60-FF018266212E}" WorkUnitID="{83E701E2-A621-4E1B-9506-6C5D9F7F48B7}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{C21C7850-93AB-4E53-9ABA-A3B4108A41CF}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>20.13072</XPos>
+														<YPos>-188.33695</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>49.80392</XPos>
+														<YPos>-1.68179</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -726,16 +795,16 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Neon_Loop" ID="{870C073C-DDE2-49FA-92B8-2022FF1CB425}">
+								<AudioFileSource Name="Maybe_Better_Neon_Boost" ID="{AAD2A21B-069E-4B97-8A30-8F7E0D04C1C6}">
 									<Language>SFX</Language>
-									<AudioFile>Neon_Loop.wav</AudioFile>
+									<AudioFile>Maybe_Better_Neon_Boost.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="904913494"/>
+										<MediaID ID="677063080"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="Neon_Loop" ID="{870C073C-DDE2-49FA-92B8-2022FF1CB425}" Platform="Linked"/>
+								<ActiveSource Name="Maybe_Better_Neon_Boost" ID="{AAD2A21B-069E-4B97-8A30-8F7E0D04C1C6}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="laser_shot" ID="{CE2731C9-E750-4E61-B845-0BB28BDD12F1}" ShortID="42031478">
@@ -1111,6 +1180,21 @@
 							</ActiveSourceList>
 						</Sound>
 						<RandomSequenceContainer Name="Excessive_Swearing" ID="{519F634F-1C03-47F8-8C77-4DD384890A5D}" ShortID="65715398">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
@@ -1121,6 +1205,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="everything_will_be_OK" ID="{528174C7-F61C-44FB-9E68-62B6A62B8DE9}" ShortID="814231623">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
@@ -1187,6 +1278,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Hammond_you_Idiot" ID="{B29E4A78-5B12-49D5-8F34-E2DA8A682D40}" ShortID="879398845">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
@@ -1231,6 +1329,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Scream_Clarkson" ID="{5113DFFB-075B-4509-A0E9-C5AADAC91AD1}" ShortID="997657640">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
@@ -1253,6 +1358,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Thanks_for_asking_im_fine" ID="{9C80D34C-DC80-4E4B-A311-DA961F3392E2}" ShortID="845459547">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
@@ -1275,6 +1387,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="You_Moron" ID="{1B03C240-A569-4B80-9C30-4155A12DB0A0}" ShortID="990169761">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>

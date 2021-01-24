@@ -5,6 +5,7 @@
 
 using UnityEngine;
 using Photon.Compression;
+using BottomGear;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -29,6 +30,9 @@ namespace Photon.Pun.Simple
         [Tooltip("Specify the transform hitscans/projectiles will originate from. If null this gameObject will be used as the origin.")]
         [SerializeField] protected Transform origin;
         [SerializeField] public KeyCode triggerKey = KeyCode.None;
+        [SerializeField] public KeyCode xboxKey = KeyCode.None;
+        [SerializeField] public KeyCode psKey = KeyCode.None;
+        BottomGear.WheelDrive drive;
 
         #endregion
 
@@ -76,6 +80,8 @@ namespace Photon.Pun.Simple
             contactTrigger = transform.GetNestedComponentInParents<IContactTrigger, NetObject>();
             hasSyncContact = contactTrigger.SyncContact != null;
 
+            drive = gameObject.transform.root.GetComponent<WheelDrive>();
+
             if (origin == null)
                 origin = transform;
 
@@ -83,7 +89,10 @@ namespace Photon.Pun.Simple
 
         public virtual void OnPreUpdate()
         {
-            if (IsMine && Input.GetKeyDown(triggerKey))
+            //This is to ensure that this button is only used for shooting
+            bool shootButton = drive.IsXbox() ? Input.GetKeyDown(xboxKey) : Input.GetKeyDown(psKey);
+
+            if (IsMine && Input.GetKeyDown(triggerKey) || shootButton)
                 QueueTrigger();
         }
 

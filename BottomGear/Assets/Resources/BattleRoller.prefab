@@ -1345,6 +1345,8 @@ MonoBehaviour:
   serializeThis: 1
   origin: {fileID: 3608952605963017561}
   triggerKey: 102
+  xboxKey: 332
+  psKey: 330
   play_audio: 1
   shot_sound:
     idInternal: 0
@@ -1659,6 +1661,14 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 96ac14d060f505543b9f5304bde125e8, type: 2}
+  stop_all:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a871fbb3a036f204582b3fd9b5263888, type: 2}
+  on_hit:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3c0859753b0ef614f9ebd67ea20e607b, type: 2}
   wheelCount: 4
   driveType: 2
   maxAngle: 30
@@ -1666,10 +1676,11 @@ MonoBehaviour:
   handBrakeTorque: 30000
   wheelRefsWeight: 0.75
   criticalSpeed: 25
-  maxSpeed: 50
-  maxBoostingSpeed: 50
-  maxTurboSpeed: 40
-  acceleration: 2500
+  minTrailSpeed: 5
+  maxSpeed: 45
+  maxBoostingSpeed: 80
+  maxTurboSpeed: 60
+  acceleration: 4000
   boostAcceleration: 10
   turboAcceleration: 7.5
   stepsBelow: 7
@@ -1686,7 +1697,6 @@ MonoBehaviour:
   explosionEffect: {fileID: 7249726364415973327}
   explosionTime: 0.35
   explosionScale: 6
-  velocity: 0
   camera: {fileID: 16950669710695238}
   sceneCamera: {fileID: 0}
   trailParticles: {fileID: 5883456233218082789}
@@ -7680,6 +7690,8 @@ MonoBehaviour:
   serializeThis: 1
   origin: {fileID: 4961857979568663177}
   triggerKey: 102
+  xboxKey: 332
+  psKey: 330
   play_audio: 1
   shot_sound:
     idInternal: 0
@@ -8500,6 +8512,8 @@ MonoBehaviour:
   serializeThis: 1
   origin: {fileID: 0}
   triggerKey: 53
+  xboxKey: 0
+  psKey: 0
   poke: 1
   grab: 1
   hitscanDefinition:
