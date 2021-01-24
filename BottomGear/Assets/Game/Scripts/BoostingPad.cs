@@ -13,6 +13,7 @@ public class BoostingPad : MonoBehaviour
 
     // RigidBody entering the Trigger
     private Rigidbody rb;
+    private BoxCollider bc;
     private BottomGear.WheelDrive drive;
 
 
@@ -20,7 +21,7 @@ public class BoostingPad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        bc = gameObject.GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -68,7 +69,7 @@ public class BoostingPad : MonoBehaviour
         // Transform car position into Booster's local space
         carRelative = transform.InverseTransformPoint(playerTrans.position);
        
-        if (carRelative.y > 0)
+        if (carRelative.y > bc.center.y)
         {
             fromFront = true;
            // Debug.Log("From front");
