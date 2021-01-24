@@ -9,6 +9,7 @@ public class PlayerColouring : MonoBehaviour
 {
     public VisualEffect explosionEffect;
     public List<MeshRenderer> renderers;
+    public List<TrailRenderer> trail_renderers;
     public GameManager manager;
     private int preset = 0;
 
@@ -17,7 +18,7 @@ public class PlayerColouring : MonoBehaviour
     {
         manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         preset = manager.GetPreset()*5;
-        manager.SetPresets(preset, ref renderers, explosionEffect);
+        manager.SetPresets(preset, ref renderers, explosionEffect, ref trail_renderers);
     }
 
     // Update is called once per frame

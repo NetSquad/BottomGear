@@ -97,7 +97,7 @@ namespace BottomGear
             return value;
         }
 
-        public void SetPresets(int preset, ref List<MeshRenderer> renderers, VisualEffect explosionEffect)
+        public void SetPresets(int preset, ref List<MeshRenderer> renderers, VisualEffect explosionEffect, ref List<TrailRenderer> trailRenderers)
         {
             int i = 0;
             renderers[i].material = presets[preset];
@@ -114,6 +114,11 @@ namespace BottomGear
             renderers[++i].material = presets[preset + 2];
             renderers[++i].material = presets[preset + 2];
             renderers[++i].material = presets[preset + 2];
+
+            trailRenderers[0].material = presets[preset + 3];
+            trailRenderers[1].material = presets[preset + 3];
+            trailRenderers[2].material = presets[preset + 4];
+
         }
 
         #endregion
