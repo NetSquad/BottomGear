@@ -107,9 +107,9 @@ namespace BottomGear
 
 		//[Header("TestVelocity")]
 		//[Tooltip("Debug velocity")]
-		public float velocity = 0;
-		public double energy = 0.0f;
-		public string[] controllername;
+		//public float velocity = 0;
+		//public double energy = 0.0f;
+		private string[] controllername;
 
 		// --- Main components ---
 		private PhotonView photonView;
@@ -150,7 +150,7 @@ namespace BottomGear
 		private float decelerator = 0.0f;
 		private float jumpTimer = 0.0f;
 		private bool isTurbo = false;
-		public bool isXbox = false;
+		private bool isXbox = false;
 
 		// --------------------- Main Methods -------------------------
 
@@ -270,8 +270,9 @@ namespace BottomGear
             if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
 			return;
 
-			// Used to debug car speed
-			velocity = rb.velocity.magnitude;
+			// Used to debug car values
+			//velocity = rb.velocity.magnitude;
+			//energy = vitals.vitals.VitalArray[1].Value;
 
 			if (Time.time - initialScoreTime >= 1.0f &&
 				photonView.IsMine
@@ -283,7 +284,7 @@ namespace BottomGear
 
 			initialScoreTime += Time.deltaTime;
 
-			energy = vitals.vitals.VitalArray[1].Value;
+			
 			// Uncomment this and timer start to profile
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
 			//watch.Reset();
@@ -326,12 +327,12 @@ namespace BottomGear
 			// --- Support both controllers and keyboard/mouse ---
 			if (isXbox)
 			{
-				accelerator = (Input.GetAxis("RT") - (-1));
+				accelerator = (Input.GetAxis("RT") - (-1)) / (2);
 
 				if ((Input.GetAxis("RT") == 0))
 					accelerator = 0.0f;
 
-				decelerator = (Input.GetAxis("LT") - (-1));
+				decelerator = (Input.GetAxis("LT") - (-1)) / (2);
 
 				if ((Input.GetAxis("LT") == 0))
 					decelerator = 0.0f;
@@ -680,7 +681,10 @@ namespace BottomGear
 			}
 		}
 
-		
+		public bool IsXbox()
+        {
+			return isXbox;
+        }
 
 		// ----------------------------------------------
 	}

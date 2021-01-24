@@ -1345,6 +1345,8 @@ MonoBehaviour:
   serializeThis: 1
   origin: {fileID: 3608952605963017561}
   triggerKey: 102
+  xboxKey: 332
+  psKey: 330
   play_audio: 1
   shot_sound:
     idInternal: 0
@@ -1695,7 +1697,6 @@ MonoBehaviour:
   explosionEffect: {fileID: 7249726364415973327}
   explosionTime: 0.35
   explosionScale: 6
-  velocity: 0
   camera: {fileID: 16950669710695238}
   sceneCamera: {fileID: 0}
   trailParticles: {fileID: 5883456233218082789}
@@ -7689,6 +7690,8 @@ MonoBehaviour:
   serializeThis: 1
   origin: {fileID: 4961857979568663177}
   triggerKey: 102
+  xboxKey: 332
+  psKey: 330
   play_audio: 1
   shot_sound:
     idInternal: 0
@@ -8509,6 +8512,8 @@ MonoBehaviour:
   serializeThis: 1
   origin: {fileID: 0}
   triggerKey: 53
+  xboxKey: 0
+  psKey: 0
   poke: 1
   grab: 1
   hitscanDefinition:
