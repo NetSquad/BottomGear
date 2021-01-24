@@ -639,6 +639,7 @@ namespace BottomGear
 				Debug.Log("Collided with bullet");
 
 				Debug.Log(vitals.vitals.VitalArray[0].Value);
+				on_hit.Post(gameObject);
 
 				if (contact && contact.Owner != null && vitals.vitals.VitalArray[0].Value - 20 <= 0) // bullet damage
 				{

@@ -1181,12 +1181,13 @@
 						</Sound>
 						<RandomSequenceContainer Name="Excessive_Swearing" ID="{519F634F-1C03-47F8-8C77-4DD384890A5D}" ShortID="65715398">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
 										<Value>1</Value>
 									</ValueList>
 								</Property>
-								<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
@@ -1204,6 +1205,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="everything_will_be_OK" ID="{528174C7-F61C-44FB-9E68-62B6A62B8DE9}" ShortID="814231623">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
@@ -1270,6 +1278,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Hammond_you_Idiot" ID="{B29E4A78-5B12-49D5-8F34-E2DA8A682D40}" ShortID="879398845">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
@@ -1314,6 +1329,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Scream_Clarkson" ID="{5113DFFB-075B-4509-A0E9-C5AADAC91AD1}" ShortID="997657640">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
@@ -1336,6 +1358,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Thanks_for_asking_im_fine" ID="{9C80D34C-DC80-4E4B-A311-DA961F3392E2}" ShortID="845459547">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
@@ -1358,6 +1387,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="You_Moron" ID="{1B03C240-A569-4B80-9C30-4155A12DB0A0}" ShortID="990169761">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1F8A444D-D8C4-4B6A-AF19-35D0D4B6BAB7}"/>
