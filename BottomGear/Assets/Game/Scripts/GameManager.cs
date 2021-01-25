@@ -55,6 +55,8 @@ namespace BottomGear
 
         public bool FlagHeld = false;
 
+        private int curentPreset = -1;
+
         //public GameObject[] AsteroidPrefabs; // unneeded
 
         #region UNITY

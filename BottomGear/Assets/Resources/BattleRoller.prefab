@@ -2401,7 +2401,7 @@ MonoBehaviour:
   - component: {fileID: 8271857195829821052}
     enableIfOwned: 1
   - component: {fileID: 3277241760081298984}
-    enableIfOwned: 1
+    enableIfOwned: 0
   componentLookup:
   - {fileID: 3623154688122286146}
   - {fileID: 3623154687913624581}

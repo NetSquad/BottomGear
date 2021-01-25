@@ -13,7 +13,7 @@ public class PlayerColouring : MonoBehaviour
     public List<MeshRenderer> renderers;
     public List<TrailRenderer> trail_renderers;
     public GameManager manager;
-    private int preset = -1;
+    private int preset = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +32,17 @@ public class PlayerColouring : MonoBehaviour
         //    PhotonNetwork.CurrentRoom.SetCustomProperties(ht);
         //}
 
-        SetColouring(manager.GetPreset());
+        //SetColouring(manager.GetPreset());
+
+        if (PhotonNetwork.IsMasterClient)
+            SetColouring(manager.GetPreset());
     }
 
     private void FixedUpdate()
     {
+
+        //if(preset == -1)
+        //    SetColouring(manager.GetPreset());
 
         //if(preset == -1)
         //{

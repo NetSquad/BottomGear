@@ -280,6 +280,9 @@ namespace BottomGear
 
 		void Update()
 		{
+			if (!playerColouring.enabled)
+				playerColouring.gameObject.SetActive(true);
+
 			// Used to debug explosion effect
             //if (Input.GetKey(KeyCode.Q))
             //{
