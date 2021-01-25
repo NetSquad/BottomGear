@@ -53,6 +53,8 @@ namespace BottomGear
         public GameObject clientUIGaugeText;
         public Material ground;
 
+        public int maxScore = 0;
+
         public bool FlagHeld = false;
 
         private int curentPreset = -1;
@@ -263,6 +265,9 @@ namespace BottomGear
 
                 StartCoroutine(EndOfGame(winner, score));
             }
+
+
+    
 
         }
 

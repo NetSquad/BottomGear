@@ -284,14 +284,14 @@ namespace BottomGear
 				playerColouring.gameObject.SetActive(true);
 
 			// Used to debug explosion effect
-            //if (Input.GetKey(KeyCode.Q))
-            //{
-            //    if (!explosionEffect.activeSelf)
-            //        explosionEffect.SetActive(true);
-            //}
+			//if (Input.GetKey(KeyCode.Q))
+			//{
+			//    if (!explosionEffect.activeSelf)
+			//        explosionEffect.SetActive(true);
+			//}
 
-            //if (photonView.IsMine && explosionEffect.activeSelf)
-            //    TriggerExplosion();
+			//if (photonView.IsMine && explosionEffect.activeSelf)
+			//    TriggerExplosion();
 
 			if (basicInventory.DefaultMount.mountedObjs.Count > 0)
 			{

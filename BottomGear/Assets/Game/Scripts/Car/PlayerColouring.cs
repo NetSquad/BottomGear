@@ -1,6 +1,7 @@
 using BottomGear;
 using ExitGames.Client.Photon.StructWrapping;
 using Photon.Pun;
+using Photon.Pun.UtilityScripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,10 +15,12 @@ public class PlayerColouring : MonoBehaviour
     public List<TrailRenderer> trail_renderers;
     public GameManager manager;
     private int preset = 0;
+    private PhotonView photonView;
 
     // Start is called before the first frame update
     void Start()
     {
+        photonView = GetComponent<PhotonView>();
         manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         //preset = manager.GetPreset();
         //manager.SetPresets(preset, ref renderers, ref explosionEffect, ref trail_renderers);
@@ -43,6 +46,13 @@ public class PlayerColouring : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (photonView.Owner.GetScore() > manager.maxScore)
+        {
+            manager.maxScore = photonView.Owner.GetScore();
+            manager.ground.SetColor("_EmissionColor", manager.explosionColors[GetPreset()]);
+        }
+
+
 
         //if(preset == -1)
         //    SetColouring(manager.GetPreset());
