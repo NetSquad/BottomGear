@@ -1,9 +1,11 @@
 using BottomGear;
+using ExitGames.Client.Photon.StructWrapping;
 using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class PlayerColouring : MonoBehaviour
 {
@@ -11,7 +13,7 @@ public class PlayerColouring : MonoBehaviour
     public List<MeshRenderer> renderers;
     public List<TrailRenderer> trail_renderers;
     public GameManager manager;
-    private int preset = 0;
+    private int preset = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +22,29 @@ public class PlayerColouring : MonoBehaviour
         //preset = manager.GetPreset();
         //manager.SetPresets(preset, ref renderers, ref explosionEffect, ref trail_renderers);
 
-        if (PhotonNetwork.IsMasterClient)
-            GetComponent<PhotonView>().RPC("SetColouring", RpcTarget.AllBufferedViaServer, manager.GetPreset());
+        //if (PhotonNetwork.IsMasterClient)
+        //    preset = manager.GetPreset();
+
+        //if (PhotonNetwork.LocalPlayer.IsMasterClient)
+        //{
+        //    Hashtable ht = new Hashtable();
+        //    ht.Add(GetComponent<PhotonView>().ViewID.ToString(), preset.ToString());
+        //    PhotonNetwork.CurrentRoom.SetCustomProperties(ht);
+        //}
+
+        SetColouring(manager.GetPreset());
     }
 
     private void FixedUpdate()
     {
+
+        //if(preset == -1)
+        //{
+        //    object pr;
+        //    PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(GetComponent<PhotonView>().ViewID.ToString(), out pr);
+        //    SetColouring(int.Parse(pr.ToString()));
+        //}
+
         //if (PhotonNetwork.IsMasterClient && preset == -1)
         //{
         //    GetComponent<PhotonView>().RPC("SetColouring", RpcTarget.AllBuffered, manager.GetPreset());
