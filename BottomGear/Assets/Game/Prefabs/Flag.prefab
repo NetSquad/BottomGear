@@ -1342,12 +1342,12 @@ MonoBehaviour:
   _alwaysReady: 1
   serializeThis: 0
   initialDelay: 0
-  respawnEnable: 0
-  despawnOn: 2
+  respawnEnable: 1
+  despawnOn: 16
   despawnDelay: 5
-  despawnEnable: 0
+  despawnEnable: 1
   respawnOn: 0
-  respawnDelay: 5
+  respawnDelay: 0
 --- !u!1 &2777367880501561181
 GameObject:
   m_ObjectHideFlags: 0
