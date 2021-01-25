@@ -27,6 +27,9 @@ public class PlayerColouring : MonoBehaviour
     [PunRPC]
     void SetColouring(int preset)
     {
+        if (manager != null)
+            manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+
         this.preset = preset;
         manager.SetPresets(preset, ref renderers, ref explosionEffect, ref trail_renderers);
 
