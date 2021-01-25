@@ -805,6 +805,9 @@ MonoBehaviour:
   InfoText: {fileID: 601629552}
   Timer: {fileID: 227530211}
   timeLimit: 60
+  presets: []
+  explosionColors: []
+  manager: {fileID: 0}
 --- !u!114 &86391214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3350,7 +3353,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 0, z: 10.000002}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -4.48, z: 0}
 --- !u!23 &476068614
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4116,7 +4119,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 8.325072, y: 0, z: 4.637067}
-  m_Center: {x: 0.027884802, y: 4.7083713e-12, z: -2.6814656}
+  m_Center: {x: 0.027884802, y: 0, z: -2.6814656}
 --- !u!23 &625432092
 MeshRenderer:
   m_ObjectHideFlags: 0

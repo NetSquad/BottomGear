@@ -1677,9 +1677,9 @@ MonoBehaviour:
   wheelRefsWeight: 0.75
   criticalSpeed: 25
   minTrailSpeed: 5
-  maxSpeed: 45
-  maxBoostingSpeed: 80
-  maxTurboSpeed: 60
+  maxSpeed: 35
+  maxBoostingSpeed: 60
+  maxTurboSpeed: 50
   acceleration: 4000
   boostAcceleration: 10
   turboAcceleration: 7.5
