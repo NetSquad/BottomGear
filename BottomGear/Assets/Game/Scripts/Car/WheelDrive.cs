@@ -695,7 +695,7 @@ namespace BottomGear
 						explosionEffect.SetActive(true);
 
 					contact.Owner.PhotonView.Owner.AddScore(10);
-					killed_enemy.Post(other.GetComponent<ParentRef>().gameObject);  //Play the audio of killing an enemy
+					killed_enemy.Post(other.transform.root.gameObject);  //Play the audio of killing an enemy
 					Debug.Log(contact.Owner.PhotonView.Owner.GetScore());
 				}
 			}
@@ -726,9 +726,9 @@ namespace BottomGear
 					if (!explosionEffect.activeSelf)
 						explosionEffect.SetActive(true);
 
-					other.GetComponent<ParentRef>().photonView.Owner.AddScore(15);
-					killed_enemy.Post(other.GetComponent<ParentRef>().gameObject);	//Play the audio of killing an enemy
-					Debug.Log(other.GetComponent<ParentRef>().photonView.Owner.GetScore());
+					other.transform.root.gameObject.GetComponent<PhotonView>().Owner.AddScore(15);
+					killed_enemy.Post(other.transform.root.gameObject);	//Play the audio of killing an enemy
+					Debug.Log(other.transform.root.gameObject.GetComponent<PhotonView>().Owner.GetScore());
 				}
 			}
 		}
