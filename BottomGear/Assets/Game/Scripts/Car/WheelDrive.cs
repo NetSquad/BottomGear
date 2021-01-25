@@ -285,8 +285,8 @@ namespace BottomGear
             //        explosionEffect.SetActive(true);
             //}
 
-            if (photonView.IsMine && explosionEffect.activeSelf)
-                TriggerExplosion();
+            //if (photonView.IsMine && explosionEffect.activeSelf)
+            //    TriggerExplosion();
 
 			if (basicInventory.DefaultMount.mountedObjs.Count > 0)
 			{
@@ -618,27 +618,27 @@ namespace BottomGear
 				rb.AddForce(direction, ForceMode.Acceleration);
 		}
 
-		private void TriggerExplosion()
-        {
-			float lerpRatio =  Mathf.Clamp(explosionCurrentTime / explosionTime, 0.0f, 1.0f);
+		//private void TriggerExplosion()
+  //      {
+		//	float lerpRatio =  Mathf.Clamp(explosionCurrentTime / explosionTime, 0.0f, 1.0f);
 
-			if(explosionCurrentTime == 0.0f)
-				explosion.Post(gameObject);
+		//	if(explosionCurrentTime == 0.0f)
+		//		explosion.Post(gameObject);
 
-			//Transform t = explosionEffect.transform;
+		//	//Transform t = explosionEffect.transform;
 			
-			explosionEffect.transform.localScale = Vector3.Lerp(Vector3.one, Vector3.one*explosionScale, lerpRatio);
+		//	explosionEffect.transform.localScale = Vector3.Lerp(Vector3.one, Vector3.one*explosionScale, lerpRatio);
 
-			explosionCurrentTime += Time.deltaTime;
+		//	explosionCurrentTime += Time.deltaTime;
 
-			if (lerpRatio == 1.0f)
-			{
-				explosionCurrentTime = 0.0f;
-				explosionEffect.SetActive(false);
-				explosionEffect.transform.localScale = Vector3.one;
-			}
+		//	if (lerpRatio == 1.0f)
+		//	{
+		//		explosionCurrentTime = 0.0f;
+		//		explosionEffect.SetActive(false);
+		//		explosionEffect.transform.localScale = Vector3.one;
+		//	}
 
-        }
+  //      }
 
 		private void SwitchCamera()
         {
@@ -693,8 +693,8 @@ namespace BottomGear
 					//Stop all audio events
 					stop_all.Post(gameObject);
 
-					if (!explosionEffect.activeSelf)
-						explosionEffect.SetActive(true);
+					//if (!explosionEffect.activeSelf)
+					//	explosionEffect.SetActive(true);
 
 					contact.Owner.PhotonView.Owner.AddScore(10);
 					killed_enemy.Post(other.transform.root.gameObject);  //Play the audio of killing an enemy
@@ -725,8 +725,8 @@ namespace BottomGear
 					SwitchCamera();
 					//Stop all audio events
 					stop_all.Post(gameObject);
-					if (!explosionEffect.activeSelf)
-						explosionEffect.SetActive(true);
+					//if (!explosionEffect.activeSelf)
+					//	explosionEffect.SetActive(true);
 
 					other.transform.root.gameObject.GetComponent<PhotonView>().Owner.AddScore(15);
 					killed_enemy.Post(other.transform.root.gameObject);	//Play the audio of killing an enemy
