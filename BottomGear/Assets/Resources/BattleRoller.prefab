@@ -592,7 +592,7 @@ MonoBehaviour:
   stateLogic:
     operation: 1
     stateMask: 1
-    notMask: 1
+    notMask: 0
   currentState: 63
 --- !u!1 &16950669342996476
 GameObject:

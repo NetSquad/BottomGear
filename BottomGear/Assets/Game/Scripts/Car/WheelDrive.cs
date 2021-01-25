@@ -285,7 +285,7 @@ namespace BottomGear
             //        explosionEffect.SetActive(true);
             //}
 
-            if (explosionEffect.activeSelf)
+            if (photonView.IsMine && explosionEffect.activeSelf)
                 TriggerExplosion();
 
 			if (basicInventory.DefaultMount.mountedObjs.Count > 0)
