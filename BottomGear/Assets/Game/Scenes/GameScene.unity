@@ -4541,6 +4541,7 @@ MonoBehaviour:
   - {r: 0.20216066, g: 2.0322466, b: 0.36176118, a: 0.003921569}
   - {r: 0, g: 1.9577663, b: 2.0322466, a: 0.003921569}
   manager: {fileID: 0}
+  overlayCamera: {fileID: 1711210763}
 --- !u!114 &964925488
 MonoBehaviour:
   m_ObjectHideFlags: 0
