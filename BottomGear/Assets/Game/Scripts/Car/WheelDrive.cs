@@ -303,20 +303,19 @@ namespace BottomGear
 			//energy = vitals.vitals.VitalArray[1].Value;
 
 			// --- Add score if this is the flag holder, change ground color ---
-			if (Time.time - initialScoreTime >= 1.0f &&
+			if ((Time.time - initialScoreTime) >= 1.0f &&
 				photonView.IsMine
 				&& basicInventory.DefaultMount.mountedObjs.Count > 0)
 			{
 				initialScoreTime = Time.time;
 				PhotonNetwork.LocalPlayer.AddScore(1);
+				//Debug.Log(PhotonNetwork.LocalPlayer.GetScore());
 			}
 			if(basicInventory.DefaultMount.mountedObjs.Count > 0)
             {
 				gameManager.FlagHeld = true;
 				gameManager.ground.SetColor("_EmissionColor", gameManager.explosionColors[playerColouring.GetPreset()]);
 			}
-
-			initialScoreTime += Time.deltaTime;
 	
 			// Uncomment this and timer start to profile
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
