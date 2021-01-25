@@ -17,7 +17,7 @@ public class Gauge : MonoBehaviour {
     /// <summary>
     /// Reference to the label in the center of the gauge
     /// </summary>
-    private Text label = null;
+    public TMPro.TextMeshProUGUI label = null;
     /// <summary>
     /// The format string to be used for formatting the label.  Allows for decimal places
     /// </summary>
@@ -27,6 +27,11 @@ public class Gauge : MonoBehaviour {
     /// Internal storage for the current percentage displayed
     /// </summary>
     private float percent = 0.0f;
+
+    private float expectedPercent = 0.0f;
+    public float fillRate = 1.0f;
+    private float currentTime = 0.0f;
+
     /// <summary>
     /// Access method to get/set the percentage to be displayed
     /// </summary>
@@ -77,7 +82,14 @@ public class Gauge : MonoBehaviour {
     public void SetPercentage(float newPercent)
     {
         // Minimize impact if we're being called with the same value
-        if (percent != newPercent) Percent = newPercent;
+        if (percent != newPercent && currentTime == 1.0f)
+        {
+            expectedPercent = newPercent;
+            //Percent = newPercent;
+
+            if (newPercent == 1.0f)
+                currentTime = Percent;
+        }
     }
 
     /// <summary>
@@ -90,13 +102,25 @@ public class Gauge : MonoBehaviour {
 
         segments = meshSegments.OrderBy(x => x.name).ToArray<MeshFilter>();
 
-        label = gameObject.GetComponentInChildren<Text>();
+        //label = gameObject.GetComponentInChildren<Text>();
 
         // Get the format string for the text
         formatString = GetFormatString(decimalPlaces);
 
         // Do initial display update
         UpdateDisplay();
+    }
+
+    private void Update()
+    {
+        Percent = Mathf.Lerp(0.0f, expectedPercent, currentTime);
+        currentTime += Time.deltaTime * fillRate;
+
+        if (currentTime > 1.0f)
+            currentTime = 1.0f; 
+
+        //Debug.Log(Percent);
+        //Debug.Log(currentTime);
     }
 
     /// <summary>
