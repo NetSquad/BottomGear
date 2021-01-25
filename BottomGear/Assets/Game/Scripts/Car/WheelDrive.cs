@@ -304,20 +304,19 @@ namespace BottomGear
 			//energy = vitals.vitals.VitalArray[1].Value;
 
 			// --- Add score if this is the flag holder, change ground color ---
-			if (Time.time - initialScoreTime >= 1.0f &&
+			if ((Time.time - initialScoreTime) >= 1.0f &&
 				photonView.IsMine
 				&& basicInventory.DefaultMount.mountedObjs.Count > 0)
 			{
 				initialScoreTime = Time.time;
 				PhotonNetwork.LocalPlayer.AddScore(1);
+				//Debug.Log(PhotonNetwork.LocalPlayer.GetScore());
 			}
 			if(basicInventory.DefaultMount.mountedObjs.Count > 0)
             {
 				gameManager.FlagHeld = true;
 				gameManager.ground.SetColor("_EmissionColor", gameManager.explosionColors[playerColouring.GetPreset()]);
 			}
-
-			initialScoreTime += Time.deltaTime;
 	
 			// Uncomment this and timer start to profile
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
@@ -684,7 +683,7 @@ namespace BottomGear
 				on_hit.Post(gameObject);
 
 				// @ch0m5: Hardcoded projectile damage, this actually makes the car explode on laser death and makes lasers dissapear, good enough for me. Forgive me Aitor for I have sinned.
-				vitals.vitals.VitalArray[0].Value -= 13;
+				vitals.vitals.VitalArray[0].Value -= 21;
 				contact.Terminate();
 
 				if (contact && contact.Owner != null && vitals.vitals.VitalArray[0].Value <= 0) // Check for player death	// @ch0m5: Used to be ".Value - 20 <= 0"
@@ -701,7 +700,7 @@ namespace BottomGear
 					Debug.Log(contact.Owner.PhotonView.Owner.GetScore());
 				}
 			}
-			else if (other.tag == "Fuel")	// @ch0m5: My code is trash, and so am I.
+			else if (other.tag == "Fuel" && vitals.vitals.VitalArray[1].Value < 100)	// @ch0m5: My code is trash, and so am I.
 			{
 				SyncState syncState = other.gameObject.transform.parent.parent.GetComponent<SyncState>();
 				vitals.vitals.VitalArray[1].Value = 100;
