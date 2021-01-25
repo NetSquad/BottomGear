@@ -691,15 +691,15 @@ namespace BottomGear
 					//Stop all audio events
 					stop_all.Post(gameObject);
 
-					if (!explosionEffect.activeSelf)
-						explosionEffect.SetActive(true);
+					//if (!explosionEffect.activeSelf)
+					//	explosionEffect.SetActive(true);
 
 					contact.Owner.PhotonView.Owner.AddScore(10);
 					killed_enemy.Post(other.GetComponent<ParentRef>().gameObject);  //Play the audio of killing an enemy
 					Debug.Log(contact.Owner.PhotonView.Owner.GetScore());
 				}
 			}
-			else if (other.tag == "Fuel" && vitals.vitals.VitalArray[1].Value < 100)	// @ch0m5: My code is trash, and so am I.
+			else if (photonView.IsMine && other.tag == "Fuel" && vitals.vitals.VitalArray[1].Value < 100)	// @ch0m5: My code is trash, and so am I.
 			{
 				SyncState syncState = other.gameObject.transform.parent.parent.GetComponent<SyncState>();
 				vitals.vitals.VitalArray[1].Value = 100;
