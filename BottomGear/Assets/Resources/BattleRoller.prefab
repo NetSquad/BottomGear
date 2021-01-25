@@ -1669,6 +1669,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 3c0859753b0ef614f9ebd67ea20e607b, type: 2}
+  killed_enemy:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9148240e2e424f8438a9f8e512660426, type: 2}
   wheelCount: 4
   driveType: 2
   maxAngle: 30

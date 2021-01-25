@@ -35,6 +35,7 @@ namespace BottomGear
 		public AK.Wwise.Event explosion;
 		public AK.Wwise.Event stop_all;
 		public AK.Wwise.Event on_hit;
+		public AK.Wwise.Event killed_enemy;
 
 
 		[Header("Wheels")]
@@ -277,13 +278,6 @@ namespace BottomGear
 
 		void Update()
 		{
-			// --- Set gauge percentage ---
-			if (photonView.IsMine)
-			{
-				float ratio = (float)(vitals.vitals.VitalArray[1].Value / vitals.vitals.VitalArray[1].VitalDef.MaxValue);
-				gameManager.clientUIGauge.SetPercentage(ratio);
-			}
-
 			// Used to debug explosion effect
             //if (Input.GetKey(KeyCode.Q))
             //{
@@ -294,29 +288,34 @@ namespace BottomGear
             if (explosionEffect.activeSelf)
                 TriggerExplosion();
 
-            // --- Only update if this is the local player ---
-            if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
-			return;
+			if (basicInventory.DefaultMount.mountedObjs.Count > 0)
+			{
+				gameManager.FlagHeld = true;
+				gameManager.ground.SetColor("_EmissionColor", gameManager.explosionColors[playerColouring.GetPreset()]);
+			}
+
+			// --- Only update if this is the local player ---
+			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
+				return;
+
+			// --- Set gauge percentage ---
+			float ratio = (float)(vitals.vitals.VitalArray[1].Value / vitals.vitals.VitalArray[1].VitalDef.MaxValue);
+			gameManager.clientUIGauge.SetPercentage(ratio);
 
 			// Used to debug car values
 			//velocity = rb.velocity.magnitude;
 			//energy = vitals.vitals.VitalArray[1].Value;
 
 			// --- Add score if this is the flag holder, change ground color ---
-			if (Time.time - initialScoreTime >= 1.0f &&
+			if ((Time.time - initialScoreTime) >= 1.0f &&
 				photonView.IsMine
 				&& basicInventory.DefaultMount.mountedObjs.Count > 0)
 			{
 				initialScoreTime = Time.time;
 				PhotonNetwork.LocalPlayer.AddScore(1);
-			}
-			if(basicInventory.DefaultMount.mountedObjs.Count > 0)
-            {
-				gameManager.FlagHeld = true;
-				gameManager.ground.SetColor("_EmissionColor", gameManager.explosionColors[playerColouring.GetPreset()]);
+				//Debug.Log(PhotonNetwork.LocalPlayer.GetScore());
 			}
 
-			initialScoreTime += Time.deltaTime;
 	
 			// Uncomment this and timer start to profile
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
@@ -677,6 +676,7 @@ namespace BottomGear
 			{
 				ContactProjectile contact = other.gameObject.GetComponent<ContactProjectile>();
 				Debug.Log("Collided with bullet");
+				on_hit.Post(gameObject);
 
 				Debug.Log(vitals.vitals.VitalArray[0].Value);
 				on_hit.Post(gameObject);
@@ -695,8 +695,8 @@ namespace BottomGear
 					//	explosionEffect.SetActive(true);
 
 					contact.Owner.PhotonView.Owner.AddScore(10);
+					killed_enemy.Post(other.GetComponent<ParentRef>().gameObject);  //Play the audio of killing an enemy
 					Debug.Log(contact.Owner.PhotonView.Owner.GetScore());
-					on_hit.Post(gameObject);
 				}
 			}
 			else if (photonView.IsMine && other.tag == "Fuel" && vitals.vitals.VitalArray[1].Value < 100)	// @ch0m5: My code is trash, and so am I.
@@ -727,6 +727,7 @@ namespace BottomGear
 						explosionEffect.SetActive(true);
 
 					other.GetComponent<ParentRef>().photonView.Owner.AddScore(15);
+					killed_enemy.Post(other.GetComponent<ParentRef>().gameObject);	//Play the audio of killing an enemy
 					Debug.Log(other.GetComponent<ParentRef>().photonView.Owner.GetScore());
 				}
 			}
