@@ -108,7 +108,7 @@ namespace BottomGear
 		//[Header("TestVelocity")]
 		//[Tooltip("Debug velocity")]
 		//public float velocity = 0;
-		//public double energy = 0.0f;
+		//public double energy = 0;
 		private string[] controllername;
 
 		// --- Main components ---
@@ -358,10 +358,15 @@ namespace BottomGear
 
 			bool controllerBoost = isXbox ? Input.GetButton("XboxB") : Input.GetButton("OButton");
 
-			if (Input.GetKey(KeyCode.LeftShift) || controllerBoost && vitals.vitals.VitalArray[1].Value > 0 && IsGrounded())
+			if (vitals.vitals.VitalArray[1].Value > 0)
             {
-				vitals.vitals.VitalArray[1].Value -= Time.fixedDeltaTime * consumptionRate;
-				isTurbo = true;
+				if (Input.GetKey(KeyCode.LeftShift) || controllerBoost && IsGrounded())
+				{
+					vitals.vitals.VitalArray[1].Value -= Time.fixedDeltaTime * consumptionRate;
+					isTurbo = true;
+				}
+				else
+					isTurbo = false;
 			}
 			else
 				isTurbo = false;
