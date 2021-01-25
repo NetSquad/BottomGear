@@ -1533,6 +1533,7 @@
 					<ChildrenList>
 						<Sound Name="Ghandi_would_approve" ID="{47E8080C-4AE7-428D-95AC-CFE1C0480977}" ShortID="1016464442">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>6</Value>
