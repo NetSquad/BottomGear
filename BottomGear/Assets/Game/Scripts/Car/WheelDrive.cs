@@ -304,8 +304,11 @@ namespace BottomGear
 				return;
 
 			// --- Set gauge percentage ---
-			float ratio = (float)(vitals.vitals.VitalArray[1].Value / vitals.vitals.VitalArray[1].VitalDef.MaxValue);
-			gameManager.clientUIGauge.SetPercentage(ratio);
+			if (photonView.IsMine)
+			{
+				float ratio = (float)(vitals.vitals.VitalArray[1].Value / vitals.vitals.VitalArray[1].VitalDef.MaxValue);
+				gameManager.clientUIGauge.SetPercentage(ratio);
+			}
 
 			// Used to debug car values
 			//velocity = rb.velocity.magnitude;
