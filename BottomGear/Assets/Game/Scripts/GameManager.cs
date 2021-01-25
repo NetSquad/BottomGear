@@ -45,6 +45,7 @@ namespace BottomGear
 
         public GameManager manager;
         private List<int> presets_used;
+        public Camera overlayCamera;
 
         //public GameObject[] AsteroidPrefabs; // unneeded
 

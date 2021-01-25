@@ -156,6 +156,8 @@ namespace BottomGear
 
 		public void Awake()
 		{
+
+
 			basicInventory = GetComponent<Photon.Pun.Simple.BasicInventory>();
 			vitals = GetComponent<Photon.Pun.Simple.SyncVitals>();
 			mTransform = transform;
@@ -163,7 +165,8 @@ namespace BottomGear
 			rb = GetComponent<Rigidbody>();
 			sceneCamera = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().sceneCamera;
 
-			
+			if (photonView.IsMine)
+				camera.GetComponent<UnityEngine.Rendering.Universal.UniversalAdditionalCameraData>().cameraStack.Add(GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().overlayCamera);
 			// Uncomment this to profile
 			//watch = new System.Diagnostics.Stopwatch();
 		}
