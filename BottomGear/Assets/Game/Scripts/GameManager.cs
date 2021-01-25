@@ -104,14 +104,12 @@ namespace BottomGear
 
         public int GetPreset()
         {
-            //int index = Random.Range(0, presets_used.Count);
+            int index = Random.Range(0, presets_used.Count);
 
-            //int value = presets_used[index];
-            //presets_used.RemoveAt(index);
+            int value = presets_used[index];
+            presets_used.RemoveAt(index);
 
-            curentPreset++;
-
-            return curentPreset;
+            return value;
         }
 
         public void SetPresets(int preset, ref List<MeshRenderer> renderers, ref VisualEffect explosionEffect, ref List<TrailRenderer> trailRenderers)

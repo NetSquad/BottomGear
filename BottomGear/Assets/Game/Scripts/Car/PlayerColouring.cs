@@ -34,7 +34,8 @@ public class PlayerColouring : MonoBehaviour
 
         //SetColouring(manager.GetPreset());
 
-        SetColouring(manager.GetPreset());
+        if (PhotonNetwork.IsMasterClient)
+            SetColouring(manager.GetPreset());
     }
 
     private void FixedUpdate()
