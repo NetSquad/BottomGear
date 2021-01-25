@@ -277,13 +277,6 @@ namespace BottomGear
 
 		void Update()
 		{
-			// --- Set gauge percentage ---
-			if (photonView.IsMine)
-			{
-				float ratio = (float)(vitals.vitals.VitalArray[1].Value / vitals.vitals.VitalArray[1].VitalDef.MaxValue);
-				gameManager.clientUIGauge.SetPercentage(ratio);
-			}
-
 			// Used to debug explosion effect
             //if (Input.GetKey(KeyCode.Q))
             //{
@@ -294,9 +287,19 @@ namespace BottomGear
             if (explosionEffect.activeSelf)
                 TriggerExplosion();
 
-            // --- Only update if this is the local player ---
-            if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
-			return;
+			if (basicInventory.DefaultMount.mountedObjs.Count > 0)
+			{
+				gameManager.FlagHeld = true;
+				gameManager.ground.SetColor("_EmissionColor", gameManager.explosionColors[playerColouring.GetPreset()]);
+			}
+
+			// --- Only update if this is the local player ---
+			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
+				return;
+
+			// --- Set gauge percentage ---
+			float ratio = (float)(vitals.vitals.VitalArray[1].Value / vitals.vitals.VitalArray[1].VitalDef.MaxValue);
+			gameManager.clientUIGauge.SetPercentage(ratio);
 
 			// Used to debug car values
 			//velocity = rb.velocity.magnitude;
@@ -311,11 +314,7 @@ namespace BottomGear
 				PhotonNetwork.LocalPlayer.AddScore(1);
 				//Debug.Log(PhotonNetwork.LocalPlayer.GetScore());
 			}
-			if(basicInventory.DefaultMount.mountedObjs.Count > 0)
-            {
-				gameManager.FlagHeld = true;
-				gameManager.ground.SetColor("_EmissionColor", gameManager.explosionColors[playerColouring.GetPreset()]);
-			}
+
 	
 			// Uncomment this and timer start to profile
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
