@@ -5635,7 +5635,7 @@ MonoBehaviour:
   sceneCamera: {fileID: 523789977}
   InfoText: {fileID: 601629552}
   Timer: {fileID: 1913974791}
-  timeLimit: 60
+  timeLimit: 180
   presets:
   - {fileID: 2100000, guid: 85c7985583790564190ac900defc2291, type: 2}
   - {fileID: 2100000, guid: 235d7ca6bef623648ba060edb8b4783c, type: 2}
