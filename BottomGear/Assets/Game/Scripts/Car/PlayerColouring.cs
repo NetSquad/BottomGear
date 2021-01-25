@@ -32,11 +32,14 @@ public class PlayerColouring : MonoBehaviour
         //    PhotonNetwork.CurrentRoom.SetCustomProperties(ht);
         //}
 
-        SetColouring(manager.GetPreset());
+        //SetColouring(manager.GetPreset());
     }
 
     private void FixedUpdate()
     {
+
+        if(preset == -1)
+            SetColouring(manager.GetPreset());
 
         //if(preset == -1)
         //{
