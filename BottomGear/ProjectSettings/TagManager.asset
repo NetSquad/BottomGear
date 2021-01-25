@@ -9,6 +9,7 @@ TagManager:
   - DomeCollider
   - Ground
   - GameManager
+  - Fuel
   layers:
   - Default
   - TransparentFX

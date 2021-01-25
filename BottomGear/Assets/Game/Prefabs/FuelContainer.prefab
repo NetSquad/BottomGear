@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7766779999941691298}
   m_Layer: 0
   m_Name: Despawned model
-  m_TagString: Untagged
+  m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7766780001194524960}
   m_Layer: 0
   m_Name: Visible Model
-  m_TagString: Untagged
+  m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 7766780001945165431}
   m_Layer: 0
   m_Name: FuelContainer
-  m_TagString: Untagged
+  m_TagString: Fuel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preventRepeats: 1
-  _ignoredSystems: 
+  _ignoredSystems: ec4d4a28ea6d720f
 --- !u!114 &7766780001945165423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +377,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 46ae98b2262770c4abebcb8c5e6bf095, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 46ae98b2262770c4abebcb8c5e6bf095, type: 3}
+      propertyPath: m_TagString
+      value: Fuel
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 46ae98b2262770c4abebcb8c5e6bf095, type: 3}
       propertyPath: m_RootOrder
@@ -464,6 +468,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 46ae98b2262770c4abebcb8c5e6bf095, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 46ae98b2262770c4abebcb8c5e6bf095, type: 3}
+      propertyPath: m_TagString
+      value: Fuel
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 46ae98b2262770c4abebcb8c5e6bf095, type: 3}
       propertyPath: m_RootOrder
