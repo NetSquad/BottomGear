@@ -2400,8 +2400,6 @@ MonoBehaviour:
     enableIfOwned: 1
   - component: {fileID: 8271857195829821052}
     enableIfOwned: 1
-  - component: {fileID: 0}
-    enableIfOwned: 0
   - component: {fileID: 3277241760081298984}
     enableIfOwned: 1
   componentLookup:
@@ -2453,7 +2451,6 @@ MonoBehaviour:
   - {fileID: 5346722963987834718}
   - {fileID: 5359872287999556070}
   - {fileID: 8271857195829821052}
-  - {fileID: 0}
   - {fileID: 3277241760081298984}
 --- !u!114 &6349677017487240278
 MonoBehaviour:
@@ -8963,7 +8960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1737707477377397356, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_Time
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1737707477377397356, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
       propertyPath: m_SortingOrder
@@ -9095,7 +9092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
       propertyPath: lengthInSec
-      value: 4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
       propertyPath: TriggerModule.inside
@@ -9119,7 +9116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5880017549711562269, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5880017549711562270, guid: 2725d8ecea761354cb8da32ef7930293, type: 3}
       propertyPath: m_Enabled
