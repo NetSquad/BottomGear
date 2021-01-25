@@ -182,13 +182,13 @@ namespace BottomGear
 			if(camera.isActiveAndEnabled && photonView.IsMine)
 				sceneCamera.SetActive(false);
 
-			if (photonView.IsMine)
+			if (photonView.IsMine && gameManager.clientUIGaugeText != null)
 				gameManager.clientUIGaugeText.gameObject.SetActive(true);
         }
 
         private void OnDisable()
         {
-			if (photonView.IsMine)
+			if (photonView.IsMine && gameManager.clientUIGaugeText != null)
 				gameManager.clientUIGaugeText.gameObject.SetActive(false);
 		}
 

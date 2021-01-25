@@ -39,6 +39,27 @@ MonoBehaviour:
       restoreCamera: 1
       offset: {x: 0, y: 0, z: 0, w: 0}
       cameraFieldOfView: 60
+--- !u!114 &-2979491529233613181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804bf49869d3b4315a850958d8530433, type: 3}
+  m_Name: Sobel
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    renderPassEvent: 400
+    blitMaterial: {fileID: 2100000, guid: f012cc041ddc048eca800cbc9cc5fd6d, type: 2}
+    blitMaterialPassIndex: 0
+    sourceType: 0
+    destinationType: 0
+    sourceTextureId: _SourceTexture
+    destinationTextureId: _DestinationTexture
 --- !u!114 &-1912745495065795840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +118,9 @@ MonoBehaviour:
   - {fileID: 7748687247054426792}
   - {fileID: 6185732288397053383}
   - {fileID: 5196854160525315034}
-  m_RendererFeatureMap: 00e3df3c1b9074e51675e9eb03c5e905a8524734ffdd886bc70d922dbe22d855da4b9f2b53ef1e484402d11a7da108a9
+  - {fileID: -2979491529233613181}
+  - {fileID: 656553823573271578}
+  m_RendererFeatureMap: 00e3df3c1b9074e51675e9eb03c5e905a8524734ffdd886bc70d922dbe22d855da4b9f2b53ef1e484402d11a7da108a983bebe7c3db8a6d61a640256398c1c09
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -165,6 +188,28 @@ MonoBehaviour:
       restoreCamera: 1
       offset: {x: 0, y: 0, z: 0, w: 0}
       cameraFieldOfView: 60
+--- !u!114 &656553823573271578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62c9c65cf3354c93be831c8bc075510, type: 3}
+  m_Name: NewScreenSpaceAmbientOcclusion
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  m_Shader: {fileID: 4800000, guid: 0849e84e3d62649e8882e9d6f056a017, type: 3}
+  m_Settings:
+    Downsample: 0
+    Source: 1
+    NormalSamples: 1
+    Intensity: 3
+    DirectLightingStrength: 0.25
+    Radius: 2
+    SampleCount: 6
 --- !u!114 &5196854160525315034
 MonoBehaviour:
   m_ObjectHideFlags: 0
