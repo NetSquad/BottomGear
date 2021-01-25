@@ -99,6 +99,9 @@ namespace Photon.Pun.Simple
 
                     syncState.Throw(localizedOffset, localizedRotation, localizedVelocity);
 
+                    // @ch0m5: Despawn instead of throwing
+                    //syncState.Despawn(false);
+
                     continue;
                 }
             }
