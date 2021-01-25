@@ -119,6 +119,7 @@ namespace BottomGear
 		public GameObject sceneCamera;
 		Transform mTransform;
 		public GameObject trailParticles;
+		private GameManager gameManager;
 
 		// --- Network ---
         Photon.Pun.Simple.SyncVitals vitals;
@@ -156,17 +157,17 @@ namespace BottomGear
 
 		public void Awake()
 		{
-
+			gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
 			basicInventory = GetComponent<Photon.Pun.Simple.BasicInventory>();
 			vitals = GetComponent<Photon.Pun.Simple.SyncVitals>();
 			mTransform = transform;
 			photonView = GetComponent<PhotonView>();
 			rb = GetComponent<Rigidbody>();
-			sceneCamera = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().sceneCamera;
+			sceneCamera = gameManager.sceneCamera;
 
 			if (photonView.IsMine)
-				camera.GetComponent<UnityEngine.Rendering.Universal.UniversalAdditionalCameraData>().cameraStack.Add(GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().overlayCamera);
+				camera.GetComponent<UnityEngine.Rendering.Universal.UniversalAdditionalCameraData>().cameraStack.Add(gameManager.overlayCamera);
 			// Uncomment this to profile
 			//watch = new System.Diagnostics.Stopwatch();
 		}
@@ -260,11 +261,18 @@ namespace BottomGear
 
 		void Update()
 		{
-            if (Input.GetKey(KeyCode.Q))
-            {
-                if (!explosionEffect.activeSelf)
-                    explosionEffect.SetActive(true);
-            }
+			// --- Set gauge percentage ---
+			if (photonView.IsMine)
+			{
+				float ratio = (float)(vitals.vitals.VitalArray[1].Value / vitals.vitals.VitalArray[1].VitalDef.MaxValue);
+				gameManager.clientUIGauge.SetPercentage(ratio);
+			}
+
+            //if (Input.GetKey(KeyCode.Q))
+            //{
+            //    if (!explosionEffect.activeSelf)
+            //        explosionEffect.SetActive(true);
+            //}
 
             if (explosionEffect.activeSelf)
                 TriggerExplosion();
