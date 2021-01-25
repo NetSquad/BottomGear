@@ -11,14 +11,30 @@ WASD or Arrows to move
 F to shoot
 Space to jump
 Middle mouse button for rear camera
+Mouse left/right movement for roll rotation on air
+Left Shift to use Nitro (Speed Boost)
 
 ### Playstation Controller (DS4)
 
 Left joystick to orientate the car
+Right Joystick for roll rotation on air
 R2 to accelerate
 L2 to decelerate
-X to jump
 R1 for rear camera
+X to jump
+□ to shoot
+O to use Nitro (Speed Boost)
+
+### Xbox Controller
+
+Left joystick to orientate the car
+Right Joystick for roll rotation on air
+R2 to accelerate
+L2 to decelerate
+RB for rear camera
+A to jump
+X to shoot
+B to use Nitro (Speed Boost)
 
 ## Authors:
 
