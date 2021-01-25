@@ -34,8 +34,11 @@ public class PlayerColouring : MonoBehaviour
 
         //SetColouring(manager.GetPreset());
 
+        //if (PhotonNetwork.IsMasterClient)
+        //    SetColouring(manager.GetPreset());
+
         if (PhotonNetwork.IsMasterClient)
-            SetColouring(manager.GetPreset());
+            GetComponent<PhotonView>().RPC("SetColouring", RpcTarget.AllBuffered, manager.GetPreset());
     }
 
     private void FixedUpdate()
@@ -57,6 +60,7 @@ public class PlayerColouring : MonoBehaviour
         //}
     }
 
+    [PunRPC]
     void SetColouring(int preset)
     {
         //if (preset != -1)
