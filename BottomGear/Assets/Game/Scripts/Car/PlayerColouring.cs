@@ -51,7 +51,6 @@ public class PlayerColouring : MonoBehaviour
         //}
     }
 
-    [PunRPC]
     void SetColouring(int preset)
     {
         //if (preset != -1)
