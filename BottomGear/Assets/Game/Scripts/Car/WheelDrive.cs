@@ -77,9 +77,7 @@ namespace BottomGear
 		[Tooltip("Speed at which the vehicle rotates in x and y axis.")]
 		public Vector3 rotationSpeed = new Vector3(30, 30, 30);
 		[Tooltip("Rate at which fuel is consumed")]
-		public float consumptionRate = 1000.0f;
-		[Tooltip("Rate at which fuel is regenerated")]
-		public float regenerationRate = 10.0f;
+		public float consumptionRate = 20.0f;
 
 		[Header("Forces")]
 		[Tooltip("The vehicle's jump force multiplier.")]
@@ -340,8 +338,6 @@ namespace BottomGear
 				stop_neon_loop.Post(gameObject);
 				playingTrailLoop = false;
 			}
-
-			
 		}
 
 		private void FixedUpdate()
@@ -405,7 +401,7 @@ namespace BottomGear
             {
 				if (Input.GetKey(KeyCode.LeftShift) || controllerBoost && IsGrounded())
 				{
-					vitals.vitals.VitalArray[1].Value -= (regenerationRate * Time.fixedDeltaTime);
+					vitals.vitals.VitalArray[1].Value -= Time.fixedDeltaTime * consumptionRate;
 					isTurbo = true;
 				}
 				else
@@ -413,10 +409,6 @@ namespace BottomGear
 			}
 			else
 				isTurbo = false;
-
-			if(!isTurbo && vitals.vitals.VitalArray[1].Value >= 0)
-				vitals.vitals.VitalArray[1].Value += (consumptionRate * Time.fixedDeltaTime);
-
 
 			float outputAcceleration = accelerator - decelerator;
 			float angle = maxAngle * inputDirection.x;
