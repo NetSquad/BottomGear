@@ -676,6 +676,12 @@ namespace BottomGear
 					on_hit.Post(gameObject);
 				}
 			}
+			else if (other.tag == "Fuel")	// @ch0m5: My code is trash, and so am I.
+			{
+				SyncState syncState = other.gameObject.transform.parent.parent.GetComponent<SyncState>();
+				vitals.vitals.VitalArray[1].Value = 100;
+				syncState.Despawn(false);
+			}
 		}
 
         private void OnParticleCollision(GameObject other)
