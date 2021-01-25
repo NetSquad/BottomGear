@@ -681,7 +681,7 @@ namespace BottomGear
 				on_hit.Post(gameObject);
 
 				// @ch0m5: Hardcoded projectile damage, this actually makes the car explode on laser death and makes lasers dissapear, good enough for me. Forgive me Aitor for I have sinned.
-				vitals.vitals.VitalArray[0].Value -= 13;
+				vitals.vitals.VitalArray[0].Value -= 21;
 				contact.Terminate();
 
 				if (contact && contact.Owner != null && vitals.vitals.VitalArray[0].Value <= 0) // Check for player death	// @ch0m5: Used to be ".Value - 20 <= 0"
@@ -698,7 +698,7 @@ namespace BottomGear
 					on_hit.Post(gameObject);
 				}
 			}
-			else if (other.tag == "Fuel")	// @ch0m5: My code is trash, and so am I.
+			else if (other.tag == "Fuel" && vitals.vitals.VitalArray[1].Value < 100)	// @ch0m5: My code is trash, and so am I.
 			{
 				SyncState syncState = other.gameObject.transform.parent.parent.GetComponent<SyncState>();
 				vitals.vitals.VitalArray[1].Value = 100;
