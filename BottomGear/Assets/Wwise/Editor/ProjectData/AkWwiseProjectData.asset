@@ -767,10 +767,6 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585900722188621294
     List: []
-  ExpandedItems:
-  - /Wwise_Bottom_Gear_Project
-  - /Wwise_Bottom_Gear_Project/Events
-  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit
-  - /Wwise_Bottom_Gear_Project/Events/Default Work Unit/Gameplay
+  ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
