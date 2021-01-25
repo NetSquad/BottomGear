@@ -691,8 +691,8 @@ namespace BottomGear
 					//Stop all audio events
 					stop_all.Post(gameObject);
 
-					if (!explosionEffect.activeSelf)
-						explosionEffect.SetActive(true);
+					//if (!explosionEffect.activeSelf)
+					//	explosionEffect.SetActive(true);
 
 					contact.Owner.PhotonView.Owner.AddScore(10);
 					Debug.Log(contact.Owner.PhotonView.Owner.GetScore());
