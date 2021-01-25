@@ -449,12 +449,11 @@ namespace BottomGear
                     orientation = orientationZ;
                     orientation.Scale(rotationSpeed * Time.fixedDeltaTime);
 
-                    //if (isXbox)
-                    //{
-                    //    rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("XboxRSHorizontal"), -1, 1), ForceMode.Acceleration);
-                    //}
-                    //else
-                       rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("HorizontalRS"), -1, 1), ForceMode.Acceleration);
+                    if (isXbox)
+                        rb.AddTorque(-orientation * Mathf.Clamp(Input.GetAxis("XboxRSHorizontal"), -1, 1), ForceMode.Acceleration);
+                    else
+						rb.AddTorque(orientation * Mathf.Clamp(Input.GetAxis("HorizontalRS"), -1, 1), ForceMode.Acceleration);
+                    
                 }
 
             }
