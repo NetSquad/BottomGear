@@ -35,6 +35,7 @@ namespace BottomGear
 		public AK.Wwise.Event explosion;
 		public AK.Wwise.Event stop_all;
 		public AK.Wwise.Event on_hit;
+		public AK.Wwise.Event killed_enemy;
 
 
 		[Header("Wheels")]
@@ -675,6 +676,7 @@ namespace BottomGear
 			{
 				ContactProjectile contact = other.gameObject.GetComponent<ContactProjectile>();
 				Debug.Log("Collided with bullet");
+				on_hit.Post(gameObject);
 
 				Debug.Log(vitals.vitals.VitalArray[0].Value);
 				on_hit.Post(gameObject);
@@ -693,8 +695,8 @@ namespace BottomGear
 						explosionEffect.SetActive(true);
 
 					contact.Owner.PhotonView.Owner.AddScore(10);
+					killed_enemy.Post(other.GetComponent<ParentRef>().gameObject);  //Play the audio of killing an enemy
 					Debug.Log(contact.Owner.PhotonView.Owner.GetScore());
-					on_hit.Post(gameObject);
 				}
 			}
 			else if (other.tag == "Fuel" && vitals.vitals.VitalArray[1].Value < 100)	// @ch0m5: My code is trash, and so am I.
@@ -725,6 +727,7 @@ namespace BottomGear
 						explosionEffect.SetActive(true);
 
 					other.GetComponent<ParentRef>().photonView.Owner.AddScore(15);
+					killed_enemy.Post(other.GetComponent<ParentRef>().gameObject);	//Play the audio of killing an enemy
 					Debug.Log(other.GetComponent<ParentRef>().photonView.Owner.GetScore());
 				}
 			}
