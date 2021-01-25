@@ -11,7 +11,7 @@ public class PlayerColouring : MonoBehaviour
     public List<MeshRenderer> renderers;
     public List<TrailRenderer> trail_renderers;
     public GameManager manager;
-    private int preset = 0;
+    private int preset = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +26,18 @@ public class PlayerColouring : MonoBehaviour
 
     private void FixedUpdate()
     {
-           
+        if (PhotonNetwork.IsMasterClient && preset == -1)
+        {
+            GetComponent<PhotonView>().RPC("SetColouring", RpcTarget.AllBuffered, manager.GetPreset());
+        }
     }
 
     [PunRPC]
     void SetColouring(int preset)
     {
+        if (preset != -1)
+            return;
+
         if (manager == null)
             manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
