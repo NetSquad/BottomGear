@@ -1721,7 +1721,7 @@ MonoBehaviour:
   flyingLinearDrag: 0
   flyingFakeGravity: 9.81
   centerOfMass: {fileID: 3623154689585449235}
-  explosionEffect: {fileID: 7249726364415973327}
+  explosionEffect: {fileID: 0}
   explosionTime: 0.35
   explosionScale: 6
   camera: {fileID: 16950669710695238}
@@ -2400,7 +2400,7 @@ MonoBehaviour:
     enableIfOwned: 1
   - component: {fileID: 8271857195829821052}
     enableIfOwned: 1
-  - component: {fileID: 6433837221847286292}
+  - component: {fileID: 0}
     enableIfOwned: 0
   - component: {fileID: 3277241760081298984}
     enableIfOwned: 1
@@ -2453,7 +2453,7 @@ MonoBehaviour:
   - {fileID: 5346722963987834718}
   - {fileID: 5359872287999556070}
   - {fileID: 8271857195829821052}
-  - {fileID: 6433837221847286292}
+  - {fileID: 0}
   - {fileID: 3277241760081298984}
 --- !u!114 &6349677017487240278
 MonoBehaviour:
@@ -2641,7 +2641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c0ce3cda52ed945b6e8b0c9b14ef98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffect: {fileID: 6433837221847286292}
+  explosionEffect: {fileID: 0}
   renderers:
   - {fileID: 3097677610897499974}
   - {fileID: 3146153407408236244}
@@ -8280,712 +8280,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &7249726364415973327
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4613312773199041896}
-  - component: {fileID: 6433837221847286292}
-  - component: {fileID: 7508376586209567362}
-  - component: {fileID: 2610176993157811555}
-  - component: {fileID: 5171712554918312367}
-  - component: {fileID: 8710610196563973931}
-  - component: {fileID: 1372286736174723843}
-  - component: {fileID: 5637178759343099120}
-  - component: {fileID: 3203479146501336747}
-  - component: {fileID: 4505558864052181775}
-  - component: {fileID: 2058074783932373613}
-  - component: {fileID: 7296107990331120716}
-  m_Layer: 0
-  m_Name: Explosion
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4613312773199041896
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249726364415973327}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6496903372571414784}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!2083052967 &6433837221847286292
-VisualEffect:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249726364415973327}
-  m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 851c87b601a57e443b19b37b6ae92621, type: 3}
-  m_InitialEventName: OnPlay
-  m_InitialEventNameOverriden: 0
-  m_StartSeed: 0
-  m_ResetSeedOnPlay: 1
-  m_ResourceVersion: 1
-  m_PropertySheet:
-    m_Float:
-      m_Array:
-      - m_Value: 0.1
-        m_Name: Particle size
-        m_Overridden: 1
-    m_Vector2f:
-      m_Array: []
-    m_Vector3f:
-      m_Array: []
-    m_Vector4f:
-      m_Array: []
-    m_Uint:
-      m_Array: []
-    m_Int:
-      m_Array: []
-    m_Matrix4x4f:
-      m_Array: []
-    m_AnimationCurve:
-      m_Array: []
-    m_Gradient:
-      m_Array: []
-    m_NamedObject:
-      m_Array: []
-    m_Bool:
-      m_Array: []
---- !u!73398921 &7508376586209567362
-VFXRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249726364415973327}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 0
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!114 &2610176993157811555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249726364415973327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  observableSearch: 2
-  Synchronization: 3
-  OwnershipTransfer: 0
-  ObservedComponents: []
-  viewIdField: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!114 &5171712554918312367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249726364415973327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97e28cba854079b4ba6a6d08014af4ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skipWhenEmpty: 0
-  ignoreNonControllerUpdates: 1
-  resimulateLateArrivals: 1
---- !u!114 &8710610196563973931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249726364415973327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c67c65934c1dab4085185d8e66a2d6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  preventRepeats: 1
-  _ignoredSystems: ec4d4a28ea6d720f
---- !u!114 &1372286736174723843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249726364415973327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eef84c6f567ef8d4ea04bcca802be993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabInstanceId: -277758
-  _applyOrder: 13
-  keyframeRate: 1
-  useDeltas: 1
-  _alwaysReady: 1
-  serializeThis: 1
---- !u!114 &5637178759343099120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249726364415973327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 326ca22e88ea7334eb428d2d4f839599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabInstanceId: -278614
-  _applyOrder: 13
-  keyframeRate: 1
-  useDeltas: 1
-  _alwaysReady: 0
-  serializeThis: 1
-  initialState: 0
-  respawnState: 1
-  readyState: 1
-  unreadyState: 0
-  mountableTo:
-    mask: 15
-  autoReset: 1
-  autoOwnerChange: 1
-  mountReliable: 1
---- !u!114 &3203479146501336747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249726364415973327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fd4015d190d32740a3ed6cdd08d1ce5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabInstanceId: -279582
-  _applyOrder: 13
-  keyframeRate: 1
-  useDeltas: 1
-  _alwaysReady: 1
-  serializeThis: 1
-  reliableOwnerChange: 1
---- !u!114 &4505558864052181775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249726364415973327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e9af983f8483414b8082743b1a028dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabInstanceId: -280446
-  onDespawned: 3
-  onAnchored: 3
-  onMounted: 2
-  onTransit: 2
-  onDropped: 2
-  onVisible: 1
-  autoDestroy: 1
---- !u!114 &2058074783932373613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249726364415973327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8784bdd5e9f1d7c46b01d111b70af3b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contactGroups:
-    mask: 0
-    expanded: 0
-  applyToChildren: 1
---- !u!114 &7296107990331120716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7249726364415973327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfa203032a269543b1fd3cee4aa1dd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabInstanceId: -282186
-  _applyOrder: 13
-  keyframeRate: 1
-  useDeltas: 1
-  _alwaysReady: 1
-  serializeThis: 1
-  interpolation: 1
-  extrapolateRatio: 0.5
-  teleportThreshold: 5
-  teleportReliable: 0
-  transformCrusher:
-    expanded: 0
-    defaultTransform: {fileID: 0}
-    posCrusher:
-      expanded: 0
-      isExpanded: 1
-      hideFieldName: 1
-      _trsType: 0
-      defaultTransform: {fileID: 0}
-      uniformAxes: 0
-      _xcrusher:
-        expanded: 0
-        axis: 0
-        showBCL: 0
-        expandBCL: 0
-        showEnableToggle: 1
-        enabled: 1
-        _accurateCenter: 0
-        outOfBoundsHandling: 1
-        encoder: 102.375
-        decoder: 0.00976801
-        actualMin: -20
-        actualMax: 20
-        wrappoint: 180
-        range: 40
-        rotationMaxValue: 340
-        maxEncodedVal: 4095
-        centerValue: 0
-        centerEncodedValue: 2047
-        _limitRange: 1
-        _useHalfRangeX: 0
-        _bitsDeterminedBy: -1
-        _bits: 0c000000080000000600000000000000
-        _min: -20
-        _max: 20
-        _resolution: 4095
-        _precision: 0.00976801
-        _trsType: 0
-      _ycrusher:
-        expanded: 0
-        axis: 1
-        showBCL: 0
-        expandBCL: 0
-        showEnableToggle: 1
-        enabled: 1
-        _accurateCenter: 0
-        outOfBoundsHandling: 1
-        encoder: 102.3
-        decoder: 0.009775171
-        actualMin: -5
-        actualMax: 5
-        wrappoint: 180
-        range: 10
-        rotationMaxValue: 355
-        maxEncodedVal: 1023
-        centerValue: 0
-        centerEncodedValue: 511
-        _limitRange: 1
-        _useHalfRangeX: 0
-        _bitsDeterminedBy: -1
-        _bits: 0a000000060000000500000000000000
-        _min: -5
-        _max: 5
-        _resolution: 1023
-        _precision: 0.009775171
-        _trsType: 0
-      _zcrusher:
-        expanded: 0
-        axis: 2
-        showBCL: 0
-        expandBCL: 0
-        showEnableToggle: 1
-        enabled: 1
-        _accurateCenter: 0
-        outOfBoundsHandling: 1
-        encoder: 102.3
-        decoder: 0.009775171
-        actualMin: -5
-        actualMax: 5
-        wrappoint: 180
-        range: 10
-        rotationMaxValue: 355
-        maxEncodedVal: 1023
-        centerValue: 0
-        centerEncodedValue: 511
-        _limitRange: 1
-        _useHalfRangeX: 0
-        _bitsDeterminedBy: -1
-        _bits: 0a000000060000000500000000000000
-        _min: -5
-        _max: 5
-        _resolution: 1023
-        _precision: 0.009775171
-        _trsType: 0
-      _ucrusher:
-        expanded: 0
-        axis: 4
-        showBCL: 0
-        expandBCL: 0
-        showEnableToggle: 0
-        enabled: 1
-        _accurateCenter: 0
-        outOfBoundsHandling: 1
-        encoder: 12.75
-        decoder: 0.078431375
-        actualMin: -10
-        actualMax: 10
-        wrappoint: 180
-        range: 20
-        rotationMaxValue: 350
-        maxEncodedVal: 255
-        centerValue: 0
-        centerEncodedValue: 127
-        _limitRange: 0
-        _useHalfRangeX: 0
-        _bitsDeterminedBy: -1
-        _bits: 08000000040000000300000000000000
-        _min: -10
-        _max: 10
-        _resolution: 255
-        _precision: 0.078431375
-        _trsType: 4
-      _qcrusher:
-        expanded: 0
-        bits: 0
-        _compressLevel: 64
-        transform: {fileID: 0}
-        local: 0
-        isStandalone: 1
-        showEnableToggle: 0
-        enabled: 1
-      local: 1
-      useWorldBounds: 0
-      boundsGroupId: 0
-      enableTRSTypeSelector: 0
-      enableLocalSelector: 1
-      bounds:
-        m_Center: {x: 0, y: 0, z: 0}
-        m_Extent: {x: 0, y: 0, z: 0}
-    rotCrusher:
-      expanded: 0
-      isExpanded: 1
-      hideFieldName: 1
-      _trsType: 1
-      defaultTransform: {fileID: 0}
-      uniformAxes: 0
-      _xcrusher:
-        expanded: 0
-        axis: 0
-        showBCL: 0
-        expandBCL: 0
-        showEnableToggle: 1
-        enabled: 0
-        _accurateCenter: 1
-        outOfBoundsHandling: 1
-        encoder: 11.372222
-        decoder: 0.08793356
-        actualMin: -180
-        actualMax: 180
-        wrappoint: 180
-        range: 360
-        rotationMaxValue: 180
-        maxEncodedVal: 4094
-        centerValue: 0
-        centerEncodedValue: 2047
-        _limitRange: 0
-        _useHalfRangeX: 0
-        _bitsDeterminedBy: -1
-        _bits: 0c000000080000000600000000000000
-        _min: -180
-        _max: 180
-        _resolution: 4095
-        _precision: 0.08791209
-        _trsType: 1
-      _ycrusher:
-        expanded: 0
-        axis: 1
-        showBCL: 0
-        expandBCL: 0
-        showEnableToggle: 1
-        enabled: 0
-        _accurateCenter: 1
-        outOfBoundsHandling: 1
-        encoder: 11.372222
-        decoder: 0.08793356
-        actualMin: -180
-        actualMax: 180
-        wrappoint: 180
-        range: 360
-        rotationMaxValue: 180
-        maxEncodedVal: 4094
-        centerValue: 0
-        centerEncodedValue: 2047
-        _limitRange: 0
-        _useHalfRangeX: 0
-        _bitsDeterminedBy: -1
-        _bits: 0c000000080000000600000000000000
-        _min: -180
-        _max: 180
-        _resolution: 4095
-        _precision: 0.08791209
-        _trsType: 1
-      _zcrusher:
-        expanded: 0
-        axis: 2
-        showBCL: 0
-        expandBCL: 0
-        showEnableToggle: 1
-        enabled: 0
-        _accurateCenter: 1
-        outOfBoundsHandling: 1
-        encoder: 11.372222
-        decoder: 0.08793356
-        actualMin: -180
-        actualMax: 180
-        wrappoint: 180
-        range: 360
-        rotationMaxValue: 180
-        maxEncodedVal: 4094
-        centerValue: 0
-        centerEncodedValue: 2047
-        _limitRange: 0
-        _useHalfRangeX: 0
-        _bitsDeterminedBy: -1
-        _bits: 0c000000080000000600000000000000
-        _min: -180
-        _max: 180
-        _resolution: 4095
-        _precision: 0.08791209
-        _trsType: 1
-      _ucrusher:
-        expanded: 0
-        axis: 4
-        showBCL: 0
-        expandBCL: 0
-        showEnableToggle: 0
-        enabled: 1
-        _accurateCenter: 0
-        outOfBoundsHandling: 1
-        encoder: 12.75
-        decoder: 0.078431375
-        actualMin: -10
-        actualMax: 10
-        wrappoint: 180
-        range: 20
-        rotationMaxValue: 350
-        maxEncodedVal: 255
-        centerValue: 0
-        centerEncodedValue: 127
-        _limitRange: 0
-        _useHalfRangeX: 0
-        _bitsDeterminedBy: -1
-        _bits: 08000000040000000300000000000000
-        _min: -10
-        _max: 10
-        _resolution: 255
-        _precision: 0.078431375
-        _trsType: 4
-      _qcrusher:
-        expanded: 0
-        bits: 44
-        _compressLevel: -1
-        transform: {fileID: 0}
-        local: 0
-        isStandalone: 0
-        showEnableToggle: 1
-        enabled: 1
-      local: 1
-      useWorldBounds: 0
-      boundsGroupId: 0
-      enableTRSTypeSelector: 0
-      enableLocalSelector: 1
-      bounds:
-        m_Center: {x: 0, y: 0, z: 0}
-        m_Extent: {x: 0, y: 0, z: 0}
-    sclCrusher:
-      expanded: 0
-      isExpanded: 1
-      hideFieldName: 1
-      _trsType: 3
-      defaultTransform: {fileID: 0}
-      uniformAxes: 0
-      _xcrusher:
-        expanded: 0
-        axis: 0
-        showBCL: 0
-        expandBCL: 0
-        showEnableToggle: 1
-        enabled: 1
-        _accurateCenter: 1
-        outOfBoundsHandling: 1
-        encoder: 127
-        decoder: 0.007874016
-        actualMin: -1
-        actualMax: 1
-        wrappoint: 180
-        range: 2
-        rotationMaxValue: 359
-        maxEncodedVal: 254
-        centerValue: 0
-        centerEncodedValue: 127
-        _limitRange: 1
-        _useHalfRangeX: 0
-        _bitsDeterminedBy: -1
-        _bits: 08000000040000000300000000000000
-        _min: -1
-        _max: 1
-        _resolution: 255
-        _precision: 0.007843138
-        _trsType: 3
-      _ycrusher:
-        expanded: 0
-        axis: 1
-        showBCL: 0
-        expandBCL: 0
-        showEnableToggle: 1
-        enabled: 1
-        _accurateCenter: 1
-        outOfBoundsHandling: 1
-        encoder: 127
-        decoder: 0.007874016
-        actualMin: -1
-        actualMax: 1
-        wrappoint: 180
-        range: 2
-        rotationMaxValue: 359
-        maxEncodedVal: 254
-        centerValue: 0
-        centerEncodedValue: 127
-        _limitRange: 1
-        _useHalfRangeX: 0
-        _bitsDeterminedBy: -1
-        _bits: 08000000040000000300000000000000
-        _min: -1
-        _max: 1
-        _resolution: 255
-        _precision: 0.007843138
-        _trsType: 3
-      _zcrusher:
-        expanded: 0
-        axis: 2
-        showBCL: 0
-        expandBCL: 0
-        showEnableToggle: 1
-        enabled: 1
-        _accurateCenter: 1
-        outOfBoundsHandling: 1
-        encoder: 127
-        decoder: 0.007874016
-        actualMin: -1
-        actualMax: 1
-        wrappoint: 180
-        range: 2
-        rotationMaxValue: 359
-        maxEncodedVal: 254
-        centerValue: 0
-        centerEncodedValue: 127
-        _limitRange: 1
-        _useHalfRangeX: 0
-        _bitsDeterminedBy: -1
-        _bits: 08000000040000000300000000000000
-        _min: -1
-        _max: 1
-        _resolution: 255
-        _precision: 0.007843138
-        _trsType: 3
-      _ucrusher:
-        expanded: 0
-        axis: 3
-        showBCL: 0
-        expandBCL: 0
-        showEnableToggle: 1
-        enabled: 1
-        _accurateCenter: 0
-        outOfBoundsHandling: 1
-        encoder: 511.5
-        decoder: 0.0019550342
-        actualMin: 0
-        actualMax: 2
-        wrappoint: 181
-        range: 2
-        rotationMaxValue: 360
-        maxEncodedVal: 1023
-        centerValue: 1
-        centerEncodedValue: 511
-        _limitRange: 1
-        _useHalfRangeX: 0
-        _bitsDeterminedBy: -1
-        _bits: 0a000000060000000500000000000000
-        _min: 0
-        _max: 2
-        _resolution: 1023
-        _precision: 0.0019550342
-        _trsType: 3
-      _qcrusher:
-        expanded: 0
-        bits: 0
-        _compressLevel: 64
-        transform: {fileID: 0}
-        local: 0
-        isStandalone: 1
-        showEnableToggle: 0
-        enabled: 1
-      local: 0
-      useWorldBounds: 0
-      boundsGroupId: 0
-      enableTRSTypeSelector: 0
-      enableLocalSelector: 1
-      bounds:
-        m_Center: {x: 0, y: 0, z: 0}
-        m_Extent: {x: 0, y: 0, z: 0}
-    isExpanded: 1
 --- !u!1 &7250448386750661936
 GameObject:
   m_ObjectHideFlags: 0
@@ -9426,7 +8720,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4613312773199041896}
   - {fileID: 3772359853826138231}
   m_Father: {fileID: 2248847848412316587}
   m_RootOrder: 6
@@ -9538,14 +8831,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
---- !u!96 &1738859177270661923 stripped
-TrailRenderer:
-  m_CorrespondingSourceObject: {fileID: 1737707477377397356, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
-  m_PrefabInstance: {fileID: 16950668375613775}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7658921752988052622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
+  m_PrefabInstance: {fileID: 16950668375613775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &1738859177270661923 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 1737707477377397356, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
   m_PrefabInstance: {fileID: 16950668375613775}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1080879019586287815 stripped
@@ -9638,11 +8931,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
---- !u!4 &7658921752056613967 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
-  m_PrefabInstance: {fileID: 16950669592117646}
-  m_PrefabAsset: {fileID: 0}
 --- !u!96 &1738859176322462690 stripped
 TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 1737707477377397356, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
@@ -9651,6 +8939,11 @@ TrailRenderer:
 --- !u!1 &1080879018638137350 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1097810918716676488, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
+  m_PrefabInstance: {fileID: 16950669592117646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7658921752056613967 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
   m_PrefabInstance: {fileID: 16950669592117646}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &16950669879174471
@@ -9739,14 +9032,14 @@ TrailRenderer:
   m_CorrespondingSourceObject: {fileID: 1737707477377397356, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
   m_PrefabInstance: {fileID: 16950669879174471}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1080879018929913039 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1097810918716676488, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
-  m_PrefabInstance: {fileID: 16950669879174471}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7658921751467583622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7671262160481586625, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
+  m_PrefabInstance: {fileID: 16950669879174471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1080879018929913039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1097810918716676488, guid: 6441f298e4b21f14db33d33bcbf76551, type: 3}
   m_PrefabInstance: {fileID: 16950669879174471}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &16950670319636986
@@ -9865,7 +9158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5988986904275926263, guid: 3ff73ebd7195ec74bbd3afa09827faa1, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5988986904275926263, guid: 3ff73ebd7195ec74bbd3afa09827faa1, type: 3}
       propertyPath: m_LocalPosition.x
