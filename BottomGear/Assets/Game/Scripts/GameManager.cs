@@ -43,11 +43,17 @@ namespace BottomGear
         [ColorUsageAttribute(true, true)]
         public List<Color> explosionColors;
 
+        [ColorUsageAttribute(true, true)]
+        public Color groundDefault;
+
         public GameManager manager;
         private List<int> presets_used;
         public Camera overlayCamera;
         public Gauge clientUIGauge;
         public GameObject clientUIGaugeText;
+        public Material ground;
+
+        public bool FlagHeld = false;
 
         //public GameObject[] AsteroidPrefabs; // unneeded
 
@@ -194,6 +200,7 @@ namespace BottomGear
 
         public override void OnLeftRoom()
         {
+            ground.SetColor("_EmissionColor", groundDefault);
             PhotonNetwork.Disconnect();
         }
 
@@ -255,6 +262,14 @@ namespace BottomGear
                 StartCoroutine(EndOfGame(winner, score));
             }
 
+        }
+
+        private void FixedUpdate()
+        {
+            if(!FlagHeld)
+                ground.SetColor("_EmissionColor", groundDefault);
+
+            FlagHeld = false;
         }
 
         public override void OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)

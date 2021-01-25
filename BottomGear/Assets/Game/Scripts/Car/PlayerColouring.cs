@@ -61,6 +61,11 @@ public class PlayerColouring : MonoBehaviour
         explosionEffect.gameObject.layer = LayerMask.NameToLayer("Volumes");
     }
 
+    public int GetPreset()
+    {
+        return preset;
+    }
+
     // Update is called once per frame
     void Update()
     {

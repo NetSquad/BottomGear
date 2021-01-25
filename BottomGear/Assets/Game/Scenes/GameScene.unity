@@ -5674,10 +5674,13 @@ MonoBehaviour:
   - {r: 2.0322466, g: 0.2766409, b: 0.0319201, a: 0.003921569}
   - {r: 0.20216066, g: 2.0322466, b: 0.36176118, a: 0.003921569}
   - {r: 0, g: 1.9577663, b: 2.0322466, a: 0.003921569}
+  groundDefault: {r: 2.843458, g: 2.843458, b: 2.843458, a: 0}
   manager: {fileID: 0}
   overlayCamera: {fileID: 1711210763}
   clientUIGauge: {fileID: 1686683885}
   clientUIGaugeText: {fileID: 547924532}
+  ground: {fileID: 2100000, guid: fab3fe7f6e5a1ca449b9907c17526fdc, type: 2}
+  FlagHeld: 0
 --- !u!114 &964925488
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -123,6 +123,7 @@ namespace BottomGear
 		Transform mTransform;
 		public GameObject trailParticles;
 		private GameManager gameManager;
+		private PlayerColouring playerColouring;
 
 		// --- Network ---
         Photon.Pun.Simple.SyncVitals vitals;
@@ -159,6 +160,7 @@ namespace BottomGear
 
 		public void Awake()
 		{
+			playerColouring = GetComponent<PlayerColouring>();
 			gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 			basicInventory = GetComponent<Photon.Pun.Simple.BasicInventory>();
 			vitals = GetComponent<Photon.Pun.Simple.SyncVitals>();
@@ -282,6 +284,7 @@ namespace BottomGear
 				gameManager.clientUIGauge.SetPercentage(ratio);
 			}
 
+			// Used to debug explosion effect
             //if (Input.GetKey(KeyCode.Q))
             //{
             //    if (!explosionEffect.activeSelf)
@@ -299,6 +302,7 @@ namespace BottomGear
 			//velocity = rb.velocity.magnitude;
 			//energy = vitals.vitals.VitalArray[1].Value;
 
+			// --- Add score if this is the flag holder, change ground color ---
 			if (Time.time - initialScoreTime >= 1.0f &&
 				photonView.IsMine
 				&& basicInventory.DefaultMount.mountedObjs.Count > 0)
@@ -306,14 +310,19 @@ namespace BottomGear
 				initialScoreTime = Time.time;
 				PhotonNetwork.LocalPlayer.AddScore(1);
 			}
+			if(basicInventory.DefaultMount.mountedObjs.Count > 0)
+            {
+				gameManager.FlagHeld = true;
+				gameManager.ground.SetColor("_EmissionColor", gameManager.explosionColors[playerColouring.GetPreset()]);
+			}
 
 			initialScoreTime += Time.deltaTime;
-
-			
+	
 			// Uncomment this and timer start to profile
 			//Debug.Log(watch.Elapsed.TotalMilliseconds);
 			//watch.Reset();
 
+			// --- Play audios ---
 			if(rb.velocity.magnitude >= minTrailSpeed && playingTrailLoop == false)
             {
 				play_neon_loop.Post(gameObject);
