@@ -101,6 +101,9 @@ namespace BottomGear
 		[Tooltip("The explosion target scale.")]
 		public float explosionScale = 4.0f;
 
+		//[Tooltip("How fast the boost UI Gauge is filled.")]
+		//public float boostFillTime = 0.1f;
+
 		float explosionCurrentTime = 0.0f;
 
 		[Header("Others")]
@@ -129,7 +132,6 @@ namespace BottomGear
 		// --- Internal variables ---
 		bool lockDown = false;
 		float linearDragBackup = 0.0f;
-
 		private bool playingTrailLoop = false;
 
 		// Uncomment this to profile
@@ -158,7 +160,6 @@ namespace BottomGear
 		public void Awake()
 		{
 			gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-
 			basicInventory = GetComponent<Photon.Pun.Simple.BasicInventory>();
 			vitals = GetComponent<Photon.Pun.Simple.SyncVitals>();
 			mTransform = transform;
@@ -167,7 +168,11 @@ namespace BottomGear
 			sceneCamera = gameManager.sceneCamera;
 
 			if (photonView.IsMine)
+			{
+				gameManager.clientUIGaugeText.gameObject.SetActive(true);
 				camera.GetComponent<UnityEngine.Rendering.Universal.UniversalAdditionalCameraData>().cameraStack.Add(gameManager.overlayCamera);
+			}
+
 			// Uncomment this to profile
 			//watch = new System.Diagnostics.Stopwatch();
 		}
@@ -176,10 +181,19 @@ namespace BottomGear
         {
 			if(camera.isActiveAndEnabled && photonView.IsMine)
 				sceneCamera.SetActive(false);
+
+			if (photonView.IsMine)
+				gameManager.clientUIGaugeText.gameObject.SetActive(true);
         }
 
-        // Find all the WheelColliders down in the hierarchy.
-        void Start()
+        private void OnDisable()
+        {
+			if (photonView.IsMine)
+				gameManager.clientUIGaugeText.gameObject.SetActive(false);
+		}
+
+		// Find all the WheelColliders down in the hierarchy.
+		void Start()
 		{
 			//Play engine Sound
 			engine_sound.Post(gameObject);
