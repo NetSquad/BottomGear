@@ -1697,13 +1697,13 @@ MonoBehaviour:
   snapForce: 10000
   flyingLinearDrag: 0
   flyingFakeGravity: 9.81
-  centerOfMass: {fileID: 0}
-  explosionEffect: {fileID: 0}
+  centerOfMass: {fileID: 3623154689585449235}
+  explosionEffect: {fileID: 7249726364415973327}
   explosionTime: 0.35
   explosionScale: 6
-  camera: {fileID: 0}
+  camera: {fileID: 16950669710695238}
   sceneCamera: {fileID: 0}
-  trailParticles: {fileID: 0}
+  trailParticles: {fileID: 5883456233218082789}
   isBoosting: 0
 --- !u!114 &6646793679201109663
 MonoBehaviour:
