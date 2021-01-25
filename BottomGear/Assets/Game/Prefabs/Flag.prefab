@@ -799,8 +799,8 @@ MonoBehaviour:
   unreadyState: 0
   mountableTo:
     mask: 15
-  autoReset: 0
-  autoOwnerChange: 0
+  autoReset: 1
+  autoOwnerChange: 1
   mountReliable: 1
 --- !u!114 &2777367880495049794
 MonoBehaviour:
