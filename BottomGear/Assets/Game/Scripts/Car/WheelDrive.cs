@@ -400,8 +400,10 @@ namespace BottomGear
 
 			bool controllerJump = isXbox ? Input.GetButtonDown("XboxA") : Input.GetButtonDown("Jump");
 
+
+
 			// ---Car jump-- -
-			if (IsGrounded() && jumpTimer >= jumpInterval && controllerJump || Input.GetButtonDown("PCJump"))
+			if (IsGrounded() && jumpTimer >= jumpInterval && (controllerJump || Input.GetButtonDown("PCJump")))
 			{
 				// --- If car jumps and has a forward acceleration, prevent it from rotating downwards ---
 				if (accelerator > 0)
