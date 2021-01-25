@@ -24,7 +24,7 @@
 	</StreamedFiles>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="89505537" Language="SFX" Hash="717087436">
+		<SoundBank Id="89505537" Language="SFX" Hash="875164545">
 			<ObjectPath>\SoundBanks\Default Work Unit\Gameplay</ObjectPath>
 			<ShortName>Gameplay</ShortName>
 			<Path>Gameplay.bnk</Path>
@@ -220,7 +220,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3639918041" Language="SFX" Hash="992001991">
+		<SoundBank Id="3639918041" Language="SFX" Hash="3987948248">
 			<ObjectPath>\SoundBanks\Default Work Unit\UI_and_Music</ObjectPath>
 			<ShortName>UI_and_Music</ShortName>
 			<Path>UI_and_Music.bnk</Path>
