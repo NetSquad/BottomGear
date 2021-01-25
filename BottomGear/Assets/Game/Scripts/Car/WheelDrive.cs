@@ -699,7 +699,7 @@ namespace BottomGear
 					on_hit.Post(gameObject);
 				}
 			}
-			else if (other.tag == "Fuel" && vitals.vitals.VitalArray[1].Value < 100)	// @ch0m5: My code is trash, and so am I.
+			else if (photonView.IsMine && other.tag == "Fuel" && vitals.vitals.VitalArray[1].Value < 100)	// @ch0m5: My code is trash, and so am I.
 			{
 				SyncState syncState = other.gameObject.transform.parent.parent.GetComponent<SyncState>();
 				vitals.vitals.VitalArray[1].Value = 100;
