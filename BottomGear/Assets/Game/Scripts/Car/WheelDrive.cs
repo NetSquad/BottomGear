@@ -658,7 +658,11 @@ namespace BottomGear
 				Debug.Log(vitals.vitals.VitalArray[0].Value);
 				on_hit.Post(gameObject);
 
-				if (contact && contact.Owner != null && vitals.vitals.VitalArray[0].Value - 20 <= 0) // bullet damage
+				// @ch0m5: Hardcoded projectile damage, this actually makes the car explode on laser death and makes lasers dissapear, good enough for me. Forgive me Aitor for I have sinned.
+				vitals.vitals.VitalArray[0].Value -= 13;
+				contact.Terminate();
+
+				if (contact && contact.Owner != null && vitals.vitals.VitalArray[0].Value <= 0) // Check for player death	// @ch0m5: Used to be ".Value - 20 <= 0"
 				{
 					SwitchCamera();
 					//Stop all audio events

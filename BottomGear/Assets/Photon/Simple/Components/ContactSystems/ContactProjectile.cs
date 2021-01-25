@@ -182,7 +182,9 @@ namespace Photon.Pun.Simple
         /// <summary>
         /// Override this and extend the base with your own projectile termination code, or place a component on this GameObject with IOnTerminate to define a response.
         /// </summary>
-        protected virtual void Terminate()
+        
+        // @ch0m5: Function used to be "protected".
+        public virtual void Terminate()
         {
             Debug.Log("Terminate");
             for (int i = 0, cnt = onTerminate.Count; i < cnt; ++i)
