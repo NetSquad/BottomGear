@@ -1586,7 +1586,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1000
   m_Drag: 0.35
-  m_AngularDrag: 0.35
+  m_AngularDrag: 0.75
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -1679,11 +1679,11 @@ MonoBehaviour:
   maxTorque: 5000
   handBrakeTorque: 30000
   wheelRefsWeight: 0.75
-  criticalSpeed: 25
+  criticalSpeed: 50
   minTrailSpeed: 5
-  maxSpeed: 35
-  maxBoostingSpeed: 60
-  maxTurboSpeed: 50
+  maxSpeed: 60
+  maxBoostingSpeed: 90
+  maxTurboSpeed: 80
   acceleration: 4000
   boostAcceleration: 10
   turboAcceleration: 7.5
@@ -1694,16 +1694,16 @@ MonoBehaviour:
   jumpForce: 20000
   jumpInterval: 1
   snapToGround: 1
-  snapForce: 3500
+  snapForce: 10000
   flyingLinearDrag: 0
   flyingFakeGravity: 9.81
-  centerOfMass: {fileID: 3623154689585449235}
-  explosionEffect: {fileID: 7249726364415973327}
+  centerOfMass: {fileID: 0}
+  explosionEffect: {fileID: 0}
   explosionTime: 0.35
   explosionScale: 6
-  camera: {fileID: 16950669710695238}
+  camera: {fileID: 0}
   sceneCamera: {fileID: 0}
-  trailParticles: {fileID: 5883456233218082789}
+  trailParticles: {fileID: 0}
   isBoosting: 0
 --- !u!114 &6646793679201109663
 MonoBehaviour:
