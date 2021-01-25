@@ -24,10 +24,15 @@ public class PlayerColouring : MonoBehaviour
             GetComponent<PhotonView>().RPC("SetColouring", RpcTarget.AllBuffered, manager.GetPreset());
     }
 
+    private void FixedUpdate()
+    {
+           
+    }
+
     [PunRPC]
     void SetColouring(int preset)
     {
-        if (manager != null)
+        if (manager == null)
             manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
         this.preset = preset;
