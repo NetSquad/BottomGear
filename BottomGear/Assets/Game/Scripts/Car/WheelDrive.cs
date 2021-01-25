@@ -691,8 +691,8 @@ namespace BottomGear
 					//Stop all audio events
 					stop_all.Post(gameObject);
 
-					//if (!explosionEffect.activeSelf)
-					//	explosionEffect.SetActive(true);
+					if (!explosionEffect.activeSelf)
+						explosionEffect.SetActive(true);
 
 					contact.Owner.PhotonView.Owner.AddScore(10);
 					killed_enemy.Post(other.GetComponent<ParentRef>().gameObject);  //Play the audio of killing an enemy
