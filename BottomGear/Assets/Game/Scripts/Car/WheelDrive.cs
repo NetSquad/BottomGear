@@ -625,6 +625,8 @@ namespace BottomGear
 			if(explosionCurrentTime == 0.0f)
 				explosion.Post(gameObject);
 
+			//Transform t = explosionEffect.transform;
+			
 			explosionEffect.transform.localScale = Vector3.Lerp(Vector3.one, Vector3.one*explosionScale, lerpRatio);
 
 			explosionCurrentTime += Time.deltaTime;

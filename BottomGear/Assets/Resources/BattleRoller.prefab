@@ -8591,27 +8591,27 @@ MonoBehaviour:
         showBCL: 0
         expandBCL: 0
         showEnableToggle: 1
-        enabled: 0
-        _accurateCenter: 1
+        enabled: 1
+        _accurateCenter: 0
         outOfBoundsHandling: 1
-        encoder: 3276.7
-        decoder: 0.0003051851
-        actualMin: -10
-        actualMax: 10
+        encoder: 102.375
+        decoder: 0.00976801
+        actualMin: -20
+        actualMax: 20
         wrappoint: 180
-        range: 20
-        rotationMaxValue: 350
-        maxEncodedVal: 65534
+        range: 40
+        rotationMaxValue: 340
+        maxEncodedVal: 4095
         centerValue: 0
-        centerEncodedValue: 32767
-        _limitRange: 0
+        centerEncodedValue: 2047
+        _limitRange: 1
         _useHalfRangeX: 0
-        _bitsDeterminedBy: -4
-        _bits: 10000000100000001000000010000000
-        _min: -10
-        _max: 10
+        _bitsDeterminedBy: -1
+        _bits: 0c000000080000000600000000000000
+        _min: -20
+        _max: 20
         _resolution: 4095
-        _precision: 0.004884005
+        _precision: 0.00976801
         _trsType: 0
       _ycrusher:
         expanded: 0
@@ -8619,27 +8619,27 @@ MonoBehaviour:
         showBCL: 0
         expandBCL: 0
         showEnableToggle: 1
-        enabled: 0
-        _accurateCenter: 1
+        enabled: 1
+        _accurateCenter: 0
         outOfBoundsHandling: 1
-        encoder: 21844.666
-        decoder: 0.000045777764
-        actualMin: -1
-        actualMax: 2
-        wrappoint: 180.5
-        range: 3
-        rotationMaxValue: 359
-        maxEncodedVal: 65534
-        centerValue: 0.5
-        centerEncodedValue: 32767
-        _limitRange: 0
+        encoder: 102.3
+        decoder: 0.009775171
+        actualMin: -5
+        actualMax: 5
+        wrappoint: 180
+        range: 10
+        rotationMaxValue: 355
+        maxEncodedVal: 1023
+        centerValue: 0
+        centerEncodedValue: 511
+        _limitRange: 1
         _useHalfRangeX: 0
-        _bitsDeterminedBy: -4
-        _bits: 10000000100000001000000010000000
-        _min: -1
-        _max: 2
-        _resolution: 255
-        _precision: 0.011764706
+        _bitsDeterminedBy: -1
+        _bits: 0a000000060000000500000000000000
+        _min: -5
+        _max: 5
+        _resolution: 1023
+        _precision: 0.009775171
         _trsType: 0
       _zcrusher:
         expanded: 0
@@ -8647,27 +8647,27 @@ MonoBehaviour:
         showBCL: 0
         expandBCL: 0
         showEnableToggle: 1
-        enabled: 0
-        _accurateCenter: 1
+        enabled: 1
+        _accurateCenter: 0
         outOfBoundsHandling: 1
-        encoder: 3276.7
-        decoder: 0.0003051851
-        actualMin: -10
-        actualMax: 10
+        encoder: 102.3
+        decoder: 0.009775171
+        actualMin: -5
+        actualMax: 5
         wrappoint: 180
-        range: 20
-        rotationMaxValue: 350
-        maxEncodedVal: 65534
+        range: 10
+        rotationMaxValue: 355
+        maxEncodedVal: 1023
         centerValue: 0
-        centerEncodedValue: 32767
-        _limitRange: 0
+        centerEncodedValue: 511
+        _limitRange: 1
         _useHalfRangeX: 0
-        _bitsDeterminedBy: -4
-        _bits: 10000000100000001000000010000000
-        _min: -10
-        _max: 10
-        _resolution: 4095
-        _precision: 0.004884005
+        _bitsDeterminedBy: -1
+        _bits: 0a000000060000000500000000000000
+        _min: -5
+        _max: 5
+        _resolution: 1023
+        _precision: 0.009775171
         _trsType: 0
       _ucrusher:
         expanded: 0
@@ -8978,7 +8978,7 @@ MonoBehaviour:
         isStandalone: 1
         showEnableToggle: 0
         enabled: 1
-      local: 1
+      local: 0
       useWorldBounds: 0
       boundsGroupId: 0
       enableTRSTypeSelector: 0
