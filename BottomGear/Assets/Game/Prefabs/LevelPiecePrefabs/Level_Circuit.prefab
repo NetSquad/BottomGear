@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8212065852548108262}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Boost_Ramp_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8212065852548108262
 Transform:
@@ -44,12 +44,12 @@ GameObject:
   - component: {fileID: 6089093374052830586}
   - component: {fileID: 6089093374052830584}
   - component: {fileID: 6089093374052830585}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Anti_Stuck (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6089093374052830586
 Transform:
@@ -98,12 +98,12 @@ GameObject:
   - component: {fileID: 6089093374541187685}
   - component: {fileID: 6089093374541187686}
   - component: {fileID: 6089093374541187687}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bump_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6089093374541187680
 Transform:
@@ -139,7 +139,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
@@ -153,7 +153,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 0.01
   m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
@@ -193,12 +193,12 @@ GameObject:
   - component: {fileID: 6089093374788511551}
   - component: {fileID: 6089093374788511549}
   - component: {fileID: 6089093374788511550}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Anti_Stuck (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6089093374788511551
 Transform:
@@ -246,12 +246,12 @@ GameObject:
   - component: {fileID: 6089093374840080730}
   - component: {fileID: 6089093374840080728}
   - component: {fileID: 6089093374840080729}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Anti_Stuck (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6089093374840080730
 Transform:
@@ -300,12 +300,12 @@ GameObject:
   - component: {fileID: 6089093375051186228}
   - component: {fileID: 6089093375051186229}
   - component: {fileID: 6089093375051186230}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bump_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6089093375051186231
 Transform:
@@ -341,7 +341,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
@@ -355,7 +355,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 0.01
   m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
@@ -395,12 +395,12 @@ GameObject:
   - component: {fileID: 6089093375364899111}
   - component: {fileID: 6089093375364899109}
   - component: {fileID: 6089093375364899110}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Anti_Stuck (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6089093375364899111
 Transform:
@@ -449,12 +449,12 @@ GameObject:
   - component: {fileID: 6089093375596419101}
   - component: {fileID: 6089093375596419102}
   - component: {fileID: 6089093375596419103}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bump_Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6089093375596419100
 Transform:
@@ -494,7 +494,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
@@ -508,7 +508,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 0.01
   m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
@@ -548,12 +548,12 @@ GameObject:
   - component: {fileID: 6089093375637968661}
   - component: {fileID: 6089093375637968875}
   - component: {fileID: 6089093375637968660}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Anti_Stuck (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6089093375637968661
 Transform:
@@ -601,12 +601,12 @@ GameObject:
   - component: {fileID: 6089093375915577922}
   - component: {fileID: 6089093375915577920}
   - component: {fileID: 6089093375915577921}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Anti_Stuck (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6089093375915577922
 Transform:
@@ -655,12 +655,12 @@ GameObject:
   - component: {fileID: 7252392722938231641}
   - component: {fileID: 4846255315249565587}
   - component: {fileID: 6089093374091858709}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Level_Circuit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5983726261608084732
 Transform:
@@ -705,7 +705,7 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
@@ -719,7 +719,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 0.01
   m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
@@ -757,12 +757,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 442058628235063569}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Boost_Ramp_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &442058628235063569
 Transform:
@@ -788,6 +788,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8212065852548108262}
     m_Modifications:
+    - target: {fileID: 932387566435695380, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 932387566950059265, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -862,6 +866,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8212065852548108262}
     m_Modifications:
+    - target: {fileID: 932387566435695380, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 932387566950059265, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -936,6 +944,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8212065852548108262}
     m_Modifications:
+    - target: {fileID: 932387566435695380, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 932387566950059265, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1010,6 +1022,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6089093375596419100}
     m_Modifications:
+    - target: {fileID: 932387566435695380, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 932387566950059265, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1084,6 +1100,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442058628235063569}
     m_Modifications:
+    - target: {fileID: 932387566435695380, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 932387566950059265, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1158,6 +1178,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6089093375596419100}
     m_Modifications:
+    - target: {fileID: 932387566435695380, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 932387566950059265, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1232,6 +1256,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442058628235063569}
     m_Modifications:
+    - target: {fileID: 932387566435695380, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 932387566950059265, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1306,6 +1334,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 442058628235063569}
     m_Modifications:
+    - target: {fileID: 932387566435695380, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 932387566950059265, guid: ae15c7aa7e2130340bdd2cd3eca09fe8, type: 3}
       propertyPath: m_RootOrder
       value: 2
