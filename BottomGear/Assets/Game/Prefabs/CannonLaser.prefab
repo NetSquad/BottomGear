@@ -100,6 +100,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 7280532597036154196}
     m_Modifications:
     - target: {fileID: 1454049109477872963, guid: c3731d2a82371eb4fb7d6c01b3c68500, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454049109477872963, guid: c3731d2a82371eb4fb7d6c01b3c68500, type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454049109477872963, guid: c3731d2a82371eb4fb7d6c01b3c68500, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 0}
