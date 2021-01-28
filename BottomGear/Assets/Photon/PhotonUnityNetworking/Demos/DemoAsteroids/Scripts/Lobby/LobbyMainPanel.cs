@@ -120,6 +120,8 @@ namespace Photon.Pun.Demo.Asteroids
             {
                 GameObject entry = Instantiate(PlayerListEntryPrefab);
                 entry.transform.SetParent(InsideRoomPanel.transform);
+                entry.transform.position = entry.transform.parent.transform.position;
+                entry.transform.rotation = entry.transform.parent.transform.rotation;
                 entry.transform.localScale = Vector3.one;
                 entry.GetComponent<PlayerListEntry>().Initialize(p.ActorNumber, p.NickName);
 
@@ -318,7 +320,7 @@ namespace Photon.Pun.Demo.Asteroids
             StartGameButton.gameObject.SetActive(CheckPlayersReady());
         }
 
-        private void SetActivePanel(string activePanel)
+        public void SetActivePanel(string activePanel)
         {
             LoginPanel.SetActive(activePanel.Equals(LoginPanel.name));
             SelectionPanel.SetActive(activePanel.Equals(SelectionPanel.name));
@@ -362,6 +364,8 @@ namespace Photon.Pun.Demo.Asteroids
             {
                 GameObject entry = Instantiate(RoomListEntryPrefab);
                 entry.transform.SetParent(RoomListContent.transform);
+                entry.transform.position = entry.transform.parent.transform.position;
+                entry.transform.rotation = entry.transform.parent.transform.rotation;
                 entry.transform.localScale = Vector3.one;
                 entry.GetComponent<RoomListEntry>().Initialize(info.Name, (byte)info.PlayerCount, info.MaxPlayers);
 
