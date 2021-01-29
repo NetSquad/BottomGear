@@ -201,7 +201,7 @@ namespace BottomGear
 
         public override void OnDisconnected(DisconnectCause cause)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("MenuScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("NewMenuScene");
         }
 
         public override void OnLeftRoom()

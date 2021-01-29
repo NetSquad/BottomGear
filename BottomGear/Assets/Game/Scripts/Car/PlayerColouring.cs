@@ -17,6 +17,7 @@ public class PlayerColouring : MonoBehaviour
     private int preset = 0;
     private PhotonView photonView;
     public RectTransform nameCanvas;
+    public TMPro.TextMeshProUGUI playerName;
     public GameObject healthBar;
 
     // Start is called before the first frame update
@@ -27,6 +28,8 @@ public class PlayerColouring : MonoBehaviour
 
         if (PhotonNetwork.IsMasterClient)
             GetComponent<PhotonView>().RPC("SetColouring", RpcTarget.AllBuffered, manager.GetPreset());
+
+        playerName.SetText(photonView.Owner.NickName);
     }
 
     private void FixedUpdate()
