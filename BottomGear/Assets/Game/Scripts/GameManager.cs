@@ -139,8 +139,8 @@ namespace BottomGear
             trailRenderers[1].material = presets[presetPos + 3];
             trailRenderers[2].material = presets[presetPos + 4];
 
-            //if(explosionEffect.HasVector4("Particle color"))
-            //    explosionEffect.SetVector4("Particle color", explosionColors[preset]);
+            if (explosionEffect.HasVector4("Particle color"))
+                explosionEffect.SetVector4("Particle color", explosionColors[preset]);
         }
 
         #endregion

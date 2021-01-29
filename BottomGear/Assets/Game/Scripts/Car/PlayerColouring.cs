@@ -86,7 +86,7 @@ public class PlayerColouring : MonoBehaviour
         renderers[6].gameObject.layer = LayerMask.NameToLayer("Volumes");
         renderers[7].gameObject.layer = LayerMask.NameToLayer("Volumes");
 
-        //explosionEffect.gameObject.layer = LayerMask.NameToLayer("Volumes");
+        explosionEffect.gameObject.layer = LayerMask.NameToLayer("Volumes");
     }
 
     public int GetPreset()

@@ -286,17 +286,17 @@ namespace BottomGear
 			if (!playerColouring.enabled)
 				playerColouring.gameObject.SetActive(true);
 
-			// Used to debug explosion effect
-			//if (Input.GetKey(KeyCode.Q))
-			//{
-			//    if (!explosionEffect.activeSelf)
-			//        explosionEffect.SetActive(true);
-			//}
+            // Used to debug explosion effect
+            if (Input.GetKey(KeyCode.Q))
+            {
+                if (!explosionEffect.activeSelf)
+                    explosionEffect.SetActive(true);
+            }
 
-			//if (photonView.IsMine && explosionEffect.activeSelf)
-			//    TriggerExplosion();
+            if (photonView.IsMine && explosionEffect.activeSelf)
+                TriggerExplosion();
 
-			if (basicInventory.DefaultMount.mountedObjs.Count > 0)
+            if (basicInventory.DefaultMount.mountedObjs.Count > 0)
 			{
 				gameManager.FlagHeld = true;
 				gameManager.ground.SetColor("_EmissionColor", gameManager.explosionColors[playerColouring.GetPreset()]);
@@ -629,29 +629,29 @@ namespace BottomGear
 				rb.AddForce(direction, ForceMode.Acceleration);
 		}
 
-		//private void TriggerExplosion()
-  //      {
-		//	float lerpRatio =  Mathf.Clamp(explosionCurrentTime / explosionTime, 0.0f, 1.0f);
+        private void TriggerExplosion()
+        {
+            float lerpRatio = Mathf.Clamp(explosionCurrentTime / explosionTime, 0.0f, 1.0f);
 
-		//	if(explosionCurrentTime == 0.0f)
-		//		explosion.Post(gameObject);
+            if (explosionCurrentTime == 0.0f)
+                explosion.Post(gameObject);
 
-		//	//Transform t = explosionEffect.transform;
-			
-		//	explosionEffect.transform.localScale = Vector3.Lerp(Vector3.one, Vector3.one*explosionScale, lerpRatio);
+            //Transform t = explosionEffect.transform;
 
-		//	explosionCurrentTime += Time.deltaTime;
+            explosionEffect.transform.localScale = Vector3.Lerp(Vector3.one, Vector3.one * explosionScale, lerpRatio);
 
-		//	if (lerpRatio == 1.0f)
-		//	{
-		//		explosionCurrentTime = 0.0f;
-		//		explosionEffect.SetActive(false);
-		//		explosionEffect.transform.localScale = Vector3.one;
-		//	}
+            explosionCurrentTime += Time.deltaTime;
 
-  //      }
+            if (lerpRatio == 1.0f)
+            {
+                explosionCurrentTime = 0.0f;
+                explosionEffect.SetActive(false);
+                explosionEffect.transform.localScale = Vector3.one/10.0f;
+            }
 
-		private void SwitchCamera()
+        }
+
+        private void SwitchCamera()
         {
 			if (!photonView.IsMine)
 				return;
