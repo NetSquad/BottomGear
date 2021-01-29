@@ -36,6 +36,10 @@ public class PlayerColouring : MonoBehaviour
             manager.maxScore = photonView.Owner.GetScore();
             manager.ground.SetColor("_EmissionColor", manager.explosionColors[GetPreset()]);
         }
+        else if (photonView.Owner.GetScore() == manager.maxScore)
+        {
+            manager.ground.SetColor("_EmissionColor", manager.groundDefault);
+        }
 
         if (photonView.IsMine)
         {
