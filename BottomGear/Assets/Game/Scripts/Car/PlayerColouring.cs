@@ -34,15 +34,16 @@ public class PlayerColouring : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         if (photonView.Owner.GetScore() > manager.maxScore)
         {
             manager.maxScore = photonView.Owner.GetScore();
             manager.ground.SetColor("_EmissionColor", manager.explosionColors[GetPreset()]);
         }
-        else if (photonView.Owner.GetScore() == manager.maxScore)
-        {
-            manager.ground.SetColor("_EmissionColor", manager.groundDefault);
-        }
+        //else if (photonView.Owner.GetScore() == manager.maxScore)
+        //{
+        //    manager.ground.SetColor("_EmissionColor", manager.groundDefault);
+        //}
 
         if (photonView.IsMine)
         {

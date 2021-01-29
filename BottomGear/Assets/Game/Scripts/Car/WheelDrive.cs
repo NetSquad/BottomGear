@@ -287,20 +287,20 @@ namespace BottomGear
 				playerColouring.gameObject.SetActive(true);
 
             // Used to debug explosion effect
-            if (Input.GetKey(KeyCode.Q))
-            {
-                if (!explosionEffect.activeSelf)
-                    explosionEffect.SetActive(true);
-            }
+            //if (Input.GetKey(KeyCode.Q))
+            //{
+            //    if (!explosionEffect.activeSelf)
+            //        explosionEffect.SetActive(true);
+            //}
 
-            if (photonView.IsMine && explosionEffect.activeSelf)
+            if (explosionEffect.activeSelf)
                 TriggerExplosion();
 
-            if (basicInventory.DefaultMount.mountedObjs.Count > 0)
-			{
-				gameManager.FlagHeld = true;
-				gameManager.ground.SetColor("_EmissionColor", gameManager.explosionColors[playerColouring.GetPreset()]);
-			}
+   //         if (basicInventory.DefaultMount.mountedObjs.Count > 0)
+			//{
+			//	gameManager.FlagHeld = true;
+			//	gameManager.ground.SetColor("_EmissionColor", gameManager.explosionColors[playerColouring.GetPreset()]);
+			//}
 
 			// --- Only update if this is the local player ---
 			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)

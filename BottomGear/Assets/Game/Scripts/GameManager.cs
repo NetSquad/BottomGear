@@ -55,9 +55,9 @@ namespace BottomGear
 
         public Camera clientCamera;
 
-        public int maxScore = 0;
+        public int maxScore = -1;
 
-        public bool FlagHeld = false;
+       // public bool FlagHeld = false;
 
         private int curentPreset = -1;
 
@@ -275,10 +275,10 @@ namespace BottomGear
 
         private void FixedUpdate()
         {
-            if(!FlagHeld)
-                ground.SetColor("_EmissionColor", groundDefault);
+            //if(!FlagHeld)
+            //    ground.SetColor("_EmissionColor", groundDefault);
 
-            FlagHeld = false;
+            //FlagHeld = false;
         }
 
         public override void OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)
