@@ -5,6 +5,7 @@ using Photon.Pun.UtilityScripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.VFX;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
@@ -32,6 +33,10 @@ public class PlayerColouring : MonoBehaviour
             GetComponent<PhotonView>().RPC("SetColouring", RpcTarget.AllBuffered, manager.GetPreset());
 
         playerName.SetText(photonView.Owner.NickName);
+        Color color = manager.explosionColors[preset];
+        color.a = 1;
+        nameCanvas.GetChild(0).GetComponent<Image>().color = color;
+        manager.SetPlayerOverviewPanelColor(photonView.Owner, preset);
     }
 
     private void FixedUpdate()

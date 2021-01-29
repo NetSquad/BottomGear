@@ -55,6 +55,8 @@ namespace BottomGear
 
         public Camera clientCamera;
 
+        public PlayerPanel playerPanel;
+
         public int maxScore = -1;
 
        // public bool FlagHeld = false;
@@ -102,7 +104,17 @@ namespace BottomGear
             
             PhotonNetwork.LocalPlayer.SetCustomProperties(props);
 
+            //foreach (Player p in PhotonNetwork.PlayerList)
+            //{
+            //    
+            //}
+        }
 
+        public void SetPlayerOverviewPanelColor(Player p, int preset)
+        {
+            Color color = explosionColors[preset];
+            color.a = 1.0f;
+            playerPanel.playerListEntries[p.ActorNumber].transform.GetComponent<Image>().color = color;
         }
 
         public override void OnDisable()
