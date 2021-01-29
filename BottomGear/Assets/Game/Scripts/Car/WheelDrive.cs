@@ -172,9 +172,14 @@ namespace BottomGear
 
 			if (photonView.IsMine)
 			{
+				gameManager.clientCamera = camera;
 				gameManager.clientUIGaugeText.gameObject.SetActive(true);
 				camera.GetComponent<UnityEngine.Rendering.Universal.UniversalAdditionalCameraData>().cameraStack.Add(gameManager.overlayCamera);
 			}
+            else
+            {
+				camera.gameObject.SetActive(false);
+            }
 
 			// Uncomment this to profile
 			//watch = new System.Diagnostics.Stopwatch();

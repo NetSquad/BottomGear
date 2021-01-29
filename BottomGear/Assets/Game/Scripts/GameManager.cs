@@ -53,6 +53,8 @@ namespace BottomGear
         public GameObject clientUIGaugeText;
         public Material ground;
 
+        public Camera clientCamera;
+
         public int maxScore = 0;
 
         public bool FlagHeld = false;

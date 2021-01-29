@@ -16,29 +16,14 @@ public class PlayerColouring : MonoBehaviour
     public GameManager manager;
     private int preset = 0;
     private PhotonView photonView;
+    public RectTransform nameCanvas;
+    public GameObject healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
         photonView = GetComponent<PhotonView>();
         manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        //preset = manager.GetPreset();
-        //manager.SetPresets(preset, ref renderers, ref explosionEffect, ref trail_renderers);
-
-        //if (PhotonNetwork.IsMasterClient)
-        //    preset = manager.GetPreset();
-
-        //if (PhotonNetwork.LocalPlayer.IsMasterClient)
-        //{
-        //    Hashtable ht = new Hashtable();
-        //    ht.Add(GetComponent<PhotonView>().ViewID.ToString(), preset.ToString());
-        //    PhotonNetwork.CurrentRoom.SetCustomProperties(ht);
-        //}
-
-        //SetColouring(manager.GetPreset());
-
-        //if (PhotonNetwork.IsMasterClient)
-        //    SetColouring(manager.GetPreset());
 
         if (PhotonNetwork.IsMasterClient)
             GetComponent<PhotonView>().RPC("SetColouring", RpcTarget.AllBuffered, manager.GetPreset());
@@ -52,30 +37,21 @@ public class PlayerColouring : MonoBehaviour
             manager.ground.SetColor("_EmissionColor", manager.explosionColors[GetPreset()]);
         }
 
-
-
-        //if(preset == -1)
-        //    SetColouring(manager.GetPreset());
-
-        //if(preset == -1)
-        //{
-        //    object pr;
-        //    PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(GetComponent<PhotonView>().ViewID.ToString(), out pr);
-        //    SetColouring(int.Parse(pr.ToString()));
-        //}
-
-        //if (PhotonNetwork.IsMasterClient && preset == -1)
-        //{
-        //    GetComponent<PhotonView>().RPC("SetColouring", RpcTarget.AllBuffered, manager.GetPreset());
-        //}
+        if (photonView.IsMine)
+        {
+            nameCanvas.rotation = Quaternion.Euler(-transform.rotation.eulerAngles.x, (manager.clientCamera.transform.rotation * Quaternion.Euler(0, 180, 0)).eulerAngles.y, -transform.rotation.eulerAngles.z);
+            healthBar.transform.rotation = Quaternion.Euler(-transform.rotation.eulerAngles.x, (manager.clientCamera.transform.rotation * Quaternion.Euler(0, 180, 0)).eulerAngles.y, -transform.rotation.eulerAngles.z);
+        }
+        else if (manager.clientCamera != null)
+        {
+            nameCanvas.rotation = Quaternion.Euler(-transform.rotation.eulerAngles.x, manager.clientCamera.transform.rotation.eulerAngles.y, -transform.rotation.eulerAngles.z);
+            healthBar.transform.rotation = Quaternion.Euler(-transform.rotation.eulerAngles.x, (manager.clientCamera.transform.rotation * Quaternion.Euler(0, 180, 0)).eulerAngles.y, -transform.rotation.eulerAngles.z);
+        }
     }
 
     [PunRPC]
     void SetColouring(int preset)
     {
-        //if (preset != -1)
-        //    return;
-
         if (manager == null)
             manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
