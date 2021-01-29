@@ -135,7 +135,7 @@ namespace BottomGear
 		bool lockDown = false;
 		float linearDragBackup = 0.0f;
 		private bool playingTrailLoop = false;
-
+		bool controllerJump = false;
 		// Uncomment this to profile
 		//System.Diagnostics.Stopwatch watch;
 
@@ -306,6 +306,12 @@ namespace BottomGear
 			if (!photonView.IsMine && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
 				return;
 
+			if (!controllerJump)
+			{
+				controllerJump = isXbox ? Input.GetButtonDown("XboxA") : Input.GetButtonDown("Jump");
+				controllerJump = Input.GetButtonDown("PCJump") ? true : controllerJump;
+			}
+
 			// --- Set gauge percentage ---
 			if (photonView.IsMine)
 			{
@@ -431,13 +437,11 @@ namespace BottomGear
 			else
 				LimitSpeed(outputAcceleration, maxSpeed, torque);
 
-			bool controllerJump = isXbox ? Input.GetButtonDown("XboxA") : Input.GetButtonDown("Jump");
-
-
-
 			// ---Car jump-- -
-			if (IsGrounded() && jumpTimer >= jumpInterval && (controllerJump || Input.GetButtonDown("PCJump")))
+			if (IsGrounded() && jumpTimer >= jumpInterval && controllerJump)
 			{
+				controllerJump = false;
+
 				// --- If car jumps and has a forward acceleration, prevent it from rotating downwards ---
 				if (accelerator > 0)
 					lockDown = true;
