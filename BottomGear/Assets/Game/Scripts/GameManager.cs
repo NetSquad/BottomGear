@@ -77,6 +77,12 @@ namespace BottomGear
             Instance = this;
         }
 
+        private void OnApplicationQuit()
+        {
+            if(ground != null)
+               ground.SetColor("_EmissionColor", groundDefault);
+        }
+
         public override void OnEnable()
         {
             base.OnEnable();

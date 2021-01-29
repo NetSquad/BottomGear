@@ -19,10 +19,12 @@ public class PlayerColouring : MonoBehaviour
     public RectTransform nameCanvas;
     public TMPro.TextMeshProUGUI playerName;
     public GameObject healthBar;
+    private WheelDrive controller;
 
     // Start is called before the first frame update
     void Start()
     {
+        controller = GetComponent<WheelDrive>();
         photonView = GetComponent<PhotonView>();
         manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
 
@@ -39,6 +41,7 @@ public class PlayerColouring : MonoBehaviour
         {
             manager.maxScore = photonView.Owner.GetScore();
             manager.ground.SetColor("_EmissionColor", manager.explosionColors[GetPreset()]);
+            controller.pickup_flag.Post(gameObject);
         }
         //else if (photonView.Owner.GetScore() == manager.maxScore)
         //{
@@ -52,8 +55,8 @@ public class PlayerColouring : MonoBehaviour
         }
         else if (manager.clientCamera != null)
         {
-            nameCanvas.rotation = Quaternion.Euler(-transform.rotation.eulerAngles.x, manager.clientCamera.transform.rotation.eulerAngles.y, -transform.rotation.eulerAngles.z);
-            healthBar.transform.rotation = Quaternion.Euler(-transform.rotation.eulerAngles.x, (manager.clientCamera.transform.rotation * Quaternion.Euler(0, 180, 0)).eulerAngles.y, -transform.rotation.eulerAngles.z);
+            nameCanvas.rotation = Quaternion.Euler(-transform.rotation.eulerAngles.x, (manager.clientCamera.transform.rotation * Quaternion.Euler(0, 180, 0)).eulerAngles.y, -transform.rotation.eulerAngles.z);
+            healthBar.transform.rotation = Quaternion.Euler(-transform.rotation.eulerAngles.x, manager.clientCamera.transform.rotation.eulerAngles.y, -transform.rotation.eulerAngles.z);
         }
     }
 

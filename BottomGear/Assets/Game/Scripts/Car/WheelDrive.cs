@@ -136,6 +136,7 @@ namespace BottomGear
 		float linearDragBackup = 0.0f;
 		private bool playingTrailLoop = false;
 		bool controllerJump = false;
+
 		// Uncomment this to profile
 		//System.Diagnostics.Stopwatch watch;
 
@@ -192,9 +193,9 @@ namespace BottomGear
 
 			if (photonView.IsMine && gameManager.clientUIGaugeText != null)
 				gameManager.clientUIGaugeText.gameObject.SetActive(true);
-        }
+		}
 
-        private void OnDisable()
+		private void OnDisable()
         {
 			if (photonView.IsMine && gameManager.clientUIGaugeText != null)
 				gameManager.clientUIGaugeText.gameObject.SetActive(false);
@@ -283,18 +284,29 @@ namespace BottomGear
 
 		void Update()
 		{
-			if (!playerColouring.enabled)
-				playerColouring.gameObject.SetActive(true);
+			//if (!playerColouring.enabled)
+			//	playerColouring.gameObject.SetActive(true);
 
-            // Used to debug explosion effect
-            //if (Input.GetKey(KeyCode.Q))
-            //{
-            //    if (!explosionEffect.activeSelf)
-            //        explosionEffect.SetActive(true);
-            //}
+			// Used to debug explosion effect
+			//if (Input.GetKey(KeyCode.Q))
+			//{
+			//    if (!explosionEffect.activeSelf)
+			//        explosionEffect.SetActive(true);
+			//}
 
-            if (explosionEffect.activeSelf)
-                TriggerExplosion();
+			// --- Explosion effect on death ---
+
+			//if (explosionEffect.transform.parent.gameObject.activeInHierarchy
+			//	&& !explosionEffect.activeInHierarchy && !explosionFinished)
+			//	explosionEffect.SetActive(true);
+
+			if(!explosionEffect.transform.parent.gameObject.activeInHierarchy)
+				explosionEffect.SetActive(true);
+
+			if (explosionEffect.activeInHierarchy)
+			{
+				TriggerExplosion();
+			}
 
    //         if (basicInventory.DefaultMount.mountedObjs.Count > 0)
 			//{
