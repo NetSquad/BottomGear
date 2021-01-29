@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 65665
   m_IgnoreTag: DomeCollider
   m_TransparentLayers:
     serializedVersion: 2
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 65665
   m_IgnoreTag: DomeCollider
   m_TransparentLayers:
     serializedVersion: 2
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 65665
   m_IgnoreTag: DomeCollider
   m_TransparentLayers:
     serializedVersion: 2
@@ -470,7 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 65665
   m_IgnoreTag: DomeCollider
   m_TransparentLayers:
     serializedVersion: 2
