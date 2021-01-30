@@ -252,6 +252,11 @@ namespace BottomGear
 
         private void Update()
         {
+            if (!InfoText.transform.parent.gameObject.activeInHierarchy && InfoText.text != "")
+                InfoText.transform.parent.gameObject.SetActive(true);
+            else
+                InfoText.transform.parent.gameObject.SetActive(false);
+
 
             if (!startTimer || currentTime >= timeLimit)
             {
