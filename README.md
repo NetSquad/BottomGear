@@ -53,8 +53,8 @@ This is a project developed by 4 university students in the span of 1 month. We 
 
 ## Thanks / References
 
-https://github.com/rlbogue/Rbogue (UI Gauge base)
-https://github.com/Unity-Technologies/BoatAttack 
-https://github.com/Unity-Technologies/UniversalRenderingExamples
-https://medium.com/@porter.johnross/unity-custom-rendering-and-improved-outlines-in-the-universal-render-pipeline-506d5f3ce496
+- https://github.com/rlbogue/Rbogue (UI Gauge base)
+- https://github.com/Unity-Technologies/BoatAttack 
+- https://github.com/Unity-Technologies/UniversalRenderingExamples
+- https://medium.com/@porter.johnross/unity-custom-rendering-and-improved-outlines-in-the-universal-render-pipeline-506d5f3ce496
 
