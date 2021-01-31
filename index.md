@@ -4,6 +4,8 @@ A multiplayer game made by a group of 4 university students in Unity using PUN2 
 
 ![Image](docs/Welcome.png)
 
+## Gameplay
+
 <iframe width="800" height="480" src="https://www.youtube.com/embed/AkXQa17olLg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## How to use:
