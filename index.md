@@ -2,6 +2,8 @@
 
 A multiplayer game made by a group of 4 people in Unity using PUN2 in more or less 1 month.
 
+![Image](docs/Welcome.png)
+
 ## How to use:
 
 ### Keyboard/Mouse
