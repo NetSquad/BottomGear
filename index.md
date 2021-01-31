@@ -1,6 +1,6 @@
 ## Welcome to Bottom Gear
 
-A multiplayer game made by a group of 4 people in Unity using PUN2 in more or less 1 month.
+A multiplayer game made by a group of 4 university students in Unity using PUN2 in the span of 1 month.
 
 ![Image](docs/Welcome.png)
 
@@ -12,7 +12,7 @@ A multiplayer game made by a group of 4 people in Unity using PUN2 in more or le
 
 ## Authors:
 
-This is a project developed by 4 university students in the span of 1 month. We are:
+We are:
 
 * GitHub account: [AitorSimona](https://github.com/AitorSimona)
 * GitHub account: [CarlesHoms](https://github.com/ch0m5)
